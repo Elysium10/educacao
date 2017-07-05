@@ -1,6 +1,6 @@
 
 ---
-title       : Médias estatísticas
+title       : Introdução 
 description : Insert the chapter description here
 attachments :
 --- type:NormalExercise lang:r xp:100 skills:1 key:aad1409c3d
