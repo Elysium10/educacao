@@ -4,7 +4,6 @@ title       : Médias estatísticas
 description : Insert the chapter description here
 attachments :
 --- type:NormalExercise lang:r xp:100 skills:1 key:aad1409c3d
-## <<<New Exercise>>>
 
 ## Introdução
 
@@ -42,17 +41,12 @@ Adicione uma linha em R que calcule 6 + 12, exatamente igual ao código de exemp
 test_output_contains("18", incorrect_msg = "Tenha certeza que você inseriu uma nova linha que some 6 + 12. Não o inicie esta linha com um `#`, senão o código não será  executado!")
 success_msg("Parabéns! Veja como o console mostra o resultado do seu código. Agora, que você está familiarizado com a interface do curso, vamos aprender R!")
 ```
---- type:NormalExercise lang:r xp:100 skills:1 key:cf0bcd211e
-
+--- type:NormalExercise lang:r xp:100 skills:1 key:955002b2b7
 ## Média aritmética
 
 É o valor que mais se aproxima do valor real. Para obtê-la basta dividir a soma dos valores das medidas efetuadas pelo número destas medidas. Por exemplo, numa experiência foram obtidas as seguintes medidas: 4m, 5m, 8m, 9m, 5m. Em R a média aritmética $\bar{x}$ pode ser calculada da seguinte maneira:
 
-<p style="background-color: rgb(102, 255, 255);">É o valor que mais se
-aproxima do valor real. Para obtê-la basta dividir a soma dos valores das medidas efetuadas pelo número destas
-medidas. Por exemplo, numa experiência foram obtidas as seguintes
-medidas: 4m, 5m, 8m, 9m, 5m. Em R a média aritmética $\bar{x}$ pode ser
-calculada da seguinte maneira:</p>
+<p style="background-color: rgb(102, 255, 255);">É o valor que mais se aproxima do valor real. Para obtê-la basta dividir a soma dos valores das medidas efetuadas pelo número destas medidas. Por exemplo, numa experiência foram obtidas as seguintes medidas: 4m, 5m, 8m, 9m, 5m. Em R a média aritmética $\bar{x}$ pode ser calculada da seguinte maneira:</p>
 
 <div style="font-size: large; font-family: sans-serif">
   <p style="color: #000000; background-color: #ffffff">Text color: black, background-color: white</p>
@@ -97,11 +91,11 @@ mean(x)
 ```
 *** =sct
 ```{r}
-test_output_contains("80.85714", incorrect_msg = "Você tem certeza que armazenou o vetor c na variável x?")
+test_output_contains("80.85714", incorrect_msg = "Voce tem certeza que armazenou o vetor c na variavel x?")
 success_msg("Parabéns! Agora você sabe calcular a média aritmética usando o R!")
 ```
---- type:NormalExercise lang:r xp:100 skills:1 key:e7a35d0445
 
+--- type:NormalExercise lang:r xp:100 skills:1 key:dd48eb091a
 ## Erro absoluto (E)
 
 Podemos encontrar o erro aboluto de uma medida usando a seguinte expressão: 
@@ -168,14 +162,13 @@ E
 test_output_contains("0.06", incorrect_msg = "Você armazenor corretamente o vetor x <- c(2.17, 2.20, 2.15, 2.12) na variável x?")
 success_msg("Parabéns! Agora você sabe calcular o erro absoluto usando o R!")
 ```
---- type:NormalExercise lang:r xp:100 skills:1 key:bdc6472237
+--- type:NormalExercise lang:r xp:100 skills:1 key:24e7dc599e
 
 ## Medida da aceleração da gravidade
 
 > #### Valor teórico da aceleração da gravidade
 
 > O valor teórico da aceleração da gravidade (g) é aproximadamente igual a 9,8 m/s<SUP>2</SUP>. Suponha que você efetuou várias medidas da aceleração e achou outro valor que corresponde a 10.2 m/s<SUP>2</SUP>. Determine o erro absoluto (E).
-
 
 *** =instructions
 - Nesse caso, a média aritmética corresponde à medida experimental efetuada de 10.2 m/s<SUP>2</SUP>. 
@@ -213,8 +206,7 @@ E
 test_output_contains("0.4", incorrect_msg = "Você armazenou corretamente 9.8 na varável g? e 10.2 na varável gr?")
 success_msg("Parabéns! Agora você sabe calcular o erro absoluto usando o R!")
 ```
-
---- type:NormalExercise lang:r xp:100 skills:1 key:57721f1e3c
+--- type:NormalExercise lang:r xp:100 skills:1 key:7f8c3148a8
 ## Erro relativo
 
 > #### Erro relativo de duas medidas
@@ -267,8 +259,3 @@ Er
 test_output_contains("0.04081", incorrect_msg = "Você armazenou corretamente 9.8 na varável g e 10.2 na varável gr?")
 success_msg("Parabéns! Agora você sabe calcular o erro relativo usando o R!")
 ```
-
-
-
-
-
