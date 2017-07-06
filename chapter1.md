@@ -9,7 +9,7 @@ attachments :
 
   <tbody>
     <tr align="center">
-      <td style="vertical-align: top; background-color: rgb(5, 10, 5); text-align: center; width: 167px;" colspan="4" rowspan="1"><span style="background-color: white; color: white;"></span><big><big><big><span style="color: white;">COMANDOS Bf#129;SICOS DO R</span></big></big></big><br>
+      <td style="vertical-align: top; background-color: rgb(5, 10, 5); text-align: center; width: 167px;" colspan="4" rowspan="1"><span style="background-color: white; color: white;"></span><big><big><big><span style="color: white;">COMANDOS BÁSICOS DO R</span></big></big></big><br>
       </td>
     </tr>
     <tr>
