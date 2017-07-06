@@ -7,6 +7,9 @@ attachments :
 
 ## Comandos básicos do R
 
+<table
+style="background-color: rgb(204, 204, 255); height: 370px; width: 570px;"
+border="1">
   <tbody>
     <tr align="center">
       <td style="vertical-align: top; background-color: rgb(5, 10, 5); text-align: center; width: 167px;" colspan="4" rowspan="1"><span style="background-color: white; color: white;"></span><big><big><big><span style="color: white;">COMANDOS BÁSICOS DO R</span></big></big></big><br>
