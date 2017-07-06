@@ -23,7 +23,11 @@ border="1">
       <td style="vertical-align: top; width: 98px; background-color: rgb(204, 255, 255); color: rgb(0, 0, 153); text-align: center; font-weight: bold;">Resultado</td>
     </tr>
 <tr>
-      <td style="vertical-align: top; text-align: center; width: 182px; background-color: rgb(147, 255, 39); color: red;">\neq</td>
+      <td style="vertical-align: top; text-align: center; width: 182px; background-color: rgb(147, 255, 39); color: red;">
+      ```{r}
+      cos(x)
+      ```
+</td>
       <td style="vertical-align: top; background-color: white; color: black; text-align: center; width: 98px;"><img src="https://s0.wp.com/latex.php?latex=%5Cneq&bg=ffffff&fg=7c705e&s=0" alt="\neq" title="\neq" class="latex" srcset="https://s0.wp.com/latex.php?latex=%5Cneq&bg=ffffff&fg=7c705e&s=0&zoom=2 1.5x" scale="1.5" height="16" width="12"></td>
       <td style="vertical-align: top; text-align: center; width: 167px; background-color: rgb(147, 255, 39); color: red;">\sim</td>
       <td style="vertical-align: top; background-color: white; text-align: center; width: 98px;"><img src="https://s0.wp.com/latex.php?latex=%5Csim&bg=ffffff&fg=7c705e&s=0" alt="\sim" title="\sim" class="latex" srcset="https://s0.wp.com/latex.php?latex=%5Csim&bg=ffffff&fg=7c705e&s=0&zoom=2 1.5x" scale="1.5" height="5" width="11"></td>
