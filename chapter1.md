@@ -30,8 +30,7 @@ cos(x)
 ```
 </td>
       <td style="vertical-align: top; background-color: white; color: black; text-align: center; width: 98px;">
-      <
-
+      
 ```{r}
 x <- 30
 cos(30)
