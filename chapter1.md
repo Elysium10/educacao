@@ -24,17 +24,11 @@ border="1">
     </tr>
 <tr>
       <td style="vertical-align: top; text-align: center; width: 182px; background-color: rgb(147, 255, 39); color: red;">
-
-```{r}
 cos(30)
-```
 </td>
       <td style="vertical-align: top; background-color: white; color: black; text-align: center; width: 98px;">
-      
-```{r}
 0.8660
-```  
-scale="1.5" height="16" width="12"></td>
+</td>
       <td style="vertical-align: top; text-align: center; width: 167px; background-color: rgb(147, 255, 39); color: red;">\sim</td>
       <td style="vertical-align: top; background-color: white; text-align: center; width: 98px;"><img src="https://s0.wp.com/latex.php?latex=%5Csim&bg=ffffff&fg=7c705e&s=0" alt="\sim" title="\sim" class="latex" srcset="https://s0.wp.com/latex.php?latex=%5Csim&bg=ffffff&fg=7c705e&s=0&zoom=2 1.5x" scale="1.5" height="5" width="11"></td>
     </tr>
@@ -671,4 +665,110 @@ Er
 ```{r}
 test_output_contains("0.04081", incorrect_msg = "Você armazenou corretamente 9.8 na varável g e 10.2 na varável gr?")
 success_msg("Parabéns! Agora você sabe calcular o erro relativo usando o R!")
+```
+
+
+--- type:NormalExercise lang:r xp:100 skills:1 key:bc0cf7b809
+## OPERAÇÕES ARITMÉTICAS
+
+```{r}
+3 + 6 + 12  # soma 
+[1] 6
+```
+```{r}
+5 + 6 * 8  # multiplica e soma 
+[1] 53         
+```
+```{r}
+20/2 + 8  # divide e soma  
+[1] 18        
+```
+```{r} 
+> 10*2**2 # potências indicadas por ** ou ^
+[1] 40        
+```
+ou
+
+```{r}
+10*2^2        
+[1] 40
+```
+```{r}
+sqrt(32) # raiz quadrada de 32
+[1] 5.656854
+```
+```{r}
+sin(pi) # seno de pi constante
+[1] 1.224606e-16
+```
+```{r}
+sin(3.14159) # seno de pi em radianos
+[1] 2.65359e-06
+```
+```{r}
+sqrt(cos(60 * pi/180)) # combinando várias expressões
+[1] 0.7071068 
+```
+```{r}
+x <- sin(pi) # atribui a x o sin(pi)
+y <- sqrt(100) # atribui a y a raiz de 100
+y + x # soma os valores guardados em y e x
+[1] 10
+```
+```{r}
+1:10
+ [1]  1  2  3  4  5  6  7  8  9 10 # cria sequência de 1 até 10 e...
+```
+```{r}
+(1:10)^2 # eleva ao quadrado seus números e...
+ [1]   1   4   9  16  25  36  49  64  81 100     
+```
+
+```{r}
+sum((1:10)^2) # soma-os.
+[1] 385
+```
+```{r}
+0:6
+[1] 0 1 2 3 4 5 6 # cria uma sequência de 0 até 6 e...
+```
+```{r}
+10^(0:6) # faz 10 elevado a cada número da sequência e... 
+[1] 1e+00 1e+01 1e+02 1e+03 1e+04 1e+05 1e+06
+```
+```{r}
+log(10^(0:6))    # ...determina seus logs e...
+[1]  0.000000  2.302585  4.605170  6.907755  9.210340 11.512925 13.815511
+```
+```{r}
+sqrt(log(10^(0:6)))    # sua raizes para...
+[1] 0.000000 1.517427 2.145966 2.628261 3.034854 3.393070 3.716922
+```
+```{r}
+sum(sqrt(log(10^(0:6))))    # somá-las
+[1] 16.4365
+```
+
+*** =instructions
+
+*** =hint
+
+*** =pre_exercise_code
+```{r}
+
+```
+
+*** =sample_code
+```{r}
+
+```
+
+*** =solution
+```{r}
+
+```
+
+*** =sct
+```{r}
+
 ```
