@@ -664,6 +664,7 @@ Er
 test_output_contains("0.04081", incorrect_msg = "Você armazenou corretamente 9.8 na varável g e 10.2 na varável gr?")
 success_msg("Parabéns! Agora você sabe calcular o erro relativo usando o R!")
 ```
+
 --- type:NormalExercise lang:r xp:100 skills:1 key:bc0cf7b809
 ## OPERAÇÕES ARITMÉTICAS
 
@@ -768,7 +769,8 @@ Adicione uma linha em R que calcule 6 + 12, exatamente igual ao código de exemp
 ```
 *** =solution
 ```{r}
-
+10:50
+```
 *** =sct
 ```{r}
 test_output_contains("10:50", incorrect_msg = "Coloque dois pontos antes de cada número!")
