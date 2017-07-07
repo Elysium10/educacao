@@ -1,4 +1,3 @@
-
 ---
 title       : Introdução 
 description : Insert the chapter description here
@@ -774,3 +773,4 @@ Adicione uma linha em R que calcule 6 + 12, exatamente igual ao código de exemp
 ```{r}
 test_output_contains("10:50", incorrect_msg = "Coloque dois pontos antes de cada número!")
 success_msg("Parabéns! Veja como o console mostra o resultado do seu código. Agora, que você está familiarizado com a interface do curso, vamos aprender R!")
+```
