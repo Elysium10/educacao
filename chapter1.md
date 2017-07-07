@@ -635,7 +635,6 @@ Tanto nesse caso como no exemplo anterior, o valor obtido nas medidas experiment
 - Subtraia o valor da medida experimental do valor da medida correta.  
 - Obtenha o módulo (valor absoluto) dessa diferença e divida pelo valor da medida correta.
 *** =hint
-
 Armazene $9.8m/s^2$ na variável g.
 Armazene a medida efetuada de $10.2m/s^2$ em uma variável qualquer (gr).
 Obtenha o módulo (valor absoluto) dessa diferença e divida pelo valor da medida correta.
@@ -666,8 +665,6 @@ Er
 test_output_contains("0.04081", incorrect_msg = "Você armazenou corretamente 9.8 na varável g e 10.2 na varável gr?")
 success_msg("Parabéns! Agora você sabe calcular o erro relativo usando o R!")
 ```
-
-
 --- type:NormalExercise lang:r xp:100 skills:1 key:bc0cf7b809
 ## OPERAÇÕES ARITMÉTICAS
 
@@ -741,34 +738,39 @@ log(10^(0:6))  # ...determina seus logs e...
 [1]  0.000000  2.302585  4.605170  6.907755  9.210340 11.512925 13.815511
 ```
 ```{r}
-sqrt(log(10^(0:6)))  # sua raizes para...
+sqrt(log(10^(0:6)))  # sua raizes e...
 [1] 0.000000 1.517427 2.145966 2.628261 3.034854 3.393070 3.716922
 ```
 ```{r}
 sum(sqrt(log(10^(0:6))))  # somá-las
 [1] 16.4365
 ```
-
-*** =instructions
-
 *** =hint
+Adicione uma linha em R que calcule 6 + 12, exatamente igual ao código de exemplo!
 
 *** =pre_exercise_code
 ```{r}
-
+# no pec
 ```
 
 *** =sample_code
 ```{r}
+# Digite a soma de 10 mais 6
+10 + 6
 
+# Digite a multiplicação de 50 vezes 6
+50*6
+
+# Digite 400 dividido por 4 mais 10
+400/4 + 10 
+
+# Crie uma sequência de números de 10 a 50.
+10:50
 ```
-
 *** =solution
 ```{r}
 
-```
-
 *** =sct
 ```{r}
-
-```
+test_output_contains("10:50", incorrect_msg = "Coloque dois pontos antes de cada número!")
+success_msg("Parabéns! Veja como o console mostra o resultado do seu código. Agora, que você está familiarizado com a interface do curso, vamos aprender R!")
