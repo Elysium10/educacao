@@ -22,18 +22,6 @@ border="1">
       <td style="vertical-align: top; width: 98px; background-color: rgb(204, 255, 255); color: rgb(0, 0, 153); text-align: center; font-weight: bold;">Resultado</td>
     </tr>
     <tr>
-      <td style="vertical-align: top; text-align: center; width: 182px; background-color: rgb(147, 255, 39); color: red;">\subset</td>
-      <td style="vertical-align: top; background-color: white; color: black; text-align: center; width: 98px;"><img src="https://s0.wp.com/latex.php?latex=%5Csubset&bg=ffffff&fg=7c705e&s=0" alt="\subset" title="\subset" class="latex" srcset="https://s0.wp.com/latex.php?latex=%5Csubset&bg=ffffff&fg=7c705e&s=0&zoom=2 1.5x" scale="1.5" height="10" width="11"></td>
-      <td style="vertical-align: top; text-align: center; width: 167px; background-color: rgb(147, 255, 39); color: red;">\ll</td>
-      <td style="vertical-align: top; background-color: white; text-align: center; width: 98px;"><img src="https://s0.wp.com/latex.php?latex=%5Cll&bg=ffffff&fg=7c705e&s=0" alt="\ll" title="\ll" class="latex" srcset="https://s0.wp.com/latex.php?latex=%5Cll&bg=ffffff&fg=7c705e&s=0&zoom=2 1.5x" scale="1.5" height="12" width="16"></td>
-    </tr>
-    <tr>
-      <td style="vertical-align: top; width: 182px; text-align: center; background-color: rgb(147, 255, 39); color: red;">\leq</td>
-      <td style="width: 98px; color: black; background-color: white; text-align: center;"><img src="https://s0.wp.com/latex.php?latex=%5Cleq&bg=ffffff&fg=7c705e&s=0" alt="\leq" title="\leq" class="latex" srcset="https://s0.wp.com/latex.php?latex=%5Cleq&bg=ffffff&fg=7c705e&s=0&zoom=2 1.5x" scale="1.5" height="14" width="11"></td>
-      <td style="vertical-align: top; width: 167px; text-align: center; background-color: rgb(147, 255, 39); color: red;">\equiv</td>
-      <td style="vertical-align: top; width: 98px; background-color: white; text-align: center;"><img src="https://s0.wp.com/latex.php?latex=%5Cequiv&bg=ffffff&fg=7c705e&s=0" alt="\equiv" title="\equiv" class="latex" srcset="https://s0.wp.com/latex.php?latex=%5Cequiv&bg=ffffff&fg=7c705e&s=0&zoom=2 1.5x" scale="1.5" height="8" width="12"></td>
-    </tr>
-    <tr>
       <td style="vertical-align: top; width: 182px; text-align: center; background-color: rgb(147, 255, 39); color: red;">\geq</td>
       <td style="width: 98px; color: black; background-color: white; text-align: center;"><img src="https://s0.wp.com/latex.php?latex=%5Cgeq&bg=ffffff&fg=7c705e&s=0" alt="\geq" title="\geq" class="latex" srcset="https://s0.wp.com/latex.php?latex=%5Cgeq&bg=ffffff&fg=7c705e&s=0&zoom=2 1.5x" scale="1.5" height="14" width="11"></td>
       <td style="vertical-align: top; width: 167px; text-align: center; background-color: rgb(147, 255, 39); color: red;">\gg</td>
