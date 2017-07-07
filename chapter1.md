@@ -26,7 +26,7 @@ border="1">
 cos(30)
 </td>
       <td style="vertical-align: top; background-color: white; color: black; text-align: center; width: 98px;">
-0.8660
+0.8655
 </td>
       <td style="vertical-align: top; text-align: center; width: 167px; background-color: rgb(147, 255, 39); color: red;">\sim</td>
       <td style="vertical-align: top; background-color: white; text-align: center; width: 98px;"><img src="https://s0.wp.com/latex.php?latex=%5Csim&bg=ffffff&fg=7c705e&s=0" alt="\sim" title="\sim" class="latex" srcset="https://s0.wp.com/latex.php?latex=%5Csim&bg=ffffff&fg=7c705e&s=0&zoom=2 1.5x" scale="1.5" height="5" width="11"></td>
