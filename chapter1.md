@@ -337,7 +337,7 @@ sum(sqrt(log(10^(0:6))))  # somá-las
 [1] 16.4365
 ```
 *** =hint
-Adicione uma linha em R que calcule 6 + 12, exatamente igual ao código de exemplo!
+Adicione uma linha em R que crie uma sequência de números de 10 a 50, conforme foi mostrado no código de exemplo!
 
 *** =pre_exercise_code
 ```{r}
@@ -364,6 +364,6 @@ Adicione uma linha em R que calcule 6 + 12, exatamente igual ao código de exemp
 ```
 *** =sct
 ```{r}
-test_output_contains("10:50", incorrect_msg = "Coloque dois pontos antes de cada número!")
+test_output_contains("10:50", incorrect_msg = "Coloque dois pontos no meio dos números que vão delimitar a sequência!")
 success_msg("Parabéns! Veja como o console mostra o resultado do seu código. Agora, que você está familiarizado com a interface do curso, vamos aprender R!")
 ```
