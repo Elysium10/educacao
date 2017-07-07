@@ -765,7 +765,7 @@ Adicione uma linha em R que calcule 6 + 12, exatamente igual ao código de exemp
 400/4 + 10 
 
 # Crie uma sequência de números de 10 a 50.
-10:50
+
 ```
 *** =solution
 ```{r}
