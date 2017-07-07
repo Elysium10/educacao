@@ -716,8 +716,8 @@ y + x # soma os valores guardados em y e x
 [1] 10
 ```
 ```{r}
-1:10
- [1]  1  2  3  4  5  6  7  8  9 10 # cria sequência de 1 até 10 e...
+1:10  # cria sequência de 1 até 10 e...
+ [1]  1  2  3  4  5  6  7  8  9 10 
 ```
 ```{r}
 (1:10)^2 # eleva ao quadrado seus números e...
@@ -729,23 +729,23 @@ sum((1:10)^2) # soma-os.
 [1] 385
 ```
 ```{r}
-0:6
-[1] 0 1 2 3 4 5 6 # cria uma sequência de 0 até 6 e...
+0:6  # cria uma sequência de 0 até 6 e...
+[1] 0 1 2 3 4 5 6 
 ```
 ```{r}
 10^(0:6) # faz 10 elevado a cada número da sequência e... 
 [1] 1e+00 1e+01 1e+02 1e+03 1e+04 1e+05 1e+06
 ```
 ```{r}
-log(10^(0:6))    # ...determina seus logs e...
+log(10^(0:6))  # ...determina seus logs e...
 [1]  0.000000  2.302585  4.605170  6.907755  9.210340 11.512925 13.815511
 ```
 ```{r}
-sqrt(log(10^(0:6)))    # sua raizes para...
+sqrt(log(10^(0:6)))  # sua raizes para...
 [1] 0.000000 1.517427 2.145966 2.628261 3.034854 3.393070 3.716922
 ```
 ```{r}
-sum(sqrt(log(10^(0:6))))    # somá-las
+sum(sqrt(log(10^(0:6))))  # somá-las
 [1] 16.4365
 ```
 
