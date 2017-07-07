@@ -116,7 +116,7 @@ de x<br>
 style="vertical-align: top; width: 182px; text-align: center; background-color: rgb(147, 255, 39); color: red;">range(x)</td>
 <td colspan="3" rowspan="1"
 style="width: 98px; color: black; background-color: white; text-align: center;">vetor
-de mínimo e máximo de&nbsp; x<br>
+de mínimo e máximo de x<br>
 </td>
 </tr>
 <tr>
