@@ -182,12 +182,6 @@ cos(30)
       <td style="vertical-align: top; width: 98px; background-color: white; text-align: center;"><img src="https://s0.wp.com/latex.php?latex=%5Ctop&bg=ffffff&fg=7c705e&s=0" alt="\top" title="\top" class="latex" srcset="https://s0.wp.com/latex.php?latex=%5Ctop&bg=ffffff&fg=7c705e&s=0&zoom=2 1.5x" scale="1.5" height="12" width="12"></td>
     </tr>
     <tr>
-      <td style="vertical-align: top; width: 182px; text-align: center; background-color: rgb(147, 255, 39); color: red;">\Im</td>
-      <td style="width: 98px; color: black; background-color: white; text-align: center;"><img src="https://s0.wp.com/latex.php?latex=%5CIm&bg=ffffff&fg=7c705e&s=0" alt="\Im" title="\Im" class="latex" srcset="https://s0.wp.com/latex.php?latex=%5CIm&bg=ffffff&fg=7c705e&s=0&zoom=2 1.5x" scale="1.5" height="12" width="11"></td>
-      <td style="vertical-align: top; width: 167px; text-align: center; background-color: rgb(147, 255, 39); color: red;">\ldots</td>
-      <td style="vertical-align: top; width: 98px; background-color: white; text-align: center;"><img src="https://s0.wp.com/latex.php?latex=%5Cldots&bg=ffffff&fg=7c705e&s=0" alt="\ldots" title="\ldots" class="latex" srcset="https://s0.wp.com/latex.php?latex=%5Cldots&bg=ffffff&fg=7c705e&s=0&zoom=2 1.5x" scale="1.5" height="2" width="18"></td>
-    </tr>
-    <tr>
       <td style="vertical-align: top; width: 182px; text-align: center; background-color: rgb(147, 255, 39); color: red;">\prime</td>
       <td style="width: 98px; color: black; background-color: white; text-align: center;"><img src="https://s0.wp.com/latex.php?latex=%5Cprime&bg=ffffff&fg=7c705e&s=0" alt="\prime" title="\prime" class="latex" srcset="https://s0.wp.com/latex.php?latex=%5Cprime&bg=ffffff&fg=7c705e&s=0&zoom=2 1.5x" scale="1.5" height="10" width="5"></td>
       <td style="vertical-align: top; width: 167px; text-align: center; background-color: rgb(147, 255, 39); color: red;">\vdots</td>
