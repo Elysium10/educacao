@@ -660,7 +660,7 @@ success_msg("Parabéns! Agora você sabe calcular o erro relativo usando o R!")
 ```
 
 --- type:NormalExercise lang:r xp:100 skills:1 key:bc0cf7b809
-## OPERAÇÕES ARITMÉTICAS
+## Operações aritméticas
 
 ```{r}
 3 + 6 + 12  # soma 
