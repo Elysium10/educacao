@@ -714,7 +714,6 @@ y + x # soma os valores guardados em y e x
 (1:10)^2 # eleva ao quadrado seus números e...
  [1]   1   4   9  16  25  36  49  64  81 100     
 ```
-
 ```{r}
 sum((1:10)^2) # soma-os.
 [1] 385
