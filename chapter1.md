@@ -542,27 +542,17 @@ funcraiz <- function(a,b,c){
     } else{
         tempo1 <-(-b-sqrt(delta))/(2*a)
         tempo2 <-(-b+sqrt(delta))/(2*a)
-        cat(tempo1, tempo2)
+        cat(tempo1,tempo2)
     }
 }
 funcraiz(1, -3, -4)
 ```
 *** =solution
 ```{r}
-funcraiz <- function(a,b,c){
-    delta <- b^2-4*a*c
-    if(delta<0){
-        cat("Essa equação de movimento não possui raízes reais - são raízes complexas - escolha outra.")
-    } else{
-        tempo1 <-(-b-sqrt(delta))/(2*a)
-        tempo2 <-(-b+sqrt(delta))/(2*a)
-        cat(tempo1, tempo2)
-    }
-}
-funcraiz(1,-3,-4)
+-1,4
 ```
 *** =sct
 ```{r}
-test_output_contains("-1, 4", incorrect_msg = "Atribua a fórmula correta para a variável tempo1")
+test_output_contains("-1,4", incorrect_msg = "Atribua a fórmula correta para a variável tempo1")
 success_msg("Parabéns! Você adquiriu noções sobre: a equação horária de um corpo em MRUV, como desenvolver uma função para determinar o instante (raiz) ou instantes (raízes) em que um móvel passa pela origem (0) da trajetória!")
 ```
