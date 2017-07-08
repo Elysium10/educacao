@@ -542,7 +542,7 @@ funcraiz <- function(a,b,c){
     } else{
         tempo1 <-(-b-sqrt(delta))/(2*a)
         tempo2 <-(-b+sqrt(delta))/(2*a)
-        cat("as raízes são reais:", tempo1, "e", tempo2)
+        cat(tempo1, tempo2)
     }
 }
 funcraiz(1, -3, -4)
