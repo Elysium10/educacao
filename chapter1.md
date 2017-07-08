@@ -545,7 +545,7 @@ funcraiz <- function(a,b,c){
         cat(tempo1,tempo2)
     }
 }
-funcraiz(1, -3, -4)
+funcraiz(1,-3,-4)
 ```
 *** =solution
 ```{r}
