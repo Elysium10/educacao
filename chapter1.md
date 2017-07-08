@@ -44,91 +44,109 @@ success_msg("Parabéns! Veja como o console mostra o resultado do seu código. A
 
 Sendo um ambiente de desenvolvimento integrado para cálculos estatísticos e gráficos, o R possui uma grande quantidade de comandos. Veremos alguns comandos básicos. 
 
-```{r}   
-3 + 6 + 12  # soma      
+```{r} 
+# soma
+3 + 6 + 12        
 [1] 6
 ```
 ```{r}
-2-4-8   # subtração
+# subtração
+2-4-8   
 [1] -10
 ```
 ```{r}
-5 + 6 * 8  # multiplica e soma 
+# multiplica e soma 
+5 + 6 * 8  
 [1] 53         
 ```
 ```{r}
-20/2 + 8  # divide e soma  
+# divide e soma
+20/2 + 8    
 [1] 18        
 ```
 ```{r} 
-10*2**2 # potência (**).
+# potência (**)
+10*2**2 
 [1] 40        
 ```
 ou
 
 ```{r}
-10*2^2  # potência (^)       
+# potência (^)
+10*2^2         
 [1] 40
 ```
 
 ```{r}
- 2+(4**5)+(sqrt(144)/2) -(4^3)*6 + 2^(2^2) # expressões
+# expressões
+2+(4**5)+(sqrt(144)/2) -(4^3)*6 + 2^(2^2) 
 [1] 664
 ```
 ou
 
 ```{r}
+# expressões
 2+4**5+sqrt (144)/2 -4^3*6+2^2^2
 [1] 664
 ```
 
 ```{r}
+# raiz quadrada de 32
 sqrt(32) # raiz quadrada de 32
 [1] 5.656854
 ```
-<p style="color: #ff0000; background-color: #ffffff">Comandos para funções trigométricas, expressões algébrica e sequências numéricas</p>
+<div style="font-size: large; font-family: sans-serif"><p style="color: #ff0000; background-color: #ffffff">Comandos para funções trigométricas, expressões algébrica e sequências numéricas</p></div>
 
 ```{r}
-sin(pi) # seno de pi constante
+# seno de pi constante
+sin(pi) 
 [1] 1.224606e-16
 ```
 ```{r}
-sin(3.14159) # seno de pi em radianos
+# seno de pi em radianos
+sin(3.14159) 
 [1] 2.65359e-06
 ```
 ```{r}
-sqrt(cos(60 * pi/180)) # combinando várias expressões
+# combinando várias comandos
+sqrt(cos(60 * pi/180)) 
 [1] 0.7071068 
 ```
 ```{r}
 x <- sin(pi) # atribui a x o sin(pi)
 y <- sqrt(100) # atribui a y a raiz de 100
-y + x # soma os valores guardados em y e x
+# soma os valores guardados em y e x
+y + x 
 [1] 10
 ```
 ```{r}
-1:10  # cria sequência de 1 até 10 e...
+# cria sequência de 1 até 10
+1:10  
  [1]  1  2  3  4  5  6  7  8  9 10 
 ```
 ```{r}
-(1:10)^2 # eleva ao quadrado seus números e...
+# eleva ao quadrado os números da sequência
+(1:10)^2 .
  [1]   1   4   9  16  25  36  49  64  81 100     
 ```
 ```{r}
+# somá-los
 sum((1:10)^2) # somá-los.
 [1] 385
 ```
 ```{r}
-0:6  # cria uma sequência de 0 até 6 e...
+# cria uma sequência de 0 até 6
+0:6  
 [1] 0 1 2 3 4 5 6 
 ```
 ```{r}
-10^(0:6) # faz 10 elevado a cada número da sequência e... 
+# faz 10 elevado a cada número da sequência
+10^(0:6)  
 [1] 1e+00 1e+01 1e+02 1e+03 1e+04 1e+05 1e+06
 ```
-<p style="color: #ff0000; background-color: #ffffff">Explorando a função log10</p>
+<div style="font-size: large; font-family: sans-serif"><p style="color: #ff0000; background-color: #ffffff">Explorando a função log10</p></div>
 
-Vamos utilizar alguns comandos já visto para resolvermos logaritmos. Na matemática, o logaritmo comum ou decimal de um número é o expoente a que a base deve ser elevado para produzir este número. Por exemplo, o logaritmo de 100 na base 10 é 2, pois 10 ao quadrado é 100. Veja como calcular o log de 100:
+Utilizaremos alguns comandos já visto para resolvermos logaritmos. Na matemática, o logaritmo comum ou decimal de um número é o expoente a que a base deve ser elevado para produzir este número. Por exemplo, o logaritmo de 100 na base 10 é 2, pois 10 ao quadrado é 100. Veja como calcular o log de 100:
 
 $$\sqrt{log(100)}\rightarrow10^{x}=100\rightarrow 10^{x}=10^{2}\rightarrow x =2$$
 
@@ -151,22 +169,23 @@ $$\sqrt{log(1)}+\sqrt{log(10)}+\sqrt{log(100)}+ \sqrt{log(1000)}+\sqrt{log(10000
 Passo-a-passo:
 
 ```{r}
-10^(0:7) # fazer 10 elevado a cada número da sequência e... 
-[1] 1e+00 1e+01 1e+02 1e+03 1e+04 1e+05 1e+06 1e+07   ## faz 10 elevado a cada número da sequência e...
+# fazer 10 elevado a cada número da sequência
+10^(0:7)  
+[1] 1e+00 1e+01 1e+02 1e+03 1e+04 1e+05 1e+06 1e+07  
 ```
-
 ```{r}
-log(10^(0:7))   # determinar seus logs na sequência e...
+# determinar seus respectivos logs
+log(10^(0:7))   
 [1]  0.000000  2.302585  4.605170  6.907755  9.210340 11.512925 13.815511 16.118096
 ```
-
 ```{r}
-sqrt(log(10^(0:7)))  # suas respectivas raizes e...
+# determinar suas respectivas raízes
+sqrt(log(10^(0:7)))  
 [1] 0.000000 1.517427 2.145966 2.628261 3.034854 3.393070 3.716922 4.014735
 ```
-
 ```{r}
-sum(sqrt(log(10^(0:7)))) # somá-las
+# somá-las
+sum(sqrt(log(10^(0:7)))) 
 [1] 20.45124
 ```
 
@@ -208,7 +227,7 @@ success_msg("Bom trabalho! Neste tópico aprendemos sobre alguns comandos básic
 
 É o valor que mais se aproxima do valor real. Para obtê-la basta dividir a soma dos valores das medidas efetuadas pelo número destas medidas. Por exemplo, numa experiência foram obtidas as seguintes medidas: 4m, 5m, 8m, 9m, 5m. Em R a média aritmética $\bar{x}$ pode ser calculada da seguinte maneira:
 
-<p style="background-color: rgb(102, 255, 255);">É o valor que mais se aproxima do valor real. Para obtê-la basta dividir a soma dos valores das medidas efetuadas pelo número destas medidas. Por exemplo, numa experiência foram obtidas as seguintes medidas: 4m, 5m, 8m, 9m, 5m. Em R a média aritmética $\bar{x}$ pode ser calculada da seguinte maneira:</p>
+<div style="font-size: large; font-family: sans-serif"><p style="color: #ffffff; background-color: #ff0000">Text color: white, background-color: red</p>É o valor que mais se aproxima do valor real. Para obtê-la basta dividir a soma dos valores das medidas efetuadas pelo número destas medidas. Por exemplo, numa experiência foram obtidas as seguintes medidas: 4m, 5m, 8m, 9m, 5m. Em R a média aritmética $\bar{x}$ pode ser calculada da seguinte maneira:</p></div>
 
 <div style="font-size: large; font-family: sans-serif">
   <p style="color: #000000; background-color: #ffffff">Text color: black, background-color: white</p>
