@@ -536,12 +536,12 @@ Escolha a equação que tenha os seguintes coeficientes dentro dos parênteses: 
 *** =sample_code
 ```{r}
 funcraiz <- function(a,b,c){
-    delta <- b^2 - 4*a*c
+    delta <- b^2-4*a*c
     if(delta<0){
         cat("Essa equação de movimento não possui raízes reais - são raízes complexas - escolha outra.")
     } else{
-        tempo1 <- (-b - sqrt(delta))/(2*a)
-        tempo2 <- (-b + sqrt(delta))/(2*a)
+        tempo1 <-(-b-sqrt(delta))/(2*a)
+        tempo2 <-(-b+sqrt(delta))/(2*a)
         cat("as raízes são reais:", tempo1, "e", tempo2)
     }
 }
@@ -550,20 +550,20 @@ funcraiz(1, -3, -4)
 *** =solution
 ```{r}
 funcraiz <- function(a,b,c){
-    delta <- b^2 - 4*a*c
+    delta <- b^2-4*a*c
     if(delta<0){
         cat("Essa equação de movimento não possui raízes reais - são raízes complexas - escolha outra.")
     } else{
-        tempo1 <- (-b - sqrt(delta))/(2*a)
-        tempo2 <- (-b + sqrt(delta))/(2*a)
-        cat("as raízes são reais:", tempo1, "e", tempo2)
+        tempo1 <-(-b-sqrt(delta))/(2*a)
+        tempo2 <-(-b+sqrt(delta))/(2*a)
+        cat(tempo1, tempo2)
     }
 }
-funcraiz(1, -3, -4)
-as raízes são reais: -1 e 4
+funcraiz(1,-3,-4)
+-1, 4
 ```
 *** =sct
 ```{r}
-test_output_contains("as raízes são reais: -1 e 4", incorrect_msg = "Atribua a fórmula correta para a variável tempo1")
+test_output_contains("-1, 4", incorrect_msg = "Atribua a fórmula correta para a variável tempo1")
 success_msg("Parabéns! Você adquiriu noções sobre: a equação horária de um corpo em MRUV, como desenvolver uma função para determinar o instante (raiz) ou instantes (raízes) em que um móvel passa pela origem (0) da trajetória!")
 ```
