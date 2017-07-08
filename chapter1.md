@@ -551,6 +551,7 @@ funcraiz <- function(a,b,c){
 funcraiz(1, -3, -4)
 ```
 *** =solution
+
 ```r
 funcraiz <- function(a,b,c){
     delta <- b^2 - 4*a*c
