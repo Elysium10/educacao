@@ -560,7 +560,6 @@ funcraiz <- function(a,b,c){
     }
 }
 funcraiz(1,-3,-4)
--1, 4
 ```
 *** =sct
 ```{r}
