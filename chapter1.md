@@ -279,7 +279,7 @@ mean(x)
 *** =sct
 ```{r}
 test_output_contains("80.85714", incorrect_msg = "Voce tem certeza que armazenou o vetor c na variavel x?")
-success_msg("Parabéns! Agora você sabe calcular a média aritmética usando o R!")
+success_msg("Bom trabalho! Agora você sabe calcular a média aritmética usando o R!")
 ```
 --- type:NormalExercise lang:r xp:100 skills:1 key:dd48eb091a
 ## Erro absoluto (E)
