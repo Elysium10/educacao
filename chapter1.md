@@ -95,7 +95,10 @@ ou
 sqrt(32) # raiz quadrada de 32
 [1] 5.656854
 ```
-<div><p style="color: #ff0000; background-color: #ffffff">Comandos para funções trigométricas, expressões algébrica e sequências numéricas</p></div>
+
+<div style="font-size: large; text-align: center; font-family: sans-serif">
+    <p style="color: #ffffff; background-color: #ff0000">Comandos para funções trigométricas, expressões algébrica e sequências numéricas</p>
+</div>
 
 ```{r}
 # seno de pi constante
@@ -146,9 +149,11 @@ sum((1:10)^2)
 10^(0:6) 
 [1] 1e+00 1e+01 1e+02 1e+03 1e+04 1e+05 1e+06
 ```
-<div><p style="color: #ff0000; background-color: #ffffff">Explorando a função log10</p></div>
+<div style="font-size: large; text-align: center; font-family: sans-serif">
+    <p style="color: #ffffff; background-color: #ff0000">Explorando a função log 10</p>
+</div>
 
-Vamos utilizar alguns comandos já visto para resolvermos logaritmos. Na matemática, o logaritmo comum ou decimal de um número é o expoente a que a base deve ser elevado para produzir este número. Por exemplo, o logaritmo de 100 na base 10 é 2, pois 10 ao quadrado é 100. Veja como calcular o log de 100:
+Utilizaremos alguns comandos já visto para resolvermos logaritmos. Na matemática, o logaritmo comum ou decimal de um número é o expoente a que a base deve ser elevado para produzir este número. Por exemplo, o logaritmo de 100 na base 10 é 2, pois 10 ao quadrado é 100. Veja como calcular o log de 100:
 
 $$\sqrt{log(100)}\rightarrow10^{x}=100\rightarrow 10^{x}=10^{2}\rightarrow x =2$$
 
@@ -171,19 +176,19 @@ $$\sqrt{log(1)}+\sqrt{log(10)}+\sqrt{log(100)}+ \sqrt{log(1000)}+\sqrt{log(10000
 Passo-a-passo:
 
 ```{r}
-# fazer 10 elevado a cada número da sequência...
+# fazer 10 elevado a cada número da sequência
 10^(0:7)  
 [1] 1e+00 1e+01 1e+02 1e+03 1e+04 1e+05 1e+06 1e+07  
 ```
 
 ```{r}
-# determinar seus logs na sequência e...
+# determinar seus logs na sequência
 log(10^(0:7))   
 [1]  0.000000  2.302585  4.605170  6.907755  9.210340 11.512925 13.815511 16.118096
 ```
 
 ```{r}
-# suas respectivas raizes e...
+# determinar suas respectivas raizes
 sqrt(log(10^(0:7)))  
 [1] 0.000000 1.517427 2.145966 2.628261 3.034854 3.393070 3.716922 4.014735
 ```
@@ -232,9 +237,10 @@ success_msg("Bom trabalho! Neste tópico aprendemos sobre alguns comandos básic
 --- type:NormalExercise lang:r xp:100 skills:1 key:955002b2b7
 ## Média aritmética
 
-É o valor que mais se aproxima do valor real. Para obtê-la basta dividir a soma dos valores das medidas efetuadas pelo número destas medidas. Por exemplo, numa experiência foram obtidas as seguintes medidas: 4m, 5m, 8m, 9m, 5m. Em R a média aritmética $\bar{x}$ pode ser calculada da seguinte maneira:
+<div style="font-size: large; text-align: center; font-family: sans-serif">
+   <p style="color: #ffffff; background-color: #000000">É o valor que mais se aproxima do valor real. Para obtê-la basta dividir a soma dos valores das medidas efetuadas pelo número destas medidas. Por exemplo, numa experiência foram obtidas as seguintes medidas: 4m, 5m, 8m, 9m, 5m. Em R a média aritmética $\bar{x}$ pode ser calculada da seguinte maneira:</p>
+ </div>
 
-<div><p style="background-color: rgb(102, 255, 255);">É o valor que mais se aproxima do valor real. Para obtê-la basta dividir a soma dos valores das medidas efetuadas pelo número destas medidas. Por exemplo, numa experiência foram obtidas as seguintes medidas: 4m, 5m, 8m, 9m, 5m. Em R a média aritmética $\bar{x}$ pode ser calculada da seguinte maneira:</p></div>
 
 <div style="font-size: large; font-family: sans-serif">
   <p style="color: #000000; background-color: #ffffff">Text color: black, background-color: white</p>
@@ -250,8 +256,9 @@ x <- c(4, 5, 8, 9, 5)
 mean(x)
 ```
 Depois basta teclar enter para obter o resultado.
-
-<p style="color: #ffffff; background-color: #ff0000">Efetuando várias medidas -  cálculo de $\bar{x}$</p>
+<div style="font-size: large; text-align: center; font-family: sans-serif">
+<p style="color: #ff0000; background-color: #ffffff">Efetuando várias medidas -  cálculo de $\bar{x}$</p>
+</div>
 
 > Calcule a média aritmética das seguintes medidas: 10, 20, 30, 50, 100, 123, 233.
 
@@ -444,3 +451,5 @@ Er
 test_output_contains("0.04081", incorrect_msg = "Você armazenou corretamente 9.8 na varável g e 10.2 na varável gr?")
 success_msg("Parabéns! Agora você sabe calcular o erro relativo usando o R!")
 ```
+
+
