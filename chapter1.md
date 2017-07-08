@@ -44,8 +44,8 @@ success_msg("Parabéns! Veja como o console mostra o resultado do seu código. A
 
 Sendo um ambiente de desenvolvimento integrado para cálculos estatísticos e gráficos, o R possui uma grande quantidade de comandos. Veremos alguns comandos básicos. 
 
-```{r}
-3 + 6 + 12   # soma   
+```{r}   
+3 + 6 + 12  # soma      
 [1] 6
 ```
 ```{r}
@@ -86,7 +86,7 @@ ou
 sqrt(32) # raiz quadrada de 32
 [1] 5.656854
 ```
-<p style="color: #ff0000; background-color: #ffffff">Comandos para funções trigométricas, expressões algébrica e sequências numéricas Text color: red, background-color: white</p>
+<p style="color: #ff0000; background-color: #ffffff">Comandos para funções trigométricas, expressões algébrica e sequências numéricas</p>
 
 ```{r}
 sin(pi) # seno de pi constante
@@ -126,8 +126,7 @@ sum((1:10)^2) # somá-los.
 10^(0:6) # faz 10 elevado a cada número da sequência e... 
 [1] 1e+00 1e+01 1e+02 1e+03 1e+04 1e+05 1e+06
 ```
-
-<p style="color: #ff0000; background-color: #ffffff">Explorando a função log10 Text color: red, background-color: white</p>
+<p style="color: #ff0000; background-color: #ffffff">Explorando a função log10</p>
 
 Vamos utilizar alguns comandos já visto para resolvermos logaritmos. Na matemática, o logaritmo comum ou decimal de um número é o expoente a que a base deve ser elevado para produzir este número. Por exemplo, o logaritmo de 100 na base 10 é 2, pois 10 ao quadrado é 100. Veja como calcular o log de 100:
 
@@ -150,23 +149,27 @@ Calcule no R quanto vale a seguinte soma de logs:
 $$\sqrt{log(1)}+\sqrt{log(10)}+\sqrt{log(100)}+ \sqrt{log(1000)}+\sqrt{log(10000)}+ \sqrt{log(100000)}+\sqrt{log(10000000)}$$
 
 Passo-a-passo:
+
 ```{r}
 10^(0:7) # fazer 10 elevado a cada número da sequência e... 
- 10^(0:7)
 [1] 1e+00 1e+01 1e+02 1e+03 1e+04 1e+05 1e+06 1e+07   ## faz 10 elevado a cada número da sequência e...
 ```
+
 ```{r}
-log(10^(0:7))   #   determina seus logs na sequência e...
+log(10^(0:7))   # determinar seus logs na sequência e...
 [1]  0.000000  2.302585  4.605170  6.907755  9.210340 11.512925 13.815511 16.118096
 ```
+
 ```{r}
 sqrt(log(10^(0:7)))  # suas respectivas raizes e...
 [1] 0.000000 1.517427 2.145966 2.628261 3.034854 3.393070 3.716922 4.014735
 ```
+
 ```{r}
 sum(sqrt(log(10^(0:7)))) # somá-las
 [1] 20.45124
 ```
+
 *** =instructions
 Digite a soma de 10 mais 6 (, digite a multiplicação de 50 vezes 6.
 Depois digite 400 dividido por 4 mais 10 e crie uma sequência de números de 10 a 50.
