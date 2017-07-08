@@ -565,5 +565,5 @@ as raízes são reais: -1 e 4
 *** =sct
 ```{r}
 test_output_contains("as raízes são reais: -1 e 4", incorrect_msg = "Atribua a fórmula correta para a variável tempo1")
-success_msg("Bom trabalho! Você adquiriu noções sobre: a equação horária de um corpo em MRUV, como desenvolver uma função para determinar o instante (raiz) ou instantes (raízes) em que um móvel passa pela origem (0) da trajetória!")
+success_msg("Parabéns! Você adquiriu noções sobre: a equação horária de um corpo em MRUV, como desenvolver uma função para determinar o instante (raiz) ou instantes (raízes) em que um móvel passa pela origem (0) da trajetória!")
 ```
