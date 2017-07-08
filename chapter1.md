@@ -549,6 +549,7 @@ funcraiz <- function(a,b,c){
     }
 }
 funcraiz(1, -3, -4)
+as raízes são -1 e 4
 ```
 *** =solution
 
@@ -564,6 +565,7 @@ funcraiz <- function(a,b,c){
     }
 }
 funcraiz(1, -3, -4)
+as raízes são -1 e 4
 ```
 *** =sct
 ```{r}
