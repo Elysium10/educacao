@@ -535,24 +535,24 @@ Escolha a equação que tenha os seguintes coeficientes dentro dos parênteses: 
 ```
 *** =sample_code
 ```{r}
-funcraiz <- function(a,b,c){
-    delta <- b^2-4*a*c
+coeficientes <- function(a,b,c){
+    delta <- b^2 - 4*a*c
     if(delta<0){
-        cat("Essa equação de movimento não possui raízes reais - são raízes complexas - escolha outra.")
+        cat("Essa equação de movimento não possui raízes reais - são raízes complexas. Tente outra")
     } else{
-        tempo1 <-(-b-sqrt(delta))/(2*a)
-        tempo2 <-(-b+sqrt(delta))/(2*a)
-        cat(tempo1,tempo2)
+        tempo1 <- (-b - sqrt(delta))/(2*a)
+        tempo2 <- (-b + sqrt(delta))/(2*a)
+        cat("as raízes (instantes) são", tempo1, "e", tempo2)
     }
 }
-funcraiz(1,-3,-4)
+coeficientes (1, -3, -4)
 ```
 *** =solution
 ```{r}
--1,4
+b^2 - 4*a*c
 ```
 *** =sct
 ```{r}
-test_output_contains("-1,4", incorrect_msg = "Atribua a fórmula correta para a variável tempo1")
+test_output_contains("b^2 - 4*a*c", incorrect_msg = "Atribua a fórmula correta para a variável tempo1")
 success_msg("Parabéns! Você adquiriu noções sobre: a equação horária de um corpo em MRUV, como desenvolver uma função para determinar o instante (raiz) ou instantes (raízes) em que um móvel passa pela origem (0) da trajetória!")
 ```
