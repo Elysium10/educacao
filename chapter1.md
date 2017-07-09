@@ -461,8 +461,6 @@ Equação horária do MRUV
 
 Na Física temos o conhecido Movimento Retilíneo Uniformemente Variado(MRUV), onde a velocidade de um móvel varia igualmente em intervalos de tempos iguais, ou seja, sua acelaração é constante. A equação horária do movimento é definida por
 
-
-
 Exemplos de equações horárias de movimentos de móveis
 
 $$S = 6 - 5t + 1t^{2}$$ ==> Coeficientes:  a = 1,  b = -5,  c = 6.   Raízes: 2 e 3. 
