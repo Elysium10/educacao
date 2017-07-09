@@ -565,7 +565,7 @@ coeficientes (1, -3, -4)
 *** =sct
 ```{r}
 test_output_contains("coeficientes (1, -3, -4)", incorrect_msg = "O nome da função é coeficientes. Digite o nome da função com os seus respectivos coeficientes e tecle Enter.")
-success_msg("Parabéns! Você adquiriu noções sobre: a equação horária de um corpo em MRUV, como desenvolver uma função para determinar o instante (raiz) ou instantes (raízes) em que um móvel passa pela origem (0) da trajetória!. Relembrou que, na Física Clássica não existe tempo negativo, por isso as raízes devem ser positivas")
+success_msg("Bom trabalho! Você adquiriu noções sobre: a equação horária de um corpo em MRUV, como desenvolver uma função em R para determinar o instante ou instantes em que um móvel passa pela origem (0) da trajetória e observou que as raízes devem ser sempre positivas")
 ```
 
 
