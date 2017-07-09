@@ -529,18 +529,35 @@ as raízes são 2 e 3
 - Execute a função digitando-a pelo nome, conforme mostrado no exemplo anterior. Use a seguinte equação:
 $$S = -4 - 3t + t^{2}.$$
 
-- A resposta do problema é que o móvel, regido pela equação dada, passa pela origem da trajetória no instante (raiz) 4 segundos. 
+- A resposta do problema é que, de acordo com a equação, o móvel passa pela origem da trajetória no instante (raiz) 4 segundos. 
 
 *** =hint
 
+- O nome dado à função foi: coeficientes.
+
+- Digite o nome da função com seus coeficientes entre parênteses.
 
 *** =pre_exercise_code
 ```{r}
+
+# no pec
 
 ```
 
 *** =sample_code
 ```{r}
+
+coeficientes <- function(a,b,c){
+    delta <- b^2 - 4*a*c
+    if(delta<0){
+        cat("Essa equação de movimento não possui raízes reais - são raízes complexas. Tente outra")
+    } else{
+        tempo1 <- (-b - sqrt(delta))/(2*a)
+        tempo2 <- (-b + sqrt(delta))/(2*a)
+        cat("as raízes (instantes) são", tempo1, "e", tempo2)
+    }
+}
+# Digite na linha abaixo o nome da função (coeficientes) com os seus respectivos coeficientes e tecle Enter.
 
 ```
 
