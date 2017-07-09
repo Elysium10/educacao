@@ -536,7 +536,7 @@ Escolha a equação que tenha os seguintes coeficientes dentro dos parênteses: 
 *** =sample_code
 ```{r}
 coeficientes <- function(a,b,c){
-    delta <- b^2 - 4*a*c
+    delta <- 
     if(delta<0){
         cat("Essa equação de movimento não possui raízes reais - são raízes complexas. Tente outra")
     } else{
@@ -549,7 +549,17 @@ coeficientes (1, -3, -4)
 ```
 *** =solution
 ```{r}
-b^2 - 4*a*c
+coeficientes <- function(a,b,c){
+    delta <- (b^2 - 4*a*c)
+    if(delta<0){
+        cat("Essa equação de movimento não possui raízes reais - são raízes complexas. Tente outra")
+    } else{
+        tempo1 <- (-b - sqrt(delta))/(2*a)
+        tempo2 <- (-b + sqrt(delta))/(2*a)
+        cat("as raízes (instantes) são", tempo1, "e", tempo2)
+    }
+}
+coeficientes (1, -3, -4)
 ```
 *** =sct
 ```{r}
