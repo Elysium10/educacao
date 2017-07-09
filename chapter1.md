@@ -480,11 +480,11 @@ com coeficientes: a = 1, b = -5, c = 6. Raízes: 2 e 3.
 $$S = 30 + 20t - 5t^{2}$$
 com coeficientes:  a = -5,  b = 20,  c = 30. Raízes: -1.162278 e 5.162278.
 $$S = 6 + 8t + 4t^{2}$$  
-com coeficientes:  a = -4,  b = 8,  c = 6. Raízes: complexas. 
+com coeficientes:  a = -4,  b = 8,  c = 6. Raízes:  complexas. 
 $$S = -2 - 3t + 5t^{2}$$ 
 com coeficientes:  a = -5,  b = 3,  c = 2. Raízes:  -0.4 e 1.
 $$S = -20 - t + t^{2}$$  
-com coeficientes:  a = -1,  b = -1,  c = -20. Raízes: -4 e 5.
+com coeficientes:  a = -1,  b = -1,  c = -20. Raízes:  -4 e 5.
 $$S = -4 - 3t + t^{2}$$
 com coeficientes:  a = -1,  b = -3,  c = -4. Raízes: -1 e 4. 
 $$S = 7 - 8t + t^{2}$$
