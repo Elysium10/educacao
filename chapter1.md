@@ -475,27 +475,20 @@ success_msg("Bom trabalho! Neste tópico aprendemos aprendemos a somar, tirar ra
 - Na Física temos o conhecido Movimento Retilíneo Uniformemente Variado(MRUV), onde a velocidade de um móvel varia igualmente em intervalos de tempos iguais, ou seja, sua acelaração é constante. A equação horária desse tipo de movimento equivale a uma equação do 2º grau, onde a condição para que o móvel passe pela origem da trajetória é determinada quando o espaço final (S) percorrido for igual a zero.
 
 - Exemplos de equações horárias de movimentos de móveis:
-
 $$S = 6 - 5t + 1t^{2}$$
-
-<div style="font-size: large; font-family: sans-serif">
-  <p style="color: #000000; background-color: #ffffff">Com coeficientes:  a = 1,  b = -5,  c = 6.   Raízes: 2 e 3</p>
-</div>
-
-
-
-$$S = 30 + 20t - 5t^{2}$$ ==> Coeficientes:  a = -5,  b = 20,  c = 30.  Raízes: -1.162278 e 5.162278.
-
-$$S = 6 + 8t + 4t^{2}$$  ==> Coeficientes:  a = -4,  b = 8,  c = 6.  Raízes: complexas. 
-
-$$S = -2 - 3t + 5t^{2}$$ ==>  Coeficientes:  a = -5,  b = 3,  c = 2.  Raízes:  -0.4 e 1. 
-
-$$S = -20 - t + t^{2}$$ ==> Coeficientes:  a = -1,  b = -1,  c = -20.  Raízes: -4 e 5. 
-
-$$S = -4 - 3t + t^{2}$$ ==> Coeficientes:  a = -1,  b = -3,  c = -4.  Raízes: -1 e 4. 
-
-$$S = 7 - 8t + t^{2}$$  ==> Coeficientes:  a = -1,  b = -8,  c = 7.  Raízes: 1 e 7.
-
+com coeficientes: a = 1, b = -5, c = 6. Raízes: 2 e 3.
+$$S = 30 + 20t - 5t^{2}$$
+com coeficientes:  a = -5,  b = 20,  c = 30. Raízes: -1.162278 e 5.162278.
+$$S = 6 + 8t + 4t^{2}$$  
+com coeficientes:  a = -4,  b = 8,  c = 6. Raízes: complexas. 
+$$S = -2 - 3t + 5t^{2}$$ 
+com coeficientes:  a = -5,  b = 3,  c = 2. Raízes:  -0.4 e 1.
+$$S = -20 - t + t^{2}$$  
+com coeficientes:  a = -1,  b = -1,  c = -20. Raízes: -4 e 5.
+$$S = -4 - 3t + t^{2}$$
+com coeficientes:  a = -1,  b = -3,  c = -4. Raízes: -1 e 4. 
+$$S = 7 - 8t + t^{2}$$
+com coeficientes:  a = -1,  b = -8,  c = 7. Raízes: 1 e 7.
 ### Criando a função passo-a-passo
 
 - É necessário criarmos uma função para o cálculo do instante (ou instantes) em que o móvel passa pela origem da trajetória. 
