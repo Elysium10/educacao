@@ -467,3 +467,67 @@ Adicione uma linha em R que crie uma sequência de números de 10 a 50, conforme
 test_output_contains("10:50", incorrect_msg = "Coloque dois pontos no meio dos números que vão delimitar a sequência!")
 success_msg("Bom trabalho! Neste tópico aprendemos aprendemos a somar, tirar raiz quadrada, criar sequências numéricas, elevar seus respectivos números ao quadrado, determinar seus logs, suas respectivas raízes e somá-las. ")
 ```
+
+
+--- type:NormalExercise lang:r xp:100 skills:1 key:6026cdef55
+## Criando uma função no R
+
+# Equação horária do MRUV
+
+Na Física temos o conhecido Movimento Retilíneo Uniformemente Variado(MRUV), onde a velocidade de um móvel varia igualmente em intervalos de tempos iguais, ou seja, sua acelaração é constante. A equação horária desse tipo de movimento equivale a uma equação do 2º grau, onde a condição para que o móvel passe pela origem da trajetória é determinada quando o espaço final (S) percorrido for igual a zero.
+
+Exemplos de equações horárias de movimentos de móveis
+
+$$S = 6 - 5t + 1t^{2}$$ ==> Coeficientes:  a = 1,  b = -5,  c = 6.   Raízes: 2 e 3. 
+
+$$S = 30 + 20t - 5t^{2}$$ ==> Coeficientes:  a = -5,  b = 20,  c = 30.  Raízes: -1.162278 e 5.162278.
+
+$$S = 6 + 8t + 4t^{2}$$  ==> Coeficientes:  a = -4,  b = 8,  c = 6.  Raízes: complexas. 
+
+$$S = -2 - 3t + 5t^{2}$$ ==>  Coeficientes:  a = -5,  b = 3,  c = 2.  Raízes:  -0.4 e 1. 
+
+$$S = -20 - t + t^{2}$$ ==> Coeficientes:  a = -1,  b = -1,  c = -20.  Raízes: -4 e 5. 
+
+$$S = -4 - 3t + t^{2}$$ ==> Coeficientes:  a = -1,  b = -3,  c = -4.  Raízes: -1 e 4. 
+
+$$S = 7 - 8t + t^{2}$$  ==> Coeficientes:  a = -1,  b = -8,  c = 7.  Raízes: 1 e 7.
+
+
+## Criando a função passo-a-passo
+
+- É necessário criarmos uma função para o cálculo do instante (ou instantes) em que o móvel passa pela origem da trajetória. 
+
+- No caso dessa função, vamos chamar estes instantes de tempo1 e tempo2 que correspondem às raízes da equação. 
+
+- O nome da função será "raízes". Atribua a ele o comando function( ). A função precisará de informações ou argumentos: coloque nos parênteses os coeficientes separados por vírgula (a, b, c). 
+
+- A partir daí delimite por chaves os comandos necessários para a funçãos. O return() é um comando não obrigatório, mas que é bastante comum no final das funções. Não o usaremos aqui. 
+
+- Depois de tudo pronto, execute a função digitando-a pelo nome com os argumentos dentro dos parênteses (a, b, c). Assim:
+
+
+*** =instructions
+
+
+
+*** =hint
+
+*** =pre_exercise_code
+```{r}
+
+```
+
+*** =sample_code
+```{r}
+
+```
+
+*** =solution
+```{r}
+
+```
+
+*** =sct
+```{r}
+
+```
