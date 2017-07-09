@@ -461,7 +461,7 @@ Equação horária do MRUV
 
 Na Física temos o conhecido Movimento Retilíneo Uniformemente Variado(MRUV), onde a velocidade de um móvel varia igualmente em intervalos de tempos iguais, ou seja, sua acelaração é constante. A equação horária do movimento é definida por
 
-$$S = S_{0} + v_{0}t +\frac{at^{2}}{2}\cdot$$
+$S = S_{0} + v_{0}t + \frac{at^{2}}{2}\cdot$
 
 Temos aí uma equação do 2º grau, onde a condição para que o móvel passe pela origem da trajetória é determinada quando o espaço final percorrido for igual a zero:
 
@@ -469,7 +469,7 @@ $S = 0$.
 
 Portanto, a equação horária do movimento do móvel torna-se
 
-$$0 = S_{0} + v_{0}t + \frac{at^{2}}{2} \cdot$$
+$0 = S_{0} + v_{0}t + \frac{at^{2}}{2}\cdot$
 
 Exemplos de equações horárias de movimentos de móveis
 
