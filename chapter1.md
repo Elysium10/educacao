@@ -522,7 +522,8 @@ as raízes são 2 e 3
 - Nas equações dadas você vai aplicar a condição para que o móvel passe pela origem da trajetória, quando $S = 0$, e depois criar uma função que determine as raízes das equações horárias e mostrar as raízes na tela. 
 - Escolha um nome (coeficientes) para a função. Atribua a ele o comando function( ). Dentro dos parênteses do comando function digite os argumentos separados por vírgula (a, b, c). A partir daí delimite por chaves os comandos necessários para a função como no exemplo anterior. Execute a função digitando-a pelo nome, conforme mostrado no exemplo anterior. Use a seguinte equação:
 $$S = -4 - 3t + t^{2}.$$
-- Após o termino dessa atividade, execute a função criada para com todas as equações exemplificadas. 
+- Após o termino dessa atividade, execute a função criada para com todas as equações exemplificadas.
+- A resposta do problema é que o móvel, regido pela equação dada, passa pela origem da trajetória no instante (raiz) 4 segundos. 
 
 *** =hint
 O nome dado à função é "coeficientes".
@@ -543,7 +544,7 @@ coeficientes <- function(a,b,c){
         cat("as raízes (instantes) são", tempo1, "e", tempo2)
     }
 }
-# Digite o nome da função com os seus respectivos coeficientes e tecle Enter.
+# Digite na linha abaixo o nome da função com os seus respectivos coeficientes e tecle Enter.
 
 ```
 
@@ -565,7 +566,7 @@ coeficientes (1, -3, -4)
 *** =sct
 ```{r}
 test_output_contains("coeficientes (1, -3, -4)", incorrect_msg = "O nome da função é coeficientes. Digite o nome da função com os seus respectivos coeficientes e tecle Enter.")
-success_msg("Bom trabalho! Você adquiriu noções sobre: a equação horária do MRUV e desenvolveu uma função em R para determinar o instante ou instantes em que um móvel passa pela origem (0) da trajetória.")
+success_msg("Bom trabalho! Você adquiriu noções sobre a equação horária do MRUV e desenvolveu uma função para determinar o instante (raiz) ou instantes (raízes) em que um móvel passa pela origem (0) da trajetória.")
 ```
 
 
