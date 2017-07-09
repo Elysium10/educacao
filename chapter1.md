@@ -563,6 +563,6 @@ coeficientes (1, -3, -4)
 
 *** =sct
 ```{r}
-test_output_contains("b^2 - 4*a*c", incorrect_msg = "Atribua a fórmula correta para a variável delta")
+test_output_contains("as raízes (instantes) são -1 e 4", incorrect_msg = "Atribua a fórmula correta para a variável delta")
 success_msg("Parabéns! Você adquiriu noções sobre: a equação horária de um corpo em MRUV, como desenvolver uma função para determinar o instante (raiz) ou instantes (raízes) em que um móvel passa pela origem (0) da trajetória!")
 ```
