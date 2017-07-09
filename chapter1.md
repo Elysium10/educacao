@@ -479,8 +479,10 @@ success_msg("Bom trabalho! Neste tópico aprendemos aprendemos a somar, tirar ra
 $$S = 6 - 5t + 1t^{2}$$
 
 <div style="font-size: large; font-family: sans-serif">
-  <p style="color: #000000; background-color: #ffffff">- Com coeficientes:  a = 1,  b = -5,  c = 6.   Raízes: 2 e 3. </p>
+  <p style="color: #000000; background-color: #ffffff">Com coeficientes:  a = 1,  b = -5,  c = 6.   Raízes: 2 e 3</p>
 </div>
+
+
 
 $$S = 30 + 20t - 5t^{2}$$ ==> Coeficientes:  a = -5,  b = 20,  c = 30.  Raízes: -1.162278 e 5.162278.
 
