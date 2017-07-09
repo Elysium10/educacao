@@ -520,7 +520,7 @@ as raízes são 2 e 3
 
 *** =instructions
 - Nas equações dadas você vai aplicar a condição para que o móvel passe pela origem da trajetória, quando $S = 0$, e depois criar uma função que determine as raízes das equações horárias e mostrar as raízes na tela. 
-- Escolha um nome (funcraiz) para a função. Atribua a ele o comando function( ). Dentro dos parênteses do comando function digite os argumentos separados por vírgula (a, b, c). A partir daí delimite por chaves os comandos necessários para a função como no exemplo anterior. Execute a função digitando-a pelo nome, conforme mostrado no exemplo anterior. Use a seguinte equação:
+- Escolha um nome (coeficientes) para a função. Atribua a ele o comando function( ). Dentro dos parênteses do comando function digite os argumentos separados por vírgula (a, b, c). A partir daí delimite por chaves os comandos necessários para a função como no exemplo anterior. Execute a função digitando-a pelo nome, conforme mostrado no exemplo anterior. Use a seguinte equação:
 $$S = -4 - 3t + t^{2}.$$
 - Após o termino dessa atividade, execute a função criada para com todas as equações exemplificadas. 
 
