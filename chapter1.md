@@ -79,7 +79,8 @@ Crie um vetor c com as medidas dadas. Armazene o vetor c em uma variável x e us
 *** =sample_code
 ```{r}
 # Calcule a média aritmética pedida
-x <- mean(x)
+
+mean(x)
 ```
 *** =solution
 ```{r}
@@ -91,7 +92,6 @@ mean(x)
 test_output_contains("80.85714", incorrect_msg = "Voce tem certeza que armazenou o vetor c na variavel x?")
 success_msg("Parabéns! Agora você sabe calcular a média aritmética usando o R!")
 ```
-
 --- type:NormalExercise lang:r xp:100 skills:1 key:dd48eb091a
 ## Erro absoluto (E)
 
@@ -415,5 +415,5 @@ Adicione uma linha em R que crie uma sequência de números de 10 a 50, conforme
 *** =sct
 ```{r}
 test_output_contains("10:50", incorrect_msg = "Coloque dois pontos no meio dos números que vão delimitar a sequência!")
-success_msg("Bom trabalho! Neste tópico aprendemos sobre alguns comandos básicos e enfatizamos as operações matemáticas. Apredemos a somar, tirar raiz quadrada, criar sequências numéricas, elevar seus respectivos números ao quadrado, determinar seus logs na sequência, determinar suas respectivas raizes e somá-las. Veja como o console mostra o resultado do seu código.")
+success_msg("Bom trabalho! Neste tópico aprendemos aprendemos a somar, tirar raiz quadrada, criar sequências numéricas, elevar seus respectivos números ao quadrado, determinar seus logs, suas respectivas raizes e somá-las. ")
 ```
