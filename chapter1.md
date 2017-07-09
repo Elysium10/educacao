@@ -437,13 +437,15 @@ sum(sqrt(log(10^(0:7))))
 
 *** =instructions
 
-* Digite a soma de 10 mais 6 e a multiplicação de 50 vezes 6.
+* Digite a soma de 10 mais 6 e a multiplicação de 50 vezes 6 (já feito).
 
-* Depois digite 400 dividido por 4 mais 10 e crie uma sequência de números de 10 a 50.
+* Depois digite 400 dividido por 4 mais 10 e crie uma sequência de números de 10 a 50 (já feito).
+
+* Digite expressão para a soma das raízes dos logs dos números da sequência 1,  2,  4,  8 e 16.
 
 *** =hint
 
-- Adicione uma linha em R que crie uma sequência de números de 10 a 50, conforme foi mostrado no código de exemplo!
+- A expressão é semelhante a que foi mostrada nesse tópico! Crie a sequência com 2 elevado a 0:5.
 
 *** =pre_exercise_code
 ```{r}
@@ -470,7 +472,7 @@ sum(sqrt(log(2^(0:5))))
 ```
 *** =sct
 ```{r}
-test_output_contains("sum(sqrt(log(2^(0:5))))", incorrect_msg = "Coloque dois pontos no meio dos números que vão delimitar a sequência!")
+test_output_contains("sum(sqrt(log(2^(0:5))))", incorrect_msg = "Os números da sequência são 1,  2,  4,  8 e 16. Crie essa sequência elevando dois a 0:5, como visto no tópico.")
 success_msg("Bom trabalho! Neste tópico aprendemos aprendemos a somar, tirar raiz quadrada, criar sequências numéricas, elevar seus respectivos números ao quadrado, determinar seus logs, suas respectivas raízes e somá-las. ")
 ```
 --- type:NormalExercise lang:r xp:100 skills:1 key:6026cdef55
