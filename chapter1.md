@@ -489,6 +489,7 @@ $$S = -4 - 3t + t^{2}$$
 com coeficientes:  a = -1,  b = -3,  c = -4. Raízes: -1 e 4. 
 $$S = 7 - 8t + t^{2}$$
 com coeficientes:  a = -1,  b = -8,  c = 7. Raízes: 1 e 7.
+
 ### Criando a função passo-a-passo
 
 - É necessário criarmos uma função para o cálculo do instante (ou instantes) em que o móvel passa pela origem da trajetória. 
@@ -513,20 +514,25 @@ coefic <- function(a,b,c){
     }
 }
 ```
-- Depois basta digitar, por exemplo, os coeficientes das raízes: coefic (1, -5, 6) e teclar "Enter". Em seguida aparecerá na tela as duas raízes que são os intantes na Física. Na prática o tempo sempre é positivo, por isso, qualquer raiz negativa ou complexa será desconsiderada. Veja exemplo:
+- Depois basta digitar, por exemplo, os coeficientes das raízes: coefic (1, -5, 6) e teclar "Enter". Em seguida aparecerá na tela as duas raízes que são os intantes na Física. Na prática o tempo sempre é positivo, por isso, qualquer raiz negativa (complexa) será desconsiderada. Você pode executar esse procedimento para todas as equações dadas no tópico. Veja exemplo:
 
 ```{r}
 > coefic (1, -5, 6)
 as raízes são 2 e 3 
 ```
-
-
-
 *** =instructions
 
+- Nas equação dada vai aplicar a condição para que o móvel passe pela origem da trajetória, quando $S = 0$, e depois criar uma função que determine e mostre as raízes na tela;
 
+- Escolha um nome (coeficientes) para a função. Atribua a ele o comando function( ). Dentro dos parênteses do comando function digite os argumentos separados por vírgula (a, b, c). A partir daí delimite por chaves os comandos necessários para a função;
+
+- Execute a função digitando-a pelo nome, conforme mostrado no exemplo anterior. Use a seguinte equação:
+$$S = -4 - 3t + t^{2}.$$
+
+- A resposta do problema é que o móvel, regido pela equação dada, passa pela origem da trajetória no instante (raiz) 4 segundos. 
 
 *** =hint
+
 
 *** =pre_exercise_code
 ```{r}
