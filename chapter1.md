@@ -468,7 +468,6 @@ sum(sqrt(log(10^(0:7))))
 *** =solution
 ```{r}
 sum(sqrt(log(2^(0:5))))
-
 ```
 *** =sct
 ```{r}
