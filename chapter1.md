@@ -469,7 +469,7 @@ $S = 0$.
 
 Portanto, a equação horária do movimento do móvel torna-se
 
-$$0 = S_{0} + v_{0}t +\frac{at^{2}}{2}\cdot$$
+$$0 = S_{0} + v_{0}t + \frac{at^{2}}{2} \cdot$$
 
 Exemplos de equações horárias de movimentos de móveis
 
