@@ -470,11 +470,12 @@ success_msg("Bom trabalho! Neste tópico aprendemos aprendemos a somar, tirar ra
 --- type:NormalExercise lang:r xp:100 skills:1 key:6026cdef55
 ## Criando uma função no R
 
-### Equação horária do MRUV
+> Equação horária do MRUV
 
 - Na Física temos o conhecido Movimento Retilíneo Uniformemente Variado(MRUV), onde a velocidade de um móvel varia igualmente em intervalos de tempos iguais, ou seja, sua acelaração é constante. A equação horária desse tipo de movimento equivale a uma equação do 2º grau, onde a condição para que o móvel passe pela origem da trajetória é determinada quando o espaço final (S) percorrido for igual a zero.
 
-- Exemplos de equações horárias de movimentos de móveis:
+> Exemplos de equações horárias de movimentos de móveis:
+
 $$S = 6 - 5t + 1t^{2}$$
 com coeficientes: a = 1, b = -5, c = 6. Raízes: 2 e 3.
 $$S = 30 + 20t - 5t^{2}$$
@@ -490,7 +491,7 @@ com coeficientes:  a = -1,  b = -3,  c = -4. Raízes: -1 e 4.
 $$S = 7 - 8t + t^{2}$$
 com coeficientes:  a = -1,  b = -8,  c = 7. Raízes: 1 e 7.
 
-### Criando a função passo-a-passo
+> Criando a função passo-a-passo
 
 - É necessário criarmos uma função para o cálculo do instante (ou instantes) em que o móvel passa pela origem da trajetória. 
 
@@ -522,14 +523,14 @@ as raízes são 2 e 3
 ```
 *** =instructions
 
-- Nas equação dada vai aplicar a condição para que o móvel passe pela origem da trajetória, quando $S = 0$, e depois criar uma função que determine e mostre as raízes na tela;
+* Aplique a condição para que o móvel passe pela origem da trajetória, quando $S = 0$. Crie uma função que determine e mostre as raízes na tela;
 
-- Escolha um nome (coeficientes) para a função. Atribua a ele o comando function( ). Dentro dos parênteses do comando function digite os argumentos separados por vírgula (a, b, c). A partir daí delimite por chaves os comandos necessários para a função;
+* Escolha um nome (coeficientes) para a função. Atribua a ele o comando function( ). Dentro dos parênteses do comando function digite os argumentos separados por vírgula (a, b, c). A partir daí delimite por chaves os comandos necessários para a função;
 
-- Execute a função digitando-a pelo nome, conforme mostrado no exemplo anterior. Use a seguinte equação:
+* Execute a função digitando-a pelo nome, conforme mostrado no exemplo anterior. Use a seguinte equação:
 $$S = -4 - 3t + t^{2}.$$
 
-- A resposta do problema é que, de acordo com a equação, o móvel passa pela origem da trajetória no instante (raiz) 4 segundos. 
+* A resposta do problema é que, de acordo com a equação, o móvel passa pela origem da trajetória no instante (raiz) 4 segundos. 
 
 *** =hint
 
