@@ -527,8 +527,6 @@ $$S = -4 - 3t + t^{2}.$$
 *** =hint
 Escolha o nome da função como funcraiz.
 Atribua à variável delta a fórmula correta ==> b^2 - 4*a*c
-Execute a função digitando-a pelo nome(funcraiz). Os argumentos são os coeficientes.
-Escolha a equação que tenha os seguintes coeficientes dentro dos parênteses: funraiz(1, -3, -4).
 *** =pre_exercise_code
 ```{r}
 # no pec
@@ -547,6 +545,7 @@ coeficientes <- function(a,b,c){
 }
 coeficientes (1, -3, -4)
 ```
+
 *** =solution
 ```{r}
 coeficientes <- function(a,b,c){
@@ -561,8 +560,9 @@ coeficientes <- function(a,b,c){
 }
 coeficientes (1, -3, -4)
 ```
+
 *** =sct
 ```{r}
-test_output_contains("b^2 - 4*a*c", incorrect_msg = "Atribua a fórmula correta para a variável tempo1")
+test_output_contains("b^2 - 4*a*c", incorrect_msg = "Atribua a fórmula correta para a variável delta")
 success_msg("Parabéns! Você adquiriu noções sobre: a equação horária de um corpo em MRUV, como desenvolver uma função para determinar o instante (raiz) ou instantes (raízes) em que um móvel passa pela origem (0) da trajetória!")
 ```
