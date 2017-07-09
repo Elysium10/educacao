@@ -507,12 +507,20 @@ coefic <- function(a,b,c){
     if(delta<0){
         cat("Essa equação de movimento não possui raízes reais - são raízes complexas")
     } else{
-        tempo1 <- (-b - sqrt(delta))/(2*a)
-        tempo2 <- (-b + sqrt(delta))/(2*a)
+        raiz1 <- (-b - sqrt(delta))/(2*a)
+        raiz2 <- (-b + sqrt(delta))/(2*a)
         cat("as raízes são reais:", raiz1, "e", raiz2)
     }
 }
 ```
+- Depois basta digitar, por exemplo, os coeficientes das raízes: coefic (1, -5, 6) e teclar "Enter". Em seguida aparecerá na tela as duas raízes que são os intantes na Física. Na prática o tempo sempre é positivo, por isso, qualquer raiz negativa ou complexa será desconsiderada. Veja exemplo:
+
+```{r}
+> coefic (1, -5, 6)
+as raízes são 2 e 3 
+```
+
+
 
 *** =instructions
 
