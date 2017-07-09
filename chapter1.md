@@ -454,7 +454,7 @@ success_msg("Parabéns! Agora você sabe calcular o erro relativo usando o R!")
 
 --- type:NormalExercise lang:r xp:100 skills:1 key:bc1c9884e2
 
-## Criando uma função para determinar as raízes de equações do 2º grau
+## Criando uma função no R
 
 <div style="font-size: large; text-align: center; font-family: sans-serif">
 <p style="color: #FFFFFF; background-color: #33A0C3">Equação horária do MRUV</p></div>
