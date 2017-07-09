@@ -7,10 +7,12 @@ attachments :
 ## Comandos básicos do R
 
 *** =instructions
+
 - O editor à direita possui um código de exemplo. Você consegue identificar quais linhas são códigos em R e quais são comentários?
 - Adicione uma linha de código que calcule a soma de 6 + 12, e clique no botão ‘Submit Answer’.
 
 *** =hint
+
 Adicione uma linha em R que calcule 6 + 12, exatamente igual ao código de exemplo!
 
 *** =pre_exercise_code
@@ -39,6 +41,7 @@ Adicione uma linha em R que calcule 6 + 12, exatamente igual ao código de exemp
 test_output_contains("18", incorrect_msg = "Tenha certeza que você inseriu uma nova linha que some 6 + 12. Não o inicie esta linha com um `#`, senão o código não será  executado!")
 success_msg("Parabéns! Veja como o console mostra o resultado do seu código. Agora, que você está familiarizado com a interface do curso, vamos aprender R!")
 ```
+
 --- type:NormalExercise lang:r xp:100 skills:1 key:bc0cf7b809
 ## Operações aritméticas no ambiente R
 
@@ -200,16 +203,19 @@ sum(sqrt(log(10^(0:7))))
 ```
 
 *** =instructions
+
 Digite a soma de 10 mais 6 (, digite a multiplicação de 50 vezes 6.
 Depois digite 400 dividido por 4 mais 10 e crie uma sequência de números de 10 a 50.
 
 *** =hint
+
 Adicione uma linha em R que crie uma sequência de números de 10 a 50, conforme foi mostrado no código de exemplo!
 
 *** =pre_exercise_code
 ```{r}
 # no pec
 ```
+
 *** =sample_code
 ```{r}
 # Digite a soma de 10 mais 6
@@ -222,18 +228,18 @@ Adicione uma linha em R que crie uma sequência de números de 10 a 50, conforme
 400/4 + 10 
 
 # Crie uma sequência de números de 10 a 50
-
-
 ```
 *** =solution
 ```{r}
 10:50
 ```
+
 *** =sct
 ```{r}
 test_output_contains("10:50", incorrect_msg = "Coloque dois pontos no meio dos números que vão delimitar a sequência!")
 success_msg("Bom trabalho! Neste tópico aprendemos sobre alguns comandos básicos e enfatizamos as operações matemáticas. Apredemos a somar, tirar raiz quadrada, criar sequências numéricas, elevar seus respectivos números ao quadrado, determinar seus logs na sequência, determinar suas respectivas raizes e somá-las. Veja como o console mostra o resultado do seu código.")
 ```
+
 --- type:NormalExercise lang:r xp:100 skills:1 key:955002b2b7
 ## Média aritmética
 
@@ -263,22 +269,25 @@ Depois basta teclar enter para obter o resultado.
 > Calcule a média aritmética das seguintes medidas: 10, 20, 30, 50, 100, 123, 233.
 
 *** =instructions
+
 - Use o mesmo procedimento feito no código acima acima.
 - O vetor é c(10, 20, 30, 50, 100, 123, 233). Armazene-o numa variável.
 
 *** =hint
+
 Crie um vetor c com as medidas dadas. Armazene o vetor c em uma variável x e use o comando mean(x)
 
 *** =pre_exercise_code
 ```{r}
 # no pec
 ```
+
 *** =sample_code
 ```{r}
 # Calcule a média aritmética pedida
 x <- mean(x)
 ```
-*** =*** =solution
+=*** =solution
 ```{r}
 x <- c(10, 20, 30, 50, 100, 123, 233)
 mean(x)
@@ -288,6 +297,7 @@ mean(x)
 test_output_contains("80.85714", incorrect_msg = "Voce tem certeza que armazenou o vetor c na variavel x?")
 success_msg("Bom trabalho! Agora você sabe calcular a média aritmética usando o R!")
 ```
+
 --- type:NormalExercise lang:r xp:100 skills:1 key:dd48eb091a
 ## Erro absoluto (E)
 
@@ -316,9 +326,11 @@ Depois basta teclar enter para obter o resultado.
 > Suponha que você tenha a tarefa de medir várias vezes a altura de uma porta e obteve as seguintes medidas: 2.17, 2.20, 2.15 e 2.12. Se o valor correto da medida da altura da porta corresponde a 2.10m, calcule o erro absoluto (E).
 
 *** =instructions
+
 - Calcule a média aritmética das medidas ==> mean(x). 
 - Subtraia a média encontrada da medida correta ==> m - mean(x). 
 - Obtenha o módulo (valor absoluto) dessa diferença ==> abs(m - mean(x)).
+
 *** =hint
 
 Armazene 2.10 na variável m.
@@ -329,6 +341,7 @@ da medida correta numa variável m e use o comando mean(x).
 ```{r}
 # no pec
 ```
+
 *** =sample_code
 ```{r}
 # Armazene o valor da medida correta. 
@@ -350,13 +363,14 @@ mean(x)
 E <- abs(m - mean(x))
 E 
 ```
+
 *** =sct
 ```{r}
 test_output_contains("0.06", incorrect_msg = "Você armazenor corretamente o vetor x <- c(2.17, 2.20, 2.15, 2.12) na variável x?")
 success_msg("Parabéns! Agora você sabe calcular o erro absoluto usando o R!")
 ```
---- type:NormalExercise lang:r xp:100 skills:1 key:24e7dc599e
 
+--- type:NormalExercise lang:r xp:100 skills:1 key:24e7dc599e
 ## Medida da aceleração da gravidade
 
 > #### Valor teórico da aceleração da gravidade
@@ -364,9 +378,11 @@ success_msg("Parabéns! Agora você sabe calcular o erro absoluto usando o R!")
 > O valor teórico da aceleração da gravidade (g) é aproximadamente igual a 9,8 m/s<SUP>2</SUP>. Suponha que você efetuou várias medidas da aceleração e achou outro valor que corresponde a 10.2 m/s<SUP>2</SUP>. Determine o erro absoluto (E).
 
 *** =instructions
+
 - Nesse caso, a média aritmética corresponde à medida experimental efetuada de 10.2 m/s<SUP>2</SUP>. 
 - Subtraia o valor da medida experimental do valor da medida correta.  
 - Obtenha o módulo (valor absoluto) dessa diferença.
+
 *** =hint
 
 Armazene $9.8m/s^2$ na variável g.
@@ -376,6 +392,7 @@ Armazene a medida efetuada de $10.2m/s^2$ em uma variável qualquer (gr).
 ```{r}
 # no pec
 ```
+
 *** =sample_code
 ```{r}
 # Armazene o valor da medida correta de 9.8. 
@@ -387,6 +404,7 @@ E <- abs(9.8 - 10.2)
 # Mostre o valor do erro na e E na tela, digitando Eteclando Enter.
 E
 ```
+
 *** =solution
 ```{r}
 g <- 9.8
@@ -394,11 +412,13 @@ gr <- 10.2
 E <- abs(g - gr)
 E 
 ```
+
 *** =sct
 ```{r}
 test_output_contains("0.4", incorrect_msg = "Você armazenou corretamente 9.8 na varável g? e 10.2 na varável gr?")
 success_msg("Parabéns! Agora você sabe calcular o erro absoluto usando o R!")
 ```
+
 --- type:NormalExercise lang:r xp:100 skills:1 key:7f8c3148a8
 ## Erro relativo
 
@@ -417,17 +437,22 @@ $\left |g-gr  \right |$ - módulo da diferença entre os valores das medidas te�
 Tanto nesse caso como no exemplo anterior, o valor obtido nas medidas experimentais é o mesmo valor da média aritmética.
 
 *** =instructions
+
 - Mesmo procedimento do exercício anterior: a medida experimental corresponde à média aritmética efetuada de $10.2m/s^2$. 
 - Subtraia o valor da medida experimental do valor da medida correta.  
 - Obtenha o módulo (valor absoluto) dessa diferença e divida pelo valor da medida correta.
+
 *** =hint
+
 Armazene $9.8m/s^2$ na variável g.
 Armazene a medida efetuada de $10.2m/s^2$ em uma variável qualquer (gr).
 Obtenha o módulo (valor absoluto) dessa diferença e divida pelo valor da medida correta.
+
 *** =pre_exercise_code
 ```{r}
 # no pec
 ```
+
 *** =sample_code
 ```{r}
 # Armazene o valor da medida correta de 9.8. 
@@ -439,13 +464,16 @@ Er <- abs(g - gr)/g
 # Mostre o valor do erro relativo, digitando Eteclando Enter.
 Er
 ```
+
 *** =solution
+
 ```{r}
 g <- 9.8
 gr <- 10.2
 Er <- abs(g - gr)/g
 Er 
 ```
+
 *** =sct
 ```{r}
 test_output_contains("0.04081", incorrect_msg = "Você armazenou corretamente 9.8 na varável g e 10.2 na varável gr?")
@@ -453,7 +481,6 @@ success_msg("Parabéns! Agora você sabe calcular o erro relativo usando o R!")
 ```
 
 --- type:NormalExercise lang:r xp:100 skills:1 key:bc1c9884e2
-
 ## Criando uma função no R
 
 <div style="font-size: large; text-align: center; font-family: sans-serif">
@@ -488,7 +515,6 @@ $$S = -4 - 3t + t^{2}$$ ==> Coeficientes:  a = -1,  b = -3,  c = -4.  Raízes: -
 
 $$S = 7 - 8t + t^{2}$$  ==> Coeficientes:  a = -1,  b = -8,  c = 7.  Raízes: 1 e 7.
 
-
 <div style="font-size: large; text-align: center; font-family: sans-serif">
 <p style="color: #FFFFFF; background-color: #33A0C3">Criando a função passo-a-passo</p></div>
 
@@ -512,26 +538,35 @@ raízes(1, -5, 6) e teclar Enter e aparecerá na tela as duas raízes que são o
 ```{r}
 > raízes (1, -5, 6)
 as raízes são 2 e 3 
-
 ```
+
 <div style="font-size: large; text-align: center; font-family: sans-serif">
 <p style="color: #FFFFFF; background-color: #33A0C3">Atividades</p>
 </div>
 
 *** =instructions
-- Nas equações dadas você vai aplicar a condição para que o móvel passe pela origem da trajetória, quando $S = 0$, e depois criar uma função que determine as raízes das equações horárias e mostrar as raízes na tela. 
-- Escolha um nome (coeficientes) para a função. Atribua a ele o comando function( ). Dentro dos parênteses do comando function digite os argumentos separados por vírgula (a, b, c). A partir daí delimite por chaves os comandos necessários para a função como no exemplo anterior. Execute a função digitando-a pelo nome, conforme mostrado no exemplo anterior. Use a seguinte equação:
+
+- Nas equações dadas você vai aplicar a condição para que o móvel passe pela origem da trajetória, quando $S = 0$, e depois criar uma função que determine as raízes das equações horárias e mostrar as raízes na tela.
+
+- Escolha um nome (coeficientes) para a função. Atribua a ele o comando function( ). Dentro dos parênteses do comando function digite os argumentos separados por vírgula (a, b, c). A partir daí delimite por chaves os comandos necessários para a função como no exemplo anterior.
+
+- Execute a função digitando-a pelo nome, conforme mostrado no exemplo anterior. Use a seguinte equação:
 $$S = -4 - 3t + t^{2}.$$
+
 - Após o termino dessa atividade, execute a função criada para com todas as equações exemplificadas.
+
 - A resposta do problema é que o móvel, regido pela equação dada, passa pela origem da trajetória no instante (raiz) 4 segundos. 
 
 *** =hint
-O nome dado à função é "coeficientes".
-Digite o nome da função com seus coeficientes entre parênteses.
+
+- O nome dado à função é "coeficientes".
+- Digite o nome da função com seus coeficientes entre parênteses.
+
 *** =pre_exercise_code
 ```{r}
 # no pec
 ```
+
 *** =sample_code
 ```{r}
 coeficientes <- function(a,b,c){
@@ -580,20 +615,16 @@ success_msg("Bom trabalho! Você adquiriu noções sobre a equação horária do
 
 *** =pre_exercise_code
 ```{r}
-
 ```
 
 *** =sample_code
 ```{r}
-
 ```
 
 *** =solution
 ```{r}
-
 ```
 
 *** =sct
 ```{r}
-
 ```
