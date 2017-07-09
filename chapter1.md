@@ -42,32 +42,27 @@ success_msg("Parabéns! Veja como o console mostra o resultado do seu código. A
 --- type:NormalExercise lang:r xp:100 skills:1 key:955002b2b7
 ## Média aritmética
 
-É o valor que mais se aproxima do valor real. Para obtê-la basta dividir a soma dos valores das medidas efetuadas pelo número destas medidas. Por exemplo, numa experiência foram obtidas as seguintes medidas: 4m, 5m, 8m, 9m, 5m. Em R a média aritmética $\bar{x}$ pode ser calculada da seguinte maneira:
+> É o valor que mais se aproxima do valor real de uma medida. Para obtê-la basta dividir a soma dos valores das medidas efetuadas pelo número destas medidas.
 
-<p style="background-color: rgb(102, 255, 255);">É o valor que mais se aproxima do valor real. Para obtê-la basta dividir a soma dos valores das medidas efetuadas pelo número destas medidas. Por exemplo, numa experiência foram obtidas as seguintes medidas: 4m, 5m, 8m, 9m, 5m. Em R a média aritmética $\bar{x}$ pode ser calculada da seguinte maneira:</p>
+Por exemplo, numa experiência foram obtidas as seguintes medidas: 4m, 5m, 8m, 9m, 5m. Em R a média aritmética $\bar{x}$ pode ser calculada da seguinte maneira:
 
-<div style="font-size: large; font-family: sans-serif">
-  <p style="color: #000000; background-color: #ffffff">Text color: black, background-color: white</p>
-  <p style="color: #ffffff; background-color: #000000">Text color: white, background-color: black</p>
-  <p style="color: #ff0000; background-color: #ffffff">Text color: red, background-color: white</p>
-  <p style="color: blue; background-color: #ffffff">Text color: blue, background-color: white</p>
-  <p style="color: green; background-color: #ffff42">Text color: green, background-color: yellow</p>
-  <p style="color: #ffffff; background-color: #ff0000">Text color: white, background-color: red</p>
-</div>
 
 ```{r}
 x <- c(4, 5, 8, 9, 5)
 mean(x)
 ```
+
 Depois basta teclar enter para obter o resultado.
 
-> #### Efetuando várias medidas -  cálculo de $\bar{x}$
+> Efetuando várias medidas -  cálculo de $\bar{x}$
 
-> Calcule a média aritmética das seguintes medidas: 10, 20, 30, 50, 100, 123, 233.
+* Calcule a média aritmética das seguintes medidas: 10, 20, 30, 50, 100, 123, 233.
 
 *** =instructions
-- Use o mesmo procedimento feito no código acima acima.
-- O vetor é c(10, 20, 30, 50, 100, 123, 233). Armazene-o numa variável.
+
+- Use o mesmo procedimento feito no código deste tópico.
+
+- O vetor é c(10, 20, 30, 50, 100, 123, 233). Armazene-o numa variável x.
 
 *** =hint
 Crie um vetor c com as medidas dadas. Armazene o vetor c em uma variável x e use o comando mean(x)
@@ -78,8 +73,8 @@ Crie um vetor c com as medidas dadas. Armazene o vetor c em uma variável x e us
 ```
 *** =sample_code
 ```{r}
-# Calcule a média aritmética pedida
-
+# Após digitar o comando para atribuir a uma variável x os números 10, 20, 30, 50, 100, 123, 233, determine a média 
+x <- 
 mean(x)
 ```
 *** =solution
@@ -583,7 +578,6 @@ coeficientes <- function(a,b,c){
     }
 }
 coeficientes (1, -3, -4)
-
 ```
 
 *** =sct
