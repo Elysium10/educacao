@@ -525,8 +525,8 @@ $$S = -4 - 3t + t^{2}.$$
 - Após o termino dessa atividade, execute a função criada para com todas as equações exemplificadas. 
 
 *** =hint
-Escolha o nome da função como funcraiz.
-Atribua à variável delta a fórmula correta ==> b^2 - 4*a*c
+O nome dado à função é "coeficientes".
+Digite o nome da função com seus coeficientes entre parênteses.
 *** =pre_exercise_code
 ```{r}
 # no pec
@@ -544,6 +544,7 @@ coeficientes <- function(a,b,c){
     }
 }
 # Digite o nome da função com os seus respectivos coeficientes e tecle Enter.
+
 ```
 
 *** =solution
@@ -563,8 +564,8 @@ coeficientes (1, -3, -4)
 
 *** =sct
 ```{r}
-test_output_contains("coeficientes (1, -3, -4)", incorrect_msg = "Atribua a fórmula correta para a variável delta")
-success_msg("Parabéns! Você adquiriu noções sobre: a equação horária de um corpo em MRUV, como desenvolver uma função para determinar o instante (raiz) ou instantes (raízes) em que um móvel passa pela origem (0) da trajetória!")
+test_output_contains("coeficientes (1, -3, -4)", incorrect_msg = "O nome da função é coeficientes. Digite o nome da função com os seus respectivos coeficientes e tecle Enter.")
+success_msg("Parabéns! Você adquiriu noções sobre: a equação horária de um corpo em MRUV, como desenvolver uma função para determinar o instante (raiz) ou instantes (raízes) em que um móvel passa pela origem (0) da trajetória!. Relembrou que, na Física Clássica não existe tempo negativo, por isso as raízes devem ser positivas")
 ```
 
 
