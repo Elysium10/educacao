@@ -518,7 +518,7 @@ $$S = 7 - 8t + t^{2}$$  ==> Coeficientes:  a = -1,  b = -8,  c = 7.  Raízes: 1 
 <div style="font-size: large; text-align: center; font-family: sans-serif">
 <p style="color: #FFFFFF; background-color: #33A0C3">Criando a função passo-a-passo</p></div>
 
-É necessário criarmos uma função para o cálculo do instante (ou instantes) em que o móvel passa pela origem da trajetória.No caso dessa função, vamos chamar estes instantes de tempo1 e tempo2 que correspondem às raízes da equação. O nome da função será "raízes". Atribua a ele o comando function( ). A função precisará de informações ou argumentos: coloque nos parênteses os coeficientes separados por vírgula (a, b, c). A partir daí delimite por chaves os comandos necessários para a funçãos. O return() é um comando não obrigatório, mas que é bastante comum no final das funções. Não o usaremos aqui. Depois de tudo pronto, execute a função digitando-a pelo nome com os argumentos dentro dos parênteses (a, b, c). Assim: 
+> É necessário criarmos uma função para o cálculo do instante (ou instantes) em que o móvel passa pela origem da trajetória.No caso dessa função, vamos chamar estes instantes de tempo1 e tempo2 que correspondem às raízes da equação. O nome da função será "raízes". Atribua a ele o comando function( ). A função precisará de informações ou argumentos: coloque nos parênteses os coeficientes separados por vírgula (a, b, c). A partir daí delimite por chaves os comandos necessários para a funçãos. O return() é um comando não obrigatório, mas que é bastante comum no final das funções. Não o usaremos aqui. Depois de tudo pronto, execute a função digitando-a pelo nome com os argumentos dentro dos parênteses (a, b, c). Assim: 
 
 ```{r}
 raízes <- function(a,b,c){
