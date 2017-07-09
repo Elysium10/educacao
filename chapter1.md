@@ -259,7 +259,9 @@ success_msg("Parabéns! Agora você sabe calcular o erro relativo usando o R!")
 --- type:NormalExercise lang:r xp:100 skills:1 key:bc0cf7b809
 ## Operações aritméticas no ambiente R
 
-Sendo um ambiente de desenvolvimento integrado para cálculos estatísticos e gráficos, o R possui uma grande quantidade de comandos. Veremos alguns comandos básicos. 
+Sendo um ambiente de desenvolvimento integrado para cálculos estatísticos e gráficos, o R possui uma grande quantidade de comandos. 
+
+> Veja alguns comandos básicos: 
 
 ```{r}
 # soma
@@ -321,7 +323,7 @@ sqrt(32)
 
 [1] 5.656854
 ```
-<p style="color: #ff0000; background-color: #ffffff">Comandos para funções trigométricas, expressões algébrica e sequências numéricas Text color: red, background-color: white</p>
+> Comandos para funções trigométricas, expressões algébrica e sequências numéricas
 
 ```{r}
 # seno de pi constante
@@ -381,8 +383,7 @@ sum((1:10)^2)
 
 [1] 1e+00 1e+01 1e+02 1e+03 1e+04 1e+05 1e+06
 ```
-
-<p style="color: #ff0000; background-color: #ffffff">Explorando a função log10 Text color: red, background-color: white</p>
+> Explorando a função log10
 
 Vamos utilizar alguns comandos já visto para resolvermos logaritmos. Na matemática, o logaritmo comum ou decimal de um número é o expoente a que a base deve ser elevado para produzir este número. Por exemplo, o logaritmo de 100 na base 10 é 2, pois 10 ao quadrado é 100. Veja como calcular o log de 100:
 
@@ -400,11 +401,11 @@ O log de 10000000 na base 10 equivale a quanto? Veja:
 
 $$\sqrt{log(10000000)}\rightarrow10^{x}=10000000\rightarrow 10^{x}=10^{7}\rightarrow x =7$$
 
-Calcule no R quanto vale a seguinte soma de logs:
+> Calcule no R quanto vale a seguinte soma de logs:
 
 $$\sqrt{log(1)}+\sqrt{log(10)}+\sqrt{log(100)}+ \sqrt{log(1000)}+\sqrt{log(10000)}+ \sqrt{log(100000)}+\sqrt{log(10000000)}$$
 
-Passo-a-passo:
+> Passo-a-passo:
 
 ```{r}
 # Fazer 10 elevado a cada número da sequência
@@ -435,11 +436,14 @@ sum(sqrt(log(10^(0:7))))
 ```
 
 *** =instructions
-Digite a soma de 10 mais 6 (, digite a multiplicação de 50 vezes 6.
-Depois digite 400 dividido por 4 mais 10 e crie uma sequência de números de 10 a 50.
+
+* Digite a soma de 10 mais 6 e a multiplicação de 50 vezes 6.
+
+* Depois digite 400 dividido por 4 mais 10 e crie uma sequência de números de 10 a 50.
 
 *** =hint
-Adicione uma linha em R que crie uma sequência de números de 10 a 50, conforme foi mostrado no código de exemplo!
+
+- Adicione uma linha em R que crie uma sequência de números de 10 a 50, conforme foi mostrado no código de exemplo!
 
 *** =pre_exercise_code
 ```{r}
@@ -456,15 +460,17 @@ Adicione uma linha em R que crie uma sequência de números de 10 a 50, conforme
 # Digite 400 dividido por 4 mais 10
 400/4 + 10 
 
-# Crie uma sequência de números de 10 a 50.
+# Dada a sequência 1,  2,  4,  8 e 16, determine na linha abaixo uma expressão para a soma das raízes dos logs desses números.
+
 ```
 *** =solution
 ```{r}
-10:50
+sum(sqrt(log(2^(0:5))))
+
 ```
 *** =sct
 ```{r}
-test_output_contains("10:50", incorrect_msg = "Coloque dois pontos no meio dos números que vão delimitar a sequência!")
+test_output_contains("sum(sqrt(log(2^(0:5))))", incorrect_msg = "Coloque dois pontos no meio dos números que vão delimitar a sequência!")
 success_msg("Bom trabalho! Neste tópico aprendemos aprendemos a somar, tirar raiz quadrada, criar sequências numéricas, elevar seus respectivos números ao quadrado, determinar seus logs, suas respectivas raízes e somá-las. ")
 ```
 --- type:NormalExercise lang:r xp:100 skills:1 key:6026cdef55
