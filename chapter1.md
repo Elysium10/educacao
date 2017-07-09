@@ -242,10 +242,7 @@ success_msg("Bom trabalho! Neste tópico aprendemos sobre alguns comandos básic
 --- type:NormalExercise lang:r xp:100 skills:1 key:2c3629ba44
 ## Média aritmética
 
-<div style="font-size: large; text-align: center; font-family: sans-serif">
-   <p style="color: #ffffff; background-color: #000000">É o valor que mais se aproxima do valor real. Para obtê-la basta dividir a soma dos valores das medidas efetuadas pelo número destas medidas. Por exemplo, numa experiência foram obtidas as seguintes medidas: 4m, 5m, 8m, 9m, 5m. Em R a média aritmética $\bar{x}$ pode ser calculada da seguinte maneira:</p>
- </div>
-
+É o valor que mais se aproxima do valor real. Para obtê-la basta dividir a soma dos valores das medidas efetuadas pelo número destas medidas. Por exemplo, numa experiência foram obtidas as seguintes medidas: 4m, 5m, 8m, 9m, 5m. Em R a média aritmética $\bar{x}$ pode ser calculada da seguinte maneira:
 
 <div style="font-size: large; font-family: sans-serif">
   <p style="color: #000000; background-color: #ffffff">Text color: black, background-color: white</p>
