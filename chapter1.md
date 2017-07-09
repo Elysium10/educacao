@@ -482,8 +482,7 @@ success_msg("Parabéns! Agora você sabe calcular o erro relativo usando o R!")
 --- type:NormalExercise lang:r xp:100 skills:1 key:bc1c9884e2
 ## Criando uma função no R
 
-<div style="font-size: large; text-align: center; font-family: sans-serif">
-<p style="color: #FFFFFF; background-color: #33A0C3">Equação horária do MRUV</p></div>
+Equação horária do MRUV
 
 Na Física temos o conhecido Movimento Retilíneo Uniformemente Variado(MRUV), onde a velocidade de um móvel varia igualmente em intervalos de tempos iguais, ou seja, sua acelaração é constante. A equação horária do movimento é definida por
 
@@ -497,8 +496,8 @@ Portanto, a equação horária do movimento do móvel torna-se
 
 $$0 = S_{0} + v_{0}t +\frac{at^{2}}{2}\cdot$$
 
-<div style="font-size: large; text-align: center; font-family: sans-serif">
-<p style="color: #FFFFFF; background-color: #33A0C3">Exemplos de equações horárias de movimentos de móveis</p></div>
+Exemplos de equações horárias de movimentos de móveis
+
 $$S = 6 - 5t + 1t^{2}$$ ==> Coeficientes:  a = 1,  b = -5,  c = 6.   Raízes: 2 e 3. 
 
 $$S = 30 + 20t - 5t^{2}$$ ==> Coeficientes:  a = -5,  b = 20,  c = 30.  Raízes: -1.162278 e 5.162278.
@@ -515,11 +514,7 @@ $$S = 7 - 8t + t^{2}$$
 
 ==> Coeficientes:  a = -1,  b = -8,  c = 7.  Raízes: 1 e 7.
 
-<br>
-
-<div style="font-size: large; text-align: center; font-family: sans-serif">
-<p style="color: #FFFFFF; background-color: #33A0C3">Criando a função passo-a-passo</p></div>
-<br>
+Criando a função passo-a-passo
 
 - É necessário criarmos uma função para o cálculo do instante (ou instantes) em que o móvel passa pela origem da trajetória. 
 
@@ -549,21 +544,10 @@ Depois basta digitar, por exemplo, os coeficientes das raízes:
 raízes(1, -5, 6) e teclar Enter e aparecerá na tela as duas raízes que são os intantes. Na prática o tempo sempre é positivo, por isso, qualquer raiz negativa ou complexa será desconsiderada.
 
 ```{r}
-# expressões aritmáticas
-2+(4**5)+(sqrt(144)/2) -(4^3)*6 + 2^(2^2) 
-[1] 664
-```
-
-```{r}
 > raízes (1, -5, 6)
 as raízes são 2 e 3 
 ```
-<br>
-<div style="font-size: large; text-align: center; font-family: sans-serif">
-<p style="color: #FFFFFF; background-color: #33A0C3">Atividades</p>
-</div>
-
-<br>
+Atividades
 
 *** =instructions
 
@@ -628,6 +612,9 @@ success_msg("Bom trabalho! Você adquiriu noções sobre a equação horária do
 
 --- type:NormalExercise lang:r xp:100 skills:1 key:226dd93a3a
 ## Novo exercício
+
+
+
 
 
 *** =instructions
