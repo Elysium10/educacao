@@ -544,7 +544,7 @@ coeficientes <- function(a,b,c){
         cat("as raízes (instantes) são", tempo1, "e", tempo2)
     }
 }
-# Digite na linha abaixo o nome da função com os seus respectivos coeficientes e tecle Enter.
+# Digite na linha abaixo o nome da função (coeficientes) com os seus respectivos coeficientes e tecle Enter.
 
 ```
 
