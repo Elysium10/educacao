@@ -41,7 +41,6 @@ Adicione uma linha em R que calcule 6 + 12, exatamente igual ao código de exemp
 test_output_contains("18", incorrect_msg = "Tenha certeza que você inseriu uma nova linha que some 6 + 12. Não o inicie esta linha com um `#`, senão o código não será  executado!")
 success_msg("Parabéns! Veja como o console mostra o resultado do seu código. Agora, que você está familiarizado com a interface do curso, vamos aprender R!")
 ```
-
 --- type:NormalExercise lang:r xp:100 skills:1 key:bc0cf7b809
 ## Operações aritméticas no ambiente R
 
@@ -99,9 +98,7 @@ sqrt(32) # raiz quadrada de 32
 [1] 5.656854
 ```
 
-<div style="font-size: large; text-align: center; font-family: sans-serif">
-    <p style="color: #ffffff; background-color: #ff0000">Comandos para funções trigométricas, expressões algébrica e sequências numéricas</p>
-</div>
+Comandos para funções trigométricas, expressões algébrica e sequências numéricas
 
 ```{r}
 # seno de pi constante
@@ -152,9 +149,7 @@ sum((1:10)^2)
 10^(0:6) 
 [1] 1e+00 1e+01 1e+02 1e+03 1e+04 1e+05 1e+06
 ```
-<div style="font-size: large; text-align: center; font-family: sans-serif">
-    <p style="color: #ffffff; background-color: #ff0000">Explorando a função log 10</p>
-</div>
+Explorando a função log 10
 
 Utilizaremos alguns comandos já visto para resolvermos logaritmos. Na matemática, o logaritmo comum ou decimal de um número é o expoente a que a base deve ser elevado para produzir este número. Por exemplo, o logaritmo de 100 na base 10 é 2, pois 10 ao quadrado é 100. Veja como calcular o log de 100:
 
@@ -244,23 +239,13 @@ success_msg("Bom trabalho! Neste tópico aprendemos sobre alguns comandos básic
 
 É o valor que mais se aproxima do valor real. Para obtê-la basta dividir a soma dos valores das medidas efetuadas pelo número destas medidas. Por exemplo, numa experiência foram obtidas as seguintes medidas: 4m, 5m, 8m, 9m, 5m. Em R a média aritmética $\bar{x}$ pode ser calculada da seguinte maneira:
 
-<div style="font-size: large; font-family: sans-serif">
-  <p style="color: #000000; background-color: #ffffff">Text color: black, background-color: white</p>
-  <p style="color: #ffffff; background-color: #000000">Text color: white, background-color: black</p>
-  <p style="color: #ff0000; background-color: #ffffff">Text color: red, background-color: white</p>
-  <p style="color: blue; background-color: #ffffff">Text color: blue, background-color: white</p>
-  <p style="color: green; background-color: #ffff42">Text color: green, background-color: yellow</p>
-  <p style="color: #ffffff; background-color: #ff0000">Text color: white, background-color: red</p>
-</div>
-
 ```{r}
 x <- c(4, 5, 8, 9, 5)
 mean(x)
 ```
 Depois basta teclar enter para obter o resultado.
-<div style="font-size: large; text-align: center; font-family: sans-serif">
-<p style="color: #ff0000; background-color: #ffffff">Efetuando várias medidas -  cálculo de $\bar{x}$</p>
-</div>
+
+Efetuando várias medidas -  cálculo de $\bar{x}$
 
 > Calcule a média aritmética das seguintes medidas: 10, 20, 30, 50, 100, 123, 233.
 
@@ -283,7 +268,7 @@ Crie um vetor c com as medidas dadas. Armazene o vetor c em uma variável x e us
 # Calcule a média aritmética pedida
 x <- mean(x)
 ```
-=*** =solution
+*** =solution
 ```{r}
 x <- c(10, 20, 30, 50, 100, 123, 233)
 mean(x)
@@ -293,7 +278,6 @@ mean(x)
 test_output_contains("80.85714", incorrect_msg = "Voce tem certeza que armazenou o vetor c na variavel x?")
 success_msg("Bom trabalho! Agora você sabe calcular a média aritmética usando o R!")
 ```
-
 --- type:NormalExercise lang:r xp:100 skills:1 key:dd48eb091a
 ## Erro absoluto (E)
 
@@ -328,16 +312,13 @@ Depois basta teclar enter para obter o resultado.
 - Obtenha o módulo (valor absoluto) dessa diferença ==> abs(m - mean(x)).
 
 *** =hint
-
 Armazene 2.10 na variável m.
 Crie um vetor c com as medidas dadas. Armazene o vetor c em uma variável x e o valor 
 da medida correta numa variável m e use o comando mean(x).
-
 *** =pre_exercise_code
 ```{r}
 # no pec
 ```
-
 *** =sample_code
 ```{r}
 # Armazene o valor da medida correta. 
@@ -359,13 +340,11 @@ mean(x)
 E <- abs(m - mean(x))
 E 
 ```
-
 *** =sct
 ```{r}
 test_output_contains("0.06", incorrect_msg = "Você armazenor corretamente o vetor x <- c(2.17, 2.20, 2.15, 2.12) na variável x?")
 success_msg("Parabéns! Agora você sabe calcular o erro absoluto usando o R!")
 ```
-
 --- type:NormalExercise lang:r xp:100 skills:1 key:24e7dc599e
 ## Medida da aceleração da gravidade
 
@@ -388,7 +367,6 @@ Armazene a medida efetuada de $10.2m/s^2$ em uma variável qualquer (gr).
 ```{r}
 # no pec
 ```
-
 *** =sample_code
 ```{r}
 # Armazene o valor da medida correta de 9.8. 
@@ -400,7 +378,6 @@ E <- abs(9.8 - 10.2)
 # Mostre o valor do erro na e E na tela, digitando Eteclando Enter.
 E
 ```
-
 *** =solution
 ```{r}
 g <- 9.8
@@ -414,7 +391,6 @@ E
 test_output_contains("0.4", incorrect_msg = "Você armazenou corretamente 9.8 na varável g? e 10.2 na varável gr?")
 success_msg("Parabéns! Agora você sabe calcular o erro absoluto usando o R!")
 ```
-
 --- type:NormalExercise lang:r xp:100 skills:1 key:7f8c3148a8
 ## Erro relativo
 
@@ -460,7 +436,6 @@ Er <- abs(g - gr)/g
 # Mostre o valor do erro relativo, digitando Eteclando Enter.
 Er
 ```
-
 *** =solution
 
 ```{r}
@@ -475,7 +450,6 @@ Er
 test_output_contains("0.04081", incorrect_msg = "Você armazenou corretamente 9.8 na varável g e 10.2 na varável gr?")
 success_msg("Parabéns! Agora você sabe calcular o erro relativo usando o R!")
 ```
-
 --- type:NormalExercise lang:r xp:100 skills:1 key:bc1c9884e2
 ## Criando uma função no R
 
@@ -536,7 +510,6 @@ raízes <- function(a,b,c){
     }
 }
 ```
-
 Depois basta digitar, por exemplo, os coeficientes das raízes:
 raízes(1, -5, 6) e teclar Enter e aparecerá na tela as duas raízes que são os intantes. Na prática o tempo sempre é positivo, por isso, qualquer raiz negativa ou complexa será desconsiderada.
 
@@ -605,14 +578,8 @@ coeficientes (1, -3, -4)
 test_output_contains("coeficientes (1, -3, -4)", incorrect_msg = "O nome da função é coeficientes. Digite o nome da função com os seus respectivos coeficientes e tecle Enter.")
 success_msg("Bom trabalho! Você adquiriu noções sobre a equação horária do MRUV e desenvolveu uma função para determinar o instante (raiz) ou instantes (raízes) em que um móvel passa pela origem (0) da trajetória.")
 ```
-
-
 --- type:NormalExercise lang:r xp:100 skills:1 key:226dd93a3a
 ## Novo exercício
-
-
-
-
 
 *** =instructions
 
