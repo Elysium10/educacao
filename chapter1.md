@@ -463,7 +463,7 @@ Na Física temos o conhecido Movimento Retilíneo Uniformemente Variado(MRUV), o
 
 $$S = S_{0} + v_{0}t +\frac{at^{2}}{2}\cdot$$
 
-Temos uma equação do 2º grau, onde a condição para que o móvel passe pela origem da trajetória é determinada quando o espaço final percorrido for igual a zero:
+Temos aí uma equação do 2º grau, onde a condição para que o móvel passe pela origem da trajetória é determinada quando o espaço final percorrido for igual a zero:
 
 $S = 0$. 
 
@@ -474,19 +474,19 @@ $$0 = S_{0} + v_{0}t +\frac{at^{2}}{2}\cdot$$
 <div style="font-size: large; text-align: center; font-family: sans-serif">
 <p style="color: #ffffff; background-color: #ff0000">Exemplos de equações horárias de movimentos de móveis</p></div>
 
-$$S = 6 - 5t + 1t^{2}$$ ==> Coeficientes: a = 1, b = -5, c = 6.  Raízes: 2 e 3. 
+$$S = 6 - 5t + 1t^{2}$$ ==> Coeficientes:  a = 1,  b = -5,  c = 6.   Raízes: 2 e 3. 
 
-$$S = 30 + 20t - 5t^{2}$$ ==> Coeficientes: a = -5, b = 20, c = 30. Raízes: -1.162278 e 5.162278.
+$$S = 30 + 20t - 5t^{2}$$ ==> Coeficientes:  a = -5,  b = 20,  c = 30.  Raízes: -1.162278 e 5.162278.
 
-$$S = 6 + 8t + 4t^{2}$$  ==> Coeficientes: a = -4, b = 8, c = 6. Raízes: complexas. 
+$$S = 6 + 8t + 4t^{2}$$  ==> Coeficientes:  a = -4,  b = 8,  c = 6.  Raízes: complexas. 
 
-$$S = -2 - 3t + 5t^{2}$$ ==>  Coeficientes: a = -5, b = 3, c = 2. Raízes:  -0.4 e 1. 
+$$S = -2 - 3t + 5t^{2}$$ ==>  Coeficientes:  a = -5,  b = 3,  c = 2.  Raízes:  -0.4 e 1. 
 
-$$S = -20 - t + t^{2}$$ ==> Coeficientes: a = -1, b = -1, c = -20. Raízes: -4 e 5. 
+$$S = -20 - t + t^{2}$$ ==> Coeficientes:  a = -1,  b = -1,  c = -20.  Raízes: -4 e 5. 
 
-$$S = -4 - 3t + t^{2}$$ ==> Coeficientes: a = -1, b = -3, c = -4. Raízes: -1 e 4. 
+$$S = -4 - 3t + t^{2}$$ ==> Coeficientes:  a = -1,  b = -3,  c = -4.  Raízes: -1 e 4. 
 
-$$S = 7 - 8t + t^{2}$$  ==> Coeficientes: a = -1, b = -8, c = 7. Raízes: 1 e 7.
+$$S = 7 - 8t + t^{2}$$  ==> Coeficientes:  a = -1,  b = -8,  c = 7.  Raízes: 1 e 7.
 
 
 <div style="font-size: large; text-align: center; font-family: sans-serif">
