@@ -268,6 +268,7 @@ Crie um vetor c com as medidas dadas. Armazene o vetor c em uma variável x e us
 # Calcule a média aritmética pedida
 x <- mean(x)
 ```
+
 *** =solution
 ```{r}
 x <- c(10, 20, 30, 50, 100, 123, 233)
@@ -332,6 +333,7 @@ E <- abs(m - mean(x))
 # Mostre o valor de E na tela.
 E
 ```
+
 *** =solution
 ```{r}
 m <- 2.10
@@ -367,6 +369,7 @@ Armazene a medida efetuada de $10.2m/s^2$ em uma variável qualquer (gr).
 ```{r}
 # no pec
 ```
+
 *** =sample_code
 ```{r}
 # Armazene o valor da medida correta de 9.8. 
@@ -436,6 +439,7 @@ Er <- abs(g - gr)/g
 # Mostre o valor do erro relativo, digitando Eteclando Enter.
 Er
 ```
+
 *** =solution
 
 ```{r}
