@@ -488,10 +488,11 @@ $$S = -4 - 3t + t^{2}$$ ==> Coeficientes: a = -1, b = -3, c = -4. Raízes: -1 e 
 
 $$S = 7 - 8t + t^{2}$$  ==> Coeficientes: a = -1, b = -8, c = 7. Raízes: 1 e 7.
 
+
 <div style="font-size: large; text-align: center; font-family: sans-serif">
 <p style="color: #000000; background-color: #ffffff">Criando a função passo-a-passo</p></div>
 
-É necessário criarmos uma função para o cálculo do instante (ou instantes) em que o móvel passa pela origem da trajetória.No caso dessa função, vamos chamar estes instantes de tempo1 e tempo2 que correspondem às raízes da equação. O nome da função será "raízes". Atribua a ele o comando function( ). A função precisará de informações ou argumentos: coloque nos parênteses os coeficientes separados por vírgula (a, b, c). A partir daí delimite por chaves os comandos necessários para a funçãos. O return() é um comando não obrigatório, mas que é bastante comum no final das funções. Não o usaremos aqui. Veja como a função ficará:
+É necessário criarmos uma função para o cálculo do instante (ou instantes) em que o móvel passa pela origem da trajetória.No caso dessa função, vamos chamar estes instantes de tempo1 e tempo2 que correspondem às raízes da equação. O nome da função será "raízes". Atribua a ele o comando function( ). A função precisará de informações ou argumentos: coloque nos parênteses os coeficientes separados por vírgula (a, b, c). A partir daí delimite por chaves os comandos necessários para a funçãos. O return() é um comando não obrigatório, mas que é bastante comum no final das funções. Não o usaremos aqui. Depois de tudo pronto, execute a função digitando-a pelo nome com os argumentos dentro dos parênteses (a, b, c). Assim: 
 
 ```{r}
 raízes <- function(a,b,c){
@@ -511,20 +512,21 @@ raízes(1, -5, 6) e teclar Enter e aparecerá na tela as duas raízes que são o
 ```{r}
 > raízes (1, -5, 6)
 as raízes são 2 e 3 
+
 ```
 <div style="font-size: large; text-align: center; font-family: sans-serif">
 <p style="color: #000000; background-color: #ffffff">Atividades</p>
 </div>
 
 *** =instructions
-- Nas equações dadas você vai aplicar a condição para que o móvel passe pela origem da trajetória, quando $S = 0$, e depois criar uma função que determine as raízes das equações horárias e mostre as raízes na tela. 
-- Escolha o nome de "coeficientes" para a função. Atribua a ele o comando function( ). Dentro dos parênteses do comando function digite os argumentos separados por vírgula (a, b, c). A partir daí delimite por chaves os comandos necessários para a função como no exemplo anterior. Execute a função digitando-a pelo nome, conforme mostrado no exemplo anterior. Use a seguinte equação:
+- Nas equações dadas você vai aplicar a condição para que o móvel passe pela origem da trajetória, quando $S = 0$, e depois criar uma função que determine as raízes das equações horárias e mostrar as raízes na tela. 
+- Escolha um nome (funcraiz) para a função. Atribua a ele o comando function( ). Dentro dos parênteses do comando function digite os argumentos separados por vírgula (a, b, c). A partir daí delimite por chaves os comandos necessários para a função como no exemplo anterior. Execute a função digitando-a pelo nome, conforme mostrado no exemplo anterior. Use a seguinte equação:
 $$S = -4 - 3t + t^{2}.$$
-- Após o termino dessa atividade, execute a função criada para com todas as equações exemplificadas neste tópico. 
+- Após o termino dessa atividade, execute a função criada para com todas as equações exemplificadas. 
 
 *** =hint
-O nome da função é "coeficientes".
-Dentro dos parênteses do comando function digite os coeficientes da equação separados por vírgula.
+Escolha o nome da função como funcraiz.
+Atribua à variável delta a fórmula correta ==> b^2 - 4*a*c
 *** =pre_exercise_code
 ```{r}
 # no pec
@@ -532,7 +534,7 @@ Dentro dos parênteses do comando function digite os coeficientes da equação s
 *** =sample_code
 ```{r}
 coeficientes <- function(a,b,c){
-    delta <- 
+    delta <- b^2 - 4*a*c
     if(delta<0){
         cat("Essa equação de movimento não possui raízes reais - são raízes complexas. Tente outra")
     } else{
@@ -541,7 +543,7 @@ coeficientes <- function(a,b,c){
         cat("as raízes (instantes) são", tempo1, "e", tempo2)
     }
 }
-coeficientes (1, -3, -4)
+
 ```
 
 *** =solution
@@ -556,14 +558,13 @@ coeficientes <- function(a,b,c){
         cat("as raízes (instantes) são", tempo1, "e", tempo2)
     }
 }
-# Digite o nome da função com os seus respectivos coeficientes e tecle Enter:
-
+coeficientes (1, -3, -4)
 ```
 
 *** =sct
 ```{r}
-test_output_contains("coeficientes (1, -3, -4)", incorrect_msg = "Digite corretamente o nome da função com os coeficientes da equação")
-success_msg("Bom trabalho! Você adquiriu noções sobre: a equação horária de um corpo em MRUV, como desenvolver uma função para determinar o instante (raiz) ou instantes (raízes) em que um móvel passa pela origem (0) da trajetória e recordou que a Física clássica aceita somente instantes positivos!")
+test_output_contains("coeficientes (1, -3, -4)", incorrect_msg = "Atribua a fórmula correta para a variável delta")
+success_msg("Parabéns! Você adquiriu noções sobre: a equação horária de um corpo em MRUV, como desenvolver uma função para determinar o instante (raiz) ou instantes (raízes) em que um móvel passa pela origem (0) da trajetória!")
 ```
 
 
