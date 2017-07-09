@@ -467,18 +467,20 @@ Adicione uma linha em R que crie uma sequência de números de 10 a 50, conforme
 test_output_contains("10:50", incorrect_msg = "Coloque dois pontos no meio dos números que vão delimitar a sequência!")
 success_msg("Bom trabalho! Neste tópico aprendemos aprendemos a somar, tirar raiz quadrada, criar sequências numéricas, elevar seus respectivos números ao quadrado, determinar seus logs, suas respectivas raízes e somá-las. ")
 ```
-
-
 --- type:NormalExercise lang:r xp:100 skills:1 key:6026cdef55
 ## Criando uma função no R
 
-# Equação horária do MRUV
+### Equação horária do MRUV
 
-Na Física temos o conhecido Movimento Retilíneo Uniformemente Variado(MRUV), onde a velocidade de um móvel varia igualmente em intervalos de tempos iguais, ou seja, sua acelaração é constante. A equação horária desse tipo de movimento equivale a uma equação do 2º grau, onde a condição para que o móvel passe pela origem da trajetória é determinada quando o espaço final (S) percorrido for igual a zero.
+- Na Física temos o conhecido Movimento Retilíneo Uniformemente Variado(MRUV), onde a velocidade de um móvel varia igualmente em intervalos de tempos iguais, ou seja, sua acelaração é constante. A equação horária desse tipo de movimento equivale a uma equação do 2º grau, onde a condição para que o móvel passe pela origem da trajetória é determinada quando o espaço final (S) percorrido for igual a zero.
 
-Exemplos de equações horárias de movimentos de móveis
+- Exemplos de equações horárias de movimentos de móveis:
 
-$$S = 6 - 5t + 1t^{2}$$ ==> Coeficientes:  a = 1,  b = -5,  c = 6.   Raízes: 2 e 3. 
+$$S = 6 - 5t + 1t^{2}$$
+
+<div style="font-size: large; font-family: sans-serif">
+  <p style="color: #000000; background-color: #ffffff">- Com coeficientes:  a = 1,  b = -5,  c = 6.   Raízes: 2 e 3. </p>
+</div>
 
 $$S = 30 + 20t - 5t^{2}$$ ==> Coeficientes:  a = -5,  b = 20,  c = 30.  Raízes: -1.162278 e 5.162278.
 
@@ -492,8 +494,7 @@ $$S = -4 - 3t + t^{2}$$ ==> Coeficientes:  a = -1,  b = -3,  c = -4.  Raízes: -
 
 $$S = 7 - 8t + t^{2}$$  ==> Coeficientes:  a = -1,  b = -8,  c = 7.  Raízes: 1 e 7.
 
-
-## Criando a função passo-a-passo
+### Criando a função passo-a-passo
 
 - É necessário criarmos uma função para o cálculo do instante (ou instantes) em que o móvel passa pela origem da trajetória. 
 
@@ -505,6 +506,18 @@ $$S = 7 - 8t + t^{2}$$  ==> Coeficientes:  a = -1,  b = -8,  c = 7.  Raízes: 1 
 
 - Depois de tudo pronto, execute a função digitando-a pelo nome com os argumentos dentro dos parênteses (a, b, c). Assim:
 
+```{r}
+coefic <- function(a,b,c){
+    delta <- b^2 - 4*a*c
+    if(delta<0){
+        cat("Essa equação de movimento não possui raízes reais - são raízes complexas")
+    } else{
+        tempo1 <- (-b - sqrt(delta))/(2*a)
+        tempo2 <- (-b + sqrt(delta))/(2*a)
+        cat("as raízes são reais:", raiz1, "e", raiz2)
+    }
+}
+```
 
 *** =instructions
 
