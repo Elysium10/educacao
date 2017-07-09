@@ -239,8 +239,7 @@ Adicione uma linha em R que crie uma sequência de números de 10 a 50, conforme
 test_output_contains("10:50", incorrect_msg = "Coloque dois pontos no meio dos números que vão delimitar a sequência!")
 success_msg("Bom trabalho! Neste tópico aprendemos sobre alguns comandos básicos e enfatizamos as operações matemáticas. Apredemos a somar, tirar raiz quadrada, criar sequências numéricas, elevar seus respectivos números ao quadrado, determinar seus logs na sequência, determinar suas respectivas raizes e somá-las. Veja como o console mostra o resultado do seu código.")
 ```
-
---- type:NormalExercise lang:r xp:100 skills:1 key:955002b2b7
+--- type:NormalExercise lang:r xp:100 skills:1 key:2c3629ba44
 ## Média aritmética
 
 <div style="font-size: large; text-align: center; font-family: sans-serif">
@@ -512,19 +511,25 @@ $$S = -20 - t + t^{2}$$ ==> Coeficientes:  a = -1,  b = -1,  c = -20.  Raízes: 
 
 $$S = -4 - 3t + t^{2}$$ ==> Coeficientes:  a = -1,  b = -3,  c = -4.  Raízes: -1 e 4. 
 
-$$S = 7 - 8t + t^{2}$$  ==> Coeficientes:  a = -1,  b = -8,  c = 7.  Raízes: 1 e 7.
+$$S = 7 - 8t + t^{2}$$  
+
+==> Coeficientes:  a = -1,  b = -8,  c = 7.  Raízes: 1 e 7.
+
+<br>
+
 <div style="font-size: large; text-align: center; font-family: sans-serif">
 <p style="color: #FFFFFF; background-color: #33A0C3">Criando a função passo-a-passo</p></div>
 <br>
-É necessário criarmos uma função para o cálculo do instante (ou instantes) em que o móvel passa pela origem da trajetória. 
 
-No caso dessa função, vamos chamar estes instantes de tempo1 e tempo2 que correspondem às raízes da equação. 
+- É necessário criarmos uma função para o cálculo do instante (ou instantes) em que o móvel passa pela origem da trajetória. 
 
-O nome da função será "raízes". Atribua a ele o comando function( ). A função precisará de informações ou argumentos: coloque nos parênteses os coeficientes separados por vírgula (a, b, c). 
+- No caso dessa função, vamos chamar estes instantes de tempo1 e tempo2 que correspondem às raízes da equação. 
 
-A partir daí delimite por chaves os comandos necessários para a funçãos. O return() é um comando não obrigatório, mas que é bastante comum no final das funções. Não o usaremos aqui. 
+- O nome da função será "raízes". Atribua a ele o comando function( ). A função precisará de informações ou argumentos: coloque nos parênteses os coeficientes separados por vírgula (a, b, c). 
 
-Depois de tudo pronto, execute a função digitando-a pelo nome com os argumentos dentro dos parênteses (a, b, c). Assim: 
+- A partir daí delimite por chaves os comandos necessários para a funçãos. O return() é um comando não obrigatório, mas que é bastante comum no final das funções. Não o usaremos aqui. 
+
+- Depois de tudo pronto, execute a função digitando-a pelo nome com os argumentos dentro dos parênteses (a, b, c). Assim: 
 <br>
 
 ```{r}
@@ -539,9 +544,15 @@ raízes <- function(a,b,c){
     }
 }
 ```
+
 Depois basta digitar, por exemplo, os coeficientes das raízes:
 raízes(1, -5, 6) e teclar Enter e aparecerá na tela as duas raízes que são os intantes. Na prática o tempo sempre é positivo, por isso, qualquer raiz negativa ou complexa será desconsiderada.
 
+```{r}
+# expressões aritmáticas
+2+(4**5)+(sqrt(144)/2) -(4^3)*6 + 2^(2^2) 
+[1] 664
+```
 
 ```{r}
 > raízes (1, -5, 6)
