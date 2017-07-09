@@ -81,7 +81,7 @@ Crie um vetor c com as medidas dadas. Armazene o vetor c em uma variável x e us
 # Calcule a média aritmética pedida
 x <- mean(x)
 ```
-=*** =solution
+*** =solution
 ```{r}
 x <- c(10, 20, 30, 50, 100, 123, 233)
 mean(x)
