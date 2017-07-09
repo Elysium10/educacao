@@ -534,7 +534,7 @@ Atribua à variável delta a fórmula correta ==> b^2 - 4*a*c
 *** =sample_code
 ```{r}
 coeficientes <- function(a,b,c){
-    delta <- b^2 - 4*a*c
+    delta <- 
     if(delta<0){
         cat("Essa equação de movimento não possui raízes reais - são raízes complexas. Tente outra")
     } else{
