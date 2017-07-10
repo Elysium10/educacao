@@ -47,11 +47,11 @@ barplot(table(floor(rnorm(5000, 250, 50))), xlab='Números aleatórios', ylab='F
 ```
 *** =solution
 ```{r}
-barplot(table(floor(rnorm(5000, 250, 50))), xlab = "Numeros aleatorios", ylab = "Frequencias"
+barplot(table(floor(rnorm(5000, 250, 50))), xlab='Números aleatórios', ylab='Frequências')
 ```
 *** =sct
 ```{r}
-test_output_contains("barplot(table(floor(rnorm(5000, 250, 50))), xlab ="Numeros aleatorios", ylab ="Frequencias")", 
+test_output_contains("barplot(table(floor(rnorm(5000, 250, 50))), xlab='Números aleatórios', ylab='Frequências')", 
 incorrect_msg = "Insira certinho a linha 100*12/10. Não o inicie esta linha com um `#`, senão o código não será  executado!")
 
 success_msg("Parabéns! Veja como o console mostra o resultado do seu código. Agora, que você está familiarizado com a interface do curso, vamos aprender R!")
