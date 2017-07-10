@@ -47,6 +47,11 @@ barplot(table(floor(rnorm(5000, 250, 50))), xlab="Números aleatórios", ylab="F
 ```
 *** =solution
 ```{r}
+# Calcule 100/12
+3 + 4
+# Calcule 100 * 12
+100*12
+# Digite (copie e cole) seu primeiro programa
 barplot(table(floor(rnorm(5000, 250, 50))), xlab='Números aleatórios', ylab='Frequências')
 ```
 
