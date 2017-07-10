@@ -47,12 +47,12 @@ barplot(table(floor(rnorm(5000, 250, 50))), xlab="Números aleatórios", ylab="F
 ```
 *** =solution
 ```{r}
-barplot(table(floor(rnorm(5000, 250, 50))), xlab="Números aleatórios", ylab="Frequências")
+barplot(table(floor(rnorm(5000, 250, 50))), xlab='Números aleatórios', ylab='Frequências')
 ```
 
 *** =sct
 ```{r}
-test_output_contains("barplot(table(floor(rnorm(5000, 250, 50))), xlab="Números aleatórios", ylab="Frequências"), incorrect_msg = "Tenha certeza que você inseriu uma nova linha que some 6 + 12. Não o inicie esta linha com um `#`, senão o código não será  executado!")
+test_output_contains("barplot(table(floor(rnorm(5000, 250, 50))), xlab='Números aleatórios', ylab='Frequências')"), incorrect_msg = "Tenha certeza que você inseriu uma nova linha que some 6 + 12. Não o inicie esta linha com um `#`, senão o código não será  executado!")
 success_msg("Parabéns! Veja como o console mostra o resultado do seu código. Agora, que você está familiarizado com a interface do curso, vamos aprender R!")
 ```
 --- type:NormalExercise lang:r xp:100 skills:1 key:955002b2b7
