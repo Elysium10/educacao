@@ -5,12 +5,31 @@ attachments :
 --- type:NormalExercise lang:r xp:100 skills:1 key:aad1409c3d
 ## Comandos básicos do R
 
+> A linguagem R
+
+R é uma linguagem de programação que pode ser utilizada em diversas áreas da ciência, pesquisas científicas, estatística e análise de dados. Devido a sua facilidade de manuseio, pode ser usada por alunos, trabalhadores, técnicos, professores e pesquisadores. Nesse ambiente os usuários podem limpar, analisar, visualizar e apresentar dados. O R é gratuito para download, pois está licenciado nos termos da licença GNU General Public. O R pode ser utilizado em todas as plataformas  Windows, Linux e Mac.
+
+> Seu primeiro programa em R
+
+Com apenas uma linha de código, seu primeiro programa em R vai gerar gráfico de barras oriundo de uma tabela carregada com 5000 números aleatórios em uma distribuição normal com a frequência de cada um dos números. Foi atribuído a média desses números para 250 e o seu desvio padrão para 50. O comando floor remove o ponto decimal. Estes comandos é apenas para mostrar o poder da linguagem R, não se preocupe ainda em aprendê-los. Veja os comandos: 
+
+```{r}
+barplot(table(floor(rnorm(5000, 250, 50))), xlab="Números aleatórios", ylab="Frequências")
+```
+
 *** =instructions
-- O editor à direita possui um código de exemplo. Você consegue identificar quais linhas são códigos em R e quais são comentários?
-- Adicione uma linha de código que calcule a soma de 6 + 12, e clique no botão ‘Submit Answer’.
+
+- O editor à direita possui um código de exemplo. As linhas de comentários dos códigos são identificados pelo símbolo #.
+
+- Adicione uma linha de código que calcule a divisão 100/12 (já feito) e clique no botão 'Submit Answer'.
+
+- Adicione uma linha de código que calcule a multiplicação de 100*12 (já feito) e clique no botão 'Submit Answer'.
+
+- Copie e cole o seu primeiro programa deste tópico no editor e tecle em 'Submit Answer' para visualisar o gráfico.
 
 *** =hint
-Adicione uma linha em R que calcule 6 + 12, exatamente igual ao código de exemplo!
+
+- Adicione uma linha em R que calcule a multiplicação 100*12 (já feito)
 
 *** =pre_exercise_code
 ```{r}
@@ -19,24 +38,21 @@ Adicione uma linha em R que calcule 6 + 12, exatamente igual ao código de exemp
 
 *** =sample_code
 ```{r}
-# Calcule 3 + 4
+# Calcule 100/12
 3 + 4
-
-# Calcule 6 + 12
+# Calcule 100 * 12
+100*12
+# Digite (copie e cole) seu primeiro programa
 
 ```
 *** =solution
 ```{r}
-# Calcule 3 + 4
-3 + 4
-
-# Calcule 6 + 12
-6 + 12
+barplot(table(floor(rnorm(5000, 250, 50))), xlab="Números aleatórios", ylab="Frequências")
 ```
 
 *** =sct
 ```{r}
-test_output_contains("18", incorrect_msg = "Tenha certeza que você inseriu uma nova linha que some 6 + 12. Não o inicie esta linha com um `#`, senão o código não será  executado!")
+test_output_contains("barplot(table(floor(rnorm(5000, 250, 50))), xlab="Números aleatórios", ylab="Frequências"), incorrect_msg = "Tenha certeza que você inseriu uma nova linha que some 6 + 12. Não o inicie esta linha com um `#`, senão o código não será  executado!")
 success_msg("Parabéns! Veja como o console mostra o resultado do seu código. Agora, que você está familiarizado com a interface do curso, vamos aprender R!")
 ```
 --- type:NormalExercise lang:r xp:100 skills:1 key:955002b2b7
@@ -85,7 +101,7 @@ mean(x)
 *** =sct
 ```{r}
 test_output_contains("80.85714", incorrect_msg = "Voce tem certeza que armazenou o vetor c na variavel x?")
-success_msg("Parabéns! Agora você sabe calcular a média aritmética usando o R!")
+success_msg("Bom trabalho! Agora você sabe calcular a média aritmética usando o R!")
 ```
 --- type:NormalExercise lang:r xp:100 skills:1 key:dd48eb091a
 ## Erro absoluto (E)
