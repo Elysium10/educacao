@@ -42,16 +42,16 @@ barplot(table(floor(rnorm(5000, 250, 50))), xlab='Números aleatórios', ylab='F
 100/12
 # Calcule 100*12
 100*12
-# Calcule 100*12/10 e clique no botão 'Submit Answer'
+# Calcule (digite) 100*12/10 e clique no botão 'Submit Answer'
 
 ```
 *** =solution
 ```{r}
-120
+100*12/10
 ```
 *** =sct
 ```{r}
-test_output_contains("120"), incorrect_msg = "Insira certinho um comando que calcule 100*12/10. Não o inicie esta linha com um `#`, senão o código não será  executado!")
+test_output_contains("100*12/10"), incorrect_msg = "Insira certinho a linha 100*12/10. Não o inicie esta linha com um `#`, senão o código não será  executado!")
 success_msg("Parabéns! Veja como o console mostra o resultado do seu código. Agora, que você está familiarizado com a interface do curso, vamos aprender R!")
 ```
 --- type:NormalExercise lang:r xp:100 skills:1 key:955002b2b7
