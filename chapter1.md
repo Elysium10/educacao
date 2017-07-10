@@ -29,7 +29,7 @@ barplot(table(floor(rnorm(5000, 250, 50))), xlab='Numeros aleatorios', ylab='Fre
 
 *** =hint
 
-- Adicione a linha em R que plota o gráfico.
+- Copie a linha de código do seu "primeiro programa em R" e cole no editor à direita para gerar um gráfico.
 - Dica não use aspas para descrever os eixos do gráfico Xlab e Ylab.
 - Para ver o gráfico em tela cheia, seu navegador deve estar habilitado para ver popups.
 
@@ -58,7 +58,7 @@ barplot(table(floor(rnorm(5000, 250, 50))), xlab='Numeros aleatorios', ylab='Fre
 test_output_contains("barplot(table(floor(rnorm(5000, 250, 50))), xlab='Numeros aleatorios', ylab='Frequencias')", 
 incorrect_msg = "Veja as dicas. Para ver o gráfico maior, habilite seu navegador para mostrar popups.")
 
-success_msg("Bom trabalho! Veja como o console mostra o gráfico oriundo do seu comando. Agora que você está familiarizado com a interface do curso, vamos aprender mais sobre o R!")
+success_msg("Bom trabalho! Veja como o console mostra as operações aritméticas e o gráfico oriundo dos seus comandos. Agora que você está familiarizado com a interface do curso, vamos aprender mais sobre o R!")
 ```
 --- type:NormalExercise lang:r xp:100 skills:1 key:955002b2b7
 ## Média aritmética
