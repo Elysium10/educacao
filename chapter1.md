@@ -14,7 +14,7 @@ R é uma linguagem de programação que pode ser utilizada em diversas áreas da
 Com apenas uma linha de código, seu primeiro programa em R vai gerar gráfico de barras oriundo de uma tabela carregada com 5000 números aleatórios em uma distribuição normal com a frequência de cada um dos números. Foi atribuído a média desses números para 250 e o seu desvio padrão para 50. O comando floor remove o ponto decimal. Estes comandos é apenas para mostrar o poder da linguagem R, não se preocupe ainda em aprendê-los. Veja os comandos: 
 
 ```{r}
-barplot(table(floor(rnorm(5000, 250, 50))), xlab='Números aleatórios', ylab='Frequências')
+barplot(table(floor(rnorm(5000, 250, 50))), xlab='Numeros aleatorios', ylab='Frequencias')
 ```
 
 *** =instructions
@@ -25,11 +25,13 @@ barplot(table(floor(rnorm(5000, 250, 50))), xlab='Números aleatórios', ylab='F
 
 - Adicione uma linha de código que calcule a multiplicação de 100*12 (já feito) e clique no botão 'Submit Answer'.
 
-- Adicione uma linha de código que calcule 100*12/10 e clique no botão 'Submit Answer'.
+- Adicione a linha de códico do seu "primeiro programa" e clique no botão 'Submit Answer'.
 
 *** =hint
 
-- Adicione uma linha em R que calcule a expressão 100*12/10.
+- Adicione a linha em R que plota o gráfico.
+- Dica não use aspas para descrever os eixos do gráfico Xlab e Ylab.
+- Para ver o gráfico em tela cheia, seu navegador deve estar habilitado para ver popups.
 
 *** =pre_exercise_code
 ```{r}
@@ -42,19 +44,21 @@ barplot(table(floor(rnorm(5000, 250, 50))), xlab='Números aleatórios', ylab='F
 100/12
 # Calcule 100*12
 100*12
-# Calcule (digite) 100*12/10 e clique no botão 'Submit Answer'
+# Calcule (digite) 100*12/10'
+100*12/10
+# Digite seu "primeiro programa": 
 
 ```
 *** =solution
 ```{r}
-barplot(table(floor(rnorm(5000, 250, 50))), xlab='Números aleatórios', ylab='Frequências')
+barplot(table(floor(rnorm(5000, 250, 50))), xlab='Numeros aleatorios', ylab='Frequencias')
 ```
 *** =sct
 ```{r}
-test_output_contains("barplot(table(floor(rnorm(5000, 250, 50))), xlab='Números aleatórios', ylab='Frequências')", 
-incorrect_msg = "Insira certinho a linha 100*12/10. Não o inicie esta linha com um `#`, senão o código não será  executado!")
+test_output_contains("barplot(table(floor(rnorm(5000, 250, 50))), xlab='Numeros aleatorios', ylab='Frequencias')", 
+incorrect_msg = "Veja as dicas. Para ver o gráfico maior, habilite seu navegador para mostrar popups.")
 
-success_msg("Parabéns! Veja como o console mostra o resultado do seu código. Agora, que você está familiarizado com a interface do curso, vamos aprender R!")
+success_msg("Bom trabalho! Veja como o console mostra o gráfico oriundo do seu comando. Agora que você está familiarizado com a interface do curso, vamos aprender mais sobre o R!")
 ```
 --- type:NormalExercise lang:r xp:100 skills:1 key:955002b2b7
 ## Média aritmética
