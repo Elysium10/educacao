@@ -35,7 +35,7 @@ barplot(table(floor(rnorm(5000, 250, 50))), xlab='Numeros aleatorios', ylab='Fre
 ```
 *** =sample_code
 ```{r}
-# Calcule (digite) 100*12/10
+# Calcule (digite na linha abaixo) 100*12/10
 
 ```
 
