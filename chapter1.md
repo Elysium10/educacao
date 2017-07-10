@@ -25,11 +25,11 @@ barplot(table(floor(rnorm(5000, 250, 50))), xlab='Números aleatórios', ylab='F
 
 - Adicione uma linha de código que calcule a multiplicação de 100*12 (já feito) e clique no botão 'Submit Answer'.
 
-- Copie e cole o seu primeiro programa deste tópico no editor e tecle em 'Submit Answer' para visualisar o gráfico.
+- Adicione uma linha de código que calcule 100*12/10 e clique no botão 'Submit Answer'.
 
 *** =hint
 
-- Adicione uma linha em R que calcule a multiplicação 100*12 (já feito)
+- Adicione uma linha em R que calcule a expressão 100*12/10.
 
 *** =pre_exercise_code
 ```{r}
@@ -42,19 +42,17 @@ barplot(table(floor(rnorm(5000, 250, 50))), xlab='Números aleatórios', ylab='F
 100/12
 # Calcule 100*12
 100*12
-# Digite (copie e cole) seu primeiro programa
+# Calcule 100*12/10 e clique no botão 'Submit Answer'
 
 ```
 *** =solution
 ```{r}
-barplot(table(floor(rnorm(5000, 250, 50))), xlab='Números aleatórios', ylab='Frequências')
+120
 ```
 *** =sct
 ```{r}
-
-test_output_contains("barplot(table(floor(rnorm(5000, 250, 50))), xlab='Números aleatórios', ylab='Frequências')"), incorrect_msg = "Tenha certeza que você inseriu uma nova linha que some 6 + 12. Não o inicie esta linha com um `#`, senão o código não será  executado!")
+test_output_contains("120"), incorrect_msg = "Insira certinho um comando que calcule 100*12/10. Não o inicie esta linha com um `#`, senão o código não será  executado!")
 success_msg("Parabéns! Veja como o console mostra o resultado do seu código. Agora, que você está familiarizado com a interface do curso, vamos aprender R!")
-
 ```
 --- type:NormalExercise lang:r xp:100 skills:1 key:955002b2b7
 ## Média aritmética
