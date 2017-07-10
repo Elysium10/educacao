@@ -14,7 +14,7 @@ R é uma linguagem de programação que pode ser utilizada em diversas áreas da
 Com apenas uma linha de código, seu primeiro programa em R vai gerar gráfico de barras oriundo de uma tabela carregada com 5000 números aleatórios em uma distribuição normal com a frequência de cada um dos números. Foi atribuído a média desses números para 250 e o seu desvio padrão para 50. O comando floor remove o ponto decimal. Estes comandos é apenas para mostrar o poder da linguagem R, não se preocupe ainda em aprendê-los. Veja os comandos: 
 
 ```{r}
-barplot(table(floor(rnorm(5000, 250, 50))), xlab="Números aleatórios", ylab="Frequências")
+barplot(table(floor(rnorm(5000, 250, 50))), xlab='Números aleatórios', ylab='Frequências')
 ```
 
 *** =instructions
@@ -39,27 +39,22 @@ barplot(table(floor(rnorm(5000, 250, 50))), xlab="Números aleatórios", ylab="F
 *** =sample_code
 ```{r}
 # Calcule 100/12
-3 + 4
-# Calcule 100 * 12
-100 * 12
+100/12
+# Calcule 100*12
+100*12
 # Digite (copie e cole) seu primeiro programa
-
 
 ```
 *** =solution
 ```{r}
-# Calcule 100/12
-3 + 4
-# Calcule 100 * 12
-100*12
-# Digite (copie e cole) seu primeiro programa
 barplot(table(floor(rnorm(5000, 250, 50))), xlab='Números aleatórios', ylab='Frequências')
 ```
-
 *** =sct
 ```{r}
+
 test_output_contains("barplot(table(floor(rnorm(5000, 250, 50))), xlab='Números aleatórios', ylab='Frequências')"), incorrect_msg = "Tenha certeza que você inseriu uma nova linha que some 6 + 12. Não o inicie esta linha com um `#`, senão o código não será  executado!")
 success_msg("Parabéns! Veja como o console mostra o resultado do seu código. Agora, que você está familiarizado com a interface do curso, vamos aprender R!")
+
 ```
 --- type:NormalExercise lang:r xp:100 skills:1 key:955002b2b7
 ## Média aritmética
