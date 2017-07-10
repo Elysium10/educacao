@@ -53,11 +53,11 @@ barplot(table(floor(rnorm(5000, 250, 50))), xlab='Numeros aleatorios', ylab='Fre
 # Calcule 100*12
 100*12
 # Calcule (digite) 100*12/10
-100*12/10
+100 * 12/10
 ```
 *** =sct
 ```{r}
-test_output_contains("100*12/10",  incorrect_msg = "Digite corretamente a linha de código. Veja as dicas.")
+test_output_contains("100 * 12/10", incorrect_msg = "Digite corretamente a linha de código. Veja as dicas.")
 success_msg("Bom trabalho! Veja como o console mostra as operações aritméticas. Agora que você está familiarizado com a interface do curso, vamos aprender mais sobre o R!")
 ```
 --- type:NormalExercise lang:r xp:100 skills:1 key:955002b2b7
