@@ -9,9 +9,9 @@ attachments :
 
 R é uma linguagem de programação que pode ser utilizada em diversas áreas da ciência, pesquisas científicas, estatística e análise de dados. Devido a sua facilidade de manuseio, pode ser usada por alunos, trabalhadores, técnicos, professores e pesquisadores. Nesse ambiente os usuários podem limpar, analisar, visualizar e apresentar dados. O R é gratuito para download, pois está licenciado nos termos da licença GNU General Public. O R pode ser utilizado em todas as plataformas  Windows, Linux e Mac.
 
-> Seu primeiro programa em R
+> Demonstrando o poder do R - seu primeiro programa
 
-Com apenas uma linha de código, seu primeiro programa em R vai gerar gráfico de barras oriundo de uma tabela carregada com 5000 números aleatórios em uma distribuição normal com a frequência de cada um dos números. Foi atribuído a média desses números para 250 e o seu desvio padrão para 50. O comando floor remove o ponto decimal. Estes comandos é apenas para mostrar o poder da linguagem R, não se preocupe ainda em aprendê-los. Veja os comandos: 
+Com apenas uma linha de código, seu primeiro programa em R vai gerar um gráfico de barras oriundo de uma tabela carregada com 5000 números aleatórios em uma distribuição normal com a frequência de cada um dos números. Foi atribuído a média desses números para 250 e o seu desvio padrão para 50. O comando floor remove o ponto decimal. Estes comandos é apenas para mostrar o poder da linguagem R, não se preocupe ainda em aprendê-los. Quando puder, execute o comando na sua plataforma R: 
 
 ```{r}
 barplot(table(floor(rnorm(5000, 250, 50))), xlab='Numeros aleatorios', ylab='Frequencias')
@@ -21,11 +21,7 @@ barplot(table(floor(rnorm(5000, 250, 50))), xlab='Numeros aleatorios', ylab='Fre
 
 - O editor à direita possui um código de exemplo. As linhas de comentários dos códigos são identificados pelo símbolo #.
 
-- Adicione uma linha de código que calcule a divisão 100/12 (já feito) e clique no botão 'Submit Answer'.
-
-- Adicione uma linha de código que calcule a multiplicação de 100*12 (já feito) e clique no botão 'Submit Answer'.
-
-- Adicione uma linha de código que calcule a multiplicação de 100*12/12 e clique no botão 'Submit Answer'.
+- Adicione uma linha de código que calcule a multiplicação de 100*12/10 e clique no botão 'Submit Answer'.
 
 *** =hint
 
@@ -39,21 +35,17 @@ barplot(table(floor(rnorm(5000, 250, 50))), xlab='Numeros aleatorios', ylab='Fre
 ```
 *** =sample_code
 ```{r}
-# Calcule 100/12
-100/12
-# Calcule 100*12
-100*12
 # Calcule (digite) 100*12/10
 
 ```
+
 *** =solution
 ```{r}
 100*12/10
 ```
-
 *** =sct
-```{r}
 
+```{r}
 test_output_contains("100*12/10", incorrect_msg = "Digite corretamente a linha de código. Veja as dicas.")
 success_msg("Bom trabalho! Veja como o console mostra as operações aritméticas. Agora que você está familiarizado com a interface do curso, vamos aprender mais sobre o R!")
 ```
