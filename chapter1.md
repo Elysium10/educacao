@@ -48,6 +48,11 @@ barplot(table(floor(rnorm(5000, 250, 50))), xlab='Numeros aleatorios', ylab='Fre
 ```
 *** =solution
 ```{r}
+# Calcule 100/12
+100/12
+# Calcule 100*12
+100*12
+# Calcule (digite) 100*12/10
 100*12/10
 ```
 *** =sct
