@@ -54,19 +54,17 @@ success_msg("Bom trabalho! Veja como o console mostra as operações aritmética
 --- type:NormalExercise lang:r xp:100 skills:1 key:955002b2b7
 ## Média aritmética
 
-> É o valor que mais se aproxima do valor real de uma medida. Para obtê-la basta dividir a soma dos valores das medidas efetuadas pelo número destas medidas.
+> <p align="center">É o valor que mais se aproxima do valor real de uma medida. Para obtê-la basta dividir a soma dos valores das medidas efetuadas pelo número destas medidas.</p>
 
-Por exemplo, numa experiência foram obtidas as seguintes medidas: 4m, 5m, 8m, 9m, 5m. Em R a média aritmética $\bar{x}$ pode ser calculada da seguinte maneira:
-
+<p align="justify">Por exemplo, numa experiência foram obtidas as seguintes medidas: 4m, 5m, 8m, 9m, 5m. Em R a média aritmética $\bar{x}$ pode ser calculada da seguinte maneira:</p>
 
 ```{r}
 x <- c(4, 5, 8, 9, 5)
 mean(x)
 ```
+<p align="justify">Nos comandos acima podemos observar que um vetor c, formado pelas medidas dadas, foi armazenado em uma variável x. Por meio do comando mean(x) é obtido a média das medidas, ou seja, o comando mean(x) vai somar 4 + 5 + 8 + 9 + 5, dividir o resultado por 5 e mostrá-lo na tela assim que teclarmos em 'Submit Answer', no editor do ambiente R.</p>
 
-Depois basta teclar enter para obter o resultado.
-
-> Efetuando várias medidas -  cálculo de $\bar{x}$
+> <p align="center">Atividade - cálculo de $\bar{x}$</p>
 
 * Calcule a média aritmética das seguintes medidas: 10, 20, 30, 50, 100, 123, 233.
 
@@ -85,8 +83,9 @@ Crie um vetor c com as medidas dadas. Armazene o vetor c em uma variável x e us
 ```
 *** =sample_code
 ```{r}
-# Após digitar o comando para atribuir a uma variável x os números 10, 20, 30, 50, 100, 123, 233, determine a média 
+# Escreva o comando para atribuir a uma variável x os números 10, 20, 30, 50, 100, 123, 233
 x <- 
+# Determine a média: 
 mean(x)
 ```
 *** =solution
@@ -194,7 +193,7 @@ g <-
 # Armazene a medida efetuada de 10.2 em uma variável qualquer (gr).
 gr <- 
 # Obtenha o módulo (valor absoluto) da diferença entre a medida correta e a medida experimental e armazene-o na variável E.
-E <- abs(9.8 - 10.2)
+E <- abs(g - gr)
 # Mostre o valor do erro na e E na tela, digitando Eteclando Enter.
 E
 ```
