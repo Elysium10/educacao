@@ -99,77 +99,118 @@ test_output_contains("80.85714", incorrect_msg = "Voce tem certeza que armazenou
 success_msg("Bom trabalho! Agora você sabe calcular a média aritmética usando o R!")
 ```
 --- type:NormalExercise lang:r xp:100 skills:1 key:dd48eb091a
-## Média harmônica
+## Média harmônica (H)
 
-A média harmônica de números reais e positivos é definida como o inverso da média aritmética do inverso destes números. Matematicamente podemos representá-la por:
+> A média harmônica entre números reais e positivos é definida como o quociente entre a quantidade (n) de números pela soma dos inversos desses números. A média harmônica tmabém é deifinida como sendo o inverso da média aritmética do inverso destes números. Simbolicamente, temos
 
-$$x\bar{a}=\left ( \frac{1}{n} \sum_{i=1}^{n}\frac{1}{x_{i}}\right )^{-1}$$
+$$H = \displaystyle \frac{n}{\frac{1}{X1}+\frac{1}{X2}+ \frac{1}{X3}+...+\frac{1}{Xi}},$$
 
+ou de uma maneira mais compacta:
 
+$$H = \displaystyle \frac{n} { \displaystyle \sum_{i=1}^{n} \left(\frac{1}{Xi} \right)}\cdot$$
 
- 
-
-> $$E = {\left |m-\bar{m}  \right |}$$
-
-> onde,
-
-> $E$ - erro absoluto.
-
-> $m$ - valor correto.
-
-> $\bar{m}$ - valor obtido nas medidas.
-
-No R, a fórmula de erro absoluto é escrita assim:
+Exemplos de como é calculada a média harmônica no R:
 
 ```{r}
-E <- abs(m - mean(x))
-E
+x <- c(3, 8, 5, 10.5)
+1/mean(1/x)
+[1] 5.308057
 ```
-Depois basta teclar enter para obter o resultado.
+ou
 
-> #### Medindo alturas - cálculo do E
+```{r}
+x <- c(3, 8, 5, 10.5)
+(1/4*sum(1/c(3, 8, 5, 10.5)))^(-1)
+[1] 5.308057
+```
+> Aplicação 1
 
-> Suponha que você tenha a tarefa de medir várias vezes a altura de uma porta e obteve as seguintes medidas: 2.17, 2.20, 2.15 e 2.12. Se o valor correto da medida da altura da porta corresponde a 2.10m, calcule o erro absoluto (E).
+* Um móvel se desloca até uma certa cidade com uma velocidade média de 18 km/h. Depois retorna pelo mesmo percurso com uma velocidade média de 72 km/h. Determine a velocidade média do percurso completo (ida e volta).
+
+$$H = \displaystyle \frac{2} { \displaystyle \frac{1}{18} +\frac{1}{72}}=\displaystyle \frac{2} {\displaystyle\frac{5}{72}}=\displaystyle\frac{144}{5}=28.8~km/h \cdot $$
+
+- No seu ambiente R, exercite os códigos abaixo:
+
+```{r}
+x <- c(18,72)
+1/mean(1/x)
+[1] 28.8
+```
+ou
+
+```{r}
+x <- c(18,72)
+(1/2*sum(1/c(18,72)))^(-1)
+[1] 28.8
+```
+
+> Aplicação 2 
+
+* Uma motocicleta percorreu a distância entre duas cidades, com velocidade média de 60 km/h e fez a viagem de regresso com velocidade média de 40 km/h. Determine qual foi a velocidade média do percurso total, de ida e volta.
+
+$$H = \displaystyle \frac{2} { \displaystyle \frac{1}{60} +\frac{1}{40}}=\displaystyle \frac{2} {\displaystyle\frac{5}{120}}=\displaystyle\frac{240}{5}=48~km/h \cdot $$
+
+- No seu ambiente R, exercite o código abaixo:
+
+```{r}
+x <- c(60,40)
+1/mean(1/x)
+[1] 48
+```
+ou
+
+```{r}
+x <- c(60,40)
+(1/2*sum(1/c(60,40)))^(-1)
+[1] 48
+```
+
+$$H = \displaystyle \frac{3} { \displaystyle \frac{1}{2} +\frac{1}{5} + \frac{1}{10}}=\displaystyle \frac{3} {\displaystyle {\frac{13}{15}}}=\displaystyle\frac{45}{13}\cong3.46.$$
+
+
+### Atividade
+
+> Encontre a média harmônica entre 2, 5 e 10.
 
 *** =instructions
-- Calcule a média aritmética das medidas ==> mean(x). 
-- Subtraia a média encontrada da medida correta ==> m - mean(x). 
-- Obtenha o módulo (valor absoluto) dessa diferença ==> abs(m - mean(x)).
+
+* Aplique o comando para encontrar a média entre os números 2, 5, 10;
+
+* Um auxílio para comparar cálculos de média harmônica pode ser encontrado neste link: 
+[Cálculo de média harmônica.](http://www.gyplan.com.br/pt/harmonic_mean_pt.html)
+
 *** =hint
 
-Armazene 2.10 na variável m.
-Crie um vetor c com as medidas dadas. Armazene o vetor c em uma variável x e o valor 
-da medida correta numa variável m e use o comando mean(x).
+- A solução matemática é $$H = \displaystyle \frac{2} { \displaystyle \frac{1}{18} +\frac{1}{72}}=\displaystyle \frac{2} {\displaystyle\frac{5}{72}}=\displaystyle\frac{144}{5}=28.8~km/h \cdot $$
+
+- Atribua à variável x um vetor contendo os três números.
+
+- O vetor deve começar com c. Assim: c(3,5,10).
 
 *** =pre_exercise_code
+
 ```{r}
+
 # no pec
+
 ```
 *** =sample_code
 ```{r}
-# Armazene o valor da medida correta. 
-m <- 
-# Crie um vetor c com as medidas dadas e o armazene em uma variável x.
-x <- 
-# Use o comando mean(x) para calcular a média.
-mean ()
-# Obtenha o módulo (valor absoluto) dessa diferença e armazene a média numa variável.
-E <- abs(m - mean(x))
-# Mostre o valor de E na tela.
-E
+# Complete a linha abaixo com os números
+x <- c(3,5,10)
+(1/2*sum(1/c(3,5,10)))^(-1)
+}
 ```
 *** =solution
 ```{r}
-m <- 2.10
-x <- c(2.17, 2.20, 2.15, 2.12)
-mean(x)
-E <- abs(m - mean(x))
-E 
+c(3,5,10)
+}
+
 ```
 *** =sct
 ```{r}
-test_output_contains("0.06", incorrect_msg = "Você armazenor corretamente o vetor x <- c(2.17, 2.20, 2.15, 2.12) na variável x?")
-success_msg("Parabéns! Agora você sabe calcular o erro absoluto usando o R!")
+test_output_contains("c(3,5,10)", incorrect_msg = "Os números devem estar separados com vírgula e antecedidos pela letra c. Após isso, tecle em 'Submit Answer'.")
+success_msg("Bom trabalho! Você adquiriu noções sobre média harmônica aplicada na Física em velocidades médias e em números.")
 ```
 --- type:NormalExercise lang:r xp:100 skills:1 key:24e7dc599e
 
