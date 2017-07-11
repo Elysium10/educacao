@@ -1,7 +1,7 @@
 --- 
 title_meta  : Capítulo 1
 title       : Introdução
-description : "Neste capítulo você aprenderá sobre os comandos básicos do programa R, enfatizando o seu uso no dia a dia e na sala de aula. Aprenderá a criar funções básicas para usá-las em problemas de Matemática, Física, Estatística e outras ciências. Por meio do editor do texto do curso você perceberá a facilidade de uso dos comandos. Se você é aluno ou professor, terá dicas de auxílios na resolução dos problemas propostos e poderá levar a metodologia para usar em sala de aula. Será muito divertido o estudo com o auxílio da plataforma R. Seja bem vindo e bons estudos!"
+description : <p align="justify">"Neste capítulo você aprenderá sobre os comandos básicos do programa R, enfatizando o seu uso no dia a dia e na sala de aula. Aprenderá a criar funções básicas para usá-las em problemas de Matemática, Física, Estatística e outras ciências. Por meio do editor do texto do curso você perceberá a facilidade de uso dos comandos. Se você é aluno ou professor, terá dicas de auxílios na resolução dos problemas propostos e poderá levar a metodologia para usar em sala de aula. Será muito divertido o estudo com o auxílio da plataforma R. Seja bem vindo e bons estudos!"</p>
 --- type:NormalExercise lang:r xp:100 skills:1 key:aad1409c3d
 ## Comandos básicos do R
 
@@ -35,7 +35,7 @@ barplot(table(floor(rnorm(5000, 250, 50))), xlab='Numeros aleatorios', ylab='Fre
 ```
 *** =sample_code
 ```{r}
-# Calcule (digite na linha abaixo) 100*12/10
+# Calcule (escreva na linha abaixo) 100*12/10
 
 ```
 
@@ -46,7 +46,7 @@ barplot(table(floor(rnorm(5000, 250, 50))), xlab='Numeros aleatorios', ylab='Fre
 *** =sct
 
 ```{r}
-test_output_contains("100*12/10", incorrect_msg = "Digite corretamente a linha de código. Veja as dicas.")
+test_output_contains("100*12/10", incorrect_msg = "Escreva corretamente a linha de código. Veja as dicas.")
 success_msg("Bom trabalho! Veja como o console mostra as operações aritméticas. Agora que você está familiarizado com a interface do curso, vamos aprender mais sobre o R!")
 ```
 --- type:NormalExercise lang:r xp:100 skills:1 key:955002b2b7
