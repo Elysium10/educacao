@@ -99,9 +99,15 @@ test_output_contains("80.85714", incorrect_msg = "Voce tem certeza que armazenou
 success_msg("Bom trabalho! Agora você sabe calcular a média aritmética usando o R!")
 ```
 --- type:NormalExercise lang:r xp:100 skills:1 key:dd48eb091a
-## Erro absoluto (E)
+## Média harmônica
 
-Podemos encontrar o erro aboluto de uma medida usando a seguinte expressão: 
+A média harmônica de números reais e positivos é definida como o inverso da média aritmética do inverso destes números. Matematicamente podemos representá-la por:
+
+$$x\bar{a}=\left ( \frac{1}{n} \sum_{i=1}^{n}\frac{1}{x_{i}}\right )^{-1}$$
+
+
+
+ 
 
 > $$E = {\left |m-\bar{m}  \right |}$$
 
