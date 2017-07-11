@@ -132,7 +132,10 @@ $$H = \displaystyle \frac{2} { \displaystyle \frac{1}{18} +\frac{1}{72}}=\displa
 - No seu ambiente R, exercite os códigos abaixo:
 
 ```{r}
+# Atribui à variável x o vetor c
 x <- c(18,72)
+# Determina o inverso média do inverso dos números 
+# contidos na variável x
 1/mean(1/x)
 [1] 28.8
 ```
@@ -140,7 +143,7 @@ ou
 
 ```{r}
 x <- c(18,72)
-(1/2*sum(1/c(18,72)))^(-1)
+(1/2*sum(1/x))^(-1)
 [1] 28.8
 ```
 
@@ -161,12 +164,9 @@ ou
 
 ```{r}
 x <- c(60,40)
-(1/2*sum(1/c(60,40)))^(-1)
+(1/2*sum(1/x))^(-1)
 [1] 48
 ```
-
-$$H = \displaystyle \frac{3} { \displaystyle \frac{1}{2} +\frac{1}{5} + \frac{1}{10}}=\displaystyle \frac{3} {\displaystyle {\frac{13}{15}}}=\displaystyle\frac{45}{13}\cong3.46.$$
-
 
 ### Atividade
 
@@ -181,7 +181,10 @@ $$H = \displaystyle \frac{3} { \displaystyle \frac{1}{2} +\frac{1}{5} + \frac{1}
 
 *** =hint
 
-- A solução matemática é $$H = \displaystyle \frac{2} { \displaystyle \frac{1}{18} +\frac{1}{72}}=\displaystyle \frac{2} {\displaystyle\frac{5}{72}}=\displaystyle\frac{144}{5}=28.8~km/h \cdot $$
+- A solução matemática é 
+
+$$H = \displaystyle \frac{3} { \displaystyle \frac{1}{2} +\frac{1}{5} + \frac{1}{10}}$$
+$$ =\displaystyle \frac{3} {\displaystyle {\frac{13}{15}}}=\displaystyle\frac{45}{13}\cong3.46.$$
 
 - Atribua à variável x um vetor contendo os três números.
 
@@ -196,16 +199,13 @@ $$H = \displaystyle \frac{3} { \displaystyle \frac{1}{2} +\frac{1}{5} + \frac{1}
 ```
 *** =sample_code
 ```{r}
-# Complete a linha abaixo com os números
-x <- c(3,5,10)
-(1/2*sum(1/c(3,5,10)))^(-1)
-}
+# Complete a linha abaixo com o vetor c
+x <- 
+(1/3*sum(1/x))^(-1)
 ```
 *** =solution
 ```{r}
 c(3,5,10)
-}
-
 ```
 *** =sct
 ```{r}
