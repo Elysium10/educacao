@@ -601,7 +601,7 @@ success_msg("Bom trabalho! Você adquiriu noções sobre a equação horária do
 
 > Escala termométrica Kelvin
 
-<p align="justify">Foi construída baseado em pesquisas que apontam que o zero absoluto, a menor temperatura (0K) encontrada na natureza, correspondente na Celsius a -273,15°C, por isso é chamada de escala absoluta de temperatura. Essa escala possui um ponto de gelo equivalente a aproximadamente 273,15K e um ponto de ebulição equivalente a aproximadamente 373,15K. O Kelvin é a unidade de medida de base do Sistema Internacional de Unidades (SI) para a grandeza temperatura. A expressão para transformar unidades de medidas de temperaturas Celsius para Kelvin é dada por:</p>
+<p align="justify">A escala Kelvin foi construída baseado em pesquisas que apontam que o zero absoluto é a menor temperatura (0K) encontrada na natureza e corresponde na escala Celsius a -273,15°C, por isso é chamada de escala absoluta de temperatura. Possui um ponto de gelo equivalente a aproximadamente 273,15K e um ponto de ebulição equivalente a aproximadamente 373,15K. O Kelvin é a unidade de medida de base do Sistema Internacional de Unidades (SI) para a grandeza temperatura. A expressão para transformar unidades de medidas de temperaturas Celsius para Kelvin é dada por:</p>
 
 $$TK= TC + 273.15$$
 
@@ -705,7 +705,7 @@ FemC <- function(Fahrenheit,Celsius){# <== Cria a função FemC
 * Digite a função seguida de 100 e clique no botão 'Submit Answer';
  
 * Um auxílio sobre resultados de transformações de graus em escalas termométricas pode ser encontrado neste link: 
-[Conversor de temperaturas.](https://www.google.com.br/#q=transformar+graus)
+[conversor de temperaturas.](https://www.google.com.br/#q=transformar+graus)
 
 *** =hint
 
