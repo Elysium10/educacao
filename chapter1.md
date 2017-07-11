@@ -596,3 +596,156 @@ coeficientes (1, -3, -4)
 test_output_contains("coeficientes (1, -3, -4)", incorrect_msg = "O nome da função é coeficientes. Digite o nome da função com os seus respectivos coeficientes e tecle Enter.")
 success_msg("Bom trabalho! Você adquiriu noções sobre a equação horária do MRUV e desenvolveu uma função para determinar o instante (raiz) ou instantes (raízes) em que um móvel passa pela origem (0) da trajetória.")
 ```
+--- type:NormalExercise lang:r xp:100 skills:1 key:3fde33b8e4
+## Escalas termométricas
+
+> Escala termométrica Kelvin
+
+<p align="justify">Foi construída baseado em pesquisas que apontam que o zero absoluto, a menor temperatura (0K) encontrada na natureza, correspondente na Celsius a -273,15°C, por isso é chamada de escala absoluta de temperatura. Essa escala possui um ponto de gelo equivalente a aproximadamente 273,15K e um ponto de ebulição equivalente a aproximadamente 373,15K. O Kelvin é a unidade de medida de base do Sistema Internacional de Unidades (SI) para a grandeza temperatura. A expressão para transformar unidades de medidas de temperaturas Celsius para Kelvin é dada por:</p>
+
+$$TK= TC + 273.15$$
+
+> Escala termométrica Celsius
+
+<p align="justify">O grau Celsius ou Centígrado é uma unidade de medida de temperatura oriundo da escala termométrica Celsius. Nesta, o ponto de gelo corresponde a 0°C e o ponto de vapor corresponde a 100°C. A expressão para transformar unidades de medidas de temperaturas Kelvins em Celsius é dada por:</p></p> 
+
+$$TC = TK - 273.15$$
+
+> Escala termométrica Fahrenheit
+
+<p align="justify">O grau Fahrenheit é uma unidade de medida de temperatura oriundo da escala termométrica Fahrenheit, onde o ponto de gelo corresponde a 32°F  e o ponto de vapor corresponde a 212°F. O zero absoluto é definido como igual a -459,67°F. A expressão para transformar unidades de medidas de temperaturas Fahrenheit em Celsius é dada por:</p>
+
+$$TC = (TF - 32)/1.8$$
+
+> Criando mais funções
+
+<p align="justify">Baseado nas fórmulas de conversões de escalas termométricas, podemos criar algumas funções no R. 
+
+Função que transforma graus Kelvins em graus Celsius:</p>
+
+```{r}
+KemC <- function(Kelvin,Celsius){# <== Cria a função KemC 
+	# Fórmula de conversão:
+    Celsius <- Kelvin-273.15
+	# Retorna o resultado calculado:
+    return(Celsius)
+}
+```
+> No seu ambiente R, transforme 300K em Celsius. 
+
+<p align="justify"> Basta digitar, no ambiente R, o nome da função seguida com o dado entre parênteses e teremos como resposta 26.85°C. Veja:</p>
+
+```{r}
+KemC(300)
+[1] 26.85
+}
+```
+> Função que transforma graus Celsius em graus Kelvins
+
+* No seu ambiente R, transforme 10K em Celsius.
+
+```{r}
+CemK <- function(Celsius,Kelvin){# <== Cria a função CemK 
+	# Fórmula de conversão:
+    Kelvin <- Celsius + 273.15
+	# Retorna o resultado calculado:
+    return(Kelvin)
+}
+```
+
+> Função que transforma graus Fahrenheit em Kelvins
+
+- No seu ambiente R, transforme 32°F em Celsius.
+
+```{r}
+FemK <- function(Fahrenheit,Kelvin){# <== Cria a função FemK 
+	# Fórmula de conversão:
+	Kelvin <- (Fahrenheit + 459.67)/1.8
+	# Retorna o resultado calculado:
+    return(Kelvin)
+}
+```
+
+> Função que transforma graus Kelvins em Fahrenheit
+
+- No seu ambiente R, transforme 100K em Fahrenheit.
+
+```{r}
+KemF <- function(Kelvin,Fahrenheit){# <== Cria a função KemF 
+	# Fórmula de conversão:
+	Fahrenheit <- (Kelvin*1.8)-459.67)
+	# Retorna o resultado calculado:
+    return(Fahrenheit)
+}
+```
+
+> Função que transforma graus Fahrenheit em Celsius
+
+- No seu ambiente R, transforme 40°F em Fahrenheit.
+
+```{r}
+FemC <- function(Fahrenheit,Celsius){# <== Cria a função FemC 
+	# Fórmula de conversão:
+	Celsius <- (F - 32)/1.8
+	# Retorna o resultado calculado:
+    return(Celsius)
+}
+```
+
+### Atividade
+
+> Tente criar uma função que transforma graus Celsius em Fahrenheit
+
+- No nosso ambiente R, transformaremos 100°C em Fahrenheit.
+
+*** =instructions
+
+* Estude e analise a função;
+
+* Digite a função seguida de 100 e clique no botão 'Submit Answer';
+ 
+* Um auxílio sobre resultados de transformações de graus em escalas termométricas pode ser encontrado neste link: 
+[Conversor de temperaturas.](https://www.google.com.br/#q=transformar+graus)
+
+*** =hint
+
+- O nome dado à função deve ser digitado seguido com o número a ser transformado.
+
+- O nome da função está à esquerda do comando "function".
+
+*** =pre_exercise_code
+```{r}
+
+# no pec
+
+```
+
+*** =sample_code
+```{r}
+CemF <- function(Celsius,Fahrenheit){# <== Cria a função CemF 
+    # Fórmula de conversão:
+    Fahrenheit <- (1.8*Celsius + 32)
+    # Retorna o resultado calculado:
+    return(Fahrenheit)
+}
+# Na linha abaixo, escreva o comando de conversão de 100°C em Fahrenheit:
+
+```
+
+*** =solution
+```{r}
+CemF <- function(Celsius,Fahrenheit){# <== Cria a função CemF 
+    # Fórmula de conversão:
+    Fahrenheit <- (1.8*Celsius + 32)
+    # Retorna o resultado calculado:
+    return(Fahrenheit)
+}
+# Na linha abaixo, escreva o comando de conversão de 100°C em Fahrenheit:
+CemF(100)
+```
+
+*** =sct
+```{r}
+test_output_contains("CemF(100)", incorrect_msg = "O nome da função deve ser seguida com o dado que é o 100. Digite o dado entre parênteses e tecle 'Submit Answer'.")
+success_msg("Bom trabalho! Você adquiriu mais noções sobre como criar uma função e aprendeu um pouco sobre Termologia e escalas termométricas.")
+```
