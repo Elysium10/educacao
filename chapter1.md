@@ -127,19 +127,20 @@ x <- c(3, 8, 5, 10.5)
 ```
 > Aplicação 1
 
-* <p align="justify">Um móvel se desloca até uma certa cidade com uma velocidade média de 18 km/h. Depois retorna pelo mesmo percurso com uma velocidade média de 72 km/h. Determine a velocidade média do percurso completo (ida e volta).</p>
+* <p align="justify">Um móvel se desloca até uma certa cidade com uma velocidade média de 18km/h. Depois retorna pelo mesmo percurso com uma velocidade média de 72km/h. Determine a velocidade média do percurso completo (ida e volta).</p>
+
+<p align="justify">Utilizaremos a expressão que calcula a média harmônica:
+
+$$H = \displaystyle \frac{n}{\frac{1}{V1}+\frac{1}{V2}} \cdot$$
+
+Substituindo as quantidades (temos dois valores de velocidades, n = 2) e os valores das velocidades na expressão acima e obteremos
 
 $$H = \displaystyle \frac{2} { \displaystyle \frac{1}{18} +\frac{1}{72}}=\displaystyle \frac{2} {\displaystyle\frac{5}{72}}=\displaystyle\frac{144}{5}=28.8~km/h \cdot $$
 
-<p style="background-color:#33a0c2; font-size:large; text-align:center"><font color="#ffffff">No seu ambiente R, exercite os códigos abaixo:</font></p>
-
-<p style="color:#000000; background-color:#ffffff">No seu ambiente R, exercite os códigos abaixo</p>
-33A0C2
-
-- No seu ambiente R, exercite os códigos abaixo:
+Logo abaixo, temos o código deste exercício de aplicação. No seu ambiente R, exercite-o: </p>
 
 ```{r}
-# Atribui à variável x o vetor c
+# Atribui-se à variável x o vetor c
 x <- c(18,72)
 # O inverso da média do inverso dos números contidos na variável x
 1/mean(1/x)
@@ -155,11 +156,11 @@ x <- c(18,72)
 
 > Aplicação 2 
 
-* <p align="justify">Uma motocicleta percorreu a distância entre duas cidades, com velocidade média de 60 km/h e fez a viagem de regresso com velocidade média de 40 km/h. Determine qual foi a velocidade média do percurso total, de ida e volta.</p>
+* <p align="justify">Uma motocicleta percorreu a distância entre duas cidades, com velocidade média de 60km/h e fez a viagem de regresso com velocidade média de 40km/h. Determine qual foi a velocidade média do percurso total, de ida e volta.</p>
 
 $$H = \displaystyle \frac{2} { \displaystyle \frac{1}{60} +\frac{1}{40}}=\displaystyle \frac{2} {\displaystyle\frac{5}{120}}=\displaystyle\frac{240}{5}=48~km/h \cdot $$
 
-- No seu ambiente R, exercite o código abaixo:
+<p align="justify">Logo abaixo, temos o código deste exercício de aplicação. No seu ambiente R, exercite-o:</p>
 
 ```{r}
 x <- c(60,40)
@@ -175,8 +176,6 @@ x <- c(60,40)
 ```
 
 <p style="background-color:#33a0c2; font-weight: bold; font-size: 20px; text-align:center"><font color="#ffffff">ATIVIDADE</font></p>
-
-### Atividade
 
 > Encontre a média harmônica entre 2, 5 e 10.
 
