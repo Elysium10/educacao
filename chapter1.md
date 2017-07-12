@@ -183,13 +183,12 @@ x <- c(60,40)
 
 - Atribua à variável x um vetor contendo os três números.
 
-- O vetor deve começar com c. Assim: c(3,5,10).
+- O vetor deve começar com c. Assim: c(2,5,10).
 
 - Observação: a solução matemática é 
 
 $$H = \displaystyle \frac{3} { \displaystyle \frac{1}{2} +\frac{1}{5} + \frac{1}{10}}$$
-$$ =\displaystyle \frac{3} {\displaystyle {\frac{13}{15}}}=\displaystyle\frac{45}{13}\cong3.46.$$
-
+$$=\displaystyle \frac{3} {\displaystyle {\frac{8}{10}}}=\displaystyle\frac{30}{8}=3.75.$$
 
 *** =pre_exercise_code
 
@@ -206,11 +205,11 @@ x <-
 ```
 *** =solution
 ```{r}
-46
+3.75
 ```
 *** =sct
 ```{r}
-test_output_contains("46", incorrect_msg = "Os números devem estar separados com vírgula e antecedidos pela letra c. Após isso, tecle em 'Submit Answer'.")
+test_output_contains("3.75", incorrect_msg = "Os números devem estar separados com vírgula e antecedidos pela letra c. Após isso, tecle em 'Submit Answer'.")
 success_msg("Bom trabalho! Você adquiriu noções sobre média harmônica aplicada na Física em velocidades médias e em números.")
 ```
 --- type:NormalExercise lang:r xp:100 skills:1 key:24e7dc599e
