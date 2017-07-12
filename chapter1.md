@@ -51,15 +51,6 @@ barplot(table(floor(rnorm(5000, 250, 50))), xlab="Numeros aleatorios", ylab="Fre
 test_output_contains("100*12/10", incorrect_msg = "Escreva corretamente a linha de código. Veja as dicas.")
 success_msg("Bom trabalho! Veja como o console mostra as operações aritméticas. Agora que você está familiarizado com a interface do curso, vamos aprender mais sobre o R!")
 ```
-hhhh
-
-
-
-
-
-
-hhhhh
-
 --- type:NormalExercise lang:r xp:100 skills:1 key:955002b2b7
 ## Média aritmética
 
@@ -474,7 +465,7 @@ $$\sqrt{log(10000000)}\rightarrow10^{x}=10000000\rightarrow 10^{x}=10^{7}\righta
 
 > Calcule no R quanto vale a seguinte soma de logs:
 
-$$\sqrt{log(1)}+\sqrt{log(10)}+\sqrt{log(100)}+ \sqrt{log(1000)}+\sqrt{log(10000)}+ \sqrt{log(100000)}+\sqrt{log(10000000)}$$
+$$\sqrt{log(1)}+\sqrt{log(10)}+\sqrt{log(100)}+...+\sqrt{log(10000000)}$$
 
 > Passo-a-passo:
 
