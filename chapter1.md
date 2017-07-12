@@ -51,6 +51,15 @@ barplot(table(floor(rnorm(5000, 250, 50))), xlab="Numeros aleatorios", ylab="Fre
 test_output_contains("100*12/10", incorrect_msg = "Escreva corretamente a linha de código. Veja as dicas.")
 success_msg("Bom trabalho! Veja como o console mostra as operações aritméticas. Agora que você está familiarizado com a interface do curso, vamos aprender mais sobre o R!")
 ```
+hhhh
+
+
+
+
+
+
+hhhhh
+
 --- type:NormalExercise lang:r xp:100 skills:1 key:955002b2b7
 ## Média aritmética
 
@@ -112,7 +121,7 @@ $$H = \displaystyle \frac{n} { \displaystyle \sum_{i=1}^{n} \left(\frac{1}{Xi} \
 Exemplos de como é calculada a média harmônica no R:
 
 ```{r}
-# Atribui à variável x o vetor c
+# Atribui-se à variável x o vetor c
 x <- c(3, 8, 5, 10.5)
 # O inverso da média do inverso dos números contidos na variável x
 1/mean(1/x)
@@ -316,6 +325,7 @@ Er
 test_output_contains("0.04081", incorrect_msg = "Você armazenou corretamente 9.8 na varável g e 10.2 na varável gr?")
 success_msg("Parabéns! Agora você sabe calcular o erro relativo usando o R!")
 ```
+iiiiii
 
 --- type:NormalExercise lang:r xp:100 skills:1 key:bc0cf7b809
 ## Operações aritméticas no ambiente R
