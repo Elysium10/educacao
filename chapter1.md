@@ -101,7 +101,7 @@ success_msg("Bom trabalho! Agora você sabe calcular a média aritmética usando
 --- type:NormalExercise lang:r xp:100 skills:1 key:dd48eb091a
 ## Média harmônica (H)
 
-> A média harmônica entre números reais e positivos é definida como o quociente entre a quantidade (n) de números pela soma dos inversos desses números. A média harmônica tmabém é deifinida como sendo o inverso da média aritmética do inverso destes números. Simbolicamente, temos
+> <p align="justify">A média harmônica entre números reais e positivos é definida como o quociente entre a quantidade (n) de números pela soma dos inversos desses números. A média harmônica também é definida como sendo o inverso da média aritmética do inverso destes números. Simbolicamente, temos</p>
 
 $$H = \displaystyle \frac{n}{\frac{1}{X1}+\frac{1}{X2}+ \frac{1}{X3}+...+\frac{1}{Xi}},$$
 
@@ -112,7 +112,9 @@ $$H = \displaystyle \frac{n} { \displaystyle \sum_{i=1}^{n} \left(\frac{1}{Xi} \
 Exemplos de como é calculada a média harmônica no R:
 
 ```{r}
+# Atribui à variável x o vetor c
 x <- c(3, 8, 5, 10.5)
+# O inverso da média do inverso dos números contidos na variável x
 1/mean(1/x)
 [1] 5.308057
 ```
@@ -120,22 +122,26 @@ ou
 
 ```{r}
 x <- c(3, 8, 5, 10.5)
-(1/4*sum(1/c(3, 8, 5, 10.5)))^(-1)
+(1/4*sum(1/x))^(-1)
 [1] 5.308057
 ```
 > Aplicação 1
 
-* Um móvel se desloca até uma certa cidade com uma velocidade média de 18 km/h. Depois retorna pelo mesmo percurso com uma velocidade média de 72 km/h. Determine a velocidade média do percurso completo (ida e volta).
+* <p align="justify">Um móvel se desloca até uma certa cidade com uma velocidade média de 18 km/h. Depois retorna pelo mesmo percurso com uma velocidade média de 72 km/h. Determine a velocidade média do percurso completo (ida e volta).</p>
 
 $$H = \displaystyle \frac{2} { \displaystyle \frac{1}{18} +\frac{1}{72}}=\displaystyle \frac{2} {\displaystyle\frac{5}{72}}=\displaystyle\frac{144}{5}=28.8~km/h \cdot $$
+
+<p style="background-color:#33a0c2; font-size:large; text-align:center"><font color="#ffffff">No seu ambiente R, exercite os códigos abaixo:</font></p>
+
+<p style="color:#000000; background-color:#ffffff">No seu ambiente R, exercite os códigos abaixo</p>
+33A0C2
 
 - No seu ambiente R, exercite os códigos abaixo:
 
 ```{r}
 # Atribui à variável x o vetor c
 x <- c(18,72)
-# Determina o inverso média do inverso dos números 
-# contidos na variável x
+# O inverso da média do inverso dos números contidos na variável x
 1/mean(1/x)
 [1] 28.8
 ```
@@ -149,7 +155,7 @@ x <- c(18,72)
 
 > Aplicação 2 
 
-* Uma motocicleta percorreu a distância entre duas cidades, com velocidade média de 60 km/h e fez a viagem de regresso com velocidade média de 40 km/h. Determine qual foi a velocidade média do percurso total, de ida e volta.
+* <p align="justify">Uma motocicleta percorreu a distância entre duas cidades, com velocidade média de 60 km/h e fez a viagem de regresso com velocidade média de 40 km/h. Determine qual foi a velocidade média do percurso total, de ida e volta.</p>
 
 $$H = \displaystyle \frac{2} { \displaystyle \frac{1}{60} +\frac{1}{40}}=\displaystyle \frac{2} {\displaystyle\frac{5}{120}}=\displaystyle\frac{240}{5}=48~km/h \cdot $$
 
@@ -168,16 +174,19 @@ x <- c(60,40)
 [1] 48
 ```
 
+<p style="background-color:#33a0c2; font-weight: bold; font-size: 20px; text-align:center"><font color="#ffffff">ATIVIDADE</font></p>
+
 ### Atividade
 
 > Encontre a média harmônica entre 2, 5 e 10.
 
 *** =instructions
 
-* Aplique o comando para encontrar a média entre os números 2, 5, 10;
+* <p align="justify">Aplique os comandos estudados neste tópico para encontrar a média entre os números 2, 5, 10;</p>
 
-* Um auxílio para comparar cálculos de média harmônica pode ser encontrado neste link: 
-[Cálculo de média harmônica.](http://www.gyplan.com.br/pt/harmonic_mean_pt.html)
+* <p align="justify">Um auxílio para comparar cálculos de média harmônica pode ser encontrado neste link:</p> 
+
+[Cálculo de média harmônica.](http://www.gyplan.com.br/pt/harmonic_mean_pt.html)</p>
 
 *** =hint
 
