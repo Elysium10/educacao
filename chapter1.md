@@ -99,15 +99,15 @@ test_output_contains("80.85714", incorrect_msg = "Voce tem certeza que armazenou
 success_msg("Bom trabalho! Agora você sabe calcular a média aritmética usando o R!")
 ```
 --- type:NormalExercise lang:r xp:100 skills:1 key:dd48eb091a
-## Média harmônica (H)
+## Média harmônica
 
-> <p align="justify">A média harmônica entre números reais e positivos é definida como o quociente entre a quantidade (n) de números pela soma dos inversos desses números. A média harmônica também é definida como sendo o inverso da média aritmética do inverso destes números. Simbolicamente, temos</p>
+> <p align="justify">A média harmônica ($\bar{X} _{H}$)  entre números reais e positivos é definida como o quociente entre a quantidade (n) de números pela soma dos inversos desses números. A média harmônica também é definida como sendo o inverso da média aritmética do inverso destes números. Simbolicamente, temos</p>
 
-$H = \displaystyle \frac{n}{\frac{1}{X1}+\frac{1}{X2}+ \frac{1}{X3}+...+\frac{1}{Xi}},$
+$$\bar{X} _{H}  = \displaystyle \frac{n}{\frac{1}{X _{1}}+\frac{1}{X _{2}}+ \frac{1}{X _{3}}+...+\frac{1}{X _{n}}},$$
 
 ou de uma maneira mais compacta:
 
-$H = \displaystyle \frac{n} { \displaystyle \sum_{i=1}^{n} \left(\frac{1}{Xi} \right)}\cdot$
+$$\bar{X} _{H} = \displaystyle \frac{n} { \displaystyle \sum _{i=1}^{n} \left(\frac{1}{X _{i}} \right)} =  \left (\frac{1}{n}\sum _{i=1}^{n}\frac{1}{X _{i}}  \right )^{-1}.$$
 
 Exemplos de como é calculada a média harmônica no R:
 
@@ -221,22 +221,16 @@ test_output_contains("3.75", incorrect_msg = "Os números devem estar separados 
 success_msg("Bom trabalho! Você adquiriu noções sobre média harmônica aplicada na Física em velocidades médias e em números.")
 ```
 --- type:NormalExercise lang:r xp:100 skills:1 key:18b6a4eeb5
-## Média geométrica (G)
+## Média geométrica
 
-<p align="justify">Para determinar a média geométrica basta multiplicar todos os elementos dados no problema e extrair 
-a raiz de índice n (número de elementos) deste produto. Simbolicamente, temos</p>
+<p align="justify">Para determinar a média geométrica ($\bar{X} _{G}$) basta multiplicar todos os elementos dados no problema e extrair a raiz de índice n (número de elementos) deste produto. Simbolicamente, temos</p>
 
-$G =\sqrt[n]{X{1}.X{2}.X{3}.X{4} \cdots a_n},$
+$$\bar{X} _{G} = \sqrt[n]{X _{1}.X _{2}.X _{3}.X _{4} \cdots a _n},$$
 
 ou de uma maneira mais compacta:
 
-$G = \left(\prod {i=1}^n a_i \right)^{1/n}.$
-
-$$\nabla_{\vec{\delta{x}}}J=0$$
-
-$$Y = \beta_{0} + \beta_{1} x + \epsilon$$
-
-
+$$\bar{X} _{G} = \left(\prod _{i=1}^{n}x _{i}\right)^{1/n}.$$
+ 
 > Fórmula para a média geométrica no R
 
 ```{r}
@@ -246,7 +240,7 @@ $$Y = \beta_{0} + \beta_{1} x + \epsilon$$
 
 * Determine a média geométrica entre os números 2, 8, 32.
 
-$$G =\sqrt[3]{2.8.32}=\sqrt[3]{512}=\sqrt[3]{8^{3}}=8.$$
+$$\bar{X} _{G} =\sqrt[3]{2.8.32}=\sqrt[3]{512}=\sqrt[3]{8^{3}}=8.$$
 
 > Determinando a média geométrica no R:
 
