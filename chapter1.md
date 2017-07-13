@@ -228,11 +228,11 @@ success_msg("Bom trabalho! Você adquiriu noções sobre média harmônica aplic
 <p align="justify">Para determinar a média geométrica basta multiplicar todos os elementos dados no problema e extrair 
 a raiz de índice n (número de elementos) deste produto. Simbolicamente, temos</p>
 
-$ G =\sqrt[n]{a{1}.a{2}.a{3}.a{4} \cdots a_n}, $
+$G =\sqrt[n]{X{1}.X{2}.X{3}.X{4} \cdots a_n},$
 
 ou de uma maneira mais compacta:
 
-$$ G = \left(\prod {i=1}^n a_i \right)^{1/n}. $$
+$G = \left(\prod {i=1}^n a_i \right)^{1/n}.$
 
 > Média geométrica no R
 
