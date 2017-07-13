@@ -242,7 +242,7 @@ $G = \left(\prod {i=1}^n a_i \right)^{1/n}.$
 
 > Determine a média geométrica entre os números 2, 8, 32.
 
-$ G = \sqrt[3]{2.8.32}=\sqrt[3]{2.8.32}=\sqrt[3]{512}=\sqrt[3]{8^{3}}=8. $
+$$G =\sqrt[3]{2.8.32}=\sqrt[3]{2.8.32}=\sqrt[3]{512}=\sqrt[3]{8^{3}}=8.$$
 
 > Resolvendo no R:
 
@@ -256,7 +256,7 @@ prod(x)^(1/n)
 
 [1] 8
 ```
-> Determine a média geométrica entre os números 5, 7, 10, 15, 21.
+> Determine a média geométrica entre os números 5, 7, 10, 15 e 21.
 
 ```{r}
 x <- c(5, 7, 10, 15, 21)
@@ -266,19 +266,19 @@ prod(x)^(1/n)
 [1] 10.19708
 ```
 
-> Aplicação 1 
+> Aplicação  
 
-* <p align="justify">A média geométrica é muito útil em situações que envolvem aumentos sucessivos. Suponhamos que uma classe 
-de trabalhadores terá um aumento salarial de 5%, 10% e 15% em meses sucessivos. Determine a média geométrica dos aumentos.
+<p align="justify">A média geométrica é muito útil em situações que envolvem aumentos sucessivos. Suponhamos que uma classe 
+de trabalhadores terá um aumento salarial de 5%, 10% e 15% em meses sucessivos. Determine a média geométrica dos aumentos.</p>
 
-Para acumular um aumento de 5%, 10% e 15% sobre o valor de um salário, a suas taxas percentuais devem ser transformadas em 
-taxas unitárias: 
+<p align="justify">Para acumular um aumento de 5%, 10% e 15% sobre o valor de um salário, a suas taxas percentuais devem ser transformadas em taxas unitárias:</p>
 
-5% = 1.05 
-10% = 1.10 
-15% = 1.15
+* 5% = 1.05 
+* 10% = 1.10 
+* 15% = 1.15
 
-Portanto, devemos determinar a média geométrica de 1.05, 1.10, 1.15. Resolvendo no R, temos
+
+<p align="justify">Portanto, devemos determinar a média geométrica de 1.05, 1.10 e 1.15. Resolvendo no R, temos</p>
 
 ```{r}
 # Atribui-se à variável x o vetor c
@@ -291,9 +291,7 @@ prod(x)^(1/n)
 [1] 1.099242
 ```
 
-<p align="justify">Observação: O fator 1.099242 equivale a uma taxa média aproximada de 10.99% de todos os aumentos sucessivos, ou seja, se for aplicado
-três vezes consecutivas a taxa aproximada de 10.99%, no final teremos o mesmo resultado que se tivéssemos aplicado os percentuais 
-5%, 10% e 15%.</p>
+<p align="justify">Observação: O fator 1.099242 equivale a uma taxa média aproximada de 10.99% de todos os aumentos sucessivos, ou seja, se for aplicado três vezes consecutivas a taxa aproximada de 10.99%, no final teremos o mesmo resultado que se tivéssemos aplicado os percentuais 5%, 10% e 15%.</p>
 
 <p align="justify">Analise e exercite, no seu ambiente R, sobre as médias geométricas dos números dados nos códigos abaixo:</p>
 
