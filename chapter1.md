@@ -223,8 +223,6 @@ success_msg("Bom trabalho! Você adquiriu noções sobre média harmônica aplic
 --- type:NormalExercise lang:r xp:100 skills:1 key:18b6a4eeb5
 ## Média geométrica (G)
 
-> Motivação
-
 <p align="justify">Para determinar a média geométrica basta multiplicar todos os elementos dados no problema e extrair 
 a raiz de índice n (número de elementos) deste produto. Simbolicamente, temos</p>
 
@@ -234,17 +232,18 @@ ou de uma maneira mais compacta:
 
 $G = \left(\prod {i=1}^n a_i \right)^{1/n}.$
 
-> Média geométrica no R
+> Fórmula para a Média geométrica no R
 
 ```{r}
 > prod(x)^(1/n)
 ```
+> Motivação
 
 > Determine a média geométrica entre os números 2, 8, 32.
 
 $$G =\sqrt[3]{2.8.32}=\sqrt[3]{2.8.32}=\sqrt[3]{512}=\sqrt[3]{8^{3}}=8.$$
 
-> Resolvendo no R:
+> Determinando a média geométrica no R:
 
 ```{r}
 # Atribui-se à variável x o vetor c
@@ -334,7 +333,7 @@ Qual o rendimento médio deste investimento?
 
 *** =instructions
 
-<p align="justify">- Para o cálculo do rendimento de 5% e 30% sobre o valor de um investimento inicial, estas taxas percentuais devem ser transformadas em taxas unitárias, ou seja, 20% = 1.2 e 30% = 1.3.<p align="justify"> 
+<p align="justify">- Para o cálculo do rendimento de 20% e 30% sobre o valor de um investimento inicial, estas taxas percentuais devem ser transformadas em taxas unitárias, ou seja, 20% = 1.2 e 30% = 1.3.<p align="justify"> 
 
 <p align="justify">- Aplicar os comandos do R para achar as médias geométricas entre 1.2 e 1.3.</p>
 
@@ -344,9 +343,7 @@ Qual o rendimento médio deste investimento?
 
 *** =hint
 
-- Atribua à variável x um vetor contendo os três números.
-
-- O vetor deve começar com c. Assim: c(1.2,1.3).
+- Atribua à variável x um vetor contendo os três números. O vetor deve começar com c. Assim: c(1.2,1.3).
 
 - O número de elementos (n) é igual a 2. 
 
