@@ -196,7 +196,7 @@ x <- c(60,40)
 - Observação: a solução matemática é 
 
 $$H = \displaystyle \frac{3} { \displaystyle \frac{1}{2} +\frac{1}{5} + \frac{1}{10}}$$
-$$=\displaystyle \frac{3} {\displaystyle {\frac{8}{10}}}=\displaystyle\frac{30}{8}=3.75.$$
+$$= \displaystyle \frac{3} {\displaystyle {\frac{8}{10}}}=\displaystyle\frac{30}{8}=3.75.$$
 
 *** =pre_exercise_code
 
@@ -241,7 +241,7 @@ $G = \left(\prod {i=1}^n a_i \right)^{1/n}.$
 
 * Determine a média geométrica entre os números 2, 8, 32.
 
-$$G =\sqrt[3]{2.8.32}=\sqrt[3]{2.8.32}=\sqrt[3]{512}=\sqrt[3]{8^{3}}=8.$$
+$$G =\sqrt[3]{2.8.32}=\sqrt[3]{512}=\sqrt[3]{8^{3}}=8.$$
 
 > Determinando a média geométrica no R:
 
@@ -292,7 +292,9 @@ prod(x)^(1/n)
 
 <p align="justify">Observação: O fator 1.099242 equivale a uma taxa média aproximada de 10.99% de todos os aumentos sucessivos, ou seja, se for aplicado três vezes consecutivas a taxa aproximada de 10.99%, no final teremos o mesmo resultado que se tivéssemos aplicado os percentuais 5%, 10% e 15%.</p>
 
-<p align="justify">Analise e exercite, no seu ambiente R, sobre as médias geométricas dos números dados nos códigos abaixo:</p>
+> Dever de casa
+
+<p align="justify">- Analise e exercite, no seu ambiente R, sobre as médias geométricas dos números dados nos códigos abaixo:</p>
 
 ```{r}
 # Atribui-se à variável x o vetor c:
@@ -320,10 +322,11 @@ prod(x)^(1/n)
 
 [1] 4.426728
 ```
+<p align="justify">- Use os comandos do R neste problema: o 3° elemento de uma Progressão Geométrica (PG) é 3402 e o 1° é 378. Calcule o 2° termo desta PG. A resposta é 1134.</p>
+
 <p style="background-color:#33a0c2; font-weight: bold; font-size: 20px; text-align:center"><font color="#ffffff">ATIVIDADE</font></p>
 
-> Um loja de software investiu em aplicações financeiras que lhe renderam 20% no primeiro ano e 30% no segundo ano. 
-Qual o rendimento médio deste investimento?
+> <p align="justify">Uma loja de software investiu em aplicações financeiras que lhe renderam 20% no primeiro ano e 30% no segundo ano. Qual o foi o rendimento médio deste investimento?</p>
 
 *** =instructions
 
@@ -368,7 +371,7 @@ prod(x)^(1/n)
 ```
 *** =sct
 ```{r}
-test_output_contains("1.249", incorrect_msg = "Os números devem estar separados com vírgula e antecedidos pela letra c. O n = 2.")
+test_output_contains("1.249", incorrect_msg = "Os números devem estar separados por vírgulas e antecedidos pela letra c. O n equivale a 2.")
 success_msg("Bom trabalho! Você adquiriu noções sobre média geométrica aplicada em economia e em números.")
 ```
 --- type:NormalExercise lang:r xp:100 skills:1 key:24e7dc599e
