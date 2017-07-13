@@ -325,7 +325,7 @@ prod(x)^(1/n)
 
 [1] 4.426728
 ```
-<p align="justify">- Use os comandos do R neste problema: o 3° elemento de uma Progressão Geométrica (PG) é 3402 e o 1° é 378. Calcule o 2° termo desta PG. A resposta é 1134.</p>
+<p align="justify">- Use os comandos do R neste problema: o 3º elemento de uma Progressão Geométrica (PG) é 3402 e o 1º é 378. Calcule o 2º termo desta PG. A resposta é 1134.</p>
 
 <p style="background-color:#33a0c2; font-weight: bold; font-size: 20px; text-align:center"><font color="#ffffff">ATIVIDADE</font></p>
 
