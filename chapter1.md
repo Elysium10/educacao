@@ -127,15 +127,15 @@ x <- c(3, 8, 5, 10.5)
 ```
 > Aplicação 1
 
-* <p align="justify">Um móvel se desloca até uma certa cidade com uma velocidade média de 18km/h. Depois retorna pelo mesmo percurso com uma velocidade média de 72km/h. Determine a velocidade média do percurso completo (ida e volta).</p>
+* <p align="justify">Um móvel se desloca até uma certa cidade com uma velocidade média (${V} _{m}$) de 18km/h. Depois retorna pelo mesmo percurso com uma velocidade média de 72km/h. Determine a velocidade média do percurso completo (ida e volta).</p>
 
 <p align="justify">Utilizaremos a expressão que calcula a média harmônica:
 
-$$H = \displaystyle \frac{n}{\frac{1}{V1}+\frac{1}{V2}} \cdot$$
+$$\bar{X} _{H} = {V} _{m} = \displaystyle \frac{n}{\frac{1}{V1}+\frac{1}{V2}} \cdot$$
 
 Substituindo as quantidades (temos dois valores de velocidades, n = 2) e os valores das velocidades na expressão acima e obteremos
 
-$$\bar{X} _{H} = \bar{V} _{m} \displaystyle \frac{2} { \displaystyle \frac{1}{18} +\frac{1}{72}}=\displaystyle \frac{2} {\displaystyle\frac{5}{72}}=\displaystyle\frac{144}{5}=28.8~km/h \cdot $$
+$$\bar{X} _{H} = {V} _{m} = \displaystyle \frac{2} { \displaystyle \frac{1}{18} +\frac{1}{72}}=\displaystyle \frac{2} {\displaystyle\frac{5}{72}}=\displaystyle\frac{144}{5}=28.8~km/h \cdot $$
 
 Logo abaixo, temos o código deste exercício de aplicação. No seu ambiente R, exercite-o: </p>
 
