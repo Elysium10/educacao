@@ -105,16 +105,16 @@ success_msg("Bom trabalho! Agora você sabe calcular a média aritmética usando
 
 $$\bar{X} _{H}  = \displaystyle \frac{n}{\frac{1}{X _{1}}+\frac{1}{X _{2}}+ \frac{1}{X _{3}}+...+\frac{1}{X _{n}}},$$
 
-ou de uma maneira mais compacta:
+ou, de uma maneira mais compacta:
 
 $$\bar{X} _{H} = \displaystyle \frac{n} { \displaystyle \sum _{i=1}^{n} \left(\frac{1}{X _{i}} \right)} =  \left (\frac{1}{n}\sum _{i=1}^{n}\frac{1}{X _{i}}  \right )^{-1}.$$
 
 Exemplos de como é calculada a média harmônica no R:
 
 ```{r}
-# Atribui-se à variável x o vetor c
+# Atribui-se à variável x o vetor c:
 x <- c(3, 8, 5, 10.5)
-# O inverso da média do inverso dos números contidos na variável x
+# O inverso da média do inverso dos números contidos na variável x:
 1/mean(1/x)
 [1] 5.308057
 ```
@@ -135,14 +135,14 @@ $$H = \displaystyle \frac{n}{\frac{1}{V1}+\frac{1}{V2}} \cdot$$
 
 Substituindo as quantidades (temos dois valores de velocidades, n = 2) e os valores das velocidades na expressão acima e obteremos
 
-$$H = \displaystyle \frac{2} { \displaystyle \frac{1}{18} +\frac{1}{72}}=\displaystyle \frac{2} {\displaystyle\frac{5}{72}}=\displaystyle\frac{144}{5}=28.8~km/h \cdot $$
+$$\bar{X} _{H} = \bar{V} _{m} \displaystyle \frac{2} { \displaystyle \frac{1}{18} +\frac{1}{72}}=\displaystyle \frac{2} {\displaystyle\frac{5}{72}}=\displaystyle\frac{144}{5}=28.8~km/h \cdot $$
 
 Logo abaixo, temos o código deste exercício de aplicação. No seu ambiente R, exercite-o: </p>
 
 ```{r}
-# Atribui-se à variável x o vetor c
+# Atribui-se à variável x o vetor c:
 x <- c(18,72)
-# O inverso da média do inverso dos números contidos na variável x
+# O inverso da média do inverso dos números contidos na variável x:
 1/mean(1/x)
 [1] 28.8
 ```
