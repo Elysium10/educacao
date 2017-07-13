@@ -220,8 +220,169 @@ x <-
 test_output_contains("3.75", incorrect_msg = "Os números devem estar separados com vírgula e antecedidos pela letra c. Após isso, tecle em 'Submit Answer'.")
 success_msg("Bom trabalho! Você adquiriu noções sobre média harmônica aplicada na Física em velocidades médias e em números.")
 ```
---- type:NormalExercise lang:r xp:100 skills:1 key:24e7dc599e
+--- type:NormalExercise lang:r xp:100 skills:1 key:18b6a4eeb5
+## Média geométrica (G)
 
+> Motivação
+
+> <p align="justify">Para determinar a média geométrica basta multiplicar todos os elementos dados no problema e extrair 
+a raiz de índice n (número de elementos) deste produto. Simbolicamente, temos</p>
+</p>
+
+$ G = \sqrt[n]{a_1.a_2.a_3.a_4\cdots a_n}., $
+
+ou de uma maneira mais compacta:
+
+$ G = \left(\prod_{i=1}^n a_i \right)^{1/n}. $
+
+> Média geométrica no R
+
+```{r}
+> prod(x)^(1/n)
+```
+
+> Determine a média geométrica entre os números 2, 8, 32.
+
+$ G = \sqrt[3]{2.8.32}=\sqrt[3]{2.8.32}=\sqrt[3]{512}=\sqrt[3]{8^{3}}=8. $
+
+> Resolvendo no R:
+
+```{r}
+# Atribui-se à variável x o vetor c
+x <- c(2, 8, 32)
+# Número de elementos n
+n <- 3
+# Multiplicar os elementos e extrair a raiz cúbica
+prod(x)^(1/n)
+
+[1] 8
+```
+> Determine a média geométrica entre os números 5, 7, 10, 15, 21.
+
+x <- c(5, 7, 10, 15, 21)
+n <- 5
+prod(x)^(1/n)
+
+[1] 10.19708
+```
+
+> Aplicação 1 
+
+* <p align="justify">A média geométrica é muito útil em situações que envolvem aumentos sucessivos. Suponhamos que uma classe 
+de trabalhadores terá um aumento salarial de 5%, 10% e 15% em meses sucessivos. Determine a média geométrica dos aumentos.
+
+Para acumular um aumento de 5%, 10% e 15% sobre o valor de um salário, a suas taxas percentuais devem ser transformadas em 
+taxas unitárias: 
+
+5% = 1.05 
+10% = 1.10 
+15% = 1.15
+
+Portanto, devemos determinar a média geométrica de 1.05, 1.10, 1.15. Resolvendo no R, temos
+
+```{r}
+# Atribui-se à variável x o vetor c
+x <- c(1.05, 1.10, 1.15)
+# Número de elementos n
+n <- 3
+# Multiplicar os elementos e extrair a raiz cúbica
+prod(x)^(1/n)
+
+[1] 1.099242
+```
+
+<p align="justify">Observação: O fator 1.099242 equivale a uma taxa média aproximada de 10.99% de todos os aumentos sucessivos, ou seja, se for aplicado
+três vezes consecutivas a taxa aproximada de 10.99%, no final teremos o mesmo resultado que se tivéssemos aplicado os percentuais 
+5%, 10% e 15%.</p>
+
+<p align="justify">Analise e exercite, no seu ambiente R, sobre as médias geométricas dos números dados nos códigos abaixo:</p>
+
+```{r}
+# Atribui-se à variável x o vetor c
+x <- c(10, 20)
+# Número de elementos n
+n <- 2
+# Multiplicar os elementos e extrair a raiz cúbica
+prod(x)^(1/n)
+
+[1] 14.14214
+
+```
+# Atribui-se à variável x o vetor c
+x <- c(6.7, 2.2, 5)
+# Número de elementos n
+n <- 3
+# Multiplicar os elementos e extrair a raiz cúbica
+prod(x)^(1/n)
+
+[1] 4.192655
+```
+
+# Atribui-se à variável x o vetor c
+x <- c(2, 4, 6, 8)
+# Número de elementos n
+n <- 4
+# Multiplicar os elementos e extrair a raiz cúbica
+prod(x)^(1/n)
+
+[1] 4.426728
+```
+<p style="background-color:#33a0c2; font-weight: bold; font-size: 20px; text-align:center"><font color="#ffffff">ATIVIDADE</font></p>
+
+> Um loja de software investiu em aplicações financeiras que lhe renderam 20% no primeiro ano e 30% no segundo ano. 
+Qual o rendimento médio deste investimento?
+
+*** =instructions
+
+* <p align="justify"> 
+- Para o cálculo do rendimento de 5% e 30% sobre o valor de um investimento inicial, estas taxas percentuais devem ser transformadas em 
+taxas unitárias, ou seja, 20% = 1.2 e 30% = 1.3. 
+- Aplicar os comandos do R para achar as médias geométricas entre 1.2 e 1.3
+</p>
+
+* <p align="justify">Um auxílio para comparar cálculos de média geométrica pode ser encontrado neste link:</p> 
+
+[Cálculo de média geométrica.](http://www.gyplan.com.br/pt/geometric_mean_pt.html)</p>
+
+*** =hint
+
+- Atribua à variável x um vetor contendo os três números.
+
+- O vetor deve começar com c. Assim: c(1.2,1.3).
+
+- O número de elementos (n) é igual a 2. 
+
+*** =pre_exercise_code
+
+```{r}
+
+# no pec
+
+```
+*** =sample_code
+```{r}
+# Complete a linha abaixo com o vetor c
+x <- 
+# Número de elementos n
+n <- 
+# Multiplicar os elementos e extrair a raiz quadrada
+prod(x)^(1/n)
+```
+*** =solution
+```{r}
+# Complete a linha abaixo com o vetor c
+x <- c(1.2, 1.3)
+# Complete a linha abaixo com o número de elementos
+n <- 2
+# Multiplicar os elementos e extrair a raiz quadrada
+prod(x)^(1/n)
+```
+*** =sct
+```{r}
+test_output_contains("1.249", incorrect_msg = "Os números devem estar separados com vírgula e antecedidos pela letra c. O n = 2.")
+success_msg("Bom trabalho! Você adquiriu noções sobre média geométrica aplicada em economia e em números.")
+```
+--- type:NormalExercise lang:r xp:100 skills:1 key:24e7dc599e
 ## Medida da aceleração da gravidade
 
 > #### Valor teórico da aceleração da gravidade
