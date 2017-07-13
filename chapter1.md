@@ -103,11 +103,11 @@ success_msg("Bom trabalho! Agora você sabe calcular a média aritmética usando
 
 > <p align="justify">A média harmônica entre números reais e positivos é definida como o quociente entre a quantidade (n) de números pela soma dos inversos desses números. A média harmônica também é definida como sendo o inverso da média aritmética do inverso destes números. Simbolicamente, temos</p>
 
-$$H = \displaystyle \frac{n}{\frac{1}{X1}+\frac{1}{X2}+ \frac{1}{X3}+...+\frac{1}{Xi}},$$
+$H = \displaystyle \frac{n}{\frac{1}{X1}+\frac{1}{X2}+ \frac{1}{X3}+...+\frac{1}{Xi}},$
 
 ou de uma maneira mais compacta:
 
-$$H = \displaystyle \frac{n} { \displaystyle \sum_{i=1}^{n} \left(\frac{1}{Xi} \right)}\cdot$$
+$H = \displaystyle \frac{n} { \displaystyle \sum_{i=1}^{n} \left(\frac{1}{Xi} \right)}\cdot$
 
 Exemplos de como é calculada a média harmônica no R:
 
@@ -225,15 +225,14 @@ success_msg("Bom trabalho! Você adquiriu noções sobre média harmônica aplic
 
 > Motivação
 
-> <p align="justify">Para determinar a média geométrica basta multiplicar todos os elementos dados no problema e extrair 
+<p align="justify">Para determinar a média geométrica basta multiplicar todos os elementos dados no problema e extrair 
 a raiz de índice n (número de elementos) deste produto. Simbolicamente, temos</p>
-</p>
 
-$ G = \sqrt[n]{a_1.a_2.a_3.a_4\cdots a_n}., $
+$ G =\sqrt[n]{a{1}.a{2}.a{3}.a{4} \cdots a_n}, $
 
 ou de uma maneira mais compacta:
 
-$ G = \left(\prod_{i=1}^n a_i \right)^{1/n}. $
+$$ G = \left(\prod {i=1}^n a_i \right)^{1/n}. $$
 
 > Média geométrica no R
 
@@ -259,6 +258,7 @@ prod(x)^(1/n)
 ```
 > Determine a média geométrica entre os números 5, 7, 10, 15, 21.
 
+```{r}
 x <- c(5, 7, 10, 15, 21)
 n <- 5
 prod(x)^(1/n)
@@ -306,8 +306,9 @@ n <- 2
 prod(x)^(1/n)
 
 [1] 14.14214
-
 ```
+
+```{r}
 # Atribui-se à variável x o vetor c
 x <- c(6.7, 2.2, 5)
 # Número de elementos n
@@ -318,6 +319,7 @@ prod(x)^(1/n)
 [1] 4.192655
 ```
 
+```{r}
 # Atribui-se à variável x o vetor c
 x <- c(2, 4, 6, 8)
 # Número de elementos n
@@ -335,8 +337,7 @@ Qual o rendimento médio deste investimento?
 *** =instructions
 
 * <p align="justify"> 
-- Para o cálculo do rendimento de 5% e 30% sobre o valor de um investimento inicial, estas taxas percentuais devem ser transformadas em 
-taxas unitárias, ou seja, 20% = 1.2 e 30% = 1.3. 
+- Para o cálculo do rendimento de 5% e 30% sobre o valor de um investimento inicial, estas taxas percentuais devem ser transformadas em taxas unitárias, ou seja, 20% = 1.2 e 30% = 1.3. 
 - Aplicar os comandos do R para achar as médias geométricas entre 1.2 e 1.3
 </p>
 
