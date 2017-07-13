@@ -336,12 +336,11 @@ Qual o rendimento médio deste investimento?
 
 *** =instructions
 
-* <p align="justify"> 
-- Para o cálculo do rendimento de 5% e 30% sobre o valor de um investimento inicial, estas taxas percentuais devem ser transformadas em taxas unitárias, ou seja, 20% = 1.2 e 30% = 1.3. 
-- Aplicar os comandos do R para achar as médias geométricas entre 1.2 e 1.3
-</p>
+<p align="justify">- Para o cálculo do rendimento de 5% e 30% sobre o valor de um investimento inicial, estas taxas percentuais devem ser transformadas em taxas unitárias, ou seja, 20% = 1.2 e 30% = 1.3.<p align="justify"> 
 
-* <p align="justify">Um auxílio para comparar cálculos de média geométrica pode ser encontrado neste link:</p> 
+<p align="justify">- Aplicar os comandos do R para achar as médias geométricas entre 1.2 e 1.3.</p>
+
+<p align="justify">- Um auxílio para comparar cálculos de média geométrica pode ser encontrado neste link:</p> 
 
 [Cálculo de média geométrica.](http://www.gyplan.com.br/pt/geometric_mean_pt.html)</p>
 
