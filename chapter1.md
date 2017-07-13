@@ -232,25 +232,25 @@ ou de uma maneira mais compacta:
 
 $G = \left(\prod {i=1}^n a_i \right)^{1/n}.$
 
-> Fórmula para a Média geométrica no R
+> Fórmula para a média geométrica no R
 
 ```{r}
 > prod(x)^(1/n)
 ```
 > Motivação
 
-> Determine a média geométrica entre os números 2, 8, 32.
+* Determine a média geométrica entre os números 2, 8, 32.
 
 $$G =\sqrt[3]{2.8.32}=\sqrt[3]{2.8.32}=\sqrt[3]{512}=\sqrt[3]{8^{3}}=8.$$
 
 > Determinando a média geométrica no R:
 
 ```{r}
-# Atribui-se à variável x o vetor c
+# Atribui-se à variável x o vetor c:
 x <- c(2, 8, 32)
-# Número de elementos n
+# Número de elementos n:
 n <- 3
-# Multiplicar os elementos e extrair a raiz cúbica
+# Multiplicar os elementos e extrair a raiz cúbica:
 prod(x)^(1/n)
 
 [1] 8
@@ -280,11 +280,11 @@ de trabalhadores terá um aumento salarial de 5%, 10% e 15% em meses sucessivos.
 <p align="justify">Portanto, devemos determinar a média geométrica de 1.05, 1.10 e 1.15. Resolvendo no R, temos</p>
 
 ```{r}
-# Atribui-se à variável x o vetor c
+# Atribui-se à variável x o vetor c:
 x <- c(1.05, 1.10, 1.15)
-# Número de elementos n
+# Número de elementos n:
 n <- 3
-# Multiplicar os elementos e extrair a raiz cúbica
+# Multiplicar os elementos e extrair a raiz cúbica:
 prod(x)^(1/n)
 
 [1] 1.099242
@@ -295,33 +295,27 @@ prod(x)^(1/n)
 <p align="justify">Analise e exercite, no seu ambiente R, sobre as médias geométricas dos números dados nos códigos abaixo:</p>
 
 ```{r}
-# Atribui-se à variável x o vetor c
+# Atribui-se à variável x o vetor c:
 x <- c(10, 20)
-# Número de elementos n
+# Número de elementos n:
 n <- 2
-# Multiplicar os elementos e extrair a raiz cúbica
+# Multiplicar os elementos e extrair a raiz cúbica:
 prod(x)^(1/n)
 
 [1] 14.14214
 ```
 
 ```{r}
-# Atribui-se à variável x o vetor c
 x <- c(6.7, 2.2, 5)
-# Número de elementos n
 n <- 3
-# Multiplicar os elementos e extrair a raiz cúbica
 prod(x)^(1/n)
 
 [1] 4.192655
 ```
 
 ```{r}
-# Atribui-se à variável x o vetor c
 x <- c(2, 4, 6, 8)
-# Número de elementos n
 n <- 4
-# Multiplicar os elementos e extrair a raiz cúbica
 prod(x)^(1/n)
 
 [1] 4.426728
@@ -356,20 +350,20 @@ Qual o rendimento médio deste investimento?
 ```
 *** =sample_code
 ```{r}
-# Complete a linha abaixo com o vetor c
+# Complete a linha abaixo com o vetor c:
 x <- 
-# Número de elementos n
+# Número de elementos n:
 n <- 
-# Multiplicar os elementos e extrair a raiz quadrada
+# Multiplicar os elementos e extrair a raiz quadrada:
 prod(x)^(1/n)
 ```
 *** =solution
 ```{r}
-# Complete a linha abaixo com o vetor c
+# Complete a linha abaixo com o vetor c:
 x <- c(1.2, 1.3)
-# Complete a linha abaixo com o número de elementos
+# Complete a linha abaixo com o número de elementos:
 n <- 2
-# Multiplicar os elementos e extrair a raiz quadrada
+# Multiplicar os elementos e extrair a raiz quadrada:
 prod(x)^(1/n)
 ```
 *** =sct
