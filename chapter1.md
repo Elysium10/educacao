@@ -210,7 +210,7 @@ $$= \displaystyle \frac{3} {\displaystyle {\frac{8}{10}}}=\displaystyle\frac{30}
 *** =sample_code
 ```{r}
 # Complete a linha abaixo com o vetor c
-x <- c(2,5,10)
+x <- 
 (1/3*sum(1/x))^(-1)
 ```
 *** =solution
