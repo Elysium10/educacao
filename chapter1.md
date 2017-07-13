@@ -234,7 +234,7 @@ $G = \left(\prod {i=1}^n a_i \right)^{1/n}.$
 
 $$\nabla_{\vec{\delta{x}}}J=0$$
 
-$$Y = \beta_0 + \beta_1 x + \epsilon.$$
+$$Y = \beta_{0} + \beta_{1} x + \epsilon$$
 
 
 > Fórmula para a média geométrica no R
