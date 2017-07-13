@@ -158,7 +158,7 @@ x <- c(18,72)
 
 * <p align="justify">Uma motocicleta percorreu a distância entre duas cidades, com velocidade média de 60km/h e fez a viagem de regresso com velocidade média de 40km/h. Determine qual foi a velocidade média do percurso total, de ida e volta.</p>
 
-$$H = \displaystyle \frac{2} { \displaystyle \frac{1}{60} +\frac{1}{40}}=\displaystyle \frac{2} {\displaystyle\frac{5}{120}}=\displaystyle\frac{240}{5}=48~km/h \cdot $$
+$$\bar{X} _{H} = {V} _{m} = \displaystyle \frac{2} { \displaystyle \frac{1}{60} +\frac{1}{40}}=\displaystyle \frac{2} {\displaystyle\frac{5}{120}}=\displaystyle\frac{240}{5}=48~km/h \cdot $$
 
 <p align="justify">Logo abaixo, temos o código deste exercício de aplicação. No seu ambiente R, exercite-o:</p>
 
@@ -208,12 +208,14 @@ $$= \displaystyle \frac{3} {\displaystyle {\frac{8}{10}}}=\displaystyle\frac{30}
 *** =sample_code
 ```{r}
 # Complete a linha abaixo com o vetor c
-x <- 
+x <- c(2,5,10)
 (1/3*sum(1/x))^(-1)
 ```
 *** =solution
 ```{r}
-3.75
+# Complete a linha abaixo com o vetor c
+x <- c(2,5,10)
+(1/3*sum(1/x))^(-1)
 ```
 *** =sct
 ```{r}
