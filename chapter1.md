@@ -160,7 +160,9 @@ x <- c(18,72)
 
 $$\bar{X} _{H} = {V} _{m} = \displaystyle \frac{2} { \displaystyle \frac{1}{60} +\frac{1}{40}}=\displaystyle \frac{2} {\displaystyle\frac{5}{120}}=\displaystyle\frac{240}{5}=48~km/h \cdot $$
 
-<p align="justify">Logo abaixo, temos o código deste exercício de aplicação. No seu ambiente R, exercite-o:</p>
+> Dever de casa
+
+<p align="justify">Logo abaixo, temos o código deste exercício de aplicação para ser analisado e exercitado no seu ambiente R. É proveitoso exercitar sobre a média harmônica entre outros números quaisquer.</p>
 
 ```{r}
 x <- c(60,40)
