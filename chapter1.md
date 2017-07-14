@@ -39,6 +39,7 @@ barplot(table(floor(rnorm(5000, 250, 50))), xlab="Numeros aleatorios", ylab="Fre
 
 *** =solution
 ```{r}
+# Calcule (escreva na linha abaixo) 100*12/10
 100*12/10
 ```
 *** =sct
@@ -245,22 +246,12 @@ x <- c(60,40)
 
 *** =instructions
 
-* <p align="justify">Aplique os comandos estudados neste tópico para encontrar a média entre os números 2, 5, 10;</p>
-
-* <p align="justify">Um auxílio para comparar cálculos de média harmônica pode ser encontrado neste link:</p> 
-
+* <p align="justify">Encontre a média entre os números 2, 5, 10. Um auxílio para comparar cálculos de média harmônica pode ser encontrado neste link:</p> 
 [Cálculo de média harmônica.](http://www.gyplan.com.br/pt/harmonic_mean_pt.html)</p>
 
 *** =hint
 
-- Atribua à variável x um vetor contendo os três números.
-
-- O vetor deve começar com c. Assim: c(2,5,10).
-
-- Observação: a solução matemática é 
-
-$$H = \displaystyle \frac{3} { \displaystyle \frac{1}{2} +\frac{1}{5} + \frac{1}{10}}$$
-$$= \displaystyle \frac{3} {\displaystyle {\frac{8}{10}}}=\displaystyle\frac{30}{8}=3.75.$$
+- Atribua à variável x um vetor contendo os três números. O vetor deve conter 3 elementos: c(2,5,10). A solução matemática do problema é igual a 3.75.
 
 *** =pre_exercise_code
 
@@ -395,18 +386,12 @@ prod(x)^(1/n)
 
 *** =instructions
 
-<p align="justify">- Para o cálculo do rendimento de 20% e 30% sobre o valor de um investimento inicial, estas taxas percentuais devem ser transformadas em taxas unitárias, ou seja, 20% = 1.2 e 30% = 1.3.<p align="justify"> 
-
+<p align="justify">- As taxas percentuais devem ser transformadas em taxas unitárias, ou seja, 20% = 1.2 e 30% = 1.3.
 <p align="justify">- Aplicar os comandos do R para achar as médias geométricas entre 1.2 e 1.3.</p>
-
-<p align="justify">- Um auxílio para comparar cálculos de média geométrica pode ser encontrado neste link:</p> 
-
-[Cálculo de média geométrica.](http://www.gyplan.com.br/pt/geometric_mean_pt.html)</p>
 
 *** =hint
 
 - Atribua à variável x um vetor contendo os três números. O vetor deve começar com c. Assim: c(1.2,1.3).
-
 - O número de elementos (n) é igual a 2. 
 
 *** =pre_exercise_code
@@ -429,7 +414,7 @@ prod(x)^(1/n)
 ```{r}
 # Complete a linha abaixo com o vetor c:
 x <- c(1.2, 1.3)
-# Complete a linha abaixo com o número de elementos:
+# Número de elementos n:
 n <- 2
 # Multiplicar os elementos e extrair a raiz quadrada:
 prod(x)^(1/n)
@@ -472,10 +457,14 @@ E
 ```
 *** =solution
 ```{r}
+# Armazene o valor da medida correta de 9.8. 
 g <- 9.8
+# Armazene a medida efetuada de 10.2 em uma variável qualquer (gr).
 gr <- 10.2
+# Obtenha o módulo (valor absoluto) da diferença entre a medida correta e a medida experimental e armazene-o na variável E.
 E <- abs(g - gr)
-E 
+# Mostre o valor do erro na e E na tela, digitando Eteclando Enter.
+E
 ```
 *** =sct
 ```{r}
@@ -524,10 +513,14 @@ Er
 ```
 *** =solution
 ```{r}
+# Armazene o valor da medida correta de 9.8. 
 g <- 9.8
-gr <- 10.2
+# Armazene a medida efetuada de 10.2 em uma variável qualquer (gr).
+gr <- 10.2 
+# Obtenha o módulo (valor absoluto) da diferença entre a medida correta e a medida experimental e armazene-o na variável E.
 Er <- abs(g - gr)/g
-Er 
+# Mostre o valor do erro relativo, digitando Eteclando Enter.
+Er
 ```
 *** =sct
 ```{r}
@@ -716,15 +709,11 @@ sum(sqrt(log(10^(0:7))))
 ```
 
 *** =instructions
-
 * Digite a soma de 10 mais 6 e a multiplicação de 50 vezes 6 (já feito).
-
 * Depois digite 400 dividido por 4 mais 10 e crie uma sequência de números de 10 a 50 (já feito).
-
 * Digite expressão para a soma das raízes dos logs dos números da sequência 1,  2,  4,  8 e 16.
 
 *** =hint
-
 - A expressão é semelhante a que foi mostrada nesse tópico! Crie a sequência com 2 elevado a 0:5.
 
 *** =pre_exercise_code
@@ -747,6 +736,16 @@ sum(sqrt(log(10^(0:7))))
 ```
 *** =solution
 ```{r}
+# Digite a soma de 10 mais 6
+10 + 6
+
+# Digite a multiplicação de 50 vezes 6
+50*6
+
+# Digite 400 dividido por 4 mais 10
+400/4 + 10 
+
+# Dada a sequência 1,  2,  4,  8 e 16, determine na linha abaixo uma expressão para a soma das raízes dos logs desses números.
 sum(sqrt(log(2^(0:5))))
 ```
 *** =sct
@@ -809,22 +808,13 @@ coefic <- function(a,b,c){
 as raízes são 2 e 3 
 ```
 *** =instructions
-
-* Aplique a condição para que o móvel passe pela origem da trajetória, quando $S = 0$. Crie uma função que determine e mostre as raízes na tela;
-
 * Escolha um nome (coeficientes) para a função. Atribua a ele o comando function( ). Dentro dos parênteses do comando function digite os argumentos separados por vírgula (a, b, c). A partir daí delimite por chaves os comandos necessários para a função;
-
-* Execute a função digitando-a pelo nome, conforme mostrado no exemplo anterior. Use a seguinte equação:
-$$S = -4 - 3t + t^{2}.$$
-
+* Execute a função digitando-a pelo nome, conforme mostrado no exemplo anterior. Use a seguinte equação: $$S = -4 - 3t + t^{2}.$$
 * A resposta do problema é que, de acordo com a equação, o móvel passa pela origem da trajetória no instante (raiz) 4 segundos. 
 
 *** =hint
-
 - O nome dado à função foi: coeficientes.
-
 - Digite o nome da função com seus coeficientes entre parênteses.
-
 *** =pre_exercise_code
 ```{r}
 
@@ -862,6 +852,7 @@ coeficientes <- function(a,b,c){
         cat("as raízes (instantes) são", tempo1, "e", tempo2)
     }
 }
+# Digite na linha abaixo o nome da função (coeficientes) com os seus respectivos coeficientes e tecle Enter.
 coeficientes (1, -3, -4)
 ```
 
@@ -974,20 +965,13 @@ FemC <- function(Fahrenheit,Celsius){# <== Cria a função FemC
 - No nosso ambiente R, transformaremos 100°C em Fahrenheit.
 
 *** =instructions
-
 * Estude e analise a função;
-
 * Digite a função seguida de 100 e clique no botão 'Submit Answer';
- 
-* Um auxílio sobre resultados de transformações de graus em escalas termométricas pode ser encontrado neste link: 
+* Calculadora útil para conversão de temperaturas: 
 [conversor de temperaturas.](https://www.google.com.br/#q=transformar+graus)
-
 *** =hint
-
 - O nome dado à função deve ser digitado seguido com o número a ser transformado.
-
 - O nome da função está à esquerda do comando "function".
-
 *** =pre_exercise_code
 ```{r}
 
