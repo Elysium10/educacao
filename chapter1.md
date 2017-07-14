@@ -27,8 +27,6 @@ barplot(table(floor(rnorm(5000, 250, 50))), xlab="Numeros aleatorios", ylab="Fre
 
 - Digite 100*12/10 no editor à direita e clique no botão 'Submit Answer'.
 
-- O símbolo "*" indica uma multiplicação.
-
 *** =pre_exercise_code
 ```{r}
 # no pec
