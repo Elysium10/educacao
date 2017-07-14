@@ -130,8 +130,6 @@ mean(a)
 
 *** =instructions
 
-- Use o mesmo procedimento feito no código deste tópico.
-
 - O vetor que armazena os dados é representado por c(10, 20, 30, 50, 100, 123, 233). Armazene-o numa variável x.
 
 *** =hint
@@ -144,16 +142,16 @@ mean(a)
 ```
 *** =sample_code
 ```{r}
-# Atribui-se à variável x um vetor c:
+# Atribuir à variável x um vetor c:
 x <- 
-# Determine a média: 
+# Determinar a média: 
 mean(x)
 ```
 *** =solution
 ```{r}
-# Atribui-se à variável x um vetor c:
+# Atribuir à variável x um vetor c:
 x <- c(10, 20, 30, 50, 100, 123, 233)
-# Determina a média:
+# Determinar a média:
 mean(x)
 ```
 *** =sct
