@@ -21,9 +21,7 @@ barplot(table(floor(rnorm(5000, 250, 50))), xlab="Numeros aleatorios", ylab="Fre
 
 *** =instructions
 
-- O editor à direita possui um código de exemplo. As linhas de comentários dos códigos são identificados pelo símbolo #.
-
-- Adicione uma linha de código que calcule a multiplicação de 100*12/10 e clique no botão 'Submit Answer'.
+- No editor à direita adicione uma linha de código que calcule a multiplicação de 100*12/10 e clique no botão 'Submit Answer'.
 
 *** =hint
 
