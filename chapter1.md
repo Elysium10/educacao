@@ -54,17 +54,76 @@ success_msg("Bom trabalho! Veja como o console mostra as operações aritmética
 --- type:NormalExercise lang:r xp:100 skills:1 key:955002b2b7
 ## Média aritmética
 
-> <p align="center">É o valor que mais se aproxima do valor real de uma medida. Para obtê-la basta dividir a soma dos valores das medidas efetuadas pelo número destas medidas.</p>
+> <p align="justify">A média aritmética ($\bar{X}$) é o valor que mais se aproxima do valor real de uma medida. Para obtê-la basta dividir a soma dos valores das medidas efetuadas pelo número destas medidas. Simbolicamente, temos</p>
 
-<p align="justify">Por exemplo, numa experiência foram obtidas as seguintes medidas: 4m, 5m, 8m, 9m, 5m. Em R a média aritmética $\bar{x}$ pode ser calculada da seguinte maneira:</p>
+$$\bar{X} = \displaystyle \frac{X _{1}+X _{2}+X _{3}...+ X _{n}}{n},$$
+
+ou, de uma maneira mais compacta:
+
+$$\bar{X} =  {1 \over n} \sum_{i = 1}^n{X _i}.$$
+
+> Fórmula para a média aritmética no R
 
 ```{r}
-x <- c(4, 5, 8, 9, 5)
-mean(x)
+> mean(x)
 ```
-<p align="justify">Nos comandos acima podemos observar que um vetor c, formado pelas medidas dadas, foi armazenado em uma variável x. Por meio do comando mean(x) é obtido a média das medidas, ou seja, o comando mean(x) vai somar 4 + 5 + 8 + 9 + 5, dividir o resultado por 5 e mostrá-lo na tela assim que teclarmos em 'Submit Answer', no editor do ambiente R.</p>
+> Motivação
 
-> <p align="center">Atividade - cálculo de $\bar{x}$</p>
+* Determine a média aritmética entre os números 10, 20, 30.
+
+$$\bar{X} = \displaystyle \frac{10+20+30}{3}=20\cdot$$
+
+> Determinando a média aritmética no R:
+
+<p align="justify">Por exemplo, numa experiência foram obtidas as seguintes medidas: 4m, 5m, 8m, 9m, 5m. Em R, a média aritmética $\bar{X}$ pode ser calculada da seguinte maneira:</p>
+
+```{r}
+# Atribui-se à variável x um vetor c:
+x <- c(4, 5, 8, 9, 5)
+# Determina a média:
+mean(x)
+
+[1] 6.2
+```
+
+> A seguir, mais exemplos de como é calculada a média harmônica no R - analise-os e exercite-os no seu ambiente R:
+
+```{r}
+# Atribui-se à variável a um vetor c:
+a <- c(14, 20, 30, 50, 60, 56, 9, 5)
+# Determina a média:
+mean(a)
+
+[1] 30.5
+```
+
+```{r}
+# Atribui-se à variável x um vetor c:
+x <- c(10, 20, 30)
+# Determina a média:
+mean(x)
+
+[1] 20
+```
+
+```{r}
+# Atribui-se à variável a um vetor c:
+a <- c(14, 6)
+# Determina a média:
+mean(a)
+
+[1] 10
+```
+
+<p align="justify">Nos comandos acima pudemos observar que um vetor representado pela letra c, formado pelas medidas dadas, foi armazenado em uma variável x (ou outra letra). Por meio do comando mean(x) é obtido a média das medidas - por exemplo, o comando mean(x) vai somar os números 4 + 5 + 8 + 9 + 5, dividir o resultado por 5 e mostrá-lo na tela, assim que teclarmos em 'Submit Answer', no editor do ambiente R.</p>
+
+> Dever de casa - Faça no seu ambiente R
+
+<p align="justify">- Na escola, um estudante fez todas as provas de Matemática dos bimestres. Sendo que no 1º bimestre sua média correspondeu a 5.5, no 2º bimestre a 7.5, no 3º a 9 e no 4º a 5. Qual a média final do aluno? Resposta: 6.75</p>
+
+<p align="justify">- Um funcionário ganha R$ 1800,00 nos primeiros 3 meses. Nos últimos 3 meses ele ganha R$ 2000 reais. Qual é sua média salarial em um semestre (6 meses)? Resposta 1900 reais.</p>
+
+> <p align="center">Atividade - cálculo de $\bar{X}$</p>
 
 * Calcule a média aritmética das seguintes medidas: 10, 20, 30, 50, 100, 123, 233.
 
@@ -75,7 +134,8 @@ mean(x)
 - O vetor é c(10, 20, 30, 50, 100, 123, 233). Armazene-o numa variável x.
 
 *** =hint
-Crie um vetor c com as medidas dadas. Armazene o vetor c em uma variável x e use o comando mean(x)
+
+- Crie um vetor c com as medidas dadas. Armazene o vetor c em uma variável x e use o comando mean(x)
 
 *** =pre_exercise_code
 ```{r}
@@ -83,14 +143,16 @@ Crie um vetor c com as medidas dadas. Armazene o vetor c em uma variável x e us
 ```
 *** =sample_code
 ```{r}
-# Escreva o comando para atribuir a uma variável x os números 10, 20, 30, 50, 100, 123, 233
+# Atribui-se à variável x um vetor c:
 x <- 
 # Determine a média: 
 mean(x)
 ```
 *** =solution
 ```{r}
+# Atribui-se à variável x um vetor c:
 x <- c(10, 20, 30, 50, 100, 123, 233)
+# Determina a média:
 mean(x)
 ```
 *** =sct
@@ -109,6 +171,11 @@ ou, de uma maneira mais compacta:
 
 $$\bar{X} _{H} = \displaystyle \frac{n} { \displaystyle \sum _{i=1}^{n} \left(\frac{1}{X _{i}} \right)} =  \left (\frac{1}{n}\sum _{i=1}^{n}\frac{1}{X _{i}}  \right )^{-1}.$$
 
+> Fórmula para a média harmônica no R
+
+```{r}
+> 1/mean(1/x)
+```
 Exemplos de como é calculada a média harmônica no R:
 
 ```{r}
