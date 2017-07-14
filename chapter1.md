@@ -156,6 +156,152 @@ mean(x)
 test_output_contains("80.85714", incorrect_msg = "Voce tem certeza que armazenou o vetor c na variavel x?")
 success_msg("Bom trabalho! Agora você sabe calcular a média aritmética usando o R!")
 ```
+
+
+
+
+
+
+--- type:MultipleChoiceExercise lang:r xp:50 skills:1 key:a6e8e4700f
+## Média ponderada
+
+> <p align="justify">A média aritmética ponderada $\bar{X _{P}}$) é determinada por meio do produto entre determinados 
+valores e seus respectivos pesos, dividido pela soma dos pesos. Simbolicamente, temos</p>
+
+$$\bar{X _{P}} = \displaystyle \frac{X _{1} P _{1} + X _{2} P _{2} + ... + X _{n} P _{n}}{P _{1} + P _{2} + ... + P {n}},$$
+
+onde,
+ 
+$$X _{1}, X _{2}, ... + X _{n}$$
+
+são os valores dados no problema sujeitos aos seus respectivos pesos:
+
+$$P _{1}, P _{2}, ... + P _{n}$$
+
+
+$$\bar{X} =  {1 \over n} \sum_{i = 1}^n{X _i}.$$
+
+> Motivação
+
+* <p align="justify">- Na escola, um estudante fez todas as provas de Matemática dos bimestres. Sendo que no 1º bimestre 
+sua média correspondeu a 5.5, no 2º bimestre a 7.5, no 3º a 9.0 e no 4º a 5.0. Porém, foi estabelecido pela escola que as médias do 
+primeiro e segundo bimestres teriam pesos igual 40% e dos dois últimos bimestres, pesos iguais a 70%. Determine a média anual do aluno? Resposta: 6.75.</p>
+
+$$\bar{X _{P}} = \displaystyle \frac{5. (0.4) + 7.(0.4) + 9.(0.7) + 5.(0.7) }{0.4 + 0.4 + 0.7 + 0.7}= \frac{2+2.8+6.3+3.5}{2.2}$$
+$$=\frac{14.6}{2.2}\cong6.636.$$
+
+> Determinando a média aritmética ponderada no R:
+
+<p align="justify">Determine a média ponderada dos seguintes números 4 e 7, dado que os seus pesos são, respectivamente, 5 e 8. 
+A média ponderada $\bar{X}$ pode ser calculada da seguinte maneira:</p>
+
+```{r}
+# Atribuir à variável valores um vetor c:
+valores <- c(4,7)
+# Atribuir à variável pesos um vetor c:
+pesos <- c(5,8)
+# Atribuir à variável XP valores e pesos
+XP <- sum(valores*peso)/sum(pesos)
+# Mostrar mensagem média ponderada:
+cat("A média ponderada é:",XP)
+
+A média ponderada é: 5.846154
+```
+> <p align="justify">A seguir, mais exemplos de como é calculada a média ponderada no R, analise-os e 
+exercite-os no seu ambiente R:</p>
+
+```{r}
+# Atribuir à variável valores um vetor c:
+valores <- c(2,4,6,10)
+# Atribuir à variável pesos um vetor c:
+pesos <- c(0.5, 0.6, 1.5, 1.3)
+# Atribuir à variável XP valores e pesos
+XP <- sum(valores*peso)/sum(pesos)
+# Mostrar a média ponderada:
+XP
+
+[1] 7.2
+```
+```{r}
+# Atribuir à variável valores um vetor c:
+valores <- c(10, 30, 40, 50, 60, 70, 80, 90)
+# Atribuir à variável pesos um vetor c:
+pesos <- c(3, 5, 7, 9, 1, 4, 4, 2)
+# Atribuir à variável XP valores e pesos
+XP <- sum(valores*peso)/sum(pesos)
+# Mostrar a média ponderada:
+cat("A média ponderada é: ",XP)
+
+A média ponderada é: 7.794872
+```
+
+Um professor de matemática avaliou os alunos através de um trabalho em grupo e de duas provas individuais, 
+todos valendo 10 pontos, e de pesos 2, 3 e 5, respectivamente. 
+Qual será Calcule a nota final do aluno Pedro, considerando que suas notas foram as seguintes:
+
+> Dever de casa - Execute no seu ambiente R:
+
+<p align="justify">- Um professor de programação avaliou seus alunos por meio de duas atividades em grupo e de dois testes 
+individuais, cujos pesos são 5, 6 e 7, 8, respectivamente. Calcule a média final do grupo, sendo que
+foram obtidos 9.0 nas duas atividades e 5.5 nos dois testes (resposta: 6.980769).</p>
+
+```{r}
+# Atribuir à variável valores um vetor c:
+valores <- c(9,9,5.5,5.5)
+# Atribuir à variável pesos um vetor c:
+pesos <- c(5,6,7,8)
+# Atribuir à variável XP valores e pesos
+XP <- sum(valores*pesos)/sum(pesos)
+# Mostrar mensagem média ponderada:
+cat("A média ponderada é:",XP)
+
+A média ponderada é:
+```
+<p style="background-color:#33a0c2; font-weight: bold; font-size: 20px; text-align:center"><font color="#ffffff">EXERCÍCIO PROPOSTO</font></p>
+
+<p align="justify"> Um shopping realizou uma pesquisa sobre qualidade no atendimento por meio
+de uma pesquisa a 1000 clientes. As notas que dos clientes entrevistados variaram de 1 a 10, de 
+acordo com os seguintes dados: Notas: 1,2,3,4,5,6,7,8,9,10 e quantidade de clientes: 50,50,100,50,25,25,400,150,100,50. 
+Determine a média de satisfação dos clientes do shopping.</p>
+
+*** =instructions
+- Criar um vetor que armazena as notas (pesos) dos clientes: c(1,2,3,4,5,6,7,8,9,10). Armazene-o numa variável chamada pesos.
+- Criar um vetor que armazena a quantidade de clientes: c(50,50,100,50,25,25,400,150,100,50). Armazene-o numa variável chamada clientes.
+- Aplique os comandos estudados neste tópico para achar a média ponderada.
+*** =hint
+- Crie dois vetores com as medidas dadas. Armazene-os em variáveis. Após isso, tecle em 'Submit Answer'.
+*** =pre_exercise_code
+```{r}
+# no pec
+```
+*** =sample_code
+```{r}
+# Atribuir à variável pesos um vetor c:
+pesos <- 
+# Atribuir à variável clientes um vetor c:
+clientes <- 
+# Atribuir à variável XP clientes e pesos
+XP <- sum(clientes*pesos)/sum(pesos)
+# Mostrar mensagem média ponderada:
+cat("A média ponderada é:",XP)
+
+```
+*** =solution
+```{r}
+# Atribuir à variável pesos um vetor c:
+pesos <- c(1,2,3,4,5,6,7,8,9,10)
+# Atribuir à variável clientes um vetor c:
+clientes <- c(50,50,100,50,25,25,400,150,100,50)
+# Atribuir à variável XP clientes e pesos
+XP <- sum(clientes*pesos)/sum(pesos)
+# Mostrar mensagem média ponderada:
+cat("A média ponderada é:",XP)
+```
+*** =sct
+```{r}
+test_output_contains("7.6", incorrect_msg = "Armazene os vetores criados nas respectivas variáveis (pesos e clientes).")
+success_msg("Bom trabalho! Agora você sabe calcular a média ponderada!")
+```
 --- type:NormalExercise lang:r xp:100 skills:1 key:dd48eb091a
 ## Média harmônica
 
