@@ -54,7 +54,7 @@ success_msg("Bom trabalho! Veja como o console mostra as operações aritmética
 --- type:NormalExercise lang:r xp:100 skills:1 key:955002b2b7
 ## Média aritmética
 
-> <p align="justify">A média aritmética ($\bar{X}$) é o valor que mais se aproxima do valor real de uma medida. Para obtê-la basta dividir a soma dos valores das medidas efetuadas pelo número destas medidas. Simbolicamente, temos</p>
+> <p align="justify">A média aritmética ($\bar{X}$) é o valor que mais se aproxima do valor real de uma medida. Para obtê-la, basta dividir a soma dos valores das medidas efetuadas pelo número destas medidas. Simbolicamente, temos</p>
 
 $$\bar{X} = \displaystyle \frac{X _{1}+X _{2}+X _{3}...+ X _{n}}{n},$$
 
@@ -69,73 +69,74 @@ $$\bar{X} =  {1 \over n} \sum_{i = 1}^n{X _i}.$$
 ```
 > Motivação
 
-* Determine a média aritmética entre os números 10, 20, 30.
+* <p align="justify">Determine a média aritmética entre os números 10, 20 e 30.</p>
 
-$$\bar{X} = \displaystyle \frac{10+20+30}{3}=20\cdot$$
+$$\bar{X} = \displaystyle \frac{10+20+30}{3}=20.$$
 
 > Determinando a média aritmética no R:
 
-<p align="justify">Por exemplo, numa experiência foram obtidas as seguintes medidas: 4m, 5m, 8m, 9m, 5m. Em R, a média aritmética $\bar{X}$ pode ser calculada da seguinte maneira:</p>
+<p align="justify">Por exemplo, numa experiência foram obtidas as seguintes medidas: 4, 5, 8, 9, 5. Em R, a média aritmética $\bar{X}$ pode ser calculada da seguinte maneira:</p>
 
 ```{r}
-# Atribui-se à variável x um vetor c:
+# Atribuir à variável x um vetor c:
 x <- c(4, 5, 8, 9, 5)
-# Determina a média:
+# Determinar a média:
 mean(x)
 
 [1] 6.2
 ```
 
-> A seguir, mais exemplos de como é calculada a média harmônica no R - analise-os e exercite-os no seu ambiente R:
+> <p align="justify">A seguir, mais exemplos de como é calculada a média aritmética no R, analise-os e exercite-os no seu ambiente R:</p>
 
 ```{r}
-# Atribui-se à variável a um vetor c:
+# Atribuir à variável a um vetor c:
 a <- c(14, 20, 30, 50, 60, 56, 9, 5)
-# Determina a média:
+# Determinar a média:
 mean(a)
 
 [1] 30.5
 ```
 
 ```{r}
-# Atribui-se à variável x um vetor c:
+# Atribuir à variável x um vetor c:
 x <- c(10, 20, 30)
-# Determina a média:
+# Determinarr a média:
 mean(x)
 
 [1] 20
 ```
 
 ```{r}
-# Atribui-se à variável a um vetor c:
+# Atribuir à variável a um vetor c:
 a <- c(14, 6)
-# Determina a média:
+# Determinar a média:
 mean(a)
 
 [1] 10
 ```
 
-<p align="justify">Nos comandos acima pudemos observar que um vetor representado pela letra c, formado pelas medidas dadas, foi armazenado em uma variável x (ou outra letra). Por meio do comando mean(x) é obtido a média das medidas - por exemplo, o comando mean(x) vai somar os números 4 + 5 + 8 + 9 + 5, dividir o resultado por 5 e mostrá-lo na tela, assim que teclarmos em 'Submit Answer', no editor do ambiente R.</p>
+* <p align="justify"> Nos comandos acima pudemos observar que um vetor representado pela letra c, formado pelas medidas dadas, foi armazenado em uma variável x (ou outra letra). Por meio do comando mean(x) é obtido a média das medidas - por exemplo, o comando mean(x) vai somar os números 4 + 5 + 8 + 9 + 5, dividir o resultado por 5 e mostrá-lo na tela, assim que teclarmos em 'Submit Answer', no editor do ambiente R.</p>
 
-> Dever de casa - Faça no seu ambiente R
+> Dever de casa - Faça no seu ambiente R:
 
-<p align="justify">- Na escola, um estudante fez todas as provas de Matemática dos bimestres. Sendo que no 1º bimestre sua média correspondeu a 5.5, no 2º bimestre a 7.5, no 3º a 9 e no 4º a 5. Qual a média final do aluno? Resposta: 6.75</p>
+<p align="justify">- Na escola, um estudante fez todas as provas de Matemática dos bimestres. Sendo que no 1º bimestre sua média correspondeu a 5.5, no 2º bimestre a 7.5, no 3º a 9.0 e no 4º a 5.0. Qual foi a média final do aluno? Resposta: 6.75.</p>
 
-<p align="justify">- Um funcionário ganha R$ 1800,00 nos primeiros 3 meses. Nos últimos 3 meses ele ganha R$ 2000 reais. Qual é sua média salarial em um semestre (6 meses)? Resposta 1900 reais.</p>
+<p align="justify">- Um funcionário ganhou 1800 reais nos primeiros 3 meses. Nos últimos 3 meses ele ganhou 2000 reais. Qual foi sua média salarial em um semestre (6 meses)? Resposta 1900 reais.</p>
 
-> <p align="center">Atividade - cálculo de $\bar{X}$</p>
 
-* Calcule a média aritmética das seguintes medidas: 10, 20, 30, 50, 100, 123, 233.
+<p style="background-color:#33a0c2; font-weight: bold; font-size: 20px; text-align:center"><font color="#ffffff">ATIVIDADE</font></p>
+
+<p align="justify"> Calcule a média aritmética das seguintes medidas: 10, 20, 30, 50, 100, 123, 233.</p>
 
 *** =instructions
 
 - Use o mesmo procedimento feito no código deste tópico.
 
-- O vetor é c(10, 20, 30, 50, 100, 123, 233). Armazene-o numa variável x.
+- O vetor que armazena os dados é representado por c(10, 20, 30, 50, 100, 123, 233). Armazene-o numa variável x.
 
 *** =hint
 
-- Crie um vetor c com as medidas dadas. Armazene o vetor c em uma variável x e use o comando mean(x)
+- Crie um vetor c com as medidas dadas. Armazene o vetor c em uma variável x. Após isso, tecle em 'Submit Answer'.
 
 *** =pre_exercise_code
 ```{r}
