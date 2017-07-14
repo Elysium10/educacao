@@ -968,7 +968,7 @@ FemC <- function(Fahrenheit,Celsius){# <== Cria a função FemC
 * Estude e analise a função;
 * Digite a função seguida de 100 e clique no botão 'Submit Answer';
 * Calculadora útil para conversão de temperaturas: 
-[conversor de temperaturas.](https://www.google.com.br/#q=transformar+graus)
+[conversor de temperaturas.](https://www.google.com.br/#q=100+c+to+f)
 *** =hint
 - O nome dado à função deve ser digitado seguido com o número a ser transformado.
 - O nome da função está à esquerda do comando "function".
