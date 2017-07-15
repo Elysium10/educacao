@@ -259,7 +259,7 @@ pesos <-
 # Atribuir à variável clientes um vetor c:
 clientes <- 
 # Atribuir à variável XP clientes e pesos
-XP <- sum(clientes*pesos)/sum(pesos)
+XP <- sum(pesos*clientes)/sum(pesos)
 # Mostrar mensagem média ponderada:
 cat("A média ponderada é:", XP)
 ```
