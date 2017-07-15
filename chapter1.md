@@ -123,8 +123,10 @@ mean(a)
 
 <p align="justify"> Calcule a média aritmética das seguintes medidas: 10, 20, 30, 50, 100, 123, 233.</p>
 *** =instructions
-<p align="justify"> O vetor que armazena os dados é representado por c(10, 20, 30, 50, 100, 123, 233). Armazene-o numa variável x.</p>
-<p align="justify"> Veja um programa que calcula a média aritmética no link:[Cálculo de médias aritméticas.](http://pt.calcuworld.com/calculadoras-matematicas/media-aritmetica/)</p>
+<p align="justify"> - O vetor que armazena os dados é representado por c(10, 20, 30, 50, 100, 123, 233). Armazene-o numa variável x.
+<p align="justify">- Veja um programa que calcula a média aritmética no link:</p>
+
+[Cálculo de médias aritméticas.](http://pt.calcuworld.com/calculadoras-matematicas/media-aritmetica/)
 *** =hint
 <p align="justify">- Crie um vetor c com as medidas dadas. Armazene o vetor c em uma variável x. Após isso, tecle em 'Submit Answer'.</p>
 *** =pre_exercise_code
@@ -168,9 +170,7 @@ $$P _{1}, P _{2}, ... + P _{n}.$$
 
 > Motivação
 
-* <p align="justify">Na escola, um estudante fez todas as provas de Matemática dos bimestres. Sendo que no 1º bimestre 
-sua média correspondeu a 5.5, no 2º bimestre a 7.5, no 3º a 9.0 e no 4º a 5.0. Porém, foi estabelecido pela escola que as médias do 
-primeiro e segundo bimestres teriam pesos igual 40% e dos dois últimos bimestres, pesos iguais a 70%. Determine a média ponderada anual do aluno?</p>
+* <p align="justify">Na escola, um estudante fez todas as provas de Matemática dos bimestres. Sendo que no 1º bimestre sua média correspondeu a 5.5, no 2º bimestre a 7.5, no 3º a 9.0 e no 4º a 5.0. Porém, foi estabelecido pela escola que as médias do primeiro e segundo bimestres teriam pesos igual 40% e dos dois últimos bimestres, pesos iguais a 70%. Determine a média ponderada anual do aluno?</p>
 
 $$\bar{X _{P}} = \displaystyle \frac{5. (0.4) + 7.(0.4) + 9.(0.7) + 5.(0.7) }{0.4 + 0.4 + 0.7 + 0.7}$$
 
@@ -178,10 +178,13 @@ $$= \frac{2+2.8+6.3+3.5}{2.2}$$
 
 $$= \frac{14.6}{2.2}\cong6.636.$$
 
-> Determinando a média aritmética ponderada no R:
+<p align="justify"> Um auxílio para comparar cálculos de médias ponderadas pode ser encontrado neste link:</p>
 
-<p align="justify">Determine a média ponderada dos números 4 e 7, dado que os seus pesos são, respectivamente, 5 e 8. 
-No R, a média ponderada $\bar{X _{P}}$ pode ser calculada da seguinte maneira:</p>
+[Cálculo de médias ponderadas.](http://pt.calcuworld.com/calculadoras-matematicas/media-ponderada/)
+
+> <p align="justify">Determinando a média aritmética ponderada no R:</p>
+
+<p align="justify">Determine a média ponderada dos números 4 e 7, dado que os seus pesos são, respectivamente, 5 e 8. No R, a média ponderada $\bar{X _{P}}$ pode ser calculada da seguinte maneira:</p>
 
 ```{r}
 # Atribuir à variável valores um vetor c:
@@ -195,8 +198,7 @@ cat("A média ponderada é:", XP)
 
 A média ponderada é: 5.846154
 ```
-> <p align="justify">A seguir, mais exemplos de como é calculada a média ponderada no R, analise-os e 
-exercite-os no seu ambiente R:</p>
+> <p align="justify">A seguir, mais exemplos de como é calculada a média ponderada no R, analise-os e exercite-os no seu ambiente R:</p>
 
 ```{r}
 valores <- c(2,4,6,10)
@@ -216,9 +218,7 @@ A média ponderada é:  50
 ```
 > Dever de casa - Execute no seu ambiente R:
 
-<p align="justify">Um professor de programação avaliou seus alunos por meio de duas atividades em grupo e de dois testes 
-individuais, cujos pesos são 5, 6 e 7, 8, respectivamente. Calcule a média final do grupo, sendo que
-foram obtidos 9.0 nas duas atividades e 5.5 nos dois testes (resposta: 6.980769).</p>
+<p align="justify">Um professor de programação avaliou seus alunos por meio de duas atividades em grupo e de dois testes individuais, cujos pesos são 5, 6 e 7, 8, respectivamente. Calcule a média final do grupo, sendo que foram obtidos 9.0 nas duas atividades e 5.5 nos dois testes (resposta: 6.980769).</p>
 
 ```{r}
 # Atribuir à variável valores um vetor c:
@@ -233,15 +233,13 @@ cat("A média ponderada é:", XP)
 ```
 <p style="background-color:#33a0c2; font-weight: bold; font-size: 20px; text-align:center"><font color="#ffffff">EXERCÍCIO PROPOSTO</font></p>
 
-<p align="justify"> Um shopping realizou uma pesquisa sobre qualidade no atendimento por meio de uma pesquisa a 600 clientes. As notas dos clientes entrevistados variaram de 1 a 10, de acordo com os seguintes dados: Notas: 1,2,3,4,5,6,7,8,9,10 e quantidade de clientes: 50,50,140,50,50,60,50,50,100,100. Determine a média de satisfação dos clientes do shopping.</p>
+<p align="justify"> Um shopping realizou uma pesquisa sobre qualidade no atendimento por meio de uma pesquisa a 600 clientes. As notas dos clientes entrevistados variaram de 1 a 10, de acordo com os seguintes dados: Notas: 1,2,3,4,5,6,7,8,9,10 e quantidade de clientes: 50,50,140,50,50,60,50,50,100,100. Determine a média ponderada destes dados.</p>
 *** =instructions
-- Criar um vetor que armazena as notas (pesos) dos clientes: c(1,2,3,4,5,6,7,8,9,10). Armazene-o numa variável chamada pesos.
-- Criar um vetor que armazena a quantidade de clientes: c(50,50,140,50,50,60,50,50,100,100). Armazene-o numa variável chamada clientes.
-- Aplique os comandos estudados neste tópico para achar a média ponderada.
+<p align="justify">- Criar um vetor que armazena as notas (pesos) dos clientes: c(1,2,3,4,5,6,7,8,9,10). Armazene-o numa variável chamada pesos.</p>
+<p align="justify">- Criar um vetor que armazena a quantidade de clientes:c(50,50,140,50,50,60,50,50,100,100). Armazene-o numa variável chamada clientes.</p>
+- Aplicar os comandos estudados neste tópico para achar a média ponderada.
 *** =hint
 - Crie dois vetores com as medidas dadas. Armazene-os em variáveis. Após isso, tecle em 'Submit Answer'.
-- Um auxílio para comparar cálculos de média ponderada pode ser encontrado neste link: 
-[Cálculo de médias ponderadas.](http://pt.calcuworld.com/calculadoras-matematicas/media-ponderada/)
 *** =pre_exercise_code
 ```{r}
 # no pec
