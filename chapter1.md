@@ -207,10 +207,10 @@ exercite-os no seu ambiente R:</p>
 ```{r}
 valores <- c(2,4,6,10)
 pesos <- c(0.5, 0.6, 1.5, 1.3)
-XP <- sum(valores*peso)/sum(pesos)
+XP <- sum(valores*pesos)/sum(pesos)
 XP
 
-[1] 7.2
+[1] 6.512821
 ```
 ```{r}
 valores <- c(10, 30, 40, 50, 60, 70, 80, 90)
@@ -218,7 +218,7 @@ pesos <- c(3, 5, 7, 9, 1, 4, 4, 2)
 XP <- sum(valores*pesos)/sum(pesos)
 cat("A média ponderada é: ", XP)
 
-A média ponderada é: 7.794872
+A média ponderada é:  50
 ```
 > Dever de casa - Execute no seu ambiente R:
 
@@ -234,20 +234,17 @@ pesos <- c(5,6,7,8)
 # Atribuir à variável XP valores e pesos
 XP <- sum(valores*pesos)/sum(pesos)
 # Mostrar mensagem média ponderada:
-cat("A média ponderada é:",XP)
+cat("A média ponderada é:", XP)
 
 A média ponderada é:
 ```
 <p style="background-color:#33a0c2; font-weight: bold; font-size: 20px; text-align:center"><font color="#ffffff">EXERCÍCIO PROPOSTO</font></p>
 
-<p align="justify"> Um shopping realizou uma pesquisa sobre qualidade no atendimento por meio
-de uma pesquisa a 1000 clientes. As notas que dos clientes entrevistados variaram de 1 a 10, de 
-acordo com os seguintes dados: Notas: 1,2,3,4,5,6,7,8,9,10 e quantidade de clientes: 50,50,100,50,25,25,400,150,100,50. 
-Determine a média de satisfação dos clientes do shopping.</p>
+<p align="justify"> Um shopping realizou uma pesquisa sobre qualidade no atendimento por meio de uma pesquisa a 600 clientes. As notas que dos clientes entrevistados variaram de 1 a 10, de acordo com os seguintes dados: Notas: 1,2,3,4,5,6,7,8,9,10 e quantidade de clientes: c(50,50,140,50,50,60,50,50,100,100). Determine a média de satisfação dos clientes do shopping.</p>
 
 *** =instructions
 - Criar um vetor que armazena as notas (pesos) dos clientes: c(1,2,3,4,5,6,7,8,9,10). Armazene-o numa variável chamada pesos.
-- Criar um vetor que armazena a quantidade de clientes: c(50,50,100,50,25,25,400,150,100,50). Armazene-o numa variável chamada clientes.
+- Criar um vetor que armazena a quantidade de clientes: c(50,50,140,50,50,60,50,50,100,100). Armazene-o numa variável chamada clientes.
 - Aplique os comandos estudados neste tópico para achar a média ponderada.
 *** =hint
 - Crie dois vetores com as medidas dadas. Armazene-os em variáveis. Após isso, tecle em 'Submit Answer'.
@@ -264,23 +261,22 @@ clientes <-
 # Atribuir à variável XP clientes e pesos
 XP <- sum(clientes*pesos)/sum(pesos)
 # Mostrar mensagem média ponderada:
-cat("A média ponderada é:",XP)
-
+cat("A média ponderada é:", XP)
 ```
 *** =solution
 ```{r}
 # Atribuir à variável pesos um vetor c:
 pesos <- c(1,2,3,4,5,6,7,8,9,10)
 # Atribuir à variável clientes um vetor c:
-clientes <- c(50,50,100,50,25,25,400,150,100,50)
+clientes <- c(50,50,140,50,50,60,50,50,100,100)
 # Atribuir à variável XP clientes e pesos
-XP <- sum(clientes*pesos)/sum(pesos)
+XP <- sum(pesos*clientes)/sum(pesos)
 # Mostrar mensagem média ponderada:
-cat("A média ponderada é:",XP)
+cat("A média ponderada é:", XP)
 ```
 *** =sct
 ```{r}
-test_output_contains("7.6", incorrect_msg = "Armazene os vetores criados nas respectivas variáveis (pesos e clientes).")
+test_output_contains("73.27273", incorrect_msg = "Armazene os vetores criados nas respectivas variáveis (pesos e clientes).")
 success_msg("Bom trabalho! Agora você sabe calcular a média ponderada!")
 ```
 --- type:NormalExercise lang:r xp:100 skills:1 key:dd48eb091a
