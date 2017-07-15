@@ -83,7 +83,7 @@ mean(x)
 [1] 6.2
 ```
 
-> <p align="justify">A seguir, mais exemplos de como é calculada a média aritmética no R, analise-os e exercite-os no seu ambiente R:</p>
+> <p align="justify">A seguir, mais exemplos de como é calculada a média aritmética no R. Analise os exercícios e  exercite-os no seu ambiente R:</p>
 
 ```{r}
 # Atribuir à variável a um vetor c:
@@ -112,7 +112,7 @@ mean(a)
 [1] 10
 ```
 
-* <p align="justify"> Nos comandos acima pudemos observar que um vetor representado pela letra c, formado pelas medidas dadas, foi armazenado em uma variável x (ou outra letra). Por meio do comando mean(x) é obtido a média das medidas - por exemplo, o comando mean(x) vai somar os números 4 + 5 + 8 + 9 + 5, dividir o resultado por 5 e mostrá-lo na tela, assim que teclarmos em 'Submit Answer', no editor do ambiente R.</p>
+* <p align="justify"> Nos comandos acima pudemos observar que um vetor, representado pela letra c e formado pelas medidas dadas, foi armazenado em uma variável x (pode ser outra letra). Por meio do comando mean(x) é obtido a média das medidas - por exemplo, o comando mean(x) vai somar os números 4 + 5 + 8 + 9 + 5, dividir o resultado por 5 e mostrá-lo na tela, assim que executarmos os comandos no R.</p>
 
 > Dever de casa - Faça no seu ambiente R:
 
@@ -126,12 +126,12 @@ mean(a)
 <p align="justify"> Calcule a média aritmética das seguintes medidas: 10, 20, 30, 50, 100, 123, 233.</p>
 
 *** =instructions
-
-- O vetor que armazena os dados é representado por c(10, 20, 30, 50, 100, 123, 233). Armazene-o numa variável x.
-
+<p align="justify">- O vetor que armazena os dados é representado por c(10, 20, 30, 50, 100, 123, 233). Armazene-o numa variável x.</p>
+<p align="justify">- Veja um programa que calcula a média aritmética no link: 
+[Cálculo de médias aritméticas.](http://pt.calcuworld.com/calculadoras-matematicas/media-aritmetica/)</p>-
 *** =hint
 
-- Crie um vetor c com as medidas dadas. Armazene o vetor c em uma variável x. Após isso, tecle em 'Submit Answer'.
+<p align="justify">- Crie um vetor c com as medidas dadas. Armazene o vetor c em uma variável x. Após isso, tecle em 'Submit Answer'.</p>
 
 *** =pre_exercise_code
 ```{r}
