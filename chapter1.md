@@ -259,7 +259,7 @@ pesos <-
 clientes <- 
 # Atribuir à variável XP clientes e pesos
 XP <- sum(pesos*clientes)/sum(pesos)
-# Mostrar mensagem média ponderada:
+# Mostrar média ponderada:
 XP
 ```
 *** =solution
@@ -270,7 +270,7 @@ pesos <- c(1,2,3,4,5,6,7,8,9,10)
 clientes <- c(50,50,140,50,50,60,50,50,100,100)
 # Atribuir à variável XP clientes e pesos
 XP <- sum(pesos*clientes)/sum(pesos)
-# Mostrar mensagem média ponderada:
+# Mostrar média ponderada:
 XP
 ```
 *** =sct
