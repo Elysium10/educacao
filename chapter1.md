@@ -70,7 +70,7 @@ $$\bar{X} =  {1 \over n} \sum_{i = 1}^n{X _i}.$$
 
 $$\bar{X} = \displaystyle \frac{10+20+30}{3}=20.$$
 
-> Determinando a média aritmética no R:
+> Determinando a média aritmética no R
 
 <p align="justify">Por exemplo, numa experiência foram obtidas as seguintes medidas: 4, 5, 8, 9, 5. Em R, a média aritmética $\bar{X}$ pode ser calculada da seguinte maneira:</p>
 
@@ -111,7 +111,6 @@ mean(a)
 
 [1] 10
 ```
-
 * <p align="justify"> Nos comandos acima pudemos observar que um vetor, representado pela letra c e formado pelas medidas dadas, foi armazenado em uma variável x (pode ser outra letra). Por meio do comando mean(x) é obtido a média das medidas - por exemplo, o comando mean(x) vai somar os números 4 + 5 + 8 + 9 + 5, dividir o resultado por 5 e mostrá-lo na tela, assim que executarmos os comandos no R.</p>
 
 > Dever de casa - Faça no seu ambiente R:
@@ -120,19 +119,14 @@ mean(a)
 
 <p align="justify">- Um funcionário ganhou 1800 reais nos primeiros 3 meses. Nos últimos 3 meses ele ganhou 2000 reais. Qual foi sua média salarial em um semestre (6 meses)? Resposta 1900 reais.</p>
 
-
 <p style="background-color:#33a0c2; font-weight: bold; font-size: 20px; text-align:center"><font color="#ffffff">ATIVIDADE</font></p>
 
 <p align="justify"> Calcule a média aritmética das seguintes medidas: 10, 20, 30, 50, 100, 123, 233.</p>
-
 *** =instructions
-<p align="justify">- O vetor que armazena os dados é representado por c(10, 20, 30, 50, 100, 123, 233). Armazene-o numa variável x.</p>
-<p align="justify">- Veja um programa que calcula a média aritmética no link: 
-[Cálculo de médias aritméticas.](http://pt.calcuworld.com/calculadoras-matematicas/media-aritmetica/)</p>-
+<p align="justify"> O vetor que armazena os dados é representado por c(10, 20, 30, 50, 100, 123, 233). Armazene-o numa variável x.</p>
+<p align="justify"> Veja um programa que calcula a média aritmética no link:[Cálculo de médias aritméticas.](http://pt.calcuworld.com/calculadoras-matematicas/media-aritmetica/)</p>
 *** =hint
-
 <p align="justify">- Crie um vetor c com as medidas dadas. Armazene o vetor c em uma variável x. Após isso, tecle em 'Submit Answer'.</p>
-
 *** =pre_exercise_code
 ```{r}
 # no pec
