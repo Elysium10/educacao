@@ -240,13 +240,16 @@ cat("A média ponderada é:", XP)
 <p style="background-color:#33a0c2; font-weight: bold; font-size: 20px; text-align:center"><font color="#ffffff">EXERCÍCIO PROPOSTO</font></p>
 
 <p align="justify"> Um shopping realizou uma pesquisa sobre qualidade no atendimento por meio de uma pesquisa a 600 clientes. As notas que dos clientes entrevistados variaram de 1 a 10, de acordo com os seguintes dados: Notas: 1,2,3,4,5,6,7,8,9,10 e quantidade de clientes: c(50,50,140,50,50,60,50,50,100,100). Determine a média de satisfação dos clientes do shopping.</p>
-
 *** =instructions
 - Criar um vetor que armazena as notas (pesos) dos clientes: c(1,2,3,4,5,6,7,8,9,10). Armazene-o numa variável chamada pesos.
 - Criar um vetor que armazena a quantidade de clientes: c(50,50,140,50,50,60,50,50,100,100). Armazene-o numa variável chamada clientes.
 - Aplique os comandos estudados neste tópico para achar a média ponderada.
 *** =hint
 - Crie dois vetores com as medidas dadas. Armazene-os em variáveis. Após isso, tecle em 'Submit Answer'.
+- Um auxílio para comparar cálculos de média ponderada pode ser encontrado neste link: 
+[Cálculo de média ponderada.](http://pt.calcuworld.com/calculadoras-matematicas/media-ponderada/)
+
+- http://pt.calcuworld.com/calculadoras-matematicas/media-ponderada/
 *** =pre_exercise_code
 ```{r}
 # no pec
