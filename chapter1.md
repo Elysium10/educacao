@@ -9,7 +9,7 @@ description : <p align="justify">Neste capítulo você aprenderá sobre os coman
 
 <p align="justify">R é uma linguagem de programação que pode ser utilizada em diversas áreas da ciência, pesquisas científicas, estatística e análise de dados. Devido a sua facilidade de manuseio, pode ser usada por alunos, trabalhadores, técnicos, professores e pesquisadores. Nesse ambiente os usuários podem limpar, analisar, visualizar e apresentar dados. O R é gratuito para download, pois está licenciado nos termos da licença GNU General Public. O R pode ser utilizado em todas as plataformas  Windows, Linux e Mac e seus comandos podem ser encontrados nesse link:</p>   
 
-Comandos do R](https://stat.ethz.ch/R-manual/R-devel/library/base/html/00Index.html)
+[Comandos do R](https://stat.ethz.ch/R-manual/R-devel/library/base/html/00Index.html)
 
 > Demonstrando o poder do R - seu primeiro programa
 
@@ -732,7 +732,7 @@ O log de 10000000 na base 10 equivale a quanto? Veja:
 
 $$\sqrt{log(10000000)}\rightarrow10^{x}=10000000\rightarrow 10^{x}=10^{7}\rightarrow x =7$$
 
-> Calcule no R quanto vale a seguinte soma de logs:
+> <p align="justify">Calcule no R quanto vale a seguinte soma de logs:</p>
 
 $$\sqrt{log(1)}+\sqrt{log(10)}+\sqrt{log(100)}+...+\sqrt{log(10000000)}$$
 
@@ -785,6 +785,7 @@ sum(sqrt(log(10^(0:7))))
 # Digite 400 dividido por 4 mais 10:
 400/4 + 10 
 # Com a sequência dada, determine uma expressão para a soma das raízes dos logs desses números:
+
 ```
 *** =solution
 ```{r}
@@ -804,39 +805,38 @@ success_msg("Bom trabalho! Neste tópico aprendemos aprendemos a somar, tirar ra
 ```
 --- type:NormalExercise lang:r xp:100 skills:1 key:6026cdef55
 ## Criando uma função no R
-
 > Equação horária do MRUV
 
-- Na Física temos o conhecido Movimento Retilíneo Uniformemente Variado(MRUV), onde a velocidade de um móvel varia igualmente em intervalos de tempos iguais, ou seja, sua acelaração é constante. A equação horária desse tipo de movimento equivale a uma equação do 2º grau, onde a condição para que o móvel passe pela origem da trajetória é determinada quando o espaço final (S) percorrido for igual a zero.
+<p align="justify">Na Física temos o conhecido Movimento Retilíneo Uniformemente Variado(MRUV), onde a velocidade de um móvel varia igualmente em intervalos de tempos iguais, ou seja, sua acelaração é constante. A equação horária desse tipo de movimento equivale a uma equação do 2º grau, onde a condição para que o móvel passe pela origem da trajetória é determinada quando o espaço final (S) percorrido for igual a zero.</p>
 
-> Exemplos de equações horárias de movimentos de móveis:
+> <p align="justify">Exemplos de equações horárias de movimentos de móveis:</p>
 
 $$S = 6 - 5t + 1t^{2}$$
 com coeficientes: a = 1, b = -5, c = 6. Raízes: 2 e 3.
 $$S = 30 + 20t - 5t^{2}$$
-com coeficientes:  a = -5,  b = 20,  c = 30. Raízes: -1.162278 e 5.162278.
+Coeficientes:  a = -5,  b = 20,  c = 30. Raízes: -1.162278 e 5.162278.
 $$S = 6 + 8t + 4t^{2}$$  
-com coeficientes:  a = -4,  b = 8,  c = 6. Raízes:  complexas. 
+Coeficientes:  a = -4,  b = 8,  c = 6. Raízes:  complexas. 
 $$S = -2 - 3t + 5t^{2}$$ 
-com coeficientes:  a = -5,  b = 3,  c = 2. Raízes:  -0.4 e 1.
+Coeficientes:  a = -5,  b = 3,  c = 2. Raízes:  -0.4 e 1.
 $$S = -20 - t + t^{2}$$  
-com coeficientes:  a = -1,  b = -1,  c = -20. Raízes:  -4 e 5.
+Coeficientes:  a = -1,  b = -1,  c = -20. Raízes:  -4 e 5.
 $$S = -4 - 3t + t^{2}$$
-com coeficientes:  a = -1,  b = -3,  c = -4. Raízes: -1 e 4. 
+Coeficientes:  a = -1,  b = -3,  c = -4. Raízes: -1 e 4. 
 $$S = 7 - 8t + t^{2}$$
-com coeficientes:  a = -1,  b = -8,  c = 7. Raízes: 1 e 7.
+Coeficientes:  a = -1,  b = -8,  c = 7. Raízes: 1 e 7.
 
 > Criando a função passo-a-passo
 
-- É necessário criarmos uma função para o cálculo do instante (ou instantes) em que o móvel passa pela origem da trajetória. 
+* <p align="justify">É necessário criarmos uma função para o cálculo do instante (ou instantes) em que o móvel passa pela origem da trajetória.</p> 
 
-- No caso dessa função, vamos chamar estes instantes de tempo1 e tempo2 que correspondem às raízes da equação. 
+* <p align="justify">No caso dessa função, vamos chamar estes instantes de tempo1 e tempo2 que correspondem às raízes da equação.</p> 
 
-- O nome da função será "raízes". Atribua a ele o comando function( ). A função precisará de informações ou argumentos: coloque nos parênteses os coeficientes separados por vírgula (a, b, c). 
+* <p align="justify">O nome da função será "raízes". Atribua a ele o comando function( ). A função precisará de informações ou argumentos: coloque nos parênteses os coeficientes separados por vírgula (a, b, c).</p> 
 
-- A partir daí delimite por chaves os comandos necessários para a funçãos. O return() é um comando não obrigatório, mas que é bastante comum no final das funções. Não o usaremos aqui. 
+* <p align="justify">A partir daí delimite por chaves os comandos necessários para a funçãos. O return() é um comando não obrigatório, mas que é bastante comum no final das funções. Não o usaremos aqui.</p> 
 
-- Depois de tudo pronto, execute a função digitando-a pelo nome com os argumentos dentro dos parênteses (a, b, c). Assim:
+* <p align="justify">Depois de tudo pronto, execute a função digitando-a pelo nome com os argumentos dentro dos parênteses (a, b, c). Assim:</p>
 
 ```{r}
 coefic <- function(a,b,c){
@@ -850,30 +850,26 @@ coefic <- function(a,b,c){
     }
 }
 ```
-- Depois basta digitar, por exemplo, os coeficientes das raízes: coefic (1, -5, 6) e teclar "Enter". Em seguida aparecerá na tela as duas raízes que são os intantes na Física. Na prática o tempo sempre é positivo, por isso, qualquer raiz negativa (complexa) será desconsiderada. Você pode executar esse procedimento para todas as equações dadas no tópico. Veja exemplo:
+* <p align="justify">Depois basta digitar, por exemplo, os coeficientes das raízes: coefic (1, -5, 6) e teclar "Enter". Em seguida aparecerá na tela as duas raízes que são os intantes na Física. Na prática o tempo sempre é positivo, por isso, qualquer raiz negativa (complexa) será desconsiderada. Você pode executar esse procedimento para todas as equações dadas no tópico. Veja exemplo:</p>
 
 ```{r}
 > coefic (1, -5, 6)
 as raízes são 2 e 3 
 ```
 *** =instructions
-* Escolha um nome (coeficientes) para a função. Atribua a ele o comando function( ). Dentro dos parênteses do comando function digite os argumentos separados por vírgula (a, b, c). A partir daí delimite por chaves os comandos necessários para a função;
-* Execute a função digitando-a pelo nome, conforme mostrado no exemplo anterior. Use a seguinte equação: $$S = -4 - 3t + t^{2}.$$
-* A resposta do problema é que, de acordo com a equação, o móvel passa pela origem da trajetória no instante (raiz) 4 segundos. 
+* <p align="justify">Escolha um nome (coeficientes) para a função. Atribua a ele o comando function( ). Dentro dos parênteses do comando function digite os argumentos separados por vírgula (a, b, c). A partir daí delimite por chaves os comandos necessários para a função;</p>
+* <p align="justify">Execute a função digitando-a pelo nome, conforme mostrado no exemplo anterior. Use a seguinte equação: $$S = -4 - 3t + t^{2};$$</p>
+* <p align="justify">A resposta do problema é que, de acordo com a equação, o móvel passa pela origem da trajetória no instante (raiz) 4 segundos.</p> 
 
 *** =hint
-- O nome dado à função foi: coeficientes.
-- Digite o nome da função com seus coeficientes entre parênteses.
+* <p align="justify">O nome dado à função foi: coeficientes.</p>
+* <p align="justify">Digite o nome da função com seus coeficientes entre parênteses.</p>
 *** =pre_exercise_code
 ```{r}
-
 # no pec
-
 ```
-
 *** =sample_code
 ```{r}
-
 coeficientes <- function(a,b,c){
     delta <- b^2 - 4*a*c
     if(delta<0){
@@ -884,13 +880,11 @@ coeficientes <- function(a,b,c){
         cat("as raízes (instantes) são", tempo1, "e", tempo2)
     }
 }
-# Digite na linha abaixo o nome da função (coeficientes) com os seus respectivos coeficientes e tecle Enter.
+# Escreva o nome da função com os seus respectivos coeficientes:
 
 ```
-
 *** =solution
 ```{r}
-
 coeficientes <- function(a,b,c){
     delta <- b^2 - 4*a*c
     if(delta<0){
@@ -901,13 +895,11 @@ coeficientes <- function(a,b,c){
         cat("as raízes (instantes) são", tempo1, "e", tempo2)
     }
 }
-# Digite na linha abaixo o nome da função (coeficientes) com os seus respectivos coeficientes e tecle Enter.
+# Escreva o nome da função com os seus respectivos coeficientes:
 coeficientes (1, -3, -4)
 ```
-
 *** =sct
 ```{r}
-
 test_output_contains("coeficientes (1, -3, -4)", incorrect_msg = "O nome da função é coeficientes. Digite o nome da função com os seus respectivos coeficientes e tecle Enter.")
 success_msg("Bom trabalho! Você adquiriu noções sobre a equação horária do MRUV e desenvolveu uma função para determinar o instante (raiz) ou instantes (raízes) em que um móvel passa pela origem (0) da trajetória.")
 ```
