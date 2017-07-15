@@ -247,9 +247,7 @@ cat("A média ponderada é:", XP)
 *** =hint
 - Crie dois vetores com as medidas dadas. Armazene-os em variáveis. Após isso, tecle em 'Submit Answer'.
 - Um auxílio para comparar cálculos de média ponderada pode ser encontrado neste link: 
-[Cálculo de média ponderada.](http://pt.calcuworld.com/calculadoras-matematicas/media-ponderada/)
-
-- http://pt.calcuworld.com/calculadoras-matematicas/media-ponderada/
+[Cálculo de médias ponderadas.](http://pt.calcuworld.com/calculadoras-matematicas/media-ponderada/)
 *** =pre_exercise_code
 ```{r}
 # no pec
