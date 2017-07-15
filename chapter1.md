@@ -154,7 +154,6 @@ success_msg("Bom trabalho! Agora você sabe calcular a média aritmética usando
 ```
 --- type:NormalExercise lang:r xp:100 skills:1 key:edfe953f70
 ## Média ponderada
-
 > <p align="justify">A média aritmética ponderada ($\bar{X _{P}}$) é determinada por meio do produto entre determinados 
 valores e seus respectivos pesos, dividido pela soma dos pesos. Simbolicamente, temos</p>
 
@@ -182,7 +181,7 @@ $$= \frac{14.6}{2.2}\cong6.636.$$
 
 [Cálculo de médias ponderadas.](http://pt.calcuworld.com/calculadoras-matematicas/media-ponderada/)
 
-> <p align="justify">Determinando a média aritmética ponderada no R:</p>
+> <p align="justify">Comandos para calcular a média ponderada no R:</p>
 
 <p align="justify">Determine a média ponderada dos números 4 e 7, dado que os seus pesos são, respectivamente, 5 e 8. No R, a média ponderada $\bar{X _{P}}$ pode ser calculada da seguinte maneira:</p>
 
@@ -232,14 +231,13 @@ cat("A média ponderada é:", XP)
 
 ```
 <p style="background-color:#33a0c2; font-weight: bold; font-size: 20px; text-align:center"><font color="#ffffff">EXERCÍCIO PROPOSTO</font></p>
-
-<p align="justify"> Um shopping realizou uma pesquisa sobre qualidade no atendimento por meio de uma pesquisa a 600 clientes. As notas dos clientes entrevistados variaram de 1 a 10, de acordo com os seguintes dados: Notas: 1,2,3,4,5,6,7,8,9,10 e quantidade de clientes: 50,50,140,50,50,60,50,50,100,100. Determine a média ponderada destes dados.</p>
+<p align="justify"> Funcionários de um shopping realizaram uma pesquisa sobre qualidade no atendimento por meio de uma pesquisa a 600 clientes. As notas dos entrevistados variaram de 1 a 10, de acordo com os seguintes dados: notas atribuídas pelos clientes (1,2,3,4,5,6,7,8,9,10) e a quantidade de clientes entrevistados (50,50,140,50,50,60,50,50,100,100). Determine a média ponderada destes dados.</p>
 *** =instructions
 <p align="justify">- Criar um vetor que armazena as notas (pesos) dos clientes: c(1,2,3,4,5,6,7,8,9,10). Armazene-o numa variável chamada pesos.</p>
-<p align="justify">- Criar um vetor que armazena a quantidade de clientes:c(50,50,140,50,50,60,50,50,100,100). Armazene-o numa variável chamada clientes.</p>
-- Aplicar os comandos estudados neste tópico para achar a média ponderada.
+<p align="justify">- Criar um vetor que armazena a quantidade de clientes: c(50,50,140,50,50,60,50,50,100,100). Armazene-o numa variável chamada clientes.</p>
+<p align="justify">- Aplicar os comandos estudados neste tópico para achar a média ponderada.</p>
 *** =hint
-- Crie dois vetores com as medidas dadas. Armazene-os em variáveis. Após isso, tecle em 'Submit Answer'.
+<p align="justify">- Crie dois vetores com as medidas dadas. Armazene-os em variáveis. Após isso, tecle em 'Submit Answer'.</p>
 *** =pre_exercise_code
 ```{r}
 # no pec
@@ -366,7 +364,7 @@ x <- c(60,40)
 
 *** =hint
 
-- Atribua à variável x um vetor contendo os três números. O vetor deve conter 3 elementos: c(2,5,10). A solução matemática do problema é igual a 3.75.
+* <p align="justify">Atribua à variável x um vetor contendo os três números. O vetor deve conter 3 elementos: c(2,5,10). A solução matemática do problema é igual a 3.75.</p>
 
 *** =pre_exercise_code
 
@@ -500,15 +498,10 @@ prod(x)^(1/n)
 > <p align="justify">Uma loja de software investiu em aplicações financeiras que lhe renderam 20% no primeiro ano e 30% no segundo ano. Qual o foi o rendimento médio deste investimento?</p>
 
 *** =instructions
-
 <p align="justify">- As taxas percentuais devem ser transformadas em taxas unitárias, ou seja, 20% = 1.2 e 30% = 1.3.
 <p align="justify">- Aplicar os comandos do R para achar as médias geométricas entre 1.2 e 1.3.</p>
-
 *** =hint
-
-- Atribua à variável x um vetor contendo os três números. O vetor deve começar com c. Assim: c(1.2,1.3).
-- O número de elementos (n) é igual a 2. 
-
+<p align="justify">Atribua à variável x um vetor contendo os dois números da questão. O vetor deve começar com c, assim: c(1.2,1.3). O número de elementos (n) é igual a 2.</p> 
 *** =pre_exercise_code
 
 ```{r}
@@ -540,110 +533,60 @@ test_output_contains("1.249", incorrect_msg = "Os números devem estar separados
 success_msg("Bom trabalho! Você adquiriu noções sobre média geométrica aplicada em economia e em números.")
 ```
 --- type:NormalExercise lang:r xp:100 skills:1 key:24e7dc599e
-## Medida da aceleração da gravidade
-
-> #### Valor teórico da aceleração da gravidade
-
-> O valor teórico da aceleração da gravidade (g) é aproximadamente igual a 9,8 m/s<SUP>2</SUP>. Suponha que você efetuou várias medidas da aceleração e achou outro valor que corresponde a 10.2 m/s<SUP>2</SUP>. Determine o erro absoluto (E).
-
-*** =instructions
-- Nesse caso, a média aritmética corresponde à medida experimental efetuada de 10.2 m/s<SUP>2</SUP>. 
-- Subtraia o valor da medida experimental do valor da medida correta.  
-- Obtenha o módulo (valor absoluto) dessa diferença.
-*** =hint
-
-Armazene $9.8m/s^2$ na variável g.
-Armazene a medida efetuada de $10.2m/s^2$ em uma variável qualquer (gr).
-
-*** =pre_exercise_code
-```{r}
-# no pec
-```
-*** =sample_code
-```{r}
-# Armazene o valor da medida correta de 9.8. 
-g <- 
-# Armazene a medida efetuada de 10.2 em uma variável qualquer (gr).
-gr <- 
-# Obtenha o módulo (valor absoluto) da diferença entre a medida correta e a medida experimental e armazene-o na variável E.
-E <- abs(g - gr)
-# Mostre o valor do erro na e E na tela, digitando Eteclando Enter.
-E
-```
-*** =solution
-```{r}
-# Armazene o valor da medida correta de 9.8. 
-g <- 9.8
-# Armazene a medida efetuada de 10.2 em uma variável qualquer (gr).
-gr <- 10.2
-# Obtenha o módulo (valor absoluto) da diferença entre a medida correta e a medida experimental e armazene-o na variável E.
-E <- abs(g - gr)
-# Mostre o valor do erro na e E na tela, digitando Eteclando Enter.
-E
-```
-*** =sct
-```{r}
-test_output_contains("0.4", incorrect_msg = "Você armazenou corretamente 9.8 na varável g? e 10.2 na varável gr?")
-success_msg("Parabéns! Agora você sabe calcular o erro absoluto usando o R!")
-```
---- type:NormalExercise lang:r xp:100 skills:1 key:7f8c3148a8
 ## Erro relativo
 
-> #### Erro relativo de duas medidas
+> Aceleração da gravidade
 
-> Do exemplo anterior, determine o erro relativo entre as medidas dadas.
+<p align="justify"> O valor teórico da aceleração da gravidade (g) é aproximadamente igual a 9,8 m/s<SUP>2</SUP>. Suponha que você efetuou várias medidas da aceleração e achou um outro valor, uma média aritmética que corresponde a 10.2 m/s<SUP>2</SUP>, que chamaremos de gr.</p>
+
+> <p align="justify">Determinando o erro relativo entre as medidas dadas.</p>
 
 A expressão para calcular o erro relativo $E_{r}$:
 
-$E_{r} = \frac{\left |g- gr  \right |}{g}$
+$$E_{r} = \displaystyle \frac{\left |g- gr  \right |}{g}$$
 
 onde,
 
-$\left |g-gr  \right |$ - módulo da diferença entre os valores das medidas teóricas e experimentais.
+$$\left |g-gr  \right |$$ 
 
-Tanto nesse caso como no exemplo anterior, o valor obtido nas medidas experimentais é o mesmo valor da média aritmética.
+<p align="justify"> é o módulo da diferença entre os valores das medidas teóricas e experimentais. Lembrando que, nesse caso, o valor obtido nas medidas experimentais é o mesmo valor da média aritmética.</p>
 
 *** =instructions
-- Mesmo procedimento do exercício anterior: a medida experimental corresponde à média aritmética efetuada de $10.2m/s^2$. 
-- Subtraia o valor da medida experimental do valor da medida correta.  
-- Obtenha o módulo (valor absoluto) dessa diferença e divida pelo valor da medida correta.
+<p align="justify"> - Sabendo que a medida experimental (gr) corresponde à média aritmética efetuada de $10.2m/s^2$, subtraia o valor da medida experimental do valor da medida correta (g).</p>  
+<p align="justify"> - Obtenha o módulo (valor absoluto) dessa diferença e divida pelo valor da medida correta.</p>
 *** =hint
-Armazene $9.8m/s^2$ na variável g.
-Armazene a medida efetuada de $10.2m/s^2$ em uma variável qualquer (gr).
-Obtenha o módulo (valor absoluto) dessa diferença e divida pelo valor da medida correta.
+<p align="justify"> - Armazene $9.8m/s^2$ na variável g. Armazene a medida efetuada de $10.2m/s^2$ em uma variável qualquer (gr). Obtenha o módulo (valor absoluto) dessa diferença e divida pelo valor da medida correta.</p>
 *** =pre_exercise_code
 ```{r}
 # no pec
 ```
 *** =sample_code
 ```{r}
-# Armazene o valor da medida correta de 9.8. 
+# Armazene o valor da medida correta de 9.8: 
 g <- 
-# Armazene a medida efetuada de 10.2 em uma variável qualquer (gr).
-gr <- 
-# Obtenha o módulo (valor absoluto) da diferença entre a medida correta e a medida experimental e armazene-o na variável E.
+# Armazene a medida efetuada de 10.2 em uma variável qualquer (gr):
+gr <-  
+# Obtenha o valor absoluto da diferença entre a g e gr e armazene-o na variável Er:
 Er <- abs(g - gr)/g
-# Mostre o valor do erro relativo, digitando Eteclando Enter.
+# Mostre o valor do erro relativo:
 Er
 ```
 *** =solution
 ```{r}
-# Armazene o valor da medida correta de 9.8. 
+# Armazene o valor da medida correta de 9.8: 
 g <- 9.8
-# Armazene a medida efetuada de 10.2 em uma variável qualquer (gr).
+# Armazene a medida efetuada de 10.2 em uma variável qualquer (gr):
 gr <- 10.2 
-# Obtenha o módulo (valor absoluto) da diferença entre a medida correta e a medida experimental e armazene-o na variável E.
+# Obtenha o valor absoluto da diferença entre a g e gr e armazene-o na variável Er:
 Er <- abs(g - gr)/g
-# Mostre o valor do erro relativo, digitando Eteclando Enter.
+# Mostre o valor do erro relativo:
 Er
 ```
 *** =sct
 ```{r}
 test_output_contains("0.04081", incorrect_msg = "Você armazenou corretamente 9.8 na varável g e 10.2 na varável gr?")
-success_msg("Parabéns! Agora você sabe calcular o erro relativo usando o R!")
+success_msg("Parabéns! Agora você sabe calcular o erro relativo!")
 ```
-iiiiii
-
 --- type:NormalExercise lang:r xp:100 skills:1 key:bc0cf7b809
 ## Operações aritméticas no ambiente R
 
