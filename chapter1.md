@@ -654,7 +654,7 @@ sqrt(32)
 
 [1] 5.656854
 ```
-> Comandos para funções trigométricas, expressões algébrica e sequências numéricas
+> <p align="justify">Comandos para funções trigométricas, expressões algébrica e sequências numéricas</p>
 
 ```{r}
 # seno de pi constante
@@ -716,7 +716,7 @@ sum((1:10)^2)
 ```
 > Explorando a função log10
 
-Vamos utilizar alguns comandos já visto para resolvermos logaritmos. Na matemática, o logaritmo comum ou decimal de um número é o expoente a que a base deve ser elevado para produzir este número. Por exemplo, o logaritmo de 100 na base 10 é 2, pois 10 ao quadrado é 100. Veja como calcular o log de 100:
+<p align="justify">Vamos utilizar alguns comandos já visto para resolvermos logaritmos. Na matemática, o logaritmo comum ou decimal de um número é o expoente a que a base deve ser elevado para produzir este número. Por exemplo, o logaritmo de 100 na base 10 é 2, pois 10 ao quadrado é 100. Veja como calcular o log de 100:</p>
 
 $$\sqrt{log(100)}\rightarrow10^{x}=100\rightarrow 10^{x}=10^{2}\rightarrow x =2$$
 
@@ -767,49 +767,40 @@ sum(sqrt(log(10^(0:7))))
 ```
 
 *** =instructions
-* Digite a soma de 10 mais 6 e a multiplicação de 50 vezes 6 (já feito).
-* Depois digite 400 dividido por 4 mais 10 e crie uma sequência de números de 10 a 50 (já feito).
-* Digite expressão para a soma das raízes dos logs dos números da sequência 1,  2,  4,  8 e 16.
-
+* <p align="justify">Digite a soma de 10 mais 6 e a multiplicação de 50 vezes 6 (já executado no console).</p>
+* <p align="justify">Depois digite 400 dividido por 4 mais 10 e crie uma sequência de números de 10 a 50 (já executado).</p>
+* <p align="justify">Digite expressão para a soma das raízes dos logs dos números da sequência 1,  2,  4,  8 e 16. (Executar).</p>
 *** =hint
-- A expressão é semelhante a que foi mostrada nesse tópico! Crie a sequência com 2 elevado a 0:5.
-
+* <p align="justify">A expressão é semelhante a que foi mostrada nesse tópico! Crie a sequência com 2 elevado a 0:5.</p>
 *** =pre_exercise_code
 ```{r}
 # no pec
 ```
 *** =sample_code
 ```{r}
-# Digite a soma de 10 mais 6
+# Digite a soma de 10 mais 6:
 10 + 6
-
-# Digite a multiplicação de 50 vezes 6
+# Digite a multiplicação de 50 vezes 6:
 50*6
-
-# Digite 400 dividido por 4 mais 10
+# Digite 400 dividido por 4 mais 10:
 400/4 + 10 
-
-# Dada a sequência 1,  2,  4,  8 e 16, determine na linha abaixo uma expressão para a soma das raízes dos logs desses números.
-
+# Com a sequência dada, determine uma expressão para a soma das raízes dos logs desses números:
 ```
 *** =solution
 ```{r}
-# Digite a soma de 10 mais 6
+# Digite a soma de 10 mais 6:
 10 + 6
-
-# Digite a multiplicação de 50 vezes 6
+# Digite a multiplicação de 50 vezes 6:
 50*6
-
-# Digite 400 dividido por 4 mais 10
+# Digite 400 dividido por 4 mais 10:
 400/4 + 10 
-
-# Dada a sequência 1,  2,  4,  8 e 16, determine na linha abaixo uma expressão para a soma das raízes dos logs desses números.
+# Com a sequência dada, determine uma expressão para a soma das raízes dos logs desses números:
 sum(sqrt(log(2^(0:5))))
 ```
 *** =sct
 ```{r}
 test_output_contains("sum(sqrt(log(2^(0:5))))", incorrect_msg = "Os números da sequência são 1,  2,  4,  8 e 16. Crie essa sequência elevando dois a 0:5, como visto no tópico.")
-success_msg("Bom trabalho! Neste tópico aprendemos aprendemos a somar, tirar raiz quadrada, criar sequências numéricas, elevar seus respectivos números ao quadrado, determinar seus logs, suas respectivas raízes e somá-las. ")
+success_msg("Bom trabalho! Neste tópico aprendemos aprendemos a somar, tirar raiz quadrada, criar sequências numéricas, elevar seus respectivos números ao quadrado, determinar seus logs, suas respectivas raízes e somá-las.")
 ```
 --- type:NormalExercise lang:r xp:100 skills:1 key:6026cdef55
 ## Criando uma função no R
