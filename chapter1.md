@@ -236,7 +236,6 @@ XP <- sum(valores*pesos)/sum(pesos)
 # Mostrar mensagem média ponderada:
 cat("A média ponderada é:", XP)
 
-A média ponderada é:
 ```
 <p style="background-color:#33a0c2; font-weight: bold; font-size: 20px; text-align:center"><font color="#ffffff">EXERCÍCIO PROPOSTO</font></p>
 
