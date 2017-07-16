@@ -1028,7 +1028,6 @@ CemF <- function(Celsius,Fahrenheit){# <== Cria a função CemF
 # Na linha abaixo, escreva o comando de conversão de 100°C em Fahrenheit:
 
 ```
-
 *** =solution
 ```{r}
 CemF <- function(Celsius,Fahrenheit){# <== Cria a função CemF 
