@@ -62,11 +62,11 @@ angulo <- 30
 # transformar graus em radianos:
 teta <- (pi/180) * angulo
 # componente x da vi:
-vox <- vi * cos(teta)  
-voy <- vi * sin(teta)  
+vix <- vi * cos(teta)  
+viy <- vi * sin(teta)  
 # mostrar a componente x e y da vi:
-cat("A componente x da vi é igual a:", vox)
-cat("A componente y da vi é igual a:", voy)
+cat("A componente x da vi é igual a:", vix)
+cat("A componente y da vi é igual a:", viy)
 
 A componente x da vel. inicial é igual a: 43.30127
 A componente y da vel. inicial é igual a: 25
@@ -86,11 +86,11 @@ angulo <- 45
 # transformar graus em radianos:
 teta <- (pi/180) * angulo
 # componente x e y da vi:
-vox <- vi * cos(teta)  
-voy <- vi * sin(teta)  
+vix <- vi * cos(teta)  
+viy <- vi * sin(teta)  
 # mostrar as componentes x e y da vi:
-cat("A componente x da vi é igual a:", vox)
-cat("A componente y da vi é igual a:", voy)
+cat("A componente x da vi é igual a:", vix)
+cat("A componente y da vi é igual a:", viy)
 
 ```
 <p style="background-color:#33a0c2; font-weight: bold; font-size: 20px; text-align:center"><font color="#ffffff">EXERCÍCIO PROPOSTO</font></p>
@@ -117,11 +117,12 @@ angulo <-
 # transforme graus em radianos:
 teta <-
 # componente x da vi:
-vox <- vi * cos(teta)  
-voy <- vi * sin(teta)  
-# mostrar as componentes x e y da vi:
-vox 
-voy
+vix <- vi * cos(teta)  
+viy <- vi * sin(teta)  
+# mostrar a componentes x da vi:
+vix
+# mostrar a componentes y da vi:
+viy
 ```
 *** =solution
 ```{r}
@@ -134,14 +135,15 @@ angulo <- 60
 # transforme graus em radianos:
 teta <- (pi/180) * angulo
 # componente x da vi:
-vox <- vi * cos(teta)  
-voy <- vi * sin(teta)  
-# mostrar as componentes x e y da vi:
-vox 
-voy
+vix <- vi * cos(teta)  
+viy <- vi * sin(teta)  
+# mostrar a componentes x da vi:
+vix
+# mostrar a componentes y da vi:
+viy
 ```
 *** =sct
 ```{r}
-test_output_contains("vox = 100 voy = 173.20511"), incorrect_msg = "Digite corretamente o valor da variável angulo. O valor da variável teta equivale a $$(pi/180)*angulo.$$.")
+test_output_contains("173.20511", incorrect_msg = "Digite corretamente o valor da variável angulo. O valor da variável teta equivale a $$(pi/180)*angulo.$$.")
 success_msg("Bom trabalho! Você adquiriu noções sobre componentes da velocidade inicial do lançamento oblíquo da Física.")
 ```
