@@ -1015,11 +1015,8 @@ FemC <- function(Fahrenheit,Celsius){# <== Cria a função FemC
 - O nome da função está à esquerda do comando "function".
 *** =pre_exercise_code
 ```{r}
-
 # no pec
-
 ```
-
 *** =sample_code
 ```{r}
 CemF <- function(Celsius,Fahrenheit){# <== Cria a função CemF 
@@ -1043,7 +1040,6 @@ CemF <- function(Celsius,Fahrenheit){# <== Cria a função CemF
 # Na linha abaixo, escreva o comando de conversão de 100°C em Fahrenheit:
 CemF(100)
 ```
-
 *** =sct
 ```{r}
 test_output_contains("CemF(100)", incorrect_msg = "O nome da função deve ser seguida com o dado que é o 100. Digite o dado entre parênteses e tecle 'Submit Answer'.")

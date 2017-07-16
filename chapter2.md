@@ -42,15 +42,15 @@ $$V _{ix} = V _{i}.cos\theta= 50.(0.866)\cong43,30~m/s.$$
 
 $$V _{ix} = V _{i}.sen\theta= 50.(0.5)=25~m/s.$$
 
-<p align="justify"> Para simular um movimento de projéteis, acesse o link abaixo e clique em "Disparar".</p>
+<p align="justify"> Auxílio para simular um lançamento de projéteis, acesse o link abaixo e clique em "Disparar".</p>
 
-[Movimento de projéteis.](https://phet.colorado.edu/sims/projectile-motion/projectile-motion_pt_BR.html)
+[Lançamento de projéteis.](https://phet.colorado.edu/sims/projectile-motion/projectile-motion_pt_BR.html)
 
 > <p align="justify">Comandos para calcular as componentes da velocidade inicial no R:</p>
 
 <p align="justify">Use o problema anterior e determine as componentes da velocidade inicial do corpo.</p>
 
-Obs.: Em R, os argumentos das funções trigonométricas, os graus, devem ser transformados em radianos da seguinte maneira: (pi/180) multiplicado pelo ângulo). Após isso, tira-se o cos e o seno (sin) desse resultado. 
+<p align="justify">Obs.: Em R, os argumentos das funções trigonométricas, os graus, devem ser transformados em radianos da seguinte maneira: (pi/180) multiplicado pelo ângulo. Após isso, tira-se o cosseno (cos) e o seno (sin) desse resultado.</p> 
 
 ```{r}
 # aceleração da gravidade:
@@ -72,9 +72,9 @@ A componente x da vel. inicial é igual a: 43.30127
 A componente y da vel. inicial é igual a: 25
 ```
 
-> Dever de casa - Estude e execute no seu ambiente R:
+> DEVER DE CASA - estude e execute no seu ambiente R:
 
-<p align="justify"> Um projétil é lançado a partir do solo, formando com o mesmo um ângulo de 45°, com uma velocidade inicial igual a 100 m/s. Determine as componentes da velocidade inicial. Adote a aceleração da gravidade g = 10m/s<sup>2</sup>.</p>(resposta: A componente x da vel. inicial é igual a: 70.71068 e a componente y da vel. inicial é igual a: 70.71068).</p>
+<p align="justify"> Um projétil é lançado a partir do solo, formando com o mesmo um ângulo de 45°, com uma velocidade inicial igual a 100 m/s. Determine as componentes da velocidade inicial. Adote a aceleração da gravidade g = 10 m/s<sup>2</sup>.</p> (resposta: A componente x da vel. inicial é igual a: 70.71068 e a componente y da vel. inicial é igual a: 70.71068).</p>
 
 ```{r}
 # aceleração da gravidade:
@@ -88,34 +88,58 @@ teta <- (pi/180) * angulo
 # componente x da velocidade inicial
 vox <- vi * cos(teta)  
 voy <- vi * sin(teta)  
-# mostrar a componente x da vel inicial:
+# mostrar as componentes x e y da vel inicial:
 cat("A componente x da vel. inicial é igual a:", vox)
 cat("A componente y da vel. inicial é igual a:", voy)
 
 ```
 <p style="background-color:#33a0c2; font-weight: bold; font-size: 20px; text-align:center"><font color="#ffffff">EXERCÍCIO PROPOSTO</font></p>
-<p align="justify"> Funcionários de um shopping realizaram uma pesquisa sobre qualidade no atendimento por meio de uma pesquisa a 600 clientes. As notas dos entrevistados variaram de 1 a 10, de acordo com os seguintes dados: notas atribuídas pelos clientes (1,2,3,4,5,6,7,8,9,10) e a quantidade de clientes entrevistados (50,50,140,50,50,60,50,50,100,100). Determine a média ponderada destes dados.</p>
+<p align="justify"> Um projétil é lançado a partir do solo, formando com o mesmo um ângulo de 60°, com uma velocidade inicial igual a 200 m/s. Determine as componentes da velocidade inicial. Adote a aceleração da gravidade g = 10 m/s<sup>2</sup>.</p></p>
 
 *** =instructions
-
+<p align="justify"> Use o código estudado neste tópico para calcular as componentes x e y da velocidade inicial.</p> 
+<p align="justify"> Por enquanto, não usaremos o valor de g.</p>
 *** =hint
-
+<p align="justify"> O ângulo dado equivale a 60° e a variável teta equivale a</p> 
+$$(pi/180) * angulo.$$ 
 *** =pre_exercise_code
 ```{r}
-
 ```
-
 *** =sample_code
 ```{r}
-
+# aceleração da gravidade:
+g <- 10
+# velocidad inicial:
+vi <- 200
+# escreva o ângulo dado em graus:
+angulo <- 
+# transforme graus em radianos:
+teta <-
+# componente x da velocidade inicial
+vox <- vi * cos(teta)  
+voy <- vi * sin(teta)  
+# mostrar as componentes x e y da vel inicial:
+vox 
+voy
 ```
-
 *** =solution
 ```{r}
-
+# aceleração da gravidade:
+g <- 10
+# velocidad inicial:
+vi <- 200
+# escreva o ângulo dado em graus:
+angulo <- 60
+# transforme graus em radianos:
+teta <- (pi/180) * angulo
+# componente x da velocidade inicial
+vox <- vi * cos(teta)  
+voy <- vi * sin(teta)  
+# mostrar as componentes x e y da vel inicial:
+vox 
+voy
 ```
-
 *** =sct
 ```{r}
-
+# no pec
 ```
