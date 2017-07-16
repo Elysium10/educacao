@@ -5,36 +5,42 @@ description : <p align="justify">Neste capítulo você aprenderá sobre os coman
 --- type:NormalExercise lang:r xp:100 skills:1 key:8ea80fa0d0
 ## Lançamento bolíquo
 
-> <p align="justify">Um corpo lançado obliquamente possui dois tipos de movimentos: um segundo a horizontal e o outro segundo a vertical. O movimento descrito pelo corpo, lançado segundo a horizontal, é do tipo MRU (Movimento Retilíneo Uniforme). E o outro movimento descrito pelo corpo, lançado segundo a vertical, é do tipo MRUV (Movimento Retilíneo Uniformemente Variado). A trajetória descrita pelo corpo terá a forma parabólica.</p>
+<p align="justify">Um corpo lançado obliquamente possui dois tipos de movimentos: um segundo a horizontal e o outro segundo a vertical. O movimento descrito pelo corpo, lançado segundo a horizontal, é do tipo MRU (Movimento Retilíneo Uniforme). E o outro movimento descrito pelo corpo, lançado segundo a vertical, é do tipo MRUV (Movimento Retilíneo Uniformemente Variado). A trajetória descrita pelo corpo terá a forma parabólica.</p>
 
 > Componentes da velocidade inicial do corpo
 
-As componentes da velocidade inicial do corpo é dada pelas seguintes equações:
+<p align="justify">As componentes da velocidade inicial do corpo é dada pelas seguintes equações:</p>
 
-$$V _{ix} = V_{i}.cos(\theta)$$
+$$V _{ix} = V _{i}.cos(\theta)$$
 
 e
  
-$$V _{iy} = V_{i}.sen(\theta)$$
+$$V _{iy} = V _{i}.sen(\theta)$$
 
 onde,
 
-$V _{ix}]$ representa a componente da velocidade inicial na horizontal, $V_{i}$ representa a velocidade inicial do corpo, $\theta$ é o ângulo de lançamento do corpo, $V _{iy}]$ representa a componente da velocidade inicial na vertical.
-
+<p align="justify">$V _{i}$ representa a velocidade inicial do corpo, $V _{ix}$ representa a componente da velocidade inicial na horizontal, $V _{iy}$ representa a componente da velocidade inicial na vertical e $\theta$ representa o ângulo de lançamento do corpo.</p> 
 
 > Motivação
 
-* <p align="justify">Um corpo é lançado a  partir do solo, formando com o mesmo um ângulo de 30°, com uma velocidade inicial igual a 50 m/s. Determine as componentes da velocidade inicial. Adote a aceleração da gravidade g = 10m/s<sup>2</sup>.</p> 
+* <p align="justify">Um corpo é lançado a  partir do solo, formando com o mesmo um ângulo de 30°, com uma velocidade inicial igual a 50 m/s. Determine as componentes da velocidade inicial. Adote a aceleração da gravidade g = 10 m/s<sup>2</sup>.</p> 
 
-Dados: $\theta = 30°$, $V_{i} = 50 m/s$, $sen(30°)= 0.5$ e $cos(30°)\cong0.866.$ Ainda não usaremos o valor de g.
+Dados:
 
-Determinando a componente da velocidade inicial na horizontal:
+$$\theta = 30°.$$ 
+$$V_{i} = 50~m/s.$$ 
+$$sen(30°)= 0.5.$$
+$$cos(30°)\cong0.866.$$ 
 
-$$V _{ix} = V_{i}.cos\theta= 50.(0.866)\cong43,30m/s.$$
+<p align="justify">Observação: por enquanto não usaremos o valor de g.</p>
 
-Determinando a componente da velocidade inicial na vertical:
+> <p align="justify"> Determinando a componente da velocidade inicial na horizontal:</p>
 
-$$V _{ix} = V_{i}.sen\theta= 50.(0.5)\25m/s.$$
+$$V _{ix} = V _{i}.cos\theta= 50.(0.866)\cong43,30~m/s.$$
+
+> <p align="justify">* Determinando a componente da velocidade inicial na vertical:</p>
+
+$$V _{ix} = V _{i}.sen\theta= 50.(0.5)=25~m/s.$$
 
 <p align="justify"> Para simular um movimento de projéteis, acesse o link abaixo e clique em "Disparar".</p>
 
