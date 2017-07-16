@@ -101,9 +101,10 @@ cat("A componente y da vel. inicial é igual a:", voy)
 <p align="justify"> Por enquanto, não usaremos o valor de g.</p>
 *** =hint
 <p align="justify"> O ângulo dado equivale a 60° e a variável teta equivale a</p> 
-$$(pi/180) * angulo.$$ 
+$$(pi/180)*angulo.$$ 
 *** =pre_exercise_code
 ```{r}
+# no pec
 ```
 *** =sample_code
 ```{r}
@@ -141,5 +142,6 @@ voy
 ```
 *** =sct
 ```{r}
-# no pec
+test_output_contains("CemF(100)", incorrect_msg = "Digite corretamente o valor da variável angulo. Ovalor da variável teta equivale a $$(pi/180)*angulo.$$.")
+success_msg("Bom trabalho! Você adquiriu noções sobre componentes da velocidade inicial do lançamento oblíquo da Física.")
 ```
