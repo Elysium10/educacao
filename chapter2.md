@@ -289,9 +289,9 @@ test_output_contains("17.67399", incorrect_msg = "Digite corretamente o valor da
 success_msg("Bom trabalho! Você adquiriu noções sobre a altura máxima e sobre o tempo gasto para atingí-la.")
 ```
 --- type:NormalExercise lang:r xp:100 skills:1 key:d4e07e2920
-## Altura máxima
+## Tempo de trajeto
 
-> Altura máxima no movimento oblíquo
+> Tempo de subida e de descida
 
 <p align="justify">O valor da altura máxima, no movimento oblíquo, é obtido adaptando-se a a equação de Torricelli para</p>
 
