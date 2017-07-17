@@ -181,7 +181,7 @@ $$0=v _{iy}-gt _{hmáx} \rightarrow-v _{iy}=-gt _{hmáx} \rightarrow$$
 $$v _{iy}=gt _{hmáx} \rightarrow t _{hmáx}= \displaystyle \frac{v _{iy}}{g}\cdot$$
 
 <p align="justify">Visualize na figura abaixo a representação de $hmáx$, $v _{y} = 0$, $v _{y}$, $g$, o alcance do projétil e todos os componentes do movimento oblíquo:</p>
-![Componentes do movimento oblíquo inicial](http://s3.amazonaws.com/assets.datacamp.com/production/course_4551/datasets/Lancobliquo2.png "Componentes do movimento oblíquo")
+![Componentes do movimento oblíquo inicial]( "Componentes do movimento oblíquo")
 
 > Motivação
 
@@ -320,7 +320,7 @@ $$0=v _{iy}-gt _{hmáx} \rightarrow-v _{iy}=-gt _{hmáx} \rightarrow$$
 $$v _{iy}=gt _{hmáx} \rightarrow t _{hmáx}= \displaystyle \frac{v _{iy}}{g}\cdot$$
 
 <p align="justify">Visualize na figura abaixo a representação de $hmáx$, $v _{y} = 0$, $v _{y}$, $g$, o alcance do projétil e todos os componentes do movimento oblíquo:</p>
-![Componentes do movimento oblíquo inicial](http://s3.amazonaws.com/assets.datacamp.com/production/course_4551/datasets/Lancobliquo2.png "Componentes do movimento oblíquo")
+![Componentes do movimento oblíquo inicial]( "Componentes do movimento oblíquo")
 
 > Motivação
 
@@ -342,7 +342,7 @@ $$t _{hmáx}= \displaystyle \frac{v _{iy}}{g}=\displaystyle\frac{25}{9,8}\cong 2
 
 <p align="justify"> Auxílio para simular um lançamento de projéteis, acesse o link abaixo e clique em "Disparar".</p>
 
-[Lançamento de projéteis.](https://phet.colorado.edu/sims/projectile-motion/projectile-motion_pt_BR.html)
+[Lançamento de projéteis.]()
 
 > <p align="justify">Comandos no R para calcular a altura máxima e o tempo para alcançá-la:</p>
 
