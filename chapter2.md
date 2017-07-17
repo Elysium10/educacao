@@ -181,7 +181,7 @@ $$0=v _{iy}-gt _{hmáx} \rightarrow-v _{iy}=-gt _{hmáx} \rightarrow$$
 $$v _{iy}=gt _{hmáx} \rightarrow t _{hmáx}= \displaystyle \frac{v _{iy}}{g}\cdot$$
 
 <p align="justify">Visualize na figura abaixo a representação de $hmáx$, $v _{y} = 0$, $v _{y}$, $g$, o alcance do projétil e todos os componentes do movimento oblíquo:</p>
-![Componentes do movimento oblíquo inicial]( "Componentes do movimento oblíquo")
+![Componentes do movimento oblíquo inicial](http://s3.amazonaws.com/assets.datacamp.com/production/course_4551/datasets/Lancobliquo2.png "Componentes do movimento oblíquo")
 
 > Motivação
 
