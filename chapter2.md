@@ -291,15 +291,23 @@ success_msg("Bom trabalho! Você adquiriu noções sobre a altura máxima e sobr
 --- type:NormalExercise lang:r xp:100 skills:1 key:d4e07e2920
 ## Tempo de trajeto
 
-> Tempo de subida e de descida
+> Tempo de subida mais o tempo de descida
 
-<p align="justify">O valor da altura máxima, no movimento oblíquo, é obtido adaptando-se a a equação de Torricelli para</p>
+<p align="justify">Neste estudo estamos desprezando a a resistência do ar. O tempo que o projétil leva para atingir a altura máxima é o mesmo tempo gasto para voltar da altura máxima até o solo. Portanto,  o tempo total gasto em todo o trajeto pode ser  dado pela seguinte expressão: </p>
 
-$$v _{y}^{2}= v _{iy}^{2}-2gh _{máx},$$
+$$t _{tot}= 2t _{hmáx},$$
 
 onde,
 
-<p align="justify">$v _{y}$ é a componente vertical da velocidade no instante t, $v _{iy}$ é a componente da velocidade inicial na direção (vertical) y, $g$ é a aceleração da gravidade a qual vamos considerar como 9.8m/s<sup>2</sup> e $h _{máx}$ é a altura máxima alcançada pelo projétil.</p>
+$t _{tot}$ corresponde ao tempo total ou tempo de trajeto.
+
+## Alcance
+
+<p align="justify"> Sabemos que o movimento do projétil, na direção horizontal, é do tipo Movimento Retilíneo Uniforme (MRU). Para determinar o alcance, ou seja, a distância percorrida pelo projétil da posição de lançamento até tocar no solo, adaptaremos a equação do espaço do MRU para</p>
+
+$$A = v _{ix}.t _{tot},$$
+
+<p align="justify">onde $A$ corresponde ao alcance, v _{ix} à componente da velocidade inicial na direção x, e $t _{tot}$ ao tempo total ou tempo de trajeto.</p> 
 
 <p align="justify">Sabemos que à medida que o projétil vai atingindo a altura máxima, sua velocidade vai dimunuindo. Quando chega exatamente no ponto da altura máxima, o projétil tem sua velocidade equivalente a zero. Portanto, a velocidade do corpo na direção vertical torna-se nula ($v _{y}$ = 0), ou seja,</p>
 $$0= v _{iy}^{2}-2gh _{máx}.$$
