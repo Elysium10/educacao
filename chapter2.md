@@ -397,7 +397,7 @@ viy
 # altura máxima:
 hmax = (viy ^ 2)/(2 * g)
 # tempo da altura máxima
-thmax = 
+thmax <- 
 # mostrar a altura máxima e o tempo de alcançá-la:
 hmax
 thmax
