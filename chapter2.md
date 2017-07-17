@@ -299,9 +299,9 @@ $$t _{tot}= 2t _{hmáx},$$
 
 onde,
 
-$t _{tot}$ corresponde ao tempo total ou tempo de trajeto.
+<p align="justify">$t _{tot}$ corresponde ao tempo total ou tempo de trajeto e $t _{hmáx}$ ao tempo necessário para o projétil alcançar a altura máxima.</p>
 
-## Alcance
+#### Alcance
 
 <p align="justify"> Sabemos que o movimento do projétil, na direção horizontal, é do tipo Movimento Retilíneo Uniforme (MRU). Para determinar o alcance, ou seja, a distância percorrida pelo projétil da posição de lançamento até tocar no solo, adaptaremos a equação do espaço do MRU para</p>
 
