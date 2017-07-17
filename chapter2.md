@@ -11,11 +11,11 @@ description : <p align="justify">Neste capítulo você aprenderá sobre os coman
 
 <p align="justify">As componentes da velocidade inicial do corpo são dadas pelas seguintes equações:</p>
 
-$$V _{ix} = V _{i}.cos(\theta)$$
+$$v _{ix} = v _{i}.cos(\theta) \qquad Eq. 01$$
 
 e
  
-$$V _{iy} = V _{i}.sen(\theta)$$
+$$v _{iy} = v _{i}.sen(\theta) \qquad Eq. 02$$
 
 onde,
 
@@ -36,13 +36,13 @@ $$cos(30°)\cong0.866.$$
 
 <p align="justify">Observação: por enquanto, não usaremos o valor de g.</p>
 
-> <p align="justify"> Determinando a componente da velocidade inicial na horizontal:</p>
+> <p align="justify"> Determinando a componente da velocidade inicial na horizontal (Eq. 01):</p>
 
-$$V _{ix} = V _{i}.cos\theta= 50.(0.866)\cong43,30~m/s.$$
+$$v _{ix} = v _{i}.cos\theta= 50.(0.866)\cong43,30~m/s.$$
 
-> <p align="justify"> Determinando a componente da velocidade inicial na vertical:</p>
+> <p align="justify"> Determinando a componente da velocidade inicial na vertical (Eq. 02):</p>
 
-$$V _{iy} = V _{i}.sen\theta= 50.(0.5)=25~m/s.$$
+$$v _{iy} = v _{i}.sen\theta= 50.(0.5)=25~m/s.$$
 
 <p align="justify"> Auxílio para simular um lançamento de projéteis, acesse o link abaixo e clique em "Disparar".</p>
 
@@ -156,29 +156,25 @@ success_msg("Bom trabalho! Você adquiriu noções sobre componentes da velocida
 
 <p align="justify">O valor da altura máxima, no movimento oblíquo, é obtido adaptando-se a a equação de Torricelli para</p>
 
-$$v _{y}^{2}= v _{iy}^{2}-2gh _{máx},$$
+$$v _{y}^{2}= v _{iy}^{2}-2gh _{máx}, \qquad Eq. 01$$
 
-onde,
-
-<p align="justify">$v _{y}$ é a componente vertical da velocidade no instante t, $v _{iy}$ é a componente da velocidade inicial na direção (vertical) y, $g$ é a aceleração da gravidade a qual vamos considerar como 9.8m/s<sup>2</sup> e $h _{máx}$ é a altura máxima alcançada pelo projétil.</p>
+<p align="justify">onde $v _{y}$ é a componente vertical da velocidade no instante t, $v _{iy}$ é a componente da velocidade inicial na direção (vertical) y, $g$ é a aceleração da gravidade a qual vamos considerar como 9.8m/s<sup>2</sup> e $h _{máx}$ é a altura máxima alcançada pelo projétil.</p>
 
 <p align="justify">Sabemos que à medida que o projétil vai atingindo a altura máxima, sua velocidade vai dimunuindo. Quando chega exatamente no ponto da altura máxima, o projétil tem sua velocidade equivalente a zero. Portanto, a velocidade do corpo na direção vertical torna-se nula ($v _{y}$ = 0), ou seja,</p>
 $$0= v _{iy}^{2}-2gh _{máx}.$$
 <p align="justify">Daí, podemos obter a expresão para a altura máxima atingida pelo projétil:</p>
 $$-v _{iy}^{2}= -2gh _{máx}\rightarrow v _{iy}^{2}= 2gh _{máx}\rightarrow$$ 
-$$h _{máx}= \displaystyle \frac{v _{iy}^{2}}{2g}\cdot$$
+$$h _{máx}= \displaystyle \frac{v _{iy}^{2}}{2g}\cdot \qquad Eq. 02$$
 
 > Tempo para o projétil atingir a altura máxima
 
 <p align="justify">Para determinar quanto tempo o projétil levará para atingir a altura máxima, adaptaremos a equação da velocidade do MRUV para:</p>
-$$v _{y}=  v _{iy} - gt _{hmáx},$$
+$$v _{y}=  v _{iy} - gt _{hmáx}, \qquad Eq. 03$$
+<p align="justify">onde $v _{y}$ é a componente vertical da velocidade no instante t, $v _{iy}$ é a componente da velocidade inicial na direção (vertical) y, $-g$ é a aceleração da gravidade de sentido oposto ao da velocidade inicial e $t _{hmáx}$ é o tempo necessário para que o projétil alcance a altura máxima. Já sabemos que, na altura máxima, a velocidade do corpo na direção vertical torna-se nula ($v _{y}$ = 0), portanto, a equação acima torna-se</p>
 
-onde, 
-
-<p align="justify">$v _{y}$ é a componente vertical da velocidade no instante t, $v _{iy}$ é a componente da velocidade inicial na direção (vertical) y, $-g$ é a aceleração da gravidade de sentido oposto ao da velocidade inicial e $t _{hmáx}$ é o tempo necessário para que o projétil alcance a altura máxima. Já sabemos que, na altura máxima, a velocidade do corpo na direção vertical torna-se nula ($v _{y}$ = 0), portanto, a equação acima torna-se</p>
-
-$$0=v _{iy}-gt _{hmáx} \rightarrow-v _{iy}=-gt _{hmáx} \rightarrow$$ 
-$$v _{iy}=gt _{hmáx} \rightarrow t _{hmáx}= \displaystyle \frac{v _{iy}}{g}\cdot$$
+$$0=v _{iy}-gt _{hmáx} \rightarrow$$
+$$-v _{iy}=-gt _{hmáx} \rightarrow v _{iy}=gt _{hmáx} \rightarrow$$
+$$t _{hmáx}= \displaystyle \frac{v _{iy}}{g}\cdot \qquad Eq. 04$$
 
 <p align="justify">Visualize na figura abaixo a representação de $hmáx$, $v _{y} = 0$, $v _{y}$, $g$, o alcance do projétil e todos os componentes do movimento oblíquo:</p>
 ![Componentes do movimento oblíquo inicial](http://s3.amazonaws.com/assets.datacamp.com/production/course_4551/datasets/Lancobliquo2.png "Componentes do movimento oblíquo")
@@ -293,11 +289,11 @@ success_msg("Bom trabalho! Você adquiriu noções sobre a altura máxima e sobr
 > Tempo de subida mais o tempo de descida
 
 <p align="justify">Neste estudo estamos desprezando a resistência do ar. O tempo que o projétil leva para atingir a altura máxima é o mesmo tempo gasto para voltar da altura máxima até o solo. Portanto,  o tempo total gasto em todo o trajeto pode ser  dado pela seguinte expressão:</p>
-$$t _{tot} = 2t _{hmáx}~~~~~~~~~~~~~~~Eq. 1$$
+$$t _{tot} = 2t _{hmáx} \qquad Eq. 01$$
 <p align="justify">onde, $t _{tot}$ corresponde ao tempo total ou tempo de trajeto e $t _{hmáx}$ ao tempo necessário para o projétil alcançar a altura máxima.</p>
 #### Alcance
 <p align="justify"> Sabemos que o movimento do projétil, na direção horizontal, é do tipo Movimento Retilíneo Uniforme (MRU). Para determinar o alcance, ou seja, a distância percorrida pelo projétil da posição de lançamento até tocar no solo, adaptaremos a equação do espaço do MRU para</p>
-$$A=v _{ix}.t _{tot}~~~~~~~~~~~~~~~Eq. 2$$
+$$A=v _{ix}.t _{tot} \qquad Eq. 02$$
 <p align="justify">onde $A$ corresponde ao alcance, $v _{ix}$ à componente da velocidade inicial na direção x, e 
 $t _{tot}$ ao tempo total ou tempo de trajeto.</p> 
 
@@ -305,11 +301,11 @@ $t _{tot}$ ao tempo total ou tempo de trajeto.</p>
 
 * <p align="justify">Continuação do resolução do exercício: um projétil é lançado a  partir do solo, formando com o mesmo um ângulo de 30°, com uma velocidade inicial igual a 50 m/s. Determine a o tempo total gasto e o alcance do projétil. Dados: $9,8~m/s^{2}$. O $t _{hmáx}=2,55~s$ e a $v _{ix} =  43.30127~m/s$ já foram determinados em tópicos anteriores.</p>
 
-<p align="justify">Pela equação 1 deste tópico é determinado o tempo de trajeto:</p> 
+<p align="justify">Pela equação 01 deste tópico é determinado o tempo de trajeto:</p> 
 
 $$t _{tot} = 2t _{hmáx} = 2.2,55 = 5,1~s.$$
 
-<p align="justify">Pela equação 2 é determinado o alcance do projétil:</p>
+<p align="justify">Pela equação 02 é determinado o alcance do projétil:</p>
 
 $$A=v _{ix}.t _{tot} =  43,30127.5,1 = 220,83 m/s.$$
 
@@ -369,11 +365,13 @@ cat("O alcance é igual a:", A)
 <p style="background-color:#33a0c2; font-weight: bold; font-size: 20px; text-align:center"><font color="#ffffff">EXERCÍCIO PROPOSTO</font></p>
 <p align="justify"> Um projétil é lançado a partir do solo, formando com o mesmo um ângulo de 60°, com uma velocidade inicial igual a 200 m/s. Determine todos os elementos do lançamento oblíquo visto até agora. Adote a aceleração da gravidade g = 9.8 m/s<sup>2</sup>.</p>
 *** =instructions
-<p align="justify"> Use o código estudado neste tópico para calcular altura máxima e o tempo necessário para atingir esta altura.</p> 
-<p align="justify"> Adote a aceleração da gravidade g = 9.8 m/s<sup>2</sup>e a componente vertical da velocidade inicial equivalente a 173.2051, calculado no tópico anterior.</p>
+<p align="justify"> Use os códigos estudados neste tópico para calcular todos os elementos do lançamento oblíquo visto até agora.</p> 
+<p align="justify"> Adotaremos sempre a aceleração da gravidade como g = 9.8 m/s<sup>2</sup>.</p>
 *** =hint
-<p align="justify"> A altura máxima no movimento oblíquo é dada pela seguinte expressão:</p> 
-$$h _{máx}= \displaystyle \frac{v _{iy}^{2}}{2g}\cdot$$
+<p align="justify"> A componente da velocidade inicial na direção horizontal e o tempo de trajeto são dados, respectivamente, por
+$$v _{ix} = v _{i}.cos(\theta)$$
+e
+$$t _{tot} = 2t _{hmáx}.$$
 *** =pre_exercise_code
 ```{r}
 # no pec
@@ -388,23 +386,23 @@ vi <- 200
 angulo <- 60
 # transformar graus em radianos:
 teta <- (pi/180) * angulo
-# componente x da vi:
+# Escreva a componente x da vi:
 vix <-  
 viy <- vi * sin(teta)  
 # mostrar a componente x e y da vi:
 vix
 viy
 # altura máxima:
-hmax = (viy ^ 2)/(2 * g)
+hmax <- (viy ^ 2)/(2 * g)
 # tempo da altura máxima
-thmax <- 
+thmax <- viy/g
 # mostrar a altura máxima e o tempo de alcançá-la:
 hmax
 thmax
-# tempo total ou de trajeto:
-ttot = 2 * thmax
+# Escreva o tempo de trajeto:
+ttot <- 
 # alcance
-A = 
+A <- vix * ttot
 # mostrar tempo de trajeto e alcance:
 ttot
 A
@@ -419,29 +417,29 @@ vi <- 200
 angulo <- 60
 # transformar graus em radianos:
 teta <- (pi/180) * angulo
-# componente x e y da vi:
+# Escreva a componente x da vi:
 vix <- vi * cos(teta)  
 viy <- vi * sin(teta)  
 # mostrar a componente x e y da vi:
 vix
 viy
 # altura máxima:
-hmax = (viy ^ 2)/(2 * g)
+hmax <- (viy ^ 2)/(2 * g)
 # tempo da altura máxima
-thmax = viy/g
+thmax <- viy/g
 # mostrar a altura máxima e o tempo de alcançá-la:
 hmax
 thmax
-# tempo total ou de trajeto:
-ttot = 2 * thmax
+# Escreva o tempo de trajeto:
+ttot <- 2 * thmax
 # alcance
-A = vix * ttot
+A <- vix * ttot
 # mostrar tempo de trajeto e alcance:
 ttot
 A
 ```
 *** =sct
 ```{r}
-test_output_contains("3534.798", incorrect_msg = "Digite corretamente o valor da aceleração da gravidade e a expressão para a altura máxima.")
-success_msg("Bom trabalho! Você adquiriu noções sobre a altura máxima e sobre o tempo gasto para atingí-la.")
+test_output_contains("3534.798", incorrect_msg = "Veja nas dicas o valor da componente da velocidade inicial e do tempo gasto em toda trajetória.")
+success_msg("Bom trabalho! Você adquiriu noções sobre a o tempo de trajeto e o alcance de um projétil no movimento oblíquo.")
 ```
