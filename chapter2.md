@@ -288,3 +288,142 @@ thmax
 test_output_contains("17.67399", incorrect_msg = "Digite corretamente o valor da aceleração da gravidade e a expressão para a altura máxima.")
 success_msg("Bom trabalho! Você adquiriu noções sobre a altura máxima e sobre o tempo gasto para atingí-la.")
 ```
+--- type:NormalExercise lang:r xp:100 skills:1 key:d4e07e2920
+## Altura máxima
+
+> Altura máxima no movimento oblíquo
+
+<p align="justify">O valor da altura máxima, no movimento oblíquo, é obtido adaptando-se a a equação de Torricelli para</p>
+
+$$v _{y}^{2}= v _{iy}^{2}-2gh _{máx},$$
+
+onde,
+
+<p align="justify">$v _{y}$ é a componente vertical da velocidade no instante t, $v _{iy}$ é a componente da velocidade inicial na direção (vertical) y, $g$ é a aceleração da gravidade a qual vamos considerar como 9.8m/s<sup>2</sup> e $h _{máx}$ é a altura máxima alcançada pelo projétil.</p>
+
+<p align="justify">Sabemos que à medida que o projétil vai atingindo a altura máxima, sua velocidade vai dimunuindo. Quando chega exatamente no ponto da altura máxima, o projétil tem sua velocidade equivalente a zero. Portanto, a velocidade do corpo na direção vertical torna-se nula ($v _{y}$ = 0), ou seja,</p>
+$$0= v _{iy}^{2}-2gh _{máx}.$$
+<p align="justify">Daí, podemos obter a expresão para a altura máxima atingida pelo projétil:</p>
+$$-v _{iy}^{2}= -2gh _{máx}\rightarrow v _{iy}^{2}= 2gh _{máx}\rightarrow$$ 
+$$h _{máx}= \displaystyle \frac{v _{iy}^{2}}{2g}\cdot$$
+
+> Tempo para o projétil atingir a altura máxima
+
+<p align="justify">Para determinar quanto tempo o projétil levará para atingir a altura máxima, adaptaremos a equação da velocidade do MRUV para:</p>
+$$v _{y}=  v _{iy} - gt _{hmáx},$$
+
+onde, 
+
+<p align="justify">$v _{y}$ é a componente vertical da velocidade no instante t, $v _{iy}$ é a componente da velocidade inicial na direção (vertical) y, $-g$ é a aceleração da gravidade de sentido oposto ao da velocidade inicial e $t _{hmáx}$ é o tempo necessário para que o projétil alcance a altura máxima. Já sabemos que, na altura máxima, a velocidade do corpo na direção vertical torna-se nula ($v _{y}$ = 0), portanto, a equação acima torna-se</p>
+
+$$0=v _{iy}-gt _{hmáx} \rightarrow-v _{iy}=-gt _{hmáx} \rightarrow$$ 
+$$v _{iy}=gt _{hmáx} \rightarrow t _{hmáx}= \displaystyle \frac{v _{iy}}{g}\cdot$$
+
+<p align="justify">Visualize na figura abaixo a representação de $hmáx$, $v _{y} = 0$, $v _{y}$, $g$, o alcance do projétil e todos os componentes do movimento oblíquo:</p>
+![Componentes do movimento oblíquo inicial](http://s3.amazonaws.com/assets.datacamp.com/production/course_4551/datasets/Lancobliquo2.png "Componentes do movimento oblíquo")
+
+> Motivação
+
+* <p align="justify">Aproveitaremos o primeiro exemplo do tópico anterior: um projétil é lançado a  partir do solo, formando com o mesmo um ângulo de 30°, com uma velocidade inicial igual a 50 m/s. Determine a altura máxima e o tempo necessário para atingir esta altura. Adote, desta vez, a aceleração da gravidade g = 9.8 m/s<sup>2</sup>. Neste problema, não usaremos nem a velocidade inicial ($v _{i}$) e nem a componente da velocidade inicial ($v _{ix}$)</p> 
+
+<p align="justify">Observação: no tópico anterior foi determinado a componente da velocidade inicial, $v _{iy}$.</p>
+
+Dado:
+
+$$v _{iy} = 25~m/s.$$
+
+> <p align="justify"> A altura máxima:</p>
+
+$$h _{máx}= \displaystyle \frac{v _{iy}^{2}}{2g}= \displaystyle \frac{25^{2}}{2.9,8}= \displaystyle \frac{625}{19,6}\cong 31,88~m.$$
+
+> <p align="justify"> O tempo para atingir a altura máxima:</p>
+
+$$t _{hmáx}= \displaystyle \frac{v _{iy}}{g}=\displaystyle\frac{25}{9,8}\cong 2,55~s.$$
+
+<p align="justify"> Auxílio para simular um lançamento de projéteis, acesse o link abaixo e clique em "Disparar".</p>
+
+[Lançamento de projéteis.](https://phet.colorado.edu/sims/projectile-motion/projectile-motion_pt_BR.html)
+
+> <p align="justify">Comandos no R para calcular a altura máxima e o tempo para alcançá-la:</p>
+
+<p align="justify">- Do problema anterior, determinaremos a altura máxima e o tempo para alcançá-la.</p>
+
+```{r}
+# aceleração da gravidade:
+g <- 9.8
+# componente vertical de vi:
+viy = 25
+# altura máxima:
+hmax = (viy ^ 2)/(2 * g)
+# tempo da altura máxima
+thmax = viy/g
+# mostrar a altura máxima e o tempo de alcançá-la:
+cat("A altura máxima alcançada pelo projétil é igual a:", hmax)
+cat("O tempo gasto para atingir o ponto mais alto da trajetória é igual a:", thmax)
+
+A altura máxima do projétil é igual a: 31.88776
+O tempo gasto para atingir o ponto mais alto da trajetória é igual a: 2.55102
+```
+> DEVER DE CASA - estude e execute os comandos abaixo no seu ambiente R:
+
+<p align="justify"> Um projétil é lançado a partir do solo, formando com o mesmo um ângulo de 45°, com uma velocidade inicial igual a 100 m/s. Determine a altura máxima e o tempo necessário para atingir esta altura. Adote a aceleração da gravidade g = 9.8 m/s<sup>2</sup>. A componente y da vel. inicial é igual a: 70.71068 - calculada em tópico anterior. (Compare sua resposta: A altura máxima alcançada pelo projétil é igual a: 255.1021 e o tempo gasto para atingir o ponto mais alto da trajetória é igual a 7.215376). </p>
+
+```{r}
+# aceleração da gravidade:
+g <- 9.8
+# componente vertical de vi:
+viy =  70.71068
+# altura máxima:
+hmax = (viy ^ 2)/(2 * g)
+# tempo da altura máxima
+thmax = viy/g
+# mostrar a altura máxima e o tempo de alcançá-la:
+cat("A altura máxima alcançada pelo projétil é igual a:", hmax)
+cat("O tempo gasto para atingir o ponto mais alto da trajetória é igual a:", thmax)
+```
+<p style="background-color:#33a0c2; font-weight: bold; font-size: 20px; text-align:center"><font color="#ffffff">EXERCÍCIO PROPOSTO</font></p>
+<p align="justify"> Um projétil é lançado a partir do solo, formando com o mesmo um ângulo de 60°, com uma velocidade inicial igual a 200 m/s. Determine a altura máxima e o tempo necessário para atingir esta altura. Adote a aceleração da gravidade g = 9.8 m/s<sup>2</sup>.</p>
+
+*** =instructions
+<p align="justify"> Use o código estudado neste tópico para calcular altura máxima e o tempo necessário para atingir esta altura.</p> 
+<p align="justify"> Adote a aceleração da gravidade g = 9.8 m/s<sup>2</sup>e a componente vertical da velocidade inicial equivalente a 173.2051, calculado no tópico anterior.</p>
+*** =hint
+<p align="justify"> A altura máxima no movimento oblíquo é dada pela seguinte expressão:</p> 
+$$h _{máx}= \displaystyle \frac{v _{iy}^{2}}{2g}\cdot$$
+*** =pre_exercise_code
+```{r}
+# no pec
+```
+*** =sample_code
+```{r}
+# aceleração da gravidade:
+g <- 
+# componente vertical de vi:
+viy =  173.2051
+# altura máxima:
+hmax = (viy ^ 2)/(2 * g)
+# tempo da altura máxima
+thmax = 
+# mostrar a altura máxima e o tempo de alcançá-la:
+hmax
+thmax
+```
+*** =solution
+```{r}
+# aceleração da gravidade:
+g <- 9.8
+# componente vertical de vi:
+viy =  173.2051
+# altura máxima:
+hmax = (viy ^ 2)/(2 * g)
+# tempo da altura máxima
+thmax = viy/g
+# mostrar a altura máxima e o tempo de alcançá-la:
+hmax
+thmax
+```
+*** =sct
+```{r}
+test_output_contains("17.67399", incorrect_msg = "Digite corretamente o valor da aceleração da gravidade e a expressão para a altura máxima.")
+success_msg("Bom trabalho! Você adquiriu noções sobre a altura máxima e sobre o tempo gasto para atingí-la.")
+```
