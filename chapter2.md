@@ -179,16 +179,13 @@ $$v _{iy}=gt _{hmáx} \rightarrow t _{hmáx}= \displaystyle \frac{v _{iy}}{g}\cd
 
 > Motivação
 
-* <p align="justify">Aproveitaremos o primeiro exemplo do tópico anterior: um projétil é lançado a  partir do solo, formando com o mesmo um ângulo de 30°, com uma velocidade inicial igual a 50 m/s. Determine a altura máxima e o tempo necessário para atingir esta altura. Adote, desta vez, a aceleração da gravidade g = 9.8 m/s<sup>2</sup>.</p> 
+* <p align="justify">Aproveitaremos o primeiro exemplo do tópico anterior: um projétil é lançado a  partir do solo, formando com o mesmo um ângulo de 30°, com uma velocidade inicial igual a 50 m/s. Determine a altura máxima e o tempo necessário para atingir esta altura. Adote, desta vez, a aceleração da gravidade g = 9.8 m/s<sup>2</sup>. Neste problema, não usaremos nem a velocidade inicial ($V _{i}$) e nem a componente da velocidade inicial ($V _{ix}$)</p> 
 
 <p align="justify">Observação: no tópico anterior foi determinado a componente da velocidade inicial, $V _{iy}$. Observe que, por enquanto, não usaremos a componente $V _{ix}$</p>
 
-Dados:
+Dado:
 
-$$v _{y} = 0.$$
-$$v _{i} = 50~m/s.$$
 $$v _{iy} = 25~m/s.$$
-
 
 > <p align="justify"> A altura máxima:</p>
 
