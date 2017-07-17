@@ -19,7 +19,7 @@ $$v _{iy} = v _{i}.sen(\theta) \qquad Eq. 02$$
 
 onde,
 
-<p align="justify">$V _{i}$ representa a velocidade inicial do corpo, $V _{ix}$ representa a componente da velocidade inicial na direção (horizontal) do eixo x, $V _{iy}$ representa a componente da velocidade inicial na direção (vertical) do eixo y e $\theta$ representa o ângulo de lançamento do corpo. Visualize a velocidade inicial e suas componentes na figura abaixo:</p>
+<p align="justify">$v _{i}$ representa a velocidade inicial do corpo, $v _{ix}$ representa a componente da velocidade inicial na direção (horizontal) do eixo x, $v _{iy}$ representa a componente da velocidade inicial na direção (vertical) do eixo y e $\theta$ representa o ângulo de lançamento do corpo. Visualize a velocidade inicial e suas componentes na figura abaixo:</p>
 ![Componentes da velocidade inicial](http://s3.amazonaws.com/assets.datacamp.com/production/course_4551/datasets/Lancobliquo1.png "Componentes da velocidade inicial")
 
 > Motivação
@@ -30,7 +30,7 @@ onde,
 Dados:
 
 $$\theta = 30°.$$ 
-$$V_{i} = 50~m/s.$$ 
+$$v_{i} = 50~m/s.$$ 
 $$sen(30°)= 0.5.$$
 $$cos(30°)\cong0.866.$$ 
 
@@ -52,7 +52,7 @@ $$v _{iy} = v _{i}.sen\theta= 50.(0.5)=25~m/s.$$
 
 <p align="justify">- Use o problema anterior e determine as componentes da velocidade inicial do corpo.</p>
 
-<p align="justify">Obs.: Em R, os argumentos das funções trigonométricas, os graus, devem ser transformados em radianos da seguinte maneira: (pi/180) multiplicado pelo ângulo. Após isso, tira-se o cosseno (cos) e o seno (sin) desse resultado.</p> 
+<p align="justify">Obs.: Em R, os argumentos das funções trigonométricas, os graus, devem ser transformados em radianos da seguinte maneira: ($pi/180$) multiplicado pelo ângulo. Após isso, tira-se o $cosseno (cos)$ e o $seno (sin)$ desse resultado.</p> 
 
 ```{r}
 # aceleração da gravidade:
