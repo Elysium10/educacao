@@ -443,3 +443,162 @@ A
 test_output_contains("3534.798", incorrect_msg = "Veja nas dicas o valor da componente da velocidade inicial e do tempo gasto em toda trajetória.")
 success_msg("Bom trabalho! Você adquiriu noções sobre a o tempo de trajeto e o alcance de um projétil no movimento oblíquo.")
 ```
+--- type:NormalExercise lang:r xp:100 skills:1 key:314c81a391
+## Velocidade resultante
+> Tempo de subida mais o tempo de descida
+
+<p align="justify">Neste estudo estamos desprezando a resistência do ar. O tempo que o projétil leva para atingir a altura máxima é o mesmo tempo gasto para voltar da altura máxima até o solo. Portanto,  o tempo total gasto em todo o trajeto pode ser  dado pela seguinte expressão:</p>
+$$t _{tot} = 2t _{hmáx} \qquad Eq. 01$$
+<p align="justify">onde, $t _{tot}$ corresponde ao tempo total ou tempo de trajeto e $t _{hmáx}$ ao tempo necessário para o projétil alcançar a altura máxima.</p>
+#### Alcance
+<p align="justify"> Sabemos que o movimento do projétil, na direção horizontal, é do tipo Movimento Retilíneo Uniforme (MRU). Para determinar o alcance, ou seja, a distância percorrida pelo projétil da posição de lançamento até tocar no solo, adaptaremos a equação do espaço do MRU para</p>
+$$A=v _{ix}.t _{tot} \qquad Eq. 02$$
+<p align="justify">onde $A$ corresponde ao alcance, $v _{ix}$ à componente da velocidade inicial na direção x, e 
+$t _{tot}$ ao tempo total ou tempo de trajeto.</p> 
+
+> Motivação
+
+* <p align="justify">Continuação do resolução do exercício: um projétil é lançado a  partir do solo, formando com o mesmo um ângulo de 30°, com uma velocidade inicial igual a 50 m/s. Determine a o tempo total gasto e o alcance do projétil. Dados: $9,8~m/s^{2}$. O $t _{hmáx}=2,55~s$ e a $v _{ix} =  43.30127~m/s$ já foram determinados em tópicos anteriores.</p>
+
+<p align="justify">Pela equação 01 deste tópico é determinado o tempo de trajeto:</p> 
+
+$$t _{tot} = 2t _{hmáx} = 2.2,55 = 5,1~s.$$
+
+<p align="justify">Pela equação 02 é determinado o alcance do projétil:</p>
+
+$$A=v _{ix}.t _{tot} =  43,30127.5,1 = 220,83 m/s.$$
+
+> <p align="justify">Comandos no R para calcular o tempo de trajeto e o alcance:</p>
+
+```{r}
+# componente horizontal de vi:
+vix = 43.30127
+# tempo da altura máxima
+thmax = 2,55
+# tempo total ou de trajeto:
+ttot = 2 * thmax
+# alcance
+A = vix * ttot
+cat("O tempo de trajeto é igual a:", ttot)
+cat("O alcance é igual a:", A)
+
+O tempo de trajeto é igual a: 5.1
+O alcance é igual a: 220.8365
+```
+> DEVER DE CASA - estude e execute os comandos abaixo no seu ambiente R:
+
+<p align="justify"> Um projétil é lançado a partir do solo, formando com o mesmo um ângulo de 45°, com uma velocidade inicial igual a 100 m/s. Calcule todos os elementos do lançamento oblíquo, visto até agora. Adote a aceleração da gravidade g = 9.8 m/s<sup>2</sup>. (Compare sua resposta: A componente x da vi é igual a: 70.71068, A componente y da vi é igual a: 70.71068, A altura máxima alcançada pelo projétil é igual a: 31.88776, O tempo gasto para atingir o ponto mais alto da trajetória é igual a: 2.55102, O tempo de trajeto é igual a: 5.102041, O alcance é igual a: 360.7688).</p>
+```{r}
+# aceleração da gravidade:
+g <- 9.8
+# velocidad inicial:
+vi <- 100
+# ângulo dado em graus:
+angulo <- 45
+# transformar graus em radianos:
+teta <- (pi/180) * angulo
+# componente x da vi:
+vix <- vi * cos(teta)  
+viy <- vi * sin(teta)  
+# mostrar a componente x e y da vi:
+cat("A componente x da vi é igual a:", vix)
+cat("A componente y da vi é igual a:", viy)
+
+# componente vertical de vi:
+viy = 25
+# altura máxima:
+hmax = (viy ^ 2)/(2 * g)
+# tempo da altura máxima
+thmax = viy/g
+# mostrar a altura máxima e o tempo de alcançá-la:
+cat("A altura máxima alcançada pelo projétil é igual a:", hmax)
+cat("O tempo gasto para atingir o ponto mais alto da trajetória é igual a:", thmax)
+
+# tempo total ou de trajeto:
+ttot = 2 * thmax
+# alcance
+A = vix * ttot
+cat("O tempo de trajeto é igual a:", ttot)
+cat("O alcance é igual a:", A)
+```
+<p style="background-color:#33a0c2; font-weight: bold; font-size: 20px; text-align:center"><font color="#ffffff">EXERCÍCIO PROPOSTO</font></p>
+<p align="justify"> Um projétil é lançado a partir do solo, formando com o mesmo um ângulo de 60°, com uma velocidade inicial igual a 200 m/s. Determine todos os elementos do lançamento oblíquo visto até agora. Adote a aceleração da gravidade g = 9.8 m/s<sup>2</sup>.</p>
+*** =instructions
+<p align="justify"> Use os códigos estudados neste tópico para calcular todos os elementos do lançamento oblíquo visto até agora.</p> 
+<p align="justify"> Adotaremos sempre a aceleração da gravidade como g = 9.8 m/s<sup>2</sup>.</p>
+*** =hint
+<p align="justify"> A componente da velocidade inicial na direção horizontal e o tempo de trajeto são dados, respectivamente, por
+$$v _{ix} = v _{i}.cos(\theta)$$
+e
+$$t _{tot} = 2t _{hmáx}.$$
+*** =pre_exercise_code
+```{r}
+# no pec
+```
+*** =sample_code
+```{r}
+# aceleração da gravidade:
+g <- 9.8
+# velocidad inicial:
+vi <- 200
+# ângulo dado em graus:
+angulo <- 60
+# transformar graus em radianos:
+teta <- (pi/180) * angulo
+# Escreva a componente x da vi:
+vix <-  
+viy <- vi * sin(teta)  
+# mostrar a componente x e y da vi:
+vix
+viy
+# altura máxima:
+hmax <- (viy ^ 2)/(2 * g)
+# tempo da altura máxima
+thmax <- viy/g
+# mostrar a altura máxima e o tempo de alcançá-la:
+hmax
+thmax
+# Escreva o tempo de trajeto:
+ttot <- 
+# alcance
+A <- vix * ttot
+# mostrar tempo de trajeto e alcance:
+ttot
+A
+```
+*** =solution
+```{r}
+# aceleração da gravidade:
+g <- 9.8
+# velocidad inicial:
+vi <- 200
+# ângulo dado em graus:
+angulo <- 60
+# transformar graus em radianos:
+teta <- (pi/180) * angulo
+# Escreva a componente x da vi:
+vix <- vi * cos(teta)  
+viy <- vi * sin(teta)  
+# mostrar a componente x e y da vi:
+vix
+viy
+# altura máxima:
+hmax <- (viy ^ 2)/(2 * g)
+# tempo da altura máxima
+thmax <- viy/g
+# mostrar a altura máxima e o tempo de alcançá-la:
+hmax
+thmax
+# Escreva o tempo de trajeto:
+ttot <- 2 * thmax
+# alcance
+A <- vix * ttot
+# mostrar tempo de trajeto e alcance:
+ttot
+A
+```
+*** =sct
+```{r}
+test_output_contains("3534.798", incorrect_msg = "Veja nas dicas o valor da componente da velocidade inicial e do tempo gasto em toda trajetória.")
+success_msg("Bom trabalho! Você adquiriu noções sobre a o tempo de trajeto e o alcance de um projétil no movimento oblíquo.")
+```
