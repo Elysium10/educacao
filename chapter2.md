@@ -486,7 +486,7 @@ $$ = 5,4~m/s.$$
 $$v _{r}= \sqrt{43.30^{2}+ 5,4^{2}} = \sqrt{1874,89 + 29,16}$$ 
 $$= \sqrt{1904,05} = 43,635.$$
 
-> <p align="justify">Comandos no R para determinar $$v _{r}$$:</p>
+> <p align="justify">Comandos no R para determinar $v _{r}$:</p>
 
 ```{r}
 # Aceleração da gravidade:
@@ -526,14 +526,14 @@ vy <- viy - g*t
 # Velocidade resultante:
 vr <- sqrt(vx ^ 2 + vy ^ 2)
 
-cat("A velocidade da componente vertical ao atingir o tempo da altura máxima é igual a:", vy)
-cat("A velocidade resultante ao atingir a altura máxima é igual a:", vr)
+cat("A vy ao atingir o tempo da altura máxima é igual a:", vy)
+cat("A vr ao atingir a altura máxima é igual a:", vr)
 
-A velocidade da componente vertical ao atingir a altura máxima é igual a: 0
-A velocidade resultante ao atingir a altura máxima é igual a: 43.3
+A vy ao atingir o tempo da altura máxima é igual a: 0
+A vr ao atingir a altura máxima é igual a: 43.3
 ```
 
-Dado interessante: Para atingir a altura máxima (31,88776 m) o projétil leva exatamente 2,5510204081632653061224489795918 s. Se multiplicarmos esse tempo por dois (tempo de subida e tempo de descida) chegaremos ao tempo total ou de trajeto igual a  6,507705. Pergunta-se: qual é a velocidade da componente vertical e da velocidade resultante quando o projétil atingir o tempo de trajeto? Basta implementar esse dado no código em R:
+<p align="justify">Dado interessante: Para atingir a altura máxima (31,88776 m) o projétil leva exatamente 2,5510204081632653061224489795918 s. Se multiplicarmos esse tempo por dois (tempo de subida e tempo de descida) chegaremos ao tempo total ou de trajeto igual a  6,507705. Pergunta-se: qual é o valor da velocidade da componente vertical e da velocidade resultante quando o projétil alcançar o tempo de trajeto (ao atingir o solo)? Basta implementar o tempo de trajeto no código em R:</p>
 
 ```{r}
 # Aceleração da gravidade:
@@ -548,12 +548,12 @@ viy <- 25
 vy <- viy - g*t 
 # Velocidade resultante:
 vr <- sqrt(vx ^ 2 + vy ^ 2)
-cat("A velocidade da componente vertical ao atingir o tempo de todo o trajeto é igual a:", vy)
-cat("A velocidade resultante ao atingir todo o tempo de trajeto é igual a:", vr)
+cat("A vy ao atingir todo o tempo do trajeto é igual a:", vy)
+cat("A vr ao atingir todo o tempo de trajeto é igual a:", vr)
 
 
-A velocidade da componente vertical ao atingir o tempo de todo o trajeto é igual a: -38.77551
-A velocidade resultante ao atingir todo o tempo de trajeto é igual a: 58.12426
+A vy ao atingir todo o tempo do trajeto é igual a: -38.77551
+A vr ao atingir todo o tempo de trajeto é igual a: 58.12426
 ```
 > DEVER DE CASA - estude e execute os comandos abaixo no seu ambiente R:
 
