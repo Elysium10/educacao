@@ -501,11 +501,11 @@ viy <- 25
 vy <- viy - g*t 
 # Velocidade resultante:
 vr <- sqrt(vx ^ 2 + vy ^ 2)
-cat("A velocidade da componente vertical é igual a:", vy)
-cat("A velocidade resultante no tempo 2 segundos é igual a:", vr)
+cat("A vy é igual a:", vy)
+cat("A vr em 2s é igual a:", vr)
 
-A velocidade da componente vertical é igual a: 5.4
-A velocidade resultante no tempo 2 segundos é igual a: 43.63542
+A vy é igual a: 5.4
+A vr em 2s é igual a: 43.63542
 ```
 
 > <p align="justify"> Na altura máxima a velocidade do projétil na direção vertical é nula?</p>
@@ -526,13 +526,12 @@ vy <- viy - g*t
 # Velocidade resultante:
 vr <- sqrt(vx ^ 2 + vy ^ 2)
 
-cat("A vy ao atingir o tempo da altura máxima é igual a:", vy)
-cat("A vr ao atingir a altura máxima é igual a:", vr)
+cat("A vy ao atingir o t da hmax é = ", vy)
+cat("A vr ao atingir a hmax é = ", vr)
 
-A vy ao atingir o tempo da altura máxima é igual a: 0
-A vr ao atingir a altura máxima é igual a: 43.3
+A vy ao atingir o t da hmax é = 0
+A vr ao atingir a hmax é = 43.3
 ```
-
 <p align="justify">Dado interessante: Para atingir a altura máxima (31,88776 m) o projétil leva exatamente 2,5510204081632653061224489795918 s. Se multiplicarmos esse tempo por dois (tempo de subida e tempo de descida) chegaremos ao tempo total ou de trajeto igual a  6,507705. Pergunta-se: qual é o valor da velocidade da componente vertical e da velocidade resultante quando o projétil alcançar o tempo de trajeto (ao atingir o solo)? Basta implementar o tempo de trajeto no código em R:</p>
 
 ```{r}
@@ -548,12 +547,12 @@ viy <- 25
 vy <- viy - g*t 
 # Velocidade resultante:
 vr <- sqrt(vx ^ 2 + vy ^ 2)
-cat("A vy ao atingir todo o tempo do trajeto é igual a:", vy)
-cat("A vr ao atingir todo o tempo de trajeto é igual a:", vr)
+cat("A vy ao atingir o tempo de trajeto é = ", vy)
+cat("A vr ao atingir o tempo de trajeto é = ", vr)
 
 
-A vy ao atingir todo o tempo do trajeto é igual a: -38.77551
-A vr ao atingir todo o tempo de trajeto é igual a: 58.12426
+A vy ao atingir o tempo de trajeto é = -38.77551
+A vr ao atingir o tempo de trajeto é =  58.12426
 ```
 > DEVER DE CASA - estude e execute os comandos abaixo no seu ambiente R:
 
