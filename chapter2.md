@@ -450,15 +450,13 @@ success_msg("Bom trabalho! Você adquiriu noções sobre a o tempo de trajeto e 
 ## Componentes da velocidade
 <p align="justify"> Assim como a velocidade inicial possui suas componentes, a velocidade no instante t e na posição p também possui suas componentes dadas pelas seguintes equações:</p>
 
-$$v _{x} = v _{i}.cos(\theta) \qquad Eq. 01$$
+$$v _{x} = v _{ix} = v _{i}.cos(\theta) \qquad Eq. 01$$
 
 e
  
 $$v _{y} = v _{iy} - gt \qquad Eq. 02$$
 
-<p align="justify">onde, $v _{x}$ corresponde à componente horizontal da velocidade e $v _{y}$ corresponde à componente vertical da velocidade num determinado instante. Observe que a equação 01 deste tópico equivale à componente horizontal da velocidade inicial, ou seja,</p> 
-
-$$v _{x} = v _{ix}  \qquad Eq. 03$$
+<p align="justify">onde, $v _{x}$ corresponde à componente horizontal da velocidade e $v _{y}$ corresponde à componente vertical da velocidade num determinado instante. Observe que na equação 01 deste tópico a componente horizontal da velocidade inicial equivale a componente horizontal da velocidade num dado instante e numa dada posição.</p> 
 
 > Velocidade resultante
 
@@ -466,7 +464,7 @@ $$v _{x} = v _{ix}  \qquad Eq. 03$$
 
 $$v _{r}= \sqrt{v _{x}^{2}+ v _{y}^{2}} \qquad Eq. 04$$
 
-<p align="justify">onde, $v _{r}$ corresponde à velocidade resultante do projétil em um ponto $p$ num determinado instante $t$, $v _{x}$, que é constante, corresponde à componente horizontal da velocidade e $v _{y}$ corresponde à componente vertical da velocidade.</p>
+<p align="justify">onde, $v _{r}$ corresponde à velocidade resultante do projétil em um ponto $p$ num determinado instante $t$ e $v _{x}$, que é constante, corresponde à componente horizontal da velocidade e $v _{y}$ corresponde à componente vertical da velocidade.</p>
 
 > Motivação
 
