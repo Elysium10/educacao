@@ -345,23 +345,23 @@ teta <- (pi/180) * angulo
 vix <- vi * cos(teta)  
 viy <- vi * sin(teta)  
 # mostrar a componente x e y da vi:
-cat("A componente x da vi é igual a:", vix)
-cat("A componente y da vi é igual a:", viy)
+cat("A componente x da vi é = ", vix)
+cat("A componente y da vi é = ", viy)
 
 # altura máxima:
 hmax = (viy ^ 2)/(2 * g)
 # tempo da altura máxima
 thmax = viy/g
 # mostrar a altura máxima e o tempo de alcançá-la:
-cat("A altura máxima alcançada pelo projétil é igual a:", hmax)
-cat("O tempo gasto para atingir o ponto mais alto da trajetória é igual a:", thmax)
+cat("A altura máxima é = ", hmax)
+cat("O tempo para atingir a hmax é = ", thmax)
 
 # tempo total ou de trajeto:
 ttot = 2 * thmax
 # alcance
 A = vix * ttot
-cat("O tempo de trajeto é igual a:", ttot)
-cat("O alcance é igual a:", A)
+cat("O tempo de trajeto é = ", ttot)
+cat("O alcance é = ", A)
 ```
 <p style="background-color:#33a0c2; font-weight: bold; font-size: 20px; text-align:center"><font color="#ffffff">EXERCÍCIO PROPOSTO</font></p>
 <p align="justify"> Um projétil é lançado a partir do solo, formando com o mesmo um ângulo de 60°, com uma velocidade inicial igual a 200 m/s. Determine todos os elementos do lançamento oblíquo visto até agora. Adote a aceleração da gravidade g = 9.8 m/s<sup>2</sup>.</p>
@@ -552,9 +552,7 @@ A vr no tempo de trajeto é =  58.12426
 ```
 > DEVER DE CASA - estude e execute os comandos abaixo no seu ambiente R:
 
-<p align="justify"> Um projétil é lançado a partir do solo, formando com o mesmo um ângulo de 45°, com uma velocidade inicial igual a 100 m/s. Determine a componente vertical da velocidade (vy) e a velocidade resultante (vr) do projétil no instante em que o mesmo alcança a altura máxima. Adote a aceleração da gravidade g = 9.8 m/s<sup>2</sup>. Já calculados: a componente x da vi é a mesma componente x da vx que é igual a 70.71068, a componente y da vi também é igual a 70.71068, o tempo gasto para o projétil atingir o ponto mais alto da trajetória é igual a 7.215376. (Compare sua resposta: A vy ao atingir o t da hmax é  =  0, A vr ao atingir a hmax é =  70.71068.</p>
-
-(Compare sua resposta: A vy ao atingir o t da hmax é =  0, A vr ao atingir a hmax é =  70.71068.)
+<p align="justify"> Um projétil é lançado a partir do solo, formando com o mesmo um ângulo de 45°, com uma velocidade inicial igual a 100 m/s. Determine a componente vertical da velocidade (vy) e a velocidade resultante (vr) do projétil no instante em que o mesmo alcança a altura máxima. Adote a aceleração da gravidade g = 9.8 m/s<sup>2</sup>. Já calculados: a componente x da vi é a mesma componente x da v que é igual a 70.71068, a componente y da vi também é igual a 70.71068, o tempo gasto para o projétil atingir o ponto mais alto da trajetória é igual a 7.215376. (Compare sua resposta: a vy ao atingir o t da hmax é = 0 e a vr ao atingir a hmax é = 70.71068.</p>
 
 ```{r}
 g <- 9.8
@@ -570,89 +568,69 @@ vy <- viy - g * thmax
 vr <- sqrt(vx ^ 2 + vy ^ 2)
 cat("A vy ao atingir o t da hmax é = ", vy)
 cat("A vr ao atingir a hmax é = ", vr)
-
-A vy ao atingir o t da hmax é =  0
-A vr ao atingir a hmax é =  70.71068
 ```
-
 <p style="background-color:#33a0c2; font-weight: bold; font-size: 20px; text-align:center"><font color="#ffffff">EXERCÍCIO PROPOSTO</font></p>
-<p align="justify"> Um projétil é lançado a partir do solo, formando com o mesmo um ângulo de 60°, com uma velocidade inicial igual a 200 m/s. Determine todos os elementos do lançamento oblíquo visto até agora. Adote a aceleração da gravidade g = 9.8 m/s<sup>2</sup>.</p>
+<p align="justify"> Um projétil é lançado a partir do solo, formando com o mesmo um ângulo de 60°, com uma velocidade inicial igual a 200 m/s. Determine a componente vertical da velocidade (vy) e a velocidade resultante (vr) do projétil no instante em que o mesmo alcança a altura máxima. Adote a aceleração da gravidade g = 9.8 m/s<sup>2</sup>.</p>
 *** =instructions
-<p align="justify"> Use os códigos estudados neste tópico para calcular todos os elementos do lançamento oblíquo visto até agora.</p> 
+<p align="justify"> Use os comandos estudados neste tópico para calcular a componente vertical da velocidade e a velocidade resultante do projétil no tempo da altura máxima.</p> 
 <p align="justify"> Adotaremos sempre a aceleração da gravidade como g = 9.8 m/s<sup>2</sup>.</p>
 *** =hint
-<p align="justify"> A componente da velocidade inicial na direção horizontal e o tempo de trajeto são dados, respectivamente, por
-$$v _{ix} = v _{i}.cos(\theta)$$
-e
-$$t _{tot} = 2t _{hmáx}.$$
+<p align="justify"> O valor da velocidade resultante no movimento oblíquo é dado pela seguinte expressão:</p>
+$$v _{r}= \sqrt{v _{x}^{2}+ v _{y}^{2}}.$$
 *** =pre_exercise_code
 ```{r}
 # no pec
 ```
 *** =sample_code
 ```{r}
-# aceleração da gravidade:
+# Aceleração da gravidade:
 g <- 9.8
-# velocidad inicial:
+# Velocidad inicial:
 vi <- 200
-# ângulo dado em graus:
+#Ângulo dado em graus:
 angulo <- 60
-# transformar graus em radianos:
+# Graus em radianos:
 teta <- (pi/180) * angulo
-# Escreva a componente x da vi:
-vix <-  
+# Componentes x e y da vi:
+vix <- vi * cos(teta)  
 viy <- vi * sin(teta)  
-# mostrar a componente x e y da vi:
-vix
-viy
-# altura máxima:
+# Altura máxima:
 hmax <- (viy ^ 2)/(2 * g)
-# tempo da altura máxima
+# tempo da hmax
 thmax <- viy/g
-# mostrar a altura máxima e o tempo de alcançá-la:
-hmax
-thmax
-# Escreva o tempo de trajeto:
-ttot <- 
-# alcance
-A <- vix * ttot
-# mostrar tempo de trajeto e alcance:
-ttot
-A
+# Componente vertical de v:
+vy <- viy - g * thmax
+# Velocidade resultante:
+vr <- 
+cat("A vy ao atingir o t da hmax é = ", vy)
+cat("A vr ao atingir a hmax é = ", vr)
 ```
 *** =solution
 ```{r}
-# aceleração da gravidade:
+# Aceleração da gravidade:
 g <- 9.8
-# velocidad inicial:
+# Velocidad inicial:
 vi <- 200
-# ângulo dado em graus:
+#Ângulo dado em graus:
 angulo <- 60
-# transformar graus em radianos:
+# Graus em radianos:
 teta <- (pi/180) * angulo
-# Escreva a componente x da vi:
+# Componentes x e y da vi:
 vix <- vi * cos(teta)  
 viy <- vi * sin(teta)  
-# mostrar a componente x e y da vi:
-vix
-viy
-# altura máxima:
+# Altura máxima:
 hmax <- (viy ^ 2)/(2 * g)
-# tempo da altura máxima
+# tempo da hmax
 thmax <- viy/g
-# mostrar a altura máxima e o tempo de alcançá-la:
-hmax
-thmax
-# Escreva o tempo de trajeto:
-ttot <- 2 * thmax
-# alcance
-A <- vix * ttot
-# mostrar tempo de trajeto e alcance:
-ttot
-A
+# Componente vertical de v:
+vy <- viy - g * thmax
+# Velocidade resultante:
+vr <- sqrt(vx ^ 2 + vy ^ 2)
+cat("A vy ao atingir o t da hmax é = ", vy)
+cat("A vr ao atingir a hmax é = ", vr)
 ```
 *** =sct
 ```{r}
-test_output_contains("3534.798", incorrect_msg = "Veja nas dicas o valor da componente da velocidade inicial e do tempo gasto em toda trajetória.")
-success_msg("Bom trabalho! Você adquiriu noções sobre a o tempo de trajeto e o alcance de um projétil no movimento oblíquo.")
+test_output_contains("100", incorrect_msg = "Veja nas dicas a expressão que usamos para determinar a velocidade resultante.")
+success_msg("Bom trabalho! Você aprendeu a determinar o valor da componente vertical da velocidade e o valor da velocidade resultante do projétil quando o mesmo alcança a altura máxima.")
 ```
