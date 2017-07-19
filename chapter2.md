@@ -592,7 +592,9 @@ angulo <- 60
 # Graus em radianos:
 teta <- (pi/180) * angulo
 # Componentes x e y da vi:
-vix <- vi * cos(teta)  
+vix <- vi * cos(teta)
+# vx é igual a vix:
+vx <- vix
 viy <- vi * sin(teta)  
 # Altura máxima:
 hmax <- (viy ^ 2)/(2 * g)
@@ -601,7 +603,7 @@ thmax <- viy/g
 # Componente vertical de v:
 vy <- viy - g * thmax
 # escreva a velocidade resultante:
-vr <- sqrt(vx ^ 2 + vy ^ 2)
+vr <- 
 # Mostrar comp. vertical da veloc:
 vy
 # Mostrar valor da veloc. result.:
@@ -618,7 +620,9 @@ angulo <- 60
 # Graus em radianos:
 teta <- (pi/180) * angulo
 # Componentes x e y da vi:
-vix <- vi * cos(teta)  
+vix <- vi * cos(teta)
+# vx é igual a vix:
+vx <- vix
 viy <- vi * sin(teta)  
 # Altura máxima:
 hmax <- (viy ^ 2)/(2 * g)
