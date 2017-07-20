@@ -218,11 +218,8 @@ thmax = viy/g
 cat("A altura máxima alcançada pelo projétil é igual a:", hmax)
 cat("O tempo gasto para atingir o ponto mais alto da trajetória é igual a:", thmax)
 
-A altura máxima do projétil é igual a: 31.88776
+A altura máxima atingida pelo projétil é igual a: 31.88776
 O tempo gasto para atingir o ponto mais alto da trajetória é igual a: 2.5510204081632653061224489795918
-
-cat("A velocidade da componente vertical é igual a:", vy)
-cat("A velocidade resultante no tempo 2 segund
 ```
 > DEVER DE CASA - estude e execute os comandos abaixo no seu ambiente R:
 
@@ -295,7 +292,7 @@ success_msg("Bom trabalho! Você adquiriu noções sobre a altura máxima e sobr
 $$t _{tot} = 2t _{hmáx} \qquad Eq. 01$$
 <p align="justify">onde, $t _{tot}$ corresponde ao tempo total ou tempo de trajeto e $t _{hmáx}$ ao tempo necessário para o projétil alcançar a altura máxima.</p>
 #### Alcance
-<p align="justify"> Sabemos que o movimento do projétil, na direção horizontal, é do tipo Movimento Retilíneo Uniforme (MRU). Para determinar o alcance, ou seja, a distância percorrida pelo projétil da posição de lançamento até tocar no solo, adaptaremos a equação do espaço do MRU para</p>
+<p align="justify"> Sabemos que o movimento do projétil, na direção horizontal, é do tipo Movimento Retilíneo Uniforme (MRU). Para determinar o alcance, ou seja, a distância percorrida pelo projétil da posição de lançamento até tocar no solo, adaptaremos a equação do espaço do MRU ($X= v _{ix}.t) para</p>
 $$A=v _{ix}.t _{tot} \qquad Eq. 02$$
 <p align="justify">onde $A$ corresponde ao alcance, $v _{ix}$ à componente da velocidade inicial na direção x, e 
 $t _{tot}$ ao tempo total ou tempo de trajeto.</p> 
@@ -318,7 +315,7 @@ $$A=v _{ix}.t _{tot} =  43,30127.5,1 = 220,83 m/s.$$
 # componente horizontal de vi:
 vix = 43.30127
 # tempo da altura máxima
-thmax = 2.55
+thmax = 2.5510204081632653061224489795918
 # tempo total ou de trajeto:
 ttot = 2 * thmax
 # alcance
@@ -326,8 +323,8 @@ A = vix * ttot
 cat("O tempo de trajeto é igual a:", ttot)
 cat("O alcance é igual a:", A)
 
-O tempo de trajeto é igual a: 5.1
-O alcance é igual a: 220.8365
+O tempo de trajeto é igual a: 5.102041
+O alcance é igual a: 220.9248
 ```
 > DEVER DE CASA - estude e execute os comandos abaixo no seu ambiente R:
 
@@ -503,6 +500,277 @@ cat("A vr em 2s é igual a:", vr)
 A vy é igual a: 5.4
 A vr em 2s é igual a: 43.63542
 ```
+
+> <p align="justify"> Na altura máxima a velocidade do projétil na direção vertical é nula?</p>
+
+<p align="justify"> Sim. Para provar que isso é verdade, precisamos apenas do tempo que o projétil levou até na altura máxima que já foi calculado como 2.551, ou para ser mais exato como 2.5510204081632653061224489795918. Basta implementar esse dado no código em R:</p>
+
+```{r}
+# Aceleração da gravidade:
+g <- 9.8
+# Instante dado:
+t <- 2.5510204081632653061224489795918
+# Componente horizontal de v:
+vx <- 43.30127
+# Componente vertical de vi:
+viy <- 25
+# Componente vertical de v:
+vy <- viy - g*t 
+# Velocidade resultante:
+vr <- sqrt(vx ^ 2 + vy ^ 2)
+
+cat("A vy ao atingir o t da hmax é = ", vy)
+cat("A vr ao atingir a hmax é = ", vr)
+
+A vy ao atingir o t da hmax é = 0
+A vr ao atingir a hmax é = 43.3
+```
+<p align="justify">Dado interessante: Para atingir a altura máxima (31,88776 m) o projétil leva exatamente 2,5510204081632653061224489795918 s. Se multiplicarmos esse tempo por dois (tempo de subida e tempo de descida) chegaremos ao tempo total ou de trajeto igual a  6,507705. Pergunta-se: qual é o valor da velocidade da componente vertical e da velocidade resultante quando o projétil alcançar o tempo de trajeto (ao atingir o solo)? Basta implementar o tempo de trajeto no código em R:</p>
+
+```{r}
+# Aceleração da gravidade:
+g <- 9.8
+# Instante dado:
+t <- 6.507705
+# Componente horizontal de v:
+vx <- 43.30
+# Componente vertical de vi:
+viy <- 25
+# Componente vertical de v:
+vy <- viy - g*t 
+# Velocidade resultante:
+vr <- sqrt(vx ^ 2 + vy ^ 2)
+cat("A vy no tempo de trajeto é = ", vy)
+cat("A vr no tempo de trajeto é = ", vr)
+
+
+A vy no tempo de trajeto é = -38.77551
+A vr no tempo de trajeto é =  58.12426
+```
+> DEVER DE CASA - estude e execute os comandos abaixo no seu ambiente R:
+
+<p align="justify"> Um projétil é lançado a partir do solo, formando com o mesmo um ângulo de 45°, com uma velocidade inicial igual a 100 m/s. Determine a componente vertical da velocidade (vy) e a velocidade resultante (vr) do projétil no instante em que o mesmo alcança a altura máxima. Adote a aceleração da gravidade g = 9.8 m/s<sup>2</sup>. Já calculados: a componente x da vi é a mesma componente x da v que é igual a 70.71068, a componente y da vi também é igual a 70.71068, o tempo gasto para o projétil atingir o ponto mais alto da trajetória é igual a 7.215376. (Compare sua resposta: a vy ao atingir o t da hmax é = 0 e a vr ao atingir a hmax é = 70.71068.</p>
+
+```{r}
+g <- 9.8
+# Componente horizontal de v:
+vx <- 70.71068
+# Componente vertical de vi:
+viy <- 70.71068
+# Tempo na altura máxima:
+thmax <- viy/g
+# Componente vertical de v:
+vy <- viy - g * thmax
+# Velocidade resultante:
+vr <- sqrt(vx ^ 2 + vy ^ 2)
+cat("A vy ao atingir o t da hmax é = ", vy)
+cat("A vr ao atingir a hmax é = ", vr)
+```
+<p style="background-color:#33a0c2; font-weight: bold; font-size: 20px; text-align:center"><font color="#ffffff">EXERCÍCIO PROPOSTO</font></p>
+<p align="justify"> Um projétil é lançado a partir do solo, formando com o mesmo um ângulo de 60°, com uma velocidade inicial igual a 200 m/s. Determine a componente vertical da velocidade (vy) e a velocidade resultante (vr) do projétil no instante em que o mesmo alcança a altura máxima. Adote a aceleração da gravidade g = 9.8 m/s<sup>2</sup>.</p>
+*** =instructions
+<p align="justify"> Use os comandos estudados neste tópico para calcular a componente vertical da velocidade e a velocidade resultante do projétil no tempo da altura máxima.</p> 
+<p align="justify"> Adotaremos sempre a aceleração da gravidade como g = 9.8 m/s<sup>2</sup>.</p>
+*** =hint
+<p align="justify"> O valor da velocidade resultante no movimento oblíquo é dado pela seguinte expressão:</p>
+$$v _{r}= \sqrt{v _{x}^{2}+ v _{y}^{2}}.$$
+*** =pre_exercise_code
+```{r}
+# no pec
+```
+*** =sample_code
+```{r}
+# Aceleração da gravidade:
+g <- 9.8
+# Velocidad inicial:
+vi <- 200
+#Ângulo dado em graus:
+angulo <- 60
+# Graus em radianos:
+teta <- (pi/180) * angulo
+# Componentes x e y da vi:
+vix <- vi * cos(teta)
+# vx é igual a vix:
+vx <- vix
+viy <- vi * sin(teta)  
+# Altura máxima:
+hmax <- (viy ^ 2)/(2 * g)
+# tempo da hmax
+thmax <- viy/g
+# Componente vertical de v:
+vy <- viy - g * thmax
+# escreva a velocidade resultante:
+vr <- 
+# Mostrar comp. vertical da veloc:
+vy
+# Mostrar valor da veloc. result.:
+vr
+```
+*** =solution
+```{r}
+# Aceleração da gravidade:
+g <- 9.8
+# Velocidad inicial:
+vi <- 200
+#Ângulo dado em graus:
+angulo <- 60
+# Graus em radianos:
+teta <- (pi/180) * angulo
+# Componentes x e y da vi:
+vix <- vi * cos(teta)
+# vx é igual a vix:
+vx <- vix
+viy <- vi * sin(teta)  
+# Altura máxima:
+hmax <- (viy ^ 2)/(2 * g)
+# tempo da hmax
+thmax <- viy/g
+# Componente vertical de v:
+vy <- viy - g * thmax
+# escreva a velocidade resultante:
+vr <- sqrt(vx ^ 2 + vy ^ 2)
+# Mostrar comp. vertical da veloc:
+vy
+# Mostrar valor da veloc. result.:
+vr
+```
+*** =sct
+```{r}
+test_output_contains ("100", incorrect_msg = "Escreva corretamente a expressão que calcula a velocidade resultante. Veja nas dicas a expressão que usamos para determinar a velocidade resultante.")
+success_msg ("Bom trabalho! Você aprendeu a determinar o valor da componente vertical da velocidade e o valor da velocidade resultante do projétil quando o mesmo alcança a altura máxima.")
+```
+
+--- type:NormalExercise lang:r xp:100 skills:1 key:92a2d6e6a2
+## Posição do projétil
+<p align="justify"> A equação que dá a posição do projétil no instante t, segundo o eixo horizontal (X) é dada por </p>
+
+$$X= v _{ix}.t$$
+
+<p align="justify"> e a equação que dá a posição do projétil no instante t, segundo o eixo vertical (Y) é dada por </p>
+ 
+$$Y = v _{iy}.t- \displaystyle \frac{g.t^{2}}{2}.$$
+
+<p align="justify">Para determinar a posição P do projétil, basta obter os valores de X e Y.</p> 
+
+> Motivação
+
+* <p align="justify">Um projétil é lançado a  partir do solo, formando com o mesmo um ângulo de 30°, com uma velocidade inicial igual a 50 m/s. Determine a posição do projeto em 2 segundos e em 4 segundos. Considere $g = 9,8~m/s^{2}$, a $v _{ix} = 43.30~m/s$ e a $v _{iy} = 25~m/s$ foram determinados em tópicos anteriores.</p>
+
+> <p align="justify"> Posição do projétil para t = 2s</p> 
+
+$$X= v _{ix}.t = 43,30.2 = 86,6~m.$$
+
+e
+
+$$Y = v _{iy}.t- \displaystyle \frac{g.t^{2}}{2} = 25.2 - \displaystyle \frac{9,8.2^{2}}{2} = 50 - 19,6 = 30,4~m.$$
+
+> <p align="justify"> Cálculo da posição para t = 4s</p>
+
+$$X= v _{ix}.t = 43,30.4 = 173,2~m.$$
+
+e
+
+$$Y = v _{iy}.t- \displaystyle \frac{g.t^{2}}{2} = 25.4 - \displaystyle \frac{9,8.4^{2}}{2} = 100 - 78,4 = 21,6~m.$$
+
+> <p align="justify">Comandos no R para determinar, além da posição do projétil, a componente horizontal de v, a componente vertical de v e a velocidade resultante - tudo em dois segundos:</p>
+
+```{r}
+# Aceleração da gravidade:
+g <- 9.8
+# Instante dado:
+t <- 2
+# vix - já calculado:
+vix <-  43.30127
+# viy - já calculado:
+viy <- 25
+# Posição X
+X <- vix * t
+# Posição Y
+Y <- viy * t - (g * t ^ 2)/2 
+# vx é uniforme e igual a vix:
+vx <- vix
+# Componente vertical de v:
+vy <- viy - g * t 
+vy
+# Velocidade resultante:
+vr <- sqrt(vx ^ 2 + vy ^ 2)
+cat("A posição do projétil em 2s equivale a",  X, "e", Y)
+cat("As componentes de v equivale a ", vx, "e", vy)
+cat("A vr no tempo dado equivale a ", vr)
+
+A posição do projétil em 2s equivale a 86.60254 e 30.4
+As componentes de v equivale a  43.30127 e 5.4
+A vr no tempo dado equivale a  43.63668
+```
+> <p align="justify">Comandos no R para determinar, além da posição do projétil, a componente horizontal de v, a componente vertical de v e a velocidade resultante - tudo no tempo de altura máxima:</p>
+
+```{r}
+# Aceleração da gravidade:
+g <- 9.8
+# Instante da altura máxima:
+t <- 2.5510204081632653061224489795918
+# Componente horizontal de vi:
+vix <- 43.30127
+# Componente vertical de vi:
+viy <- 25
+# Posição X
+X <- vix * t
+# Posição Y
+Y <- viy * t - (g * t ^ 2)/2 
+# vx é igual a vix:
+vx <- vix
+# Componente vertical de v:
+vy <- viy - g * t 
+# Velocidade resultante:
+vr <- sqrt(vx ^ 2 + vy ^ 2)
+cat("A posição do projétil na hmax equivale a",  X, "e", Y)
+cat("As componentes de v equivale a ", vx, "e", vy)
+cat("A vr no tempo dado equivale a ", vr)
+
+A posição do projétil na hmax equivale a 110.4624 e 31.88776
+As componentes de v equivale a  43.30127 e 0
+A vr no tempo dado equivale a  43.30127
+
+```
+<p align="justify">Observe que o valor de X na altura máxima equivale a 110,4624 m, a metade do alcance (A = 220,9248m). Observe também que o valor de Y, para esse tempo exato, equivale à altura máxima (31.88776). Observe que a componente da velocidade na horizontal (vx = vix), em um dado tempo, não varia.</p>
+
+> <p align="justify">Comandos no R para determinar, além da posição do projétil, a componente horizontal de v, a componente vertical de v e a velocidade resultante - tudo no tempo de 4s):</p>
+
+```{r}
+# Aceleração da gravidade:
+g <- 9.8
+# Instante dado:
+t <- 4
+# Componente horizontal de vi:
+vix <- 43.30127
+# Componente vertical de vi:
+viy <- 25
+# Posição X
+X <- vix * t
+# Posição Y
+Y <- viy * t - (g * t ^ 2)/2 
+# Componente horizontal de v:
+vx <- vix
+# Componente vertical de v:
+vy <- viy - g * t 
+# Velocidade resultante:
+vr <- sqrt(vx ^ 2 + vy ^ 2)
+cat("A posição do projétil em 4s equivale a",  X, "e", Y)
+cat("As componentes de v equivale a ", vx, "e", vy)
+cat("A vr no tempo dado equivale a ", vr)
+
+A posição do projétil em 4s equivale a 173.2051 e 21.6
+As componentes de v equivale a  43.30127 e -14.2
+A vr no tempo dado equivale a  45.57017
+
+```
+
+
+
+
+
+
+
 
 > <p align="justify"> Na altura máxima a velocidade do projétil na direção vertical é nula?</p>
 
