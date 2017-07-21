@@ -812,7 +812,8 @@ cat(A, "é 4 vezes", hmax)
 <p style="background-color:#33a0c2; font-weight: bold; font-size: 20px; text-align:center"><font color="#ffffff">EXERCÍCIO PROPOSTO</font></p>
 <p align="justify"> Um projétil é lançado a partir do solo, formando com o mesmo um ângulo de 60°, com uma velocidade inicial igual a 200 m/s. Determine a posição do projeto no tempo de 2 segundos. Adote a aceleração da gravidade g = 9.8 m/s<sup>2</sup>.</p>
 *** =instructions
-<p align="justify"> Use os comandos em R, estudados neste capítulo, para calcular a posição do projétil no tempo de 2s. Você escreverá apenas a equação da posição do projétil no eixo X.</p>
+<p align="justify"> - Use os comandos em R, estudados neste capítulo, para calcular a posição do projétil no tempo de 2s. Você escreverá apenas a equação da posição do projétil no eixo X.</p>
+<p align="justify"> - Leia todo o código do exercício e digite a equação onde tá escrito "# Escreva a eq. da a posição em X".</p>
 *** =hint
 <p align="justify"> O valor da posição do projétil no eixo do X é obtido pela seguinte expressão:</p>
 $$X= v _{ix}.t.$$
