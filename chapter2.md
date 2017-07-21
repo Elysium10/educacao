@@ -874,3 +874,201 @@ X
 test_output_contains ("200", incorrect_msg = "Escreva a expressão que calcula o valor da posição de um projétil no eixo X. Não esqueça que o símbolo para multiplicar é o asterisco. Veja nas dicas essa expressão.")
 success_msg ("Bom trabalho! Você aprendeu a determinar o valor da posição (X, Y) do projétil em um determinado tempo.")
 ```
+
+--- type:NormalExercise lang:r xp:100 skills:1 key:289ca73696
+## Direção do projétil
+
+<p align="justify"> A direção do projeto em um dado instante t é determinada pelo cálculo da tangente entre a componente da velocidade na vertical e a componente da velocidade na horizontal. A expressão que calcula a tangente de um ângulo é dada por:</p>
+
+$$tg~ \theta = \displaystyle \frac{v _{y}}{v _{x}}$$
+
+<p align="justify"> onde, $\theta$ corresponde ao ângulo formado entre a componente horizontal e a direção da velocidade resultante num dado instante, $v _{y}$ corresponde à componente da velocidade segundo a vertical e $v _{x}$ corresponde à componente da velocidade segundo a horizontal.</p>
+
+<p align="justify">Da expressão acima podemos encontar o valor do ângulo $\theta$:</p> 
+
+$$\theta = arc~tg~\displaystyle \frac{v _{y}}{v _{x}}\cdot$$
+
+> Motivação
+
+* <p align="justify">Um projétil é lançado a  partir do solo, formando com o mesmo um ângulo de 30°, com uma velocidade inicial igual a 50 m/s. Determine a direção do projétil ao atingir o solo. Considere $g = 9,8~m/s^{2}$, a $v _{x} = 43,30127~m/s$ e a $v _{y} = -25~m/s$ foram determinados em tópicos anteriores.</p>
+
+> Determinando a tangente do ângulo
+
+$$tg~ \theta = \displaystyle \frac{v _{y}}{v _{x}}= \frac{-25}{43,30127}\cong-0,57735.$$
+
+Link para auxílio no cálculo da tangente (use números com vírgula):
+
+[Calculadora on-line da tangente.](https://www.calculadoraconversor.com/tangente/)
+
+> Determinando o ângulo
+
+$$\theta = arc~tg~(-0,5773503) = -30°.$$
+
+> <p align="justify">-30° é o ângulo formado, em relação à horizontal, no momento em que o projétil chega ao chão.</p>
+
+Link para auxílio no cálculo do arco tangente (use números com vírgula): 
+
+[Calculadora on-line de arco tangente.](https://www.calculadoraconversor.com/arcotangente/)
+
+> <p align="justify">Comandos no R para determinar a direção do projétil, em relação à horizontal, ao atingir o solo:</p>
+
+```{r}
+# vx e vy já calculados:
+vx <-  43.30127
+vy <- -25
+# Atribuir o valor vy/vx:
+tang <- vy/vx
+# Atribuir o valor do arco tg
+angulo <- atan(tang)
+# Atribuir o valor angulo/(pi/180)
+graus <- angulo/(pi/180)
+# Mostrar variável graus
+graus
+
+ -30
+```
+
+> <p align="justify">* Um projétil é lançado a  partir do solo, formando com o mesmo um ângulo de 60°, com uma velocidade inicial igual a 50 m/s. Determine a direção do projétil ao atingir o solo. Considere $g = 9,8~m/s^{2}$, a $v _{x} = 25 m/s$ e a $v _{y} = -53~m/s$.</p>
+
+```{r}
+# vx e vy dados no problema:
+vx <-  25
+vy <- -53
+# Atribuir valor vy/vx:
+tang <- vy/vx
+# Atribuir valor do arco tg
+angulo <- atan(tang)
+# Atribuir valor de angulo/(pi/180)
+graus <- angulo/(pi/180)
+# Mostrar variável graus
+graus
+
+-64.74684 
+```
+<p align="justify"> Aproximadamente -65° é o ângulo formado, em relação à horizontal, no momento em que o projétil chega ao chão.</p>
+
+> DEVER DE CASA - estude e execute os comandos abaixo no seu ambiente R:
+
+<p align="justify"> Aplique os comandos utilizados em R para resolver o seguinte problema: Um projétil é lançado a partir do solo, formando com o mesmo um ângulo de 60°, com uma velocidade inicial igual a 50 m/s. Adote a aceleração da gravidade g = 9.8 m/s<sup>2</sup>.Determine: a) A altura máxima desenvolvida pelo projétil; b) O tempo gasto para chegar na altura máxima; c) O alcance desenvolvido pelo projétil; d) A velocidade da componente vertical, a velocidade resultante e a direção do projétil ao alcançar o solo; e) A posição do projétil no tempo de 5 segundos. Compare sua resposta logo abaixo.</p>
+
+```{r}
+# Aceleração da gravidade:
+g <- 9.8
+# Vel. inicial:
+vi <- 50
+# ângulo dado em graus:
+angulo <- 60
+# transformar graus em radianos:
+teta <- (pi/180) * angulo
+# componente x da vi:
+vix <- vi * cos(teta)
+# componente y da vi:
+viy <- vi * sin(teta)
+# altura máxima
+hmax = (viy ^ 2)/(2 * g)
+# Tempo na hmax:
+thmax <- viy/g
+# tempo tot de trajeto:
+ttot = 2 * thmax
+# alcance:
+A = vix * ttot
+# Instante dado:
+t = 5
+# Posição X
+X <- vix * t
+# Posição Y
+Y <- viy * t - (g * t ^ 2)/2
+# vx é uniforme e igual a vix:
+vx <- vix
+# Componente vertical de v:
+vy <- viy - g * ttot 
+# Velocidade resultante:
+vr <- sqrt(vx ^ 2 + vy ^ 2)
+# Atribuir o valor vy/vx:
+tang <- vy/vx
+# Atribuir valor do arco tg
+angulo <- atan(tang)
+# Atribuir valor de angulo/(pi/180)
+graus <- angulo/(pi/180)
+cat("a) A hmax é igual a:", hmax)
+cat("b) O thmax é igual a:", thmax)
+cat("c) O alcance é igual a:", A)
+cat("d) A vy:", vy, "A vr:", vr, "A direção:", graus)
+cat("e) A posição em 5 segundos:", X, "e", Y)
+```
+> Compare sua resposta 
+
+```{r}
+a) A hmax é igual a: 95.66327
+b) O thmax é igual a: 4.418497
+c) O alcance é igual a: 220.9248
+d) A vy: -43.30127, A vr: 50, A direção: -60
+e) A posição em 5 segundos: 125 e 94.00635
+```
+<p style="background-color:#33a0c2; font-weight: bold; font-size: 20px; text-align:center"><font color="#ffffff">EXERCÍCIO PROPOSTO</font></p>
+<p align="justify"> Um projétil é lançado a partir do solo, formando com o mesmo um ângulo de 60°, com uma velocidade inicial igual a 200 m/s. Determine a posição do projeto no tempo de 2 segundos. Adote a aceleração da gravidade g = 9.8 m/s<sup>2</sup>.</p>
+*** =instructions
+<p align="justify"> - Use os comandos em R, estudados neste capítulo, para calcular a posição do projétil no tempo de 2s. Você escreverá apenas a equação da posição do projétil no eixo X.</p>
+<p align="justify"> - Leia todo o código do exercício e digite a equação onde tá escrito "# Escreva a eq. da posição em X".</p>
+*** =hint
+<p align="justify"> O valor da posição do projétil, no eixo X, é obtido pela seguinte expressão:</p>
+$$X= v _{ix}.t.$$
+*** =pre_exercise_code
+```{r}
+# no pec
+```
+*** =sample_code
+```{r}
+# Aceleração da gravidade:
+g <- 9.8
+# Instante dado:
+t <- 2
+# Velocidad inicial:
+vi <- 200
+#Ângulo dado em graus:
+angulo <- 60
+# Graus em radianos:
+teta <- (pi/180) * angulo
+# Componentes x e y da vi:
+vix <- vi * cos(teta)
+viy <- vi * sin(teta)
+# vx é uniforme e igual a vix:
+# Escreva a eq. da posição em X
+X <- 
+# Equação da a posição em Y
+Y <- viy * t - (g * t ^ 2)/2 
+# Mostrar posição Y
+Y
+# Mostrar posição X
+X
+```
+*** =solution
+```{r}
+# Aceleração da gravidade:
+g <- 9.8
+# Instante dado:
+t <- 2
+# Velocidad inicial:
+vi <- 200
+#Ângulo dado em graus:
+angulo <- 60
+# Graus em radianos:
+teta <- (pi/180) * angulo
+# Componentes x e y da vi:
+vix <- vi * cos(teta)
+viy <- vi * sin(teta)
+# vx é uniforme e igual a vix:
+# Escreva a eq. da posição em X
+X <- vix * t
+# Equação da a posição em Y
+Y <- viy * t - (g * t ^ 2)/2 
+# Mostrar posição Y
+Y
+# Mostrar posição X
+X
+```
+*** =sct
+```{r}
+test_output_contains ("200", incorrect_msg = "Escreva a expressão que calcula o valor da posição de um projétil no eixo X. Não esqueça que o símbolo para multiplicar é o asterisco. Veja nas dicas essa expressão.")
+success_msg ("Bom trabalho! Você aprendeu a determinar o valor da posição (X, Y) do projétil em um determinado tempo.")
+```
