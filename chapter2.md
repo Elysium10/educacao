@@ -445,38 +445,38 @@ success_msg("Bom trabalho! Você adquiriu noções sobre a o tempo de trajeto e 
 ## Componentes da velocidade
 <p align="justify"> Assim como a velocidade inicial possui suas componentes, a velocidade no instante t e na posição p também possui suas componentes dadas pelas seguintes equações:</p>
 
-$$v _{x} = v _{ix} = v _{i}.cos(\theta) \qquad Eq. 01$$
+$$v _{x} = v _{ix} = v _{i}.cos(\theta)$$
 
 e
  
-$$v _{y} = v _{iy} - gt \qquad Eq. 02$$
+$$v _{y} = v _{iy} - gt \$$
 
-<p align="justify">onde, $v _{x}$ corresponde à componente horizontal da velocidade e $v _{y}$ corresponde à componente vertical da velocidade num determinado instante. Observe que na equação 01 deste tópico a componente horizontal da velocidade inicial equivale a componente horizontal da velocidade num dado instante e numa dada posição.</p> 
+<p align="justify">onde, $v _{x}$ corresponde à componente horizontal da velocidade e $v _{y}$ corresponde à componente vertical da velocidade num determinado instante. Observe que na primeira equação a componente horizontal da velocidade inicial equivale à componente horizontal da velocidade, num dado instante e numa dada posição.</p> 
 
 > Velocidade resultante
 
 <p align="justify">No lançamento oblíquo, quando queremos determinar a velocidade resultante de um projétil num determinado ponto e instante, podemos recorrer à seguinte equação:</p>
 
-$$v _{r}= \sqrt{v _{x}^{2}+ v _{y}^{2}} \qquad Eq. 04$$
+$$v _{r}= \sqrt{v _{x}^{2}+ v _{y}^{2}}$$
 
 <p align="justify">onde, $v _{r}$ corresponde à velocidade resultante do projétil em um ponto $p$ num determinado instante $t$ e $v _{x}$, que é constante, corresponde à componente horizontal da velocidade e $v _{y}$ corresponde à componente vertical da velocidade.</p>
 
 > Motivação
 
-* <p align="justify">Um projétil é lançado a  partir do solo, formando com o mesmo um ângulo de 30°, com uma velocidade inicial igual a 50 m/s. Determine a velocidade resultante do projétil no instante 2 segundos. Considere $g = 9,8~m/s^{2}$, a $v _{ix} = 43.30~m/s$ e a $v _{iy} = 25~m/s$ foram determinados em tópicos anteriores.</p>
+* <p align="justify">Um projétil é lançado a  partir do solo, formando com o mesmo um ângulo de 30°, com uma velocidade inicial igual a 50 m/s. Determine a velocidade resultante do projétil no instante 2 segundos. Considere $g = 9,8~m/s^{2}. As componentes da velocidade inicial já foram determinda em tópicos anteriores.</p>
 
-> <p align="justify"> A componente $v _{x}$, constante, pode ser obtida pela equação 03 deste tópico:</p> 
+> <p align="justify"> A componente $v _{x}$, constante, pode ser obtida pela equação:</p> 
 
-$$v _{x} = v _{ix} = 43,30~m/s.$$
+$$v _{x} = v _{ix} = 43.30127~m/s.$$
 
-> <p align="justify"> A componente $v _{y}$ pode ser obtida utilizando-se a equação 02:</p>
+> <p align="justify"> A componente $v _{y}$ pode ser obtida pela equação:</p>
 
 $$v _{y} = 25 - 9,8.2 = 25 - 19,6$$
 $$ = 5,4~m/s.$$
 
-> <p align="justify"> A velocidade resultante pode ser obtida utilizando-se a equação 04:</p>
-
-$$v _{r}= \sqrt{43.30^{2}+ 5,4^{2}} = \sqrt{1874,89 + 29,16}$$ 
+> <p align="justify"> A velocidade resultante pode ser obtida utilizando-se a equação:</p>
+$$v _{r}= \sqrt{v _{x}^{2}+ v _{y}^{2}} = \sqrt{43.30^{2}+ 5,4^{2}}$$ 
+$$= \sqrt{1874,89 + 29,16}$$ 
 $$= \sqrt{1904,05} = 43,635~m/s.$$
 
 > <p align="justify">Comandos no R para determinar $v _{r}$:</p>
@@ -486,19 +486,27 @@ $$= \sqrt{1904,05} = 43,635~m/s.$$
 g <- 9.8
 # Instante dado:
 t <- 2
-# Componente horizontal de v:
-vx <- 43.30
-# Componente vertical de vi:
-viy <- 25
+# Velocidade inicial:
+vi <- 50
+# ângulo dado em graus:
+angulo <- 30
+# transformar graus em radianos:
+teta <- (pi/180) * angulo
+# componente x da vi:
+vix <- vi * cos(teta) 
+# Componente y da vi:
+viy <- vi * sin(teta) 
+# Movimento uniforme (vx = vix):
+vx <- vix
 # Componente vertical de v:
-vy <- viy - g*t 
+vy <- viy - g * t 
 # Velocidade resultante:
 vr <- sqrt(vx ^ 2 + vy ^ 2)
 cat("A vy é igual a:", vy)
-cat("A vr em 2s é igual a:", vr)
+cat("A vr é igual a:", vr)
 
 A vy é igual a: 5.4
-A vr em 2s é igual a: 43.63542
+A vr é igual a: 43.63668
 ```
 
 > <p align="justify"> Na altura máxima a velocidade do projétil na direção vertical é nula?</p>
@@ -515,38 +523,41 @@ vx <- 43.30127
 # Componente vertical de vi:
 viy <- 25
 # Componente vertical de v:
-vy <- viy - g*t 
+vy <- viy - g * t 
 # Velocidade resultante:
 vr <- sqrt(vx ^ 2 + vy ^ 2)
 
 cat("A vy ao atingir o t da hmax é = ", vy)
 cat("A vr ao atingir a hmax é = ", vr)
 
-A vy ao atingir o t da hmax é = 0
-A vr ao atingir a hmax é = 43.3
+A vy ao atingir o t da hmax é =  0
+A vr ao atingir a hmax é =  43.30127
 ```
-<p align="justify">Dado interessante: Para atingir a altura máxima (31,88776 m) o projétil leva exatamente 2,5510204081632653061224489795918 s. Se multiplicarmos esse tempo por dois (tempo de subida e tempo de descida) chegaremos ao tempo total ou de trajeto igual a  6,507705. Pergunta-se: qual é o valor da velocidade da componente vertical e da velocidade resultante quando o projétil alcançar o tempo de trajeto (ao atingir o solo)? Basta implementar o tempo de trajeto no código em R:</p>
+<p align="justify">Dado interessante: Na altura máxima a a componente vy é nula, porém, a velocidade resultante (vr) não é nula, tem valor mínimo igual à componente horizontal (vx = vix). Para atingir a altura máxima (31,88776 m) o projétil leva exatamente 2,5510204081632653061224489795918 s. Se multiplicarmos esse tempo por dois (tempo de subida e tempo de descida) chegaremos ao tempo total ou de trajeto igual a 5,1020408163265306122448979591836. Pergunta-se: qual é o valor da velocidade da componente vertical e da velocidade resultante quando o projétil alcançar o tempo de trajeto (ao atingir o solo)? Basta implementar o tempo de trajeto no código em R:</p>
 
 ```{r}
 # Aceleração da gravidade:
 g <- 9.8
 # Instante dado:
-t <- 6.507705
+t <- 5.1020408163265306122448979591836
 # Componente horizontal de v:
-vx <- 43.30
+vx <- 43.30127
 # Componente vertical de vi:
 viy <- 25
 # Componente vertical de v:
-vy <- viy - g*t 
+vy <- viy - g * t 
 # Velocidade resultante:
 vr <- sqrt(vx ^ 2 + vy ^ 2)
 cat("A vy no tempo de trajeto é = ", vy)
 cat("A vr no tempo de trajeto é = ", vr)
 
-
-A vy no tempo de trajeto é = -38.77551
-A vr no tempo de trajeto é =  58.12426
+A vy no tempo de trajeto é =  -25
+A vr no tempo de trajeto é =  50
 ```
+<p align="justify">Dado interessante: A velocidade que o projétil cai no chão é a mesma velocidade inicial de lançamento (50 m/s). O valor da componente vertical da velocidade de saída (no problema viy = 25 m/s) do projétil é o mesmo na sua chegada ao chão, porém, de sinal contrário (-25 m/s). Em qualquer posição (X,Y) da trajetória parabólica o projétil possui duas velocidades de mesmo módulo, uma positiva ao subir e uma negativa ao descer.
+
+</p>
+
 > DEVER DE CASA - estude e execute os comandos abaixo no seu ambiente R:
 
 <p align="justify"> Um projétil é lançado a partir do solo, formando com o mesmo um ângulo de 45°, com uma velocidade inicial igual a 100 m/s. Determine a componente vertical da velocidade (vy) e a velocidade resultante (vr) do projétil no instante em que o mesmo alcança a altura máxima. Adote a aceleração da gravidade g = 9.8 m/s<sup>2</sup>. Já calculados: a componente x da vi é a mesma componente x da v que é igual a 70.71068, a componente y da vi também é igual a 70.71068, o tempo gasto para o projétil atingir o ponto mais alto da trajetória é igual a 7.215376. (Compare sua resposta: a vy ao atingir o t da hmax é = 0 e a vr ao atingir a hmax é = 70.71068.</p>
@@ -642,15 +653,15 @@ success_msg ("Bom trabalho! Você aprendeu a determinar o valor da componente ve
 
 --- type:NormalExercise lang:r xp:100 skills:1 key:92a2d6e6a2
 ## Posição do projétil
-<p align="justify"> A equação que dá a posição do projétil no instante t, segundo o eixo horizontal (X) é dada por </p>
+<p align="justify"> A equação que dá a posição do projétil no instante t, segundo o eixo horizontal (X), é dada por </p>
 
 $$X= v _{ix}.t$$
 
-<p align="justify"> e a equação que dá a posição do projétil no instante t, segundo o eixo vertical (Y) é dada por </p>
+<p align="justify"> e a equação que dá a posição do projétil no instante t, segundo o eixo vertical (Y), é dada por </p>
  
-$$Y = v _{iy}.t- \displaystyle \frac{g.t^{2}}{2}.$$
+$$y = v _{ix}.t- \displaystyle \frac{g.t^{2}}{2}\cdot$$
 
-<p align="justify">Para determinar a posição P do projétil, basta obter os valores de X e Y.</p> 
+<p align="justify">Para determinar uma posição qualquer do projétil, basta obter os valores de X e Y.</p> 
 
 > Motivação
 
@@ -662,7 +673,8 @@ $$X= v _{ix}.t = 43,30.2 = 86,6~m.$$
 
 e
 
-$$Y = v _{iy}.t- \displaystyle \frac{g.t^{2}}{2} = 25.2 - \displaystyle \frac{9,8.2^{2}}{2} = 50 - 19,6 = 30,4~m.$$
+$$Y = v _{iy}.t- \displaystyle \frac{g.t^{2}}{2} = 25.2 - \displaystyle \frac{9,8.2^{2}}{2}$$ 
+$$= 50 - 19,6 = 30,4~m.$$
 
 > <p align="justify"> Cálculo da posição para t = 4s</p>
 
@@ -670,7 +682,8 @@ $$X= v _{ix}.t = 43,30.4 = 173,2~m.$$
 
 e
 
-$$Y = v _{iy}.t- \displaystyle \frac{g.t^{2}}{2} = 25.4 - \displaystyle \frac{9,8.4^{2}}{2} = 100 - 78,4 = 21,6~m.$$
+$$Y = v _{iy}.t- \displaystyle \frac{g.t^{2}}{2} = 25.4 - \displaystyle \frac{9,8.4^{2}}{2}$$ 
+$$= 100 - 78,4 = 21,6~m.$$
 
 > <p align="justify">Comandos no R para determinar, além da posição do projétil, a componente horizontal de v, a componente vertical de v e a velocidade resultante - tudo em dois segundos:</p>
 
@@ -694,13 +707,13 @@ vy <- viy - g * t
 vy
 # Velocidade resultante:
 vr <- sqrt(vx ^ 2 + vy ^ 2)
-cat("A posição do projétil em 2s equivale a",  X, "e", Y)
-cat("As componentes de v equivale a ", vx, "e", vy)
-cat("A vr no tempo dado equivale a ", vr)
+cat("Posição do projétil: ",  X, "e", Y)
+cat("Componentes de v: ", vx, "e", vy)
+cat("Velocidade resultante: ", vr)
 
-A posição do projétil em 2s equivale a 86.60254 e 30.4
-As componentes de v equivale a  43.30127 e 5.4
-A vr no tempo dado equivale a  43.63668
+Posição do projétil: 86.60254 e 30.4
+Componentes de v: 43.30127 e 5.4
+Velocidade resultante: 43.63668
 ```
 > <p align="justify">Comandos no R para determinar, além da posição do projétil, a componente horizontal de v, a componente vertical de v e a velocidade resultante - tudo no tempo de altura máxima:</p>
 
