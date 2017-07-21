@@ -813,9 +813,9 @@ cat(A, "é 4 vezes", hmax)
 <p align="justify"> Um projétil é lançado a partir do solo, formando com o mesmo um ângulo de 60°, com uma velocidade inicial igual a 200 m/s. Determine a posição do projeto no tempo de 2 segundos. Adote a aceleração da gravidade g = 9.8 m/s<sup>2</sup>.</p>
 *** =instructions
 <p align="justify"> - Use os comandos em R, estudados neste capítulo, para calcular a posição do projétil no tempo de 2s. Você escreverá apenas a equação da posição do projétil no eixo X.</p>
-<p align="justify"> - Leia todo o código do exercício e digite a equação onde tá escrito "# Escreva a eq. da a posição em X".</p>
+<p align="justify"> - Leia todo o código do exercício e digite a equação onde tá escrito "# Escreva a eq. da posição em X".</p>
 *** =hint
-<p align="justify"> O valor da posição do projétil no eixo do X é obtido pela seguinte expressão:</p>
+<p align="justify"> O valor da posição do projétil, no eixo X, é obtido pela seguinte expressão:</p>
 $$X= v _{ix}.t.$$
 *** =pre_exercise_code
 ```{r}
@@ -837,7 +837,7 @@ teta <- (pi/180) * angulo
 vix <- vi * cos(teta)
 viy <- vi * sin(teta)
 # vx é uniforme e igual a vix:
-# Escreva a eq. da a posição em X
+# Escreva a eq. da posição em X
 X <- 
 # Equação da a posição em Y
 Y <- viy * t - (g * t ^ 2)/2 
@@ -862,7 +862,7 @@ teta <- (pi/180) * angulo
 vix <- vi * cos(teta)
 viy <- vi * sin(teta)
 # vx é uniforme e igual a vix:
-# Escreva a eq. da a posição em X
+# Escreva a eq. da posição em X
 X <- vix * t
 # Equação da a posição em Y
 Y <- viy * t - (g * t ^ 2)/2 
@@ -873,6 +873,6 @@ Y
 ```
 *** =sct
 ```{r}
-test_output_contains ("326.8102", incorrect_msg = "Escreva a expressão que calcula o valor da posição do projétil no eixo X. Veja nas dicas essa expressão.")
+test_output_contains ("200", incorrect_msg = "Escreva a expressão que calcula o valor da posição do projétil no eixo X. Veja nas dicas essa expressão.")
 success_msg ("Bom trabalho! Você aprendeu a determinar o valor da posição (X, Y) do projétil em um determinado tempo.")
 ```
