@@ -344,7 +344,6 @@ viy <- vi * sin(teta)
 # mostrar a componente x e y da vi:
 cat("A componente x da vi é = ", vix)
 cat("A componente y da vi é = ", viy)
-
 # altura máxima:
 hmax = (viy ^ 2)/(2 * g)
 # tempo da altura máxima
@@ -352,10 +351,9 @@ thmax = viy/g
 # mostrar a altura máxima e o tempo de alcançá-la:
 cat("A altura máxima é = ", hmax)
 cat("O tempo para atingir a hmax é = ", thmax)
-
 # tempo total ou de trajeto:
 ttot = 2 * thmax
-# alcance
+# alcance:
 A = vix * ttot
 cat("O tempo de trajeto é = ", ttot)
 cat("O alcance é = ", A)
