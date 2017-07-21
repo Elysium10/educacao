@@ -449,7 +449,7 @@ $$v _{x} = v _{ix} = v _{i}.cos(\theta)$$
 
 e
  
-$$v _{y} = v _{iy} - gt \$$
+$$v _{y} = v _{iy} - gt$$
 
 <p align="justify">onde, $v _{x}$ corresponde à componente horizontal da velocidade e $v _{y}$ corresponde à componente vertical da velocidade num determinado instante. Observe que na primeira equação a componente horizontal da velocidade inicial equivale à componente horizontal da velocidade, num dado instante e numa dada posição.</p> 
 
@@ -463,23 +463,24 @@ $$v _{r}= \sqrt{v _{x}^{2}+ v _{y}^{2}}$$
 
 > Motivação
 
-* <p align="justify">Um projétil é lançado a  partir do solo, formando com o mesmo um ângulo de 30°, com uma velocidade inicial igual a 50 m/s. Determine a velocidade resultante do projétil no instante 2 segundos. Considere $g = 9,8~m/s^{2}. As componentes da velocidade inicial já foram determinda em tópicos anteriores.</p>
+* <p align="justify">Um projétil é lançado a  partir do solo, formando com o mesmo um ângulo de 30°, com uma velocidade inicial igual a 50 m/s. Considere $g = 9,8~m/s^{2}$ e determine a velocidade resultante do projétil no instante 2 segundos. As componentes da velocidade inicial já foram determinadas em tópicos anteriores.</p>
 
-> <p align="justify"> A componente $v _{x}$, constante, pode ser obtida pela equação:</p> 
+> <p align="justify"> A componente $v _{x}$ é constante:</p> 
 
 $$v _{x} = v _{ix} = 43.30127~m/s.$$
 
 > <p align="justify"> A componente $v _{y}$ pode ser obtida pela equação:</p>
 
-$$v _{y} = 25 - 9,8.2 = 25 - 19,6$$
-$$ = 5,4~m/s.$$
+$$v _{y} = v _{iy} - gt = 25 - 9,8.2$$ 
+$$= 25 - 19,6 = 5,4~m/s.$$
 
 > <p align="justify"> A velocidade resultante pode ser obtida utilizando-se a equação:</p>
+
 $$v _{r}= \sqrt{v _{x}^{2}+ v _{y}^{2}} = \sqrt{43.30^{2}+ 5,4^{2}}$$ 
 $$= \sqrt{1874,89 + 29,16}$$ 
 $$= \sqrt{1904,05} = 43,635~m/s.$$
 
-> <p align="justify">Comandos no R para determinar $v _{r}$:</p>
+> <p align="justify">Comandos no R para determinar a $v _{r}$:</p>
 
 ```{r}
 # Aceleração da gravidade:
@@ -511,7 +512,7 @@ A vr é igual a: 43.63668
 
 > <p align="justify"> Na altura máxima a velocidade do projétil na direção vertical é nula?</p>
 
-<p align="justify"> Sim. Para provar que isso é verdade, precisamos apenas do tempo que o projétil levou até na altura máxima que já foi calculado como 2.551, ou para ser mais exato como 2.5510204081632653061224489795918. Basta implementar esse dado no código em R:</p>
+<p align="justify"> Sim. Para provar que isso é verdade, precisamos apenas do tempo que o projétil levou até na altura máxima que já foi calculado como 2.551 ou, para ser mais exato, como 2.55102040816.... Basta implementar esse dado no código em R:</p>
 
 ```{r}
 # Aceleração da gravidade:
@@ -527,13 +528,15 @@ vy <- viy - g * t
 # Velocidade resultante:
 vr <- sqrt(vx ^ 2 + vy ^ 2)
 
-cat("A vy ao atingir o t da hmax é = ", vy)
-cat("A vr ao atingir a hmax é = ", vr)
+cat("A vy no tempo da hmax é = ", vy)
+cat("A vr no tempo da hmax é = ", vr)
 
-A vy ao atingir o t da hmax é =  0
-A vr ao atingir a hmax é =  43.30127
+A vy no tempo da hmax é =  0
+A vr no tempo da hmax é =  43.30127
 ```
-<p align="justify">Dado interessante: Na altura máxima a a componente vy é nula, porém, a velocidade resultante (vr) não é nula, tem valor mínimo igual à componente horizontal (vx = vix). Para atingir a altura máxima (31,88776 m) o projétil leva exatamente 2,5510204081632653061224489795918 s. Se multiplicarmos esse tempo por dois (tempo de subida e tempo de descida) chegaremos ao tempo total ou de trajeto igual a 5,1020408163265306122448979591836. Pergunta-se: qual é o valor da velocidade da componente vertical e da velocidade resultante quando o projétil alcançar o tempo de trajeto (ao atingir o solo)? Basta implementar o tempo de trajeto no código em R:</p>
+> <p align="justify"> Velocidade do projétil ao atingir o solo</p>
+
+<p align="justify"> Na altura máxima a a componente vy é nula, porém, a velocidade resultante (vr) não é nula, tem valor mínimo igual à componente horizontal (vx = vix = 43.30127). Para atingir a altura máxima (31,88776 m) o projétil leva exatamente 2,55102040816326530.... Se multiplicarmos esse tempo por dois (tempo de subida e tempo de descida) chegaremos ao tempo total ou de trajeto igual a 5,102040816.... Pergunta-se: qual é o valor da velocidade da componente vertical e da velocidade resultante quando o projétil alcançar o tempo de trajeto (ao atingir o solo)? Basta implementar o tempo de trajeto no código em R:</p>
 
 ```{r}
 # Aceleração da gravidade:
@@ -554,9 +557,11 @@ cat("A vr no tempo de trajeto é = ", vr)
 A vy no tempo de trajeto é =  -25
 A vr no tempo de trajeto é =  50
 ```
-<p align="justify">Dado interessante: A velocidade que o projétil cai no chão é a mesma velocidade inicial de lançamento (50 m/s). O valor da componente vertical da velocidade de saída (no problema viy = 25 m/s) do projétil é o mesmo na sua chegada ao chão, porém, de sinal contrário (-25 m/s). Em qualquer posição (X,Y) da trajetória parabólica o projétil possui duas velocidades de mesmo módulo, uma positiva ao subir e uma negativa ao descer.
+> Dados interessantes
 
-</p>
+<p align="justify"> - A velocidade que o projétil cai no chão é a mesma velocidade inicial de lançamento (50 m/s). O valor da componente vertical da velocidade de saída (no problema viy = 25 m/s) do projétil é o mesmo na sua chegada ao chão, porém, de sinal contrário (-25 m/s). Em qualquer posição (X,Y) da trajetória parabólica o projétil possui duas velocidades de mesmo módulo, uma positiva ao subir e uma negativa ao descer.</p>
+
+<p align="justify"> - Ao subir, o projétil executa um movimento progressivo (quando o deslocamento do corpo ocorre no sentido crescente da trajetória) e retardado (velocidade e aceleração da gravidade têm sinais contrários). Ao descer, o projétil executa um movimento retrógrado (quando o deslocamento do corpo ocorre no sentido decrescente da trajetória) e acelerado (velocidade e aceleração da gravidade têm mesmo sinais)</p>
 
 > DEVER DE CASA - estude e execute os comandos abaixo no seu ambiente R:
 
