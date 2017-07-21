@@ -841,10 +841,10 @@ viy <- vi * sin(teta)
 X <- 
 # Equação da a posição em Y
 Y <- viy * t - (g * t ^ 2)/2 
-# Mostrar posição X
-X
 # Mostrar posição Y
 Y
+# Mostrar posição X
+X
 ```
 *** =solution
 ```{r}
@@ -866,10 +866,10 @@ viy <- vi * sin(teta)
 X <- vix * t
 # Equação da a posição em Y
 Y <- viy * t - (g * t ^ 2)/2 
-# Mostrar posição X
-X
 # Mostrar posição Y
 Y
+# Mostrar posição X
+X
 ```
 *** =sct
 ```{r}
