@@ -1052,8 +1052,9 @@ teta <- (pi/180) * angulo
 vix <- vi * cos(teta)
 # componente y da vi:
 viy <- vi * sin(teta)
-# altura máxima
+# vx = vix
 vx <- vix
+# altura máxima
 hmax = (viy ^ 2)/(2 * g)
 # Tempo na hmax:
 thmax <- viy/g
@@ -1088,8 +1089,9 @@ teta <- (pi/180) * angulo
 vix <- vi * cos(teta)
 # componente y da vi:
 viy <- vi * sin(teta)
-# altura máxima
+# vx = vix
 vx <- vix
+# altura máxima
 hmax = (viy ^ 2)/(2 * g)
 # Tempo na hmax:
 thmax <- viy/g
