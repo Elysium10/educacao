@@ -1054,6 +1054,11 @@ vix <- vi * cos(teta)
 viy <- vi * sin(teta)
 # altura máxima
 vx <- vix
+hmax = (viy ^ 2)/(2 * g)
+# Tempo na hmax:
+thmax <- viy/g
+# tempo tot de trajeto:
+ttot = 2 * thmax
 # Componente vertical de v:
 vy <- viy - g * ttot
 #Atribuir vy/vx a uma variável
@@ -1064,8 +1069,8 @@ angulo <- atan(tang)
 graus <- angulo/(pi/180)
 # Mostrar vy:
 vy
-# Mostrar vr:
-vr
+# Mostrar vx:
+vx
 # Mostrar direção:
 graus
 ```
@@ -1085,6 +1090,11 @@ vix <- vi * cos(teta)
 viy <- vi * sin(teta)
 # altura máxima
 vx <- vix
+hmax = (viy ^ 2)/(2 * g)
+# Tempo na hmax:
+thmax <- viy/g
+# tempo tot de trajeto:
+ttot = 2 * thmax
 # Componente vertical de v:
 vy <- viy - g * ttot
 #Atribuir vy/vx a uma variável
@@ -1095,8 +1105,8 @@ angulo <- atan(tang)
 graus <- angulo/(pi/180)
 # Mostrar vy:
 vy
-# Mostrar vr:
-vr
+# Mostrar vx:
+vx
 # Mostrar direção:
 graus
 ```
