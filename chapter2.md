@@ -93,7 +93,7 @@ cat("A componente viy é",  viy)
 ```
 > Compare sua resposta
 
-<p style="background-color:#000000; font-weight: bold; font-size: 20px; text-align:center"><font color="#ffffff">A componente x da vi é = 70.71068 e a componente y da vi é = 70.71068</font></p>
+<p style="background-color:#000000; font-weight: bold; font-size: 20px; text-align:justify"><font color="#ffffff">  A componente x da vi é = 70.71068; <br>  A componente y da vi é = 70.71068.</font></p>
 
 <p style="background-color:#33a0c2; font-weight: bold; font-size: 20px; text-align:center"><font color="#ffffff">EXERCÍCIO PROPOSTO</font></p>
 <p align="justify"> Um projétil é lançado a partir do solo, formando com o mesmo um ângulo de 60°, com uma velocidade inicial igual a 200 m/s. Determine as componentes da velocidade inicial. Adote a aceleração da gravidade g = 9.8. m/s<sup>2</sup>.</p>
@@ -239,7 +239,7 @@ cat("O tempo até a hmax é", thmax)
 ```
 > Compare sua resposta
 
-<p style="background-color:#000000; font-weight: bold; font-size: 20px; text-align:center"><font color="#ffffff">A altura máxima é 255.1021 e o tempo até a hmax é 7.215376</font></p>
+<p style="background-color:#000000; font-weight: bold; font-size: 20px; text-align:justify"><font color="#ffffff">  A altura máxima é 255.1021; <br>  O tempo até a hmax é 7.215376.</font></p>
 
 <p style="background-color:#33a0c2; font-weight: bold; font-size: 20px; text-align:center"><font color="#ffffff">EXERCÍCIO PROPOSTO</font></p>
 <p align="justify"> Um projétil é lançado a partir do solo, formando com o mesmo um ângulo de 60°, com uma velocidade inicial igual a 200 m/s. Determine a altura máxima e o tempo necessário para atingir esta altura. Adote a aceleração da gravidade g = 9.8 m/s<sup>2</sup>.</p>
@@ -363,7 +363,7 @@ cat("O alcance é", A)
 ```
 > Compare sua resposta
 
-<p style="background-color:#000000; font-weight: bold; font-size: 20px; text-align:center"><font color="#ffffff">A componente vix é 70.71068; A componente viy é 70.71068; A altura máxima é 255.102; O thmax é 7.215375; O tempo total é 14.43075; O alcance é 1020.408.</font></p>
+<p style="background-color:#000000; font-weight: bold; font-size: 20px; text-align:justify"><font color="#ffffff">   A componente vix é 70.71068; <br>  A componente viy é 70.71068; <br>  A altura máxima é 255.102; <br>  O thmax é 7.215375; <br>  O tempo total é 14.43075; <br>  O alcance é 1020.408.</font></p>
 
 <p style="background-color:#33a0c2; font-weight: bold; font-size: 20px; text-align:center"><font color="#ffffff">EXERCÍCIO PROPOSTO</font></p>
 <p align="justify"> Um projétil é lançado a partir do solo, formando com o mesmo um ângulo de 60°, com uma velocidade inicial igual a 200 m/s. Determine todos os elementos do lançamento oblíquo visto até agora. Adote a aceleração da gravidade g = 9.8 m/s<sup>2</sup>.</p>
@@ -588,7 +588,7 @@ cat("A vr na hmax é", vr)
 ```
 > Compare sua resposta
 
-<p style="background-color:#000000; font-weight: bold; font-size: 20px; text-align:center"><font color="#ffffff">A vy na hmax é 0 (zero); A vr na hmax é 70.71068.</font></p>
+<p style="background-color:#000000; font-weight: bold; font-size: 20px; text-align:justify"><font color="#ffffff">  A vy na hmax é 0 (zero); <br>  A vr na hmax é 70.71068.</font></p>
 
 <p style="background-color:#33a0c2; font-weight: bold; font-size: 20px; text-align:center"><font color="#ffffff">EXERCÍCIO PROPOSTO</font></p>
 <p align="justify"> Um projétil é lançado a partir do solo, formando com o mesmo um ângulo de 60°, com uma velocidade inicial igual a 200 m/s. Determine a componente vertical da velocidade (vy) e a velocidade resultante (vr) do projétil no instante em que o mesmo alcança a altura máxima. Adote a aceleração da gravidade g = 9.8 m/s<sup>2</sup>.</p>
@@ -816,7 +816,7 @@ cat("A altura máxima é", hmax)
 cat("O alcance é", A)
 cat(A, "é 4 vezes", hmax)
 ```
-<p style="background-color:#000000; font-weight: bold; font-size: 20px; text-align:center"><font color="#ffffff">A altura máxima é 255.102; O alcance é 1020.408; 1020.408 é 4 vezes 255.102.</font></p>
+<p style="background-color:#000000; font-weight: bold; font-size: 20px; text-align:justify"><font color="#ffffff">  A altura máxima é 255.102; <br>  O alcance é 1020.408; <br>  1020.408 é 4 vezes 255.102.</font></p>
 
 <p style="background-color:#33a0c2; font-weight: bold; font-size: 20px; text-align:center"><font color="#ffffff">EXERCÍCIO PROPOSTO</font></p>
 <p align="justify"> Um projétil é lançado a partir do solo, formando com o mesmo um ângulo de 60°, com uma velocidade inicial igual a 200 m/s. Determine a posição do projeto no tempo de 2 segundos. Adote a aceleração da gravidade g = 9.8 m/s<sup>2</sup>.</p>
@@ -1021,16 +1021,15 @@ tang <- vy/vx
 angulo <- atan(tang)
 # Atribuir valor de angulo/(pi/180)
 graus <- angulo/(pi/180)
-cat("a) A hmax é igual a:", hmax)
-cat("b) O thmax é igual a:", thmax)
-cat("c) O alcance é igual a:", A)
+cat("a) A hmax é", hmax)
+cat("b) O thmax é", thmax)
+cat("c) O alcance é", A)
 cat("d) vy:", vy, "vr:", vr, "direção:", graus)
-cat("e) A posição em 5s:", X, "e", Y)
+cat("e) A posição em 5s é", X, "e", Y)
 ```
 > Compare sua resposta 
 
-<p style="background-color:#000000; font-weight: bold; font-size: 20px; text-align:center"><font color="#ffffff">a) A hmax é igual a: 95.66327; b) O thmax é igual a: 4.418497; c) O alcance é igual a: 220.9248; d) vy: -43.30127, vr: 50, direção: -60;
-e) A posição em 5s: 125 e 94.00635.</font></p>
+<p style="background-color:#000000; font-weight: bold; font-size: 20px; text-align:justify"><font color="#ffffff">&nbsp;&nbsp;a) A hmax é 95.66327;<br>&nbsp;&nbsp;b) O thmax é 4.418497;<br>&nbsp;&nbsp;c) O alcance é 220.9248;<br>&nbsp;&nbsp;d) vy: -43.30127, vr: 50, direção: -60; <br>&nbsp;&nbsp;e) A posição em 5s é 125 e 94.00635.</font></p>
 
 <p style="background-color:#33a0c2; font-weight: bold; font-size: 20px; text-align:center"><font color="#ffffff">EXERCÍCIO PROPOSTO</font></p>
 <p align="justify"> Um projétil é lançado a partir do solo, formando com o mesmo um ângulo de 60°, com uma velocidade inicial igual a 200 m/s. Determine as componentes vx, vy e a direção do projétil ao chegar no solo. Adote a aceleração da gravidade g = 9.8 m/s<sup>2</sup>.</p>
