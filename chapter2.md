@@ -888,7 +888,7 @@ $$tg~ \theta = \displaystyle \frac{v _{y}}{v _{x}}$$
 
 $$\theta = arc~tg~\displaystyle \frac{v _{y}}{v _{x}}\cdot$$
 
-> Motivação
+> Motivação 1
 
 * <p align="justify">Um projétil é lançado a  partir do solo, formando com o mesmo um ângulo de 30°, com uma velocidade inicial igual a 50 m/s. Determine a direção do projétil ao atingir o solo. Considere $g = 9,8~m/s^{2}$, a $v _{x} = 43,30127~m/s$ e a $v _{y} = -25~m/s$ foram determinados em tópicos anteriores.</p>
 
@@ -912,6 +912,24 @@ Link para auxílio no cálculo do arco tangente (use números com vírgula):
 
 > <p align="justify">Comandos no R para determinar a direção do projétil, em relação à horizontal, ao atingir o solo:</p>
 
+<p align="justify">No R, o comando "atan(núm)" retorna a tangente inversa (arco tangente) de um número. O ângulo retornado é fornecido em radianos no intervalo -pi/2 a pi/2. Para expressar o arco tangente em graus é necessário  multiplicar o resultado por 180/pi ou dividí-lo por pi/180. Exemplo: queremos saber qual é o ângulo cuja tangente é igual a 1. Colocamos o 1 indexado no comando atan e o atribuímos a uma variável qualquer, assim:</p> 
+
+```{r}
+x <- atan(1) *  180/pi
+x
+
+45
+```
+ou assim:
+
+```{r}
+y <- atan(1) /(pi/180)
+y
+
+45
+```
+<p align="justify">No problema inicial os comandos no R podem ficar nesse formato:</p>
+
 ```{r}
 # vx e vy já calculados:
 vx <-  43.30127
@@ -927,8 +945,11 @@ graus
 
  -30
 ```
+<p align="justify">Portanto, o ângulo cuja tangente é igual a -0,57735031 equivale a -30°.</p>
 
-> <p align="justify">* Um projétil é lançado a  partir do solo, formando com o mesmo um ângulo de 60°, com uma velocidade inicial igual a 50 m/s. Determine a direção do projétil ao atingir o solo. Considere $g = 9,8~m/s^{2}$, a $v _{x} = 25 m/s$ e a $v _{y} = -53~m/s$.</p>
+> Motivação 2
+
+* <p align="justify"> Um projétil é lançado a  partir do solo, formando com o mesmo um ângulo de 60°, com uma velocidade inicial igual a 50 m/s. Determine a direção do projétil ao atingir o solo. Considere $g = 9,8~m/s^{2}$, a $v _{x} = 25 m/s$ e a $v _{y} = -53~m/s$.</p>
 
 ```{r}
 # vx e vy dados no problema:
@@ -949,7 +970,7 @@ graus
 
 > DEVER DE CASA - estude e execute os comandos abaixo no seu ambiente R:
 
-<p align="justify"> Aplique os comandos utilizados em R para resolver o seguinte problema: Um projétil é lançado a partir do solo, formando com o mesmo um ângulo de 60°, com uma velocidade inicial igual a 50 m/s. Adote a aceleração da gravidade g = 9.8 m/s<sup>2</sup>.Determine: a) A altura máxima desenvolvida pelo projétil; b) O tempo gasto para chegar na altura máxima; c) O alcance desenvolvido pelo projétil; d) A velocidade da componente vertical, a velocidade resultante e a direção do projétil ao alcançar o solo; e) A posição do projétil no tempo de 5 segundos. Compare sua resposta logo abaixo.</p>
+<p align="justify"> Aplique os comandos utilizados em R para resolver o seguinte problema: Um projétil é lançado a partir do solo, formando com o mesmo um ângulo de 60°, com uma velocidade inicial igual a 50 m/s. Adote a aceleração da gravidade g = 9.8 m/s<sup>2</sup>. Determine: a) A altura máxima desenvolvida pelo projétil; b) O tempo gasto para chegar na altura máxima; c) O alcance desenvolvido pelo projétil; d) A velocidade da componente vertical, a velocidade resultante e a direção do projétil ao alcançar o solo; e) A posição do projétil no tempo de 5 segundos. Compare sua resposta logo abaixo.</p>
 
 ```{r}
 # Aceleração da gravidade:
@@ -958,7 +979,7 @@ g <- 9.8
 vi <- 50
 # ângulo dado em graus:
 angulo <- 60
-# transformar graus em radianos:
+# transformar graus em rad:
 teta <- (pi/180) * angulo
 # componente x da vi:
 vix <- vi * cos(teta)
@@ -986,15 +1007,15 @@ vy <- viy - g * ttot
 vr <- sqrt(vx ^ 2 + vy ^ 2)
 # Atribuir o valor vy/vx:
 tang <- vy/vx
-# Atribuir valor do arco tg
+# Atribuir valor do arc tg
 angulo <- atan(tang)
 # Atribuir valor de angulo/(pi/180)
 graus <- angulo/(pi/180)
 cat("a) A hmax é igual a:", hmax)
 cat("b) O thmax é igual a:", thmax)
 cat("c) O alcance é igual a:", A)
-cat("d) A vy:", vy, "A vr:", vr, "A direção:", graus)
-cat("e) A posição em 5 segundos:", X, "e", Y)
+cat("d) vy:", vy, "vr:", vr, "direção:", graus)
+cat("e) A posição em 5s:", X, "e", Y)
 ```
 > Compare sua resposta 
 
@@ -1002,17 +1023,17 @@ cat("e) A posição em 5 segundos:", X, "e", Y)
 a) A hmax é igual a: 95.66327
 b) O thmax é igual a: 4.418497
 c) O alcance é igual a: 220.9248
-d) A vy: -43.30127, A vr: 50, A direção: -60
-e) A posição em 5 segundos: 125 e 94.00635
+d) vy: -43.30127, vr: 50, direção: -60
+e) A posição em 5s: 125 e 94.00635
 ```
 <p style="background-color:#33a0c2; font-weight: bold; font-size: 20px; text-align:center"><font color="#ffffff">EXERCÍCIO PROPOSTO</font></p>
-<p align="justify"> Um projétil é lançado a partir do solo, formando com o mesmo um ângulo de 60°, com uma velocidade inicial igual a 200 m/s. Determine a posição do projeto no tempo de 2 segundos. Adote a aceleração da gravidade g = 9.8 m/s<sup>2</sup>.</p>
+<p align="justify"> Um projétil é lançado a partir do solo, formando com o mesmo um ângulo de 60°, com uma velocidade inicial igual a 200 m/s. Determine as componentes vx, vy e a direção do projétil ao chegar no solo. Adote a aceleração da gravidade g = 9.8 m/s<sup>2</sup>.</p>
 *** =instructions
-<p align="justify"> - Use os comandos em R, estudados neste capítulo, para calcular a posição do projétil no tempo de 2s. Você escreverá apenas a equação da posição do projétil no eixo X.</p>
+<p align="justify"> - Calcule a direção do projétil no tempo de trajeto do projétil. Use os comandos em R, estudados neste capítulo, para calcular a posição do projétil no tempo de 2s. Você escreverá apenas a equação da posição do projétil no eixo X.</p>
 <p align="justify"> - Leia todo o código do exercício e digite a equação onde tá escrito "# Escreva a eq. da posição em X".</p>
 *** =hint
-<p align="justify"> O valor da posição do projétil, no eixo X, é obtido pela seguinte expressão:</p>
-$$X= v _{ix}.t.$$
+<p align="justify"> A direção ou ângulo formado em relação à horizontal, no momento em que o projétil chega ao chão, pode ser obtido pela seguinte expressão:</p> 
+$$\theta = arc~tg~\displaystyle \frac{v _{y}}{v _{x}}\cdot$$
 *** =pre_exercise_code
 ```{r}
 # no pec
@@ -1020,55 +1041,68 @@ $$X= v _{ix}.t.$$
 *** =sample_code
 ```{r}
 # Aceleração da gravidade:
+# Aceleração da gravidade:
 g <- 9.8
-# Instante dado:
-t <- 2
-# Velocidad inicial:
+# Vel. inicial:
 vi <- 200
-#Ângulo dado em graus:
+# ângulo dado em graus:
 angulo <- 60
-# Graus em radianos:
+# transformar graus em rad:
 teta <- (pi/180) * angulo
-# Componentes x e y da vi:
+# componente x da vi:
 vix <- vi * cos(teta)
+# componente y da vi:
 viy <- vi * sin(teta)
-# vx é uniforme e igual a vix:
-# Escreva a eq. da posição em X
-X <- 
-# Equação da a posição em Y
-Y <- viy * t - (g * t ^ 2)/2 
-# Mostrar posição Y
-Y
-# Mostrar posição X
-X
+# altura máxima
+vx <- vix
+# Componente vertical de v:
+vy <- viy - g * ttot
+#Atribua vy/vx a uma variável
+tang <- 
+# Atribuir valor do arc tg
+angulo <- atan(tang)
+# Atribuir valor de angulo/(pi/180)
+graus <- angulo/(pi/180)
+# Mostrar vy:
+vy
+# Mostrar vr:
+vr
+# Mostrar direção:
+graus
 ```
 *** =solution
 ```{r}
 # Aceleração da gravidade:
 g <- 9.8
-# Instante dado:
-t <- 2
-# Velocidad inicial:
+# Vel. inicial:
 vi <- 200
-#Ângulo dado em graus:
+# ângulo dado em graus:
 angulo <- 60
-# Graus em radianos:
+# transformar graus em rad:
 teta <- (pi/180) * angulo
-# Componentes x e y da vi:
+# componente x da vi:
 vix <- vi * cos(teta)
+# componente y da vi:
 viy <- vi * sin(teta)
-# vx é uniforme e igual a vix:
-# Escreva a eq. da posição em X
-X <- vix * t
-# Equação da a posição em Y
-Y <- viy * t - (g * t ^ 2)/2 
-# Mostrar posição Y
-Y
-# Mostrar posição X
-X
+# altura máxima
+vx <- vix
+# Componente vertical de v:
+vy <- viy - g * ttot
+#Atribuir vy/vx a uma variável
+tang <- vy/vx
+# Atribuir valor do arc tg
+angulo <- atan(tang)
+# Atribuir valor de angulo/(pi/180)
+graus <- angulo/(pi/180)
+# Mostrar vy:
+vy
+# Mostrar vr:
+vr
+# Mostrar direção:
+graus
 ```
 *** =sct
 ```{r}
-test_output_contains ("200", incorrect_msg = "Escreva a expressão que calcula o valor da posição de um projétil no eixo X. Não esqueça que o símbolo para multiplicar é o asterisco. Veja nas dicas essa expressão.")
-success_msg ("Bom trabalho! Você aprendeu a determinar o valor da posição (X, Y) do projétil em um determinado tempo.")
+test_output_contains ("-60", incorrect_msg = "Escreva a expressão que atribua a uma variável (tang) a divisão entre as componentes vertical e horizontal da velocidade do projétil quando o mesmo alcança o tempo de trajeto.")
+success_msg ("Bom trabalho! Você aprendeu a determinar a direção do projétil quando o mesmo alcança o solo.")
 ```
