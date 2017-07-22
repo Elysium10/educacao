@@ -9,17 +9,15 @@ description : <p align="justify">Neste capítulo você aprenderá sobre os coman
 
 > Componentes da velocidade inicial do corpo
 
-<p align="justify">As componentes da velocidade inicial do corpo são dadas pelas seguintes equações:</p>
+<p align="justify">Os módulos das componentes da velocidade inicial do corpo são dadas pelas seguintes equações:</p>
 
 $$v _{ix} = v _{i}.cos(\theta)$$
 
 e
  
-$$v _{iy} = v _{i}.sen(\theta)02$$
+$$v _{iy} = v _{i}.sen(\theta)$$
 
-onde,
-
-<p align="justify">$v _{i}$ representa a velocidade inicial do corpo, $v _{ix}$ representa a componente da velocidade inicial na direção (horizontal) do eixo x, $v _{iy}$ representa a componente da velocidade inicial na direção (vertical) do eixo y e $\theta$ representa o ângulo de lançamento do corpo. Visualize a velocidade inicial e suas componentes na figura abaixo:</p>
+<p align="justify">onde, $v _{i}$ representa o módulo da velocidade inicial do corpo, $v _{ix}$ representa o módulo da componente da velocidade inicial na direção (horizontal) do eixo x, $v _{iy}$ representa o módulo da componente da velocidade inicial na direção (vertical) do eixo y e $\theta$ representa o ângulo de lançamento do corpo. Visualize os vetores velocidade inicial e suas componentes vetoriais na figura abaixo:</p>
 ![Componentes da velocidade inicial](http://s3.amazonaws.com/assets.datacamp.com/production/course_4551/datasets/Lancobliquo1.png "Componentes da velocidade inicial")
 
 > Motivação
@@ -30,18 +28,18 @@ Dados:
 
 $$\theta = 30°.$$ 
 $$v_{i} = 50~m/s.$$ 
-$$sen(30°)= 0.5.$$
-$$cos(30°)\cong0.866.$$ 
+$$sen~30°= 0,5.$$
+$$cos~30°\cong0,866.$$ 
 
 <p align="justify">Observação: por enquanto, não usaremos o valor de g.</p>
 
 > <p align="justify"> Determinando a componente da velocidade inicial na horizontal:</p>
 
-$$v _{ix} = v _{i}.cos\theta= 50.(0.866)\cong43,30~m/s.$$
+$$v _{ix} = v _{i}.cos\theta= 50.0,866\cong43,30~m/s.$$
 
 > <p align="justify"> Determinando a componente da velocidade inicial na vertical:</p>
 
-$$v _{iy} = v _{i}.sen\theta= 50.(0.5)=25~m/s.$$
+$$v _{iy} = v _{i}.sen\theta= 50.0,5=25~m/s.$$
 
 <p align="justify"> Auxílio para simular um lançamento de projéteis, acesse o link abaixo e clique em "Disparar".</p>
 
@@ -49,52 +47,56 @@ $$v _{iy} = v _{i}.sen\theta= 50.(0.5)=25~m/s.$$
 
 > <p align="justify">Comandos para calcular as componentes da velocidade inicial no R:</p>
 
-<p align="justify">- Use o problema anterior e determine as componentes da velocidade inicial do corpo.</p>
+<p align="justify"> Em R, os argumentos das funções trigonométricas, os graus, devem ser transformados em radianos multiplicando (pi/180) pelo ângulo dado. Desse resultado é extraído o cosseno (cos) e o seno (sin).</p> 
 
-<p align="justify">Obs.: Em R, os argumentos das funções trigonométricas, os graus, devem ser transformados em radianos da seguinte maneira: ($pi/180$) multiplicado pelo ângulo. Após isso, tira-se o $cosseno (cos)$ e o $seno (sin)$ desse resultado.</p> 
+<p align="justify"> Determinaremos as componentes da velocidade inicial do projétil do problema dado.</p>
 
 ```{r}
-# aceleração da gravidade:
+# Aceleração da gravidade:
 g <- 9.8
-# velocidad inicial:
+# Velocidad inicial:
 vi <- 50
 # ângulo dado em graus:
 angulo <- 30
-# transformar graus em radianos:
+# Graus em radianos:
 teta <- (pi/180) * angulo
-# componente x da vi:
+# Componente x da vi:
 vix <- vi * cos(teta)  
 viy <- vi * sin(teta)  
-# mostrar a componente x e y da vi:
-cat("A componente x da vi é igual a:", vix)
-cat("A componente y da vi é igual a:", viy)
+# Mostrar vix e viy:
+cat("A compon. x da vi é = ", vix)
+cat("A compon. y da vi é = ", viy)
 
-A componente x da vel. inicial é igual a: 43.30127
-A componente y da vel. inicial é igual a: 25
+A compon. x da vi é = 43.30127
+A compon. y da vi é = 25
 ```
 > DEVER DE CASA - estude e execute no seu ambiente R:
 
-<p align="justify"> Um projétil é lançado a partir do solo, formando com o mesmo um ângulo de 45°, com uma velocidade inicial igual a 100 m/s. Determine as componentes da velocidade inicial. Adote a aceleração da gravidade g = 9.8 m/s<sup>2</sup>.</p> (Compare sua resposta: A componente x da vel. inicial é igual a: 70.71068 e a componente y da vel. inicial é igual a: 70.71068).</p>
+<p align="justify"> Um projétil é lançado a partir do solo, formando com o mesmo um ângulo de 45°, com uma velocidade inicial igual a 100 m/s. Determine as componentes da velocidade inicial. Adote a aceleração da gravidade igual a 9,8 m/s<sup>2</sup>.Compare sua resposta logo abaixo.</p>
 
 ```{r}
-# aceleração da gravidade:
+# Aceleração da gravidade:
 g <- 9.8
-# velocidad inicial:
+# Velocidad inicial:
 vi <- 100
-# ângulo dado em graus:
+# Ângulo dado em graus:
 angulo <- 45
-# transformar graus em radianos:
+# Graus em radianos:
 teta <- (pi/180) * angulo
-# componente x e y da vi:
+# Componente x e y da vi:
 vix <- vi * cos(teta)  
 viy <- vi * sin(teta)  
-# mostrar as componentes x e y da vi:
-cat("A componente x da vi é igual a:", vix)
-cat("A componente y da vi é igual a:", viy)
+# Mostrar vix e viy:
+cat("A compon.x da vi é =",  vix)
+cat("A compon.y da vi é =",  viy)
 
 ```
+> Compare sua resposta
+
+<p style="background-color:#000000; font-weight: bold; font-size: 20px; text-align:center"><font color="#ffffff">A componente x da vi é = 70.71068 e a componente y da vi é = 70.71068</font></p>
+
 <p style="background-color:#33a0c2; font-weight: bold; font-size: 20px; text-align:center"><font color="#ffffff">EXERCÍCIO PROPOSTO</font></p>
-<p align="justify"> Um projétil é lançado a partir do solo, formando com o mesmo um ângulo de 60°, com uma velocidade inicial igual a 200 m/s. Determine as componentes da velocidade inicial. Adote a aceleração da gravidade g = 9.8. m/s<sup>2</sup>.</p></p>
+<p align="justify"> Um projétil é lançado a partir do solo, formando com o mesmo um ângulo de 60°, com uma velocidade inicial igual a 200 m/s. Determine as componentes da velocidade inicial. Adote a aceleração da gravidade g = 9.8. m/s<sup>2</sup>.</p>
 
 *** =instructions
 <p align="justify"> Use o código estudado neste tópico para calcular as componentes x e y da velocidade inicial(vi).</p> 
@@ -108,44 +110,44 @@ $$(pi/180)*angulo.$$
 ```
 *** =sample_code
 ```{r}
-# aceleração da gravidade:
+# Aceleração da gravidade:
 g <- 9.8
-# velocidad inicial(vi):
+# Velocidad inicial(vi):
 vi <- 200
-# escreva o ângulo dado em graus:
+# Escreva o ângulo dado em graus:
 angulo <- 
-# transforme graus em radianos:
+# Graus em radianos:
 teta <-
-# componente x da vi:
+# Componentes da vi:
 vix <- vi * cos(teta)  
 viy <- vi * sin(teta)  
-# mostrar a componentes x da vi:
+# Mostrar vix:
 vix
-# mostrar a componentes y da vi:
+# mostrar viy:
 viy
 ```
 *** =solution
 ```{r}
-# aceleração da gravidade:
+# Aceleração da gravidade:
 g <- 9.8
-# velocidad inicial(vi):
+# Velocidad inicial(vi):
 vi <- 200
-# escreva o ângulo dado em graus:
+# Escreva o ângulo dado em graus:
 angulo <- 60
-# transforme graus em radianos:
+# Graus em radianos:
 teta <- (pi/180) * angulo
-# componente x da vi:
+# Componentes da vi:
 vix <- vi * cos(teta)  
 viy <- vi * sin(teta)  
-# mostrar a componentes x da vi:
+# Mostrar vix:
 vix
-# mostrar a componentes y da vi:
+# mostrar viy:
 viy
 ```
 *** =sct
 ```{r}
 test_output_contains("173.20511", incorrect_msg = "Digite corretamente o valor da variável angulo. O valor da variável teta equivale a $$(pi/180)*angulo.$$.")
-success_msg("Bom trabalho! Você adquiriu noções sobre componentes da velocidade inicial do lançamento oblíquo da Física.")
+success_msg("Bom trabalho! Você adquiriu noções sobre as componentes da velocidade inicial do lançamento oblíquo.")
 ```
 --- type:NormalExercise lang:r xp:100 skills:1 key:863cc9aee1
 ## Altura máxima
@@ -171,17 +173,18 @@ $$v _{y}=  v _{iy} - gt _{hmáx}$$
 <p align="justify">onde, $v _{y}$ é a componente vertical da velocidade no instante t, $v _{iy}$ é a componente da velocidade inicial na direção (vertical) y, $-g$ é a aceleração da gravidade de sentido oposto ao da velocidade inicial e $t _{hmáx}$ é o tempo necessário para que o projétil alcance a altura máxima. Já sabemos que, na altura máxima, a velocidade do corpo na direção vertical torna-se nula ($v _{y}$ = 0), portanto, a equação acima torna-se</p>
 
 $$0=v _{iy}-gt _{hmáx} \rightarrow$$
-$$-v _{iy}=-gt _{hmáx} \rightarrow v _{iy}=gt _{hmáx} \rightarrow$$
+$$-v _{iy}=-gt _{hmáx} \rightarrow$$
+$$v _{iy}=gt _{hmáx} \rightarrow$$
 $$t _{hmáx}= \displaystyle \frac{v _{iy}}{g}\cdot$$
 
-<p align="justify">Visualize na figura abaixo a representação de $hmáx$, $v _{y} = 0$, $v _{y}$, $g$, o alcance do projétil e todos os componentes do movimento oblíquo:</p>
+<p align="justify">Visualize, na figura abaixo, a representação de $hmáx$, $v _{y} = 0$, $v _{y}$, $g$, o alcance do projétil e todos os componentes do movimento oblíquo:</p>
 ![Componentes do movimento oblíquo inicial](http://s3.amazonaws.com/assets.datacamp.com/production/course_4551/datasets/Lancobliquo2.png "Componentes do movimento oblíquo")
 
 > Motivação
 
-* <p align="justify">Aproveitaremos o primeiro exemplo do tópico anterior: um projétil é lançado a  partir do solo, formando com o mesmo um ângulo de 30°, com uma velocidade inicial igual a 50 m/s. Determine a altura máxima e o tempo necessário para atingir esta altura. Adote a aceleração da gravidade g = 9.8 m/s<sup>2</sup>. Neste problema, não usaremos nem a velocidade inicial ($v _{i}$) e nem a componente da velocidade inicial ($v _{ix}$)</p> 
+* <p align="justify">Um projétil é lançado a  partir do solo, formando com o mesmo um ângulo de 30°, com uma velocidade inicial igual a 50 m/s. Determine a altura máxima e o tempo necessário para atingir esta altura. Adote a aceleração da gravidade g = 9.8 m/s<sup>2</sup>. Neste problema, não usaremos nem a velocidade inicial ($v _{i}$) e nem a componente da velocidade inicial ($v _{ix}$)</p> 
 
-<p align="justify">Observação: no tópico anterior foi determinado a componente da velocidade inicial, $v _{iy}$.</p>
+<p align="justify">No tópico anterior foi determinado a componente da velocidade inicial, $v _{iy}$.</p>
 
 Dado:
 
@@ -201,41 +204,43 @@ $$t _{hmáx}= \displaystyle \frac{v _{iy}}{g}=\displaystyle\frac{25}{9,8}\cong 2
 
 > <p align="justify">Comandos no R para calcular a altura máxima e o tempo para alcançá-la:</p>
 
-<p align="justify">- Determinaremos a altura máxima e o tempo para alcançá-la.</p>
-
 ```{r}
-# aceleração da gravidade:
+# Aceleração da gravidade:
 g <- 9.8
-# componente vertical de vi:
+# Componente viy:
 viy = 25
-# altura máxima:
+# Altura máxima:
 hmax = (viy ^ 2)/(2 * g)
-# tempo da altura máxima
+# Tempo da hmax
 thmax = viy/g
-# mostrar a altura máxima e o tempo de alcançá-la:
-cat("A altura máxima é = :", hmax)
-cat("O tempo gasto para atingir a hmax é = ", thmax)
+# Mostrar a hmax e o thmax:
+cat("A altura máxima é", hmax)
+cat("O tempo até a hmax é", thmax)
 
-A altura máxima é = 31.88776
-O tempo gasto para atingir a hmax é = 2.5510204081632653061224489795918
+A altura máxima é 31.88776
+O tempo até a hmax é 2.5510204081632653061224489795918
 ```
 > DEVER DE CASA - estude e execute os comandos abaixo no seu ambiente R:
 
-<p align="justify"> Um projétil é lançado a partir do solo, formando com o mesmo um ângulo de 45°, com uma velocidade inicial igual a 100 m/s. Determine a altura máxima e o tempo necessário para atingir esta altura. Adote a aceleração da gravidade g = 9.8 m/s<sup>2</sup>. A componente y da vel. inicial é igual a: 70.71068 - calculada em tópico anterior. (Compare sua resposta: A altura máxima alcançada pelo projétil é igual a: 255.1021 e o tempo gasto para atingir o ponto mais alto da trajetória é igual a 7.215376). </p>
+<p align="justify"> Um projétil é lançado a partir do solo, formando com o mesmo um ângulo de 45°, com uma velocidade inicial igual a 100 m/s. Determine a altura máxima e o tempo necessário para atingir esta altura. Adote a aceleração da gravidade g = 9.8 m/s<sup>2</sup>. A componente y da vel. inicial é igual a: 70.71068 - calculada em tópico anterior. Compare sua resposta logo abaixo. </p>
 
 ```{r}
-# aceleração da gravidade:
+# Aceleração da gravidade:
 g <- 9.8
-# componente vertical de vi:
+# Componente viy:
 viy =  70.71068
-# altura máxima:
+# Altura máxima:
 hmax = (viy ^ 2)/(2 * g)
-# tempo da altura máxima
+# Tempo até a hmax:
 thmax = viy/g
-# mostrar a altura máxima e o tempo de alcançá-la:
-cat("A altura máxima é igual a:", hmax)
-cat("O tempo gasto na hmax é igual a:", thmax)
+# Mostrar hmax e thmax:
+cat("A altura máxima é", hmax)
+cat("O tempo até a hmax é", thmax)
 ```
+> Compare sua resposta
+
+<p style="background-color:#000000; font-weight: bold; font-size: 20px; text-align:center"><font color="#ffffff">A altura máxima é 255.1021 e o tempo até a hmax é 7.215376</font></p>
+
 <p style="background-color:#33a0c2; font-weight: bold; font-size: 20px; text-align:center"><font color="#ffffff">EXERCÍCIO PROPOSTO</font></p>
 <p align="justify"> Um projétil é lançado a partir do solo, formando com o mesmo um ângulo de 60°, com uma velocidade inicial igual a 200 m/s. Determine a altura máxima e o tempo necessário para atingir esta altura. Adote a aceleração da gravidade g = 9.8 m/s<sup>2</sup>.</p>
 
@@ -251,36 +256,36 @@ $$h _{máx}= \displaystyle \frac{v _{iy}^{2}}{2g}\cdot$$
 ```
 *** =sample_code
 ```{r}
-# aceleração da gravidade:
+# Aceleração da gravidade:
 g <- 
-# componente vertical de vi:
+# Componente viy:
 viy =  173.2051
-# altura máxima:
+# Altura máxima:
 hmax = (viy ^ 2)/(2 * g)
-# tempo da altura máxima
+# Tempo da hmax:
 thmax = 
-# mostrar a altura máxima e o tempo de alcançá-la:
+# Mostrar hmax e thmax:
 hmax
 thmax
 ```
 *** =solution
 ```{r}
-# aceleração da gravidade:
+# Aceleração da gravidade:
 g <- 9.8
-# componente vertical de vi:
+# Componente viy:
 viy =  173.2051
-# altura máxima:
+# Altura máxima:
 hmax = (viy ^ 2)/(2 * g)
-# tempo da altura máxima
+# Tempo da hmax:
 thmax = viy/g
-# mostrar a altura máxima e o tempo de alcançá-la:
+# Mostrar hmax e thmax:
 hmax
 thmax
 ```
 *** =sct
 ```{r}
-test_output_contains("17.67399", incorrect_msg = "Digite corretamente o valor da aceleração da gravidade e a expressão para a altura máxima.")
-success_msg("Bom trabalho! Você adquiriu noções sobre a altura máxima e sobre o tempo gasto para atingí-la.")
+test_output_contains("17.67399", incorrect_msg = "Digite corretamente o valor da aceleração da gravidade e a expressão para a altura máxima alcançada pelo projétil.")
+success_msg("Bom trabalho! Você adquiriu noções sobre como calcular a altura máxima alcançada pelo projétil e o tempo gasto para atingí-la.")
 ```
 --- type:NormalExercise lang:r xp:100 skills:1 key:12980fa718
 ## Tempo de trajeto
