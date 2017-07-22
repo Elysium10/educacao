@@ -1029,8 +1029,8 @@ e) A posição em 5s: 125 e 94.00635
 <p style="background-color:#33a0c2; font-weight: bold; font-size: 20px; text-align:center"><font color="#ffffff">EXERCÍCIO PROPOSTO</font></p>
 <p align="justify"> Um projétil é lançado a partir do solo, formando com o mesmo um ângulo de 60°, com uma velocidade inicial igual a 200 m/s. Determine as componentes vx, vy e a direção do projétil ao chegar no solo. Adote a aceleração da gravidade g = 9.8 m/s<sup>2</sup>.</p>
 *** =instructions
-<p align="justify"> - Calcule a direção do projétil no tempo de trajeto do projétil. Use os comandos em R, estudados neste capítulo, para calcular a posição do projétil no tempo de 2s. Você escreverá apenas a equação da posição do projétil no eixo X.</p>
-<p align="justify"> - Leia todo o código do exercício e digite a equação onde tá escrito "# Escreva a eq. da posição em X".</p>
+<p align="justify"> - Calcule a direção do projétil no tempo de trajeto. Você irá atribuir vy/vx a uma variável.</p>
+<p align="justify"> - Leia todo o código do exercício e escreva a atribuição à variável.</p>
 *** =hint
 <p align="justify"> A direção ou ângulo formado em relação à horizontal, no momento em que o projétil chega ao chão, pode ser obtido pela seguinte expressão:</p> 
 $$\theta = arc~tg~\displaystyle \frac{v _{y}}{v _{x}}\cdot$$
@@ -1040,7 +1040,6 @@ $$\theta = arc~tg~\displaystyle \frac{v _{y}}{v _{x}}\cdot$$
 ```
 *** =sample_code
 ```{r}
-# Aceleração da gravidade:
 # Aceleração da gravidade:
 g <- 9.8
 # Vel. inicial:
@@ -1057,7 +1056,7 @@ viy <- vi * sin(teta)
 vx <- vix
 # Componente vertical de v:
 vy <- viy - g * ttot
-#Atribua vy/vx a uma variável
+#Atribuir vy/vx a uma variável
 tang <- 
 # Atribuir valor do arc tg
 angulo <- atan(tang)
