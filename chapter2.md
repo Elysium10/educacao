@@ -896,7 +896,7 @@ $$\theta = arc~tg~\displaystyle \frac{v _{y}}{v _{x}}\cdot$$
 
 $$tg~ \theta = \displaystyle \frac{v _{y}}{v _{x}}= \frac{-25}{43,30127}\cong-0,57735.$$
 
-Link para auxílio no cálculo da tangente (use números com vírgula):
+<p align="justify">Link para auxílio no cálculo da tangente (use números com vírgula):</p>
 
 [Calculadora on-line da tangente.](https://www.calculadoraconversor.com/tangente/)
 
@@ -906,7 +906,7 @@ $$\theta = arc~tg~(-0,5773503) = -30°.$$
 
 > <p align="justify">-30° é o ângulo formado, em relação à horizontal, no momento em que o projétil chega ao chão.</p>
 
-Link para auxílio no cálculo do arco tangente (use números com vírgula): 
+<p align="justify">Link para auxílio no cálculo do arco tangente (use números com vírgula):</p>
 
 [Calculadora on-line de arco tangente.](https://www.calculadoraconversor.com/arcotangente/)
 
@@ -947,7 +947,7 @@ graus
 ```
 <p align="justify">Portanto, o ângulo cuja tangente é igual a -0,57735031 equivale a -30°.</p>
 
-> Motivação 2
+> Mais um exemplo
 
 * <p align="justify"> Um projétil é lançado a  partir do solo, formando com o mesmo um ângulo de 60°, com uma velocidade inicial igual a 50 m/s. Determine a direção do projétil ao atingir o solo. Considere $g = 9,8~m/s^{2}$, a $v _{x} = 25 m/s$ e a $v _{y} = -53~m/s$.</p>
 
