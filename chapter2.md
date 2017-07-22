@@ -163,7 +163,8 @@ $$v _{y}^{2}= v _{iy}^{2}-2gh _{máx}$$
 <p align="justify">Sabemos que à medida que o projétil vai atingindo a altura máxima, sua velocidade vai dimunuindo. Quando chega exatamente no ponto da altura máxima, o projétil tem sua velocidade equivalente a zero. Portanto, a velocidade do corpo na direção vertical torna-se nula ($v _{y}$ = 0), ou seja,</p>
 $$0= v _{iy}^{2}-2gh _{máx}.$$
 <p align="justify">Daí, podemos obter a expresão para a altura máxima alcançada pelo projétil:</p>
-$$-v _{iy}^{2}= -2gh _{máx}\rightarrow v _{iy}^{2}= 2gh _{máx}\rightarrow$$ 
+$$-v _{iy}^{2}= -2gh _{máx}\rightarrow$$ 
+$$v _{iy}^{2}= 2gh _{máx}\rightarrow$$ 
 $$h _{máx}= \displaystyle \frac{v _{iy}^{2}}{2g}\cdot$$
 
 > Tempo para o projétil atingir a altura máxima
