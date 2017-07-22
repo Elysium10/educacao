@@ -11,11 +11,11 @@ description : <p align="justify">Neste capítulo você aprenderá sobre os coman
 
 <p align="justify">As componentes da velocidade inicial do corpo são dadas pelas seguintes equações:</p>
 
-$$v _{ix} = v _{i}.cos(\theta) \qquad Eq. 01$$
+$$v _{ix} = v _{i}.cos(\theta)$$
 
 e
  
-$$v _{iy} = v _{i}.sen(\theta) \qquad Eq. 02$$
+$$v _{iy} = v _{i}.sen(\theta)02$$
 
 onde,
 
@@ -26,7 +26,6 @@ onde,
 
 * <p align="justify">Um corpo é lançado a  partir do solo, formando com o mesmo um ângulo de 30°, com uma velocidade inicial igual a 50 m/s. Determine as componentes da velocidade inicial. Adote a aceleração da gravidade g = 10 m/s<sup>2</sup>.</p> 
 
-
 Dados:
 
 $$\theta = 30°.$$ 
@@ -36,11 +35,11 @@ $$cos(30°)\cong0.866.$$
 
 <p align="justify">Observação: por enquanto, não usaremos o valor de g.</p>
 
-> <p align="justify"> Determinando a componente da velocidade inicial na horizontal (Eq. 01):</p>
+> <p align="justify"> Determinando a componente da velocidade inicial na horizontal:</p>
 
 $$v _{ix} = v _{i}.cos\theta= 50.(0.866)\cong43,30~m/s.$$
 
-> <p align="justify"> Determinando a componente da velocidade inicial na vertical (Eq. 02):</p>
+> <p align="justify"> Determinando a componente da velocidade inicial na vertical:</p>
 
 $$v _{iy} = v _{i}.sen\theta= 50.(0.5)=25~m/s.$$
 
@@ -73,7 +72,6 @@ cat("A componente y da vi é igual a:", viy)
 A componente x da vel. inicial é igual a: 43.30127
 A componente y da vel. inicial é igual a: 25
 ```
-
 > DEVER DE CASA - estude e execute no seu ambiente R:
 
 <p align="justify"> Um projétil é lançado a partir do solo, formando com o mesmo um ângulo de 45°, com uma velocidade inicial igual a 100 m/s. Determine as componentes da velocidade inicial. Adote a aceleração da gravidade g = 9.8 m/s<sup>2</sup>.</p> (Compare sua resposta: A componente x da vel. inicial é igual a: 70.71068 e a componente y da vel. inicial é igual a: 70.71068).</p>
