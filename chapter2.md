@@ -1158,6 +1158,7 @@ $$Y= v _{ix}.t - \displaystyle \frac{g.t^{2}}{2}\cdot$$
 lançado (de 0 m) até o alcance (A = 220,9248 m). Considere $g = 9,8~m/s^{2}$.</p>
 
 ```{r}
+
 # Aceleração da gravidade:
 g <- 9.8
 # Espaço inicial:
@@ -1191,21 +1192,21 @@ vy <- viy - g * tempo
 vr <- sqrt(vx ^ 2 + vy ^ 2)
 #Mostrar o eixo X
 X
-
- [1]    0.000000   2.209248   4.418496   6.627744   8.836992  11.046240  13.255488  15.464736  17.673984
- [10]  19.883232  22.092480  24.301728  26.510976  28.720224  30.929472  33.138720  35.347968  37.557216
- [19]  39.766464  41.975712  44.184960  46.394208  48.603456  50.812704  53.021952  55.231200  57.440448
- [28]  59.649696  61.858944  64.068192  66.277440  68.486688  70.695936  72.905184  75.114432  77.323680
- [37]  79.532928  81.742176  83.951424  86.160672  88.369920  90.579168  92.788416  94.997664  97.206912
- [46]  99.416160 101.625408 103.834656 106.043904 108.253152 110.462400 112.671648 114.880896 117.090144
- [55] 119.299392 121.508640 123.717888 125.927136 128.136384 130.345632 132.554880 134.764128 136.973376
- [64] 139.182624 141.391872 143.601120 145.810368 148.019616 150.228864 152.438112 154.647360 156.856608
- [73] 159.065856 161.275104 163.484352 165.693600 167.902848 170.112096 172.321344 174.530592 176.739840
- [82] 178.949088 181.158336 183.367584 185.576832 187.786080 189.995328 192.204576 194.413824 196.623072
- [91] 198.832320 201.041568 203.250816 205.460064 207.669312 209.878560 212.087808 214.297056 216.506304
-[100] 218.715552 220.924800
 ```
-<p align="justify"> Observe que o projétil partiu de om (espaço inicial) até um alcance de 220,924800m (espaço final). Pedimos para o R executar na sequência de 2.209248m em 2.209248m até chegar no alcance.</p>
+<p style="font-family = Arial; font-size: 12px; text-align:left">[1] <font color="##FF0000">0.000000</font>   2.209248   4.418496   6.627744   8.836992  11.046240  13.255488  15.464736  17.673984</p>
+<p style="font-family = Arial; font-size: 12px; text-align:left">[10]  19.883232  22.092480  24.301728  26.510976  28.720224  30.929472  33.138720  35.347968  37.557216</p>
+<p style="font-family = Arial; font-size: 12px; text-align:left">[19]  39.766464  41.975712  44.184960  46.394208  48.603456  50.812704  53.021952  55.231200  57.440448</p>
+<p style="font-family = Arial; font-size: 12px; text-align:left">[28]  59.649696  61.858944  64.068192  66.277440  68.486688  70.695936  72.905184  75.114432  77.323680</p>
+<p style="font-family = Arial; font-size: 12px; text-align:left">[37]  79.532928  81.742176  83.951424  86.160672  88.369920  90.579168  92.788416  94.997664  97.206912</p>
+<p style="font-family = Arial; font-size: 12px; text-align:left">[46]  99.416160 101.625408 103.834656 106.043904 108.253152 <font color="##FF0000">110.462400</font> 112.671648 114.880896 117.090144</p>
+<p style="font-family = Arial; font-size: 12px; text-align:left">[55] 119.299392 121.508640 123.717888 125.927136 128.136384 130.345632 132.554880 134.764128 136.973376</p>
+<p style="font-family = Arial; font-size: 12px; text-align:left">[64] 139.182624 141.391872 143.601120 145.810368 148.019616 150.228864 152.438112 154.647360 156.856608</p>
+<p style="font-family = Arial; font-size: 12px; text-align:left">[73] 159.065856 161.275104 163.484352 165.693600 167.902848 170.112096 172.321344 174.530592 176.739840</p>
+<p style="font-family = Arial; font-size: 12px; text-align:left">[82] 178.949088 181.158336 183.367584 185.576832 187.786080 189.995328 192.204576 194.413824 196.623072</p>
+<p style="font-family = Arial; font-size: 12px; text-align:left">[91] 198.832320 201.041568 203.250816 205.460064 207.669312 209.878560 212.087808 214.297056 216.506304</p>
+<p style="font-family = Arial; font-size: 12px; text-align:left">[100] 218.715552 <font color="##FF0000">220.924800</font></p>
+
+<p align="justify"> Observe que o projétil partiu de zero metro (espaço inicial) até um alcance máximo de 220,924800m (espaço final). Programamos para o R executar na sequência de 2,209248m em 2,209248m até chegar no alcance máximo.</p>
 
 > Comandos para explorar os valores de X
 
@@ -1228,7 +1229,7 @@ range(X)
 sum(X)
 11156.7
 
-# Variação cada elemento
+# Variação entre cada elemento
 # (constante)
 diff(X)
 [1]  2.209248 2.209248... 
@@ -1238,10 +1239,7 @@ diff(X)
  mean(X) 
 110.4624
 ```
-
-
 > Valores do eixo Y (Distância vertical)
-
 
 ```{r}
 # Aceleração da gravidade:
@@ -1280,25 +1278,28 @@ X
 # Mostrar o eixo Y
 Y
 ```
-[1]  0.000000e+00 1.262755e+00 2.499999e+00 3.711734e+00 4.897958e+00 6.058672e+00 7.193876e+00 8.303570e+00
-[9]  9.387753e+00 1.044643e+01 1.147959e+01 1.248724e+01 1.346939e+01 1.442602e+01 1.535714e+01 1.626275e+01
-[17] 1.714285e+01 1.799745e+01 1.882653e+01 1.963010e+01 2.040816e+01 2.116071e+01 2.188775e+01 2.258928e+01
-[25] 2.326530e+01 2.391581e+01 2.454081e+01 2.514030e+01 2.571428e+01 2.626275e+01 2.678571e+01 2.728316e+01
-[33] 2.775510e+01 2.820153e+01 2.862245e+01 2.901785e+01 2.938775e+01 2.973214e+01 3.005102e+01 3.034439e+01
-[41] 3.061224e+01 3.085459e+01 3.107143e+01 3.126275e+01 3.142857e+01 3.156888e+01 3.168367e+01 3.177296e+01
-[49] 3.183673e+01 3.187500e+01 3.188776e+01 3.187500e+01 3.183674e+01 3.177296e+01 3.168367e+01 3.156888e+01
-[57] 3.142857e+01 3.126276e+01 3.107143e+01 3.085459e+01 3.061225e+01 3.034439e+01 3.005102e+01 2.973215e+01
-[65] 2.938776e+01 2.901786e+01 2.862245e+01 2.820154e+01 2.775511e+01 2.728317e+01 2.678572e+01 2.626276e+01
-[73] 2.571429e+01 2.514032e+01 2.454083e+01 2.391583e+01 2.326532e+01 2.258930e+01 2.188777e+01 2.116073e+01
-[81] 2.040818e+01 1.963012e+01 1.882655e+01 1.799746e+01 1.714287e+01 1.626277e+01 1.535716e+01 1.442604e+01
-[89] 1.346941e+01 1.248726e+01 1.147961e+01 1.044645e+01 9.387776e+00 8.303594e+00 7.193900e+00 6.058697e+00
-[97] 4.897984e+00 3.711760e+00 2.500026e+00 1.262782e+00 2.765749e-05
+<p style="font-family = Arial; font-size: 12px; text-align:left">[1]  <font color="##FF0000">0.000000e+00</font> 1.262755e+00 2.499999e+00 3.711734e+00 4.897958e+00 6.058672e+00 7.193876e+00 8.303570e+00</p>
+<p style="font-family = Arial; font-size: 12px; text-align:left">[9]  9.387753e+00 1.044643e+01 1.147959e+01 1.248724e+01 1.346939e+01 1.442602e+01 1.535714e+01 1.626275e+01</p>
+<p style="font-family = Arial; font-size: 12px; text-align:left">[17] 1.714285e+01 1.799745e+01 1.882653e+01 1.963010e+01 2.040816e+01 2.116071e+01 2.188775e+01 2.258928e+01</p>
+<p style="font-family = Arial; font-size: 12px; text-align:left">[25] 2.326530e+01 2.391581e+01 2.454081e+01 2.514030e+01 2.571428e+01 2.626275e+01 2.678571e+01 2.728316e+01</p>
+<p style="font-family = Arial; font-size: 12px; text-align:left">[33] 2.775510e+01 2.820153e+01 2.862245e+01 2.901785e+01 2.938775e+01 2.973214e+01 3.005102e+01 3.034439e+01</p>
+<p style="font-family = Arial; font-size: 12px; text-align:left">[41] 3.061224e+01 3.085459e+01 3.107143e+01 3.126275e+01 3.142857e+01 3.156888e+01 3.168367e+01 3.177296e+01</p>
+<p style="font-family = Arial; font-size: 12px; text-align:left">[49] 3.183673e+01 3.187500e+01 <font color="##FF0000">3.188776e+01</font> 3.187500e+01 3.183674e+01 3.177296e+01 3.168367e+01 3.156888e+01</p>
+<p style="font-family = Arial; font-size: 12px; text-align:left">[57] 3.142857e+01 3.126276e+01 3.107143e+01 3.085459e+01 3.061225e+01 3.034439e+01 3.005102e+01 2.973215e+01</p>
+<p style="font-family = Arial; font-size: 12px; text-align:left">[65] 2.938776e+01 2.901786e+01 2.862245e+01 2.820154e+01 2.775511e+01 2.728317e+01 2.678572e+01 2.626276e+01</p>
+<p style="font-family = Arial; font-size: 12px; text-align:left">[73] 2.571429e+01 2.514032e+01 2.454083e+01 2.391583e+01 2.326532e+01 2.258930e+01 2.188777e+01 2.116073e+01</p>
+<p style="font-family = Arial; font-size: 12px; text-align:left">[81] 2.040818e+01 1.963012e+01 1.882655e+01 1.799746e+01 1.714287e+01 1.626277e+01 1.535716e+01 1.442604e+01</p>
+<p style="font-family = Arial; font-size: 12px; text-align:left">[89] 1.346941e+01 1.248726e+01 1.147961e+01 1.044645e+01 9.387776e+00 8.303594e+00 7.193900e+00 6.058697e+00</p>
+<p style="font-family = Arial; font-size: 12px; text-align:left">[97] 4.897984e+00 3.711760e+00 2.500026e+00 1.262782e+00 <font color="##FF0000">2.765749e-05</font></p>
 
-<p align="justify">Nos dados acima, a altura máxima corresponde a</p> 
+<p align="justify">De acordo com os dados acima, a altura máxima corresponde a</p> 
 
-$$3,188776e+01 = 3,188776.10^{1}= 3,188776.10 = 31,88776m.$$
+$$3,188776e+01m$$ 
+$$= 3,188776.10^{1}m$$
+$$= 3,188776.10m$$ 
+$$= 31,88776m.$$
 
-<p align="justify"> Observe que o projétil partiu de om (altura inicial) até uma altura máxima (altura final) de 31.88776m.</p>
+<p align="justify"> Observe que o projétil partiu de zero metro (altura inicial) até uma altura máxima de 31.88776m (altura final) e depois retorna para a origem, que na simulação tende a zero (0,00002765749m).</p>
 
 > Comandos para explorar os valores de y
 
@@ -1560,46 +1561,48 @@ vx
 # Mostrar vy
 vy
 ```
-<p style="font-family = Arial; font-size: 12px; text-align:justify">
-[1]  2.500000e+01  2.450000e+01  2.400000e+01  2.350000e+01  2.300000e+01  2.250000e+01  2.200000e+01</p>
-<p style="font-family = Arial; font-size: 12px; text-align:justify">
+<p style="font-family = Arial; font-size: 12px; text-align:left">
+[1]  <font color="##FF0000">2.500000e+01</font> 2.450000e+01  2.400000e+01  2.350000e+01  2.300000e+01  2.250000e+01  2.200000e+01</p>
+<p style="font-family = Arial; font-size: 12px; text-align:left">
 [8]  2.150000e+01  2.100000e+01  2.050000e+01  2.000000e+01  1.950000e+01  1.900000e+01  1.850000e+01</p>
-<p style="font-family = Arial; font-size: 12px; text-align:justify">
+<p style="font-family = Arial; font-size: 12px; text-align:left">
 [15] 1.800000e+01  1.750000e+01  1.700000e+01  1.650000e+01  1.600000e+01  1.550000e+01  1.500000e+01</p>
-<p style="font-family = Arial; font-size: 12px; text-align:justify">
+<p style="font-family = Arial; font-size: 12px; text-align:left">
 [22] 1.450000e+01  1.400000e+01  1.350000e+01  1.300000e+01  1.250000e+01  1.200000e+01  1.150000e+01</p>
-<p style="font-family = Arial; font-size: 12px; text-align:justify">
+<p style="font-family = Arial; font-size: 12px; text-align:left">
 [29] 1.100000e+01  1.050000e+01  1.000000e+01  9.500003e+00  9.000003e+00  8.500004e+00  8.000004e+00</p>
-<p style="font-family = Arial; font-size: 12px; text-align:justify">
+<p style="font-family = Arial; font-size: 12px; text-align:left">
 [36] 7.500004e+00  7.000004e+00  6.500004e+00  6.000004e+00  5.500004e+00  5.000004e+00  4.500004e+00</p>
-<p style="font-family = Arial; font-size: 12px; text-align:justify">
+<p style="font-family = Arial; font-size: 12px; text-align:left">
 [43] 4.000005e+00  3.500005e+00  3.000005e+00  2.500005e+00  2.000005e+00  1.500005e+00  1.000005e+00</p>
-<p style="font-family = Arial; font-size: 12px; text-align:justify">
-[50] 5.000053e-01  5.420870e-06 -4.999945e-01 -9.999944e-01 -1.499994e+00 -1.999994e+00 -2.499994e+00</p>
-<p style="font-family = Arial; font-size: 12px; text-align:justify">
+<p style="font-family = Arial; font-size: 12px; text-align:left">
+[50] 5.000053e-01  <font color="##FF0000">5.420870e-06</font> -4.999945e-01 -9.999944e-01 -1.499994e+00 -1.999994e+00 -2.499994e+00</p>
+<p style="font-family = Arial; font-size: 12px; text-align:left">
 [57]-2.999994e+00 -3.499994e+00 -3.999994e+00 -4.499994e+00 -4.999993e+00 -5.499993e+00 -5.999993e+00</p>
-<p style="font-family = Arial; font-size: 12px; text-align:justify">
+<p style="font-family = Arial; font-size: 12px; text-align:left">
 [64]-6.499993e+00 -6.999993e+00 -7.499993e+00 -7.999993e+00 -8.499993e+00 -8.999993e+00 -9.499993e+00</p>
-<p style="font-family = Arial; font-size: 12px; text-align:justify">
+<p style="font-family = Arial; font-size: 12px; text-align:left">
 [71]-9.999992e+00 -1.049999e+01 -1.099999e+01 -1.149999e+01 -1.199999e+01 -1.249999e+01 -1.299999e+01</p>
-<p style="font-family = Arial; font-size: 12px; text-align:justify">
+<p style="font-family = Arial; font-size: 12px; text-align:left">
 [78]-1.349999e+01 -1.399999e+01 -1.449999e+01 -1.499999e+01 -1.549999e+01 -1.599999e+01 -1.649999e+01</p>
-<p style="font-family = Arial; font-size: 12px; text-align:justify">
+<p style="font-family = Arial; font-size: 12px; text-align:left">
 [85]-1.699999e+01 -1.749999e+01 -1.799999e+01 -1.849999e+01 -1.899999e+01 -1.949999e+01 -1.999999e+01</p>
-<p style="font-family = Arial; font-size: 12px; text-align:justify">
+<p style="font-family = Arial; font-size: 12px; text-align:left">
 [92]-2.049999e+01 -2.099999e+01 -2.149999e+01 -2.199999e+01 -2.249999e+01 -2.299999e+01 -2.349999e+01</p>
-<p style="font-family = Arial; font-size: 12px; text-align:justify">
-[99]-2.399999e+01 -2.449999e+01 -2.499999e+01</p>
+<p style="font-family = Arial; font-size: 12px; text-align:left">
+[99]-2.399999e+01 -2.449999e+01 <font color="##FF0000">-2.499999e+01</font></p>
 
-<p align="justify">A componente vx = vix é constante. A componente vy varia. Vamos analisar os valores de vy.</p> 
+> Componentes da velocidade
 
-<p align="justify"> A velocidade da componente na vertical, vy, na partida equivale a</p> 
+<p align="justify">A componente vx = vix é constante (43,30127 m/s). A velocidade da componente vy varia de uma maneira constante, pois faz parte de um MRUV. Vamos analisar os valores de vy.</p> 
+
+<p align="justify"> Nessa simulação, a velocidade da componente na vertical, vy, na partida equivale a</p> 
 $$2,500000e+01$$ 
 $$= 2,500000.10^{1}$$
 $$= 2,500000.10$$ 
 $$= 25,000000$$ 
-$$= 25m$$ 
-<p align="justify"> e na chegada ao solo, equivale a -24,99999m. É a mesma velocidade, porém, com sinal contrário.</p>
+$$= 25m/s$$ 
+<p align="justify"> e na altura máxima sua velocidade tende a zero (0,00000542087m/s). Na chegada ao solo, equivale a -24,99999m/s. Praticamente, é o mesmo valor da velocidade de saída, porém, com sinal contrário.</p>
 
 > Comandos para explorar os valores de vy
 
@@ -1621,14 +1624,14 @@ vy[c(48:52)]
 1.500005e+00  1.000005e+00  5.000053e-01  
 5.420870e-06 -4.999945e-01
 
-# Maior valor no Y:
+# Maior valor vy:
 max(vy) 
 25
-# Menor valor no Y:
+# Menor valor vy:
 min(vy)
 -24.99999
 
-# Variação cada elemento
+# Variação entre cada elemento
 # (constante)
 diff(vy)
 [1] -0.4999999 -0.4999999... 
@@ -1681,7 +1684,7 @@ vy
 vr
 ```
 <p style="font-family = Arial; font-size: 12px; text-align:left">
-[1] 50.00000 49.75188 49.50758 49.26713 49.03060 48.79805 48.56954 48.34511 48.12484 47.90877 47.69696</p>
+[1]<font color="##FF0000"> 50.00000 </font>49.75188 49.50758 49.26713 49.03060 48.79805 48.56954 48.34511 48.12484 47.90877 47.69696</p>
 <p style="font-family = Arial; font-size: 12px; text-align:left">
 [12] 47.48947 47.28636 47.08768 46.89350 46.70385 46.51881 46.33843 46.16276 45.99185 45.82576 45.66454</p>
 <p style="font-family = Arial; font-size: 12px; text-align:left">
@@ -1689,7 +1692,7 @@ vr
 <p style="font-family = Arial; font-size: 12px; text-align:left">
 [34] 44.12766 44.03408 43.94599 43.86343 43.78641 43.71499 43.64917 43.58899 43.53447 43.48563 43.44249</p>
 <p style="font-family = Arial; font-size: 12px; text-align:left">
-[45] 43.40507 43.37338 43.34743 43.32724 43.31282 43.30416 43.30127 43.30416 43.31282 43.32724 43.34743</p>
+[45] 43.40507 43.37338 43.34743 43.32724 43.31282 43.30416 <font color="##FF0000">43.30127</font> 43.30416 43.31282 43.32724 43.34743</p>
 <p style="font-family = Arial; font-size: 12px; text-align:left">
 [56] 43.37338 43.40507 43.44249 43.48563 43.53447 43.58899 43.64917 43.71499 43.78641 43.86342 43.94599</p>
 <p style="font-family = Arial; font-size: 12px; text-align:left">
@@ -1699,18 +1702,16 @@ vr
 <p style="font-family = Arial; font-size: 12px; text-align:left">
 [89] 47.28636 47.48947 47.69696 47.90876 48.12483 48.34511 48.56953 48.79805 49.03060 49.26712 49.50757</p>
 <p style="font-family = Arial; font-size: 12px; text-align:left">
-[100]49.75188 49.99999</p>
+[100]49.75188 <font color="##FF0000">49.99999</font></p>
 
-<p align="justify"> Muitas informações podem ser extraídas dos valores da velocidade resultante. Veja algumas:</p>
-
-<p align="justify">Observe que o valor da velocidade resultante na saída e na chegada é o mesmo. A velocidade resultante na altura máxima é o mesmo valor da componente vix (43,30127&nbsp;), já que a vy é nula neste ponto. A velocidade resultante é sempre positiva. Muitas informações podem ser extraídas dos valores das componentes da velocidade. Veja algumas:</p>
+<p align="justify">Observe que o valor da velocidade resultante na saída e na chegada é o mesmo. A velocidade resultante na altura máxima é o mesmo valor da componente vix (43,30127 ), já que a vy é nula neste ponto. A velocidade resultante é sempre positiva. Muitas informações podem ser extraídas dos valores das componentes da velocidade. Veja algumas:</p>
 
 ```{r}
 # Extrai da vr 3 valores
-# de partida e de 
+# de partida 
 vr[c(1,2,3)]
 50.00000 49.75188 49.50758
-# chegada - compará-las
+# E de chegada - compará-las
 vr[c(101,100,99)]
 49.99999 49.75188 49.50757
  
@@ -1728,7 +1729,378 @@ max(vr)
 min(vr)
 43.30127
 
-# Variação cada elemento
+# Variação entre cada elemento
+# (não constante)
+diff(vr)
+[1] -0.248115560 -0.244309157... 
+[9] -0.216070158 -0.211807357...
+```
+
+> fAZER A PARTIR DAQUI - DEVER DE CASA - estude e execute os comandos abaixo no seu ambiente R:
+
+<p align="justify"> Aplique os comandos utilizados em R para resolver o seguinte problema: Um projétil é lançado a partir do solo, formando com o mesmo um ângulo de 45°, com uma velocidade inicial igual a 100 m/s. Sendo que o alcance máximo acontece quando o ângulo de lançamento é equivalente a 45°, prove que esse alcance máximo (A) é quatro vezes maior que a altura máxima (hmáx). Adote a aceleração da gravidade g = 9.8 m/s<sup>2</sup>. Compare sua resposta logo abaixo.</p>
+
+```{r}
+Aceleração da gravidade:
+g <- 9.8
+# Velocidade inicial:
+vi <- 100
+# Ângulo em graus:
+angulo <- 45
+# Graus em radianos:
+teta <- (pi/180) * angulo
+# componente vix:
+vix <- vi * cos(teta)
+# componente viy:
+viy <- vi * sin(teta) 
+# Tempo na thmax:
+thmax <- viy/g
+# tempo total:
+ttot = 2 * thmax
+# altura máxima:
+hmax = (viy ^ 2)/(2 * g)
+# alcance
+A = vix * ttot
+cat("A altura máxima é", hmax)
+cat("O alcance é", A)
+cat(A, "é 4 vezes", hmax)
+```
+> Compare sua resposta 
+
+<p style="background-color:#000000; font-weight: bold; font-size: 20px; text-align:justify"><font color="#ffffff">  a) A hmax é 95.66327;<br>  b) O thmax é 4.418497;<br>  c) O alcance é 220.9248;<br>  d) vy: -43.30127, vr: 50, direção: -60; <br>  e) A posição em 5s é 125 e 94.00635.</font></p>
+
+<p style="background-color:#33a0c2; font-weight: bold; font-size: 20px; text-align:center"><font color="#ffffff">EXERCÍCIO PROPOSTO</font></p>
+<p align="justify"> Um projétil é lançado a partir do solo, formando com o mesmo um ângulo de 60°, com uma velocidade inicial igual a 200 m/s. Determine as componentes vx, vy e a direção do projétil ao chegar no solo. Adote a aceleração da gravidade g = 9.8 m/s<sup>2</sup>.</p>
+*** =instructions
+<p align="justify"> - Calcule a direção do projétil no tempo de trajeto. Você irá atribuir vy/vx a uma variável.</p>
+<p align="justify"> - Leia todo o código do exercício e escreva a atribuição à variável.</p>
+*** =hint
+<p align="justify"> A direção ou ângulo formado em relação à horizontal, no momento em que o projétil chega ao chão, pode ser obtido pela seguinte expressão:</p> 
+$$\theta = arc~tg~\displaystyle \frac{v _{y}}{v _{x}}\cdot$$
+*** =pre_exercise_code
+```{r}
+# no pec
+```
+*** =sample_code
+```{r}
+# Aceleração da gravidade:
+g <- 9.8
+# Vel. inicial:
+vi <- 200
+# ângulo dado em graus:
+angulo <- 60
+# transformar graus em rad:
+teta <- (pi/180) * angulo
+# componente x da vi:
+vix <- vi * cos(teta)
+# componente y da vi:
+viy <- vi * sin(teta)
+# vx = vix
+vx <- vix
+# altura máxima
+hmax = (viy ^ 2)/(2 * g)
+# Tempo na hmax:
+thmax <- viy/g
+# tempo tot de trajeto:
+ttot = 2 * thmax
+# Componente vertical de v:
+vy <- viy - g * ttot
+#Atribuir vy/vx a uma variável
+tang <- 
+# Atribuir valor do arc tg
+angulo <- atan(tang)
+# Atribuir valor de angulo/(pi/180)
+graus <- angulo/(pi/180)
+# Mostrar vy:
+vy
+# Mostrar vx:
+vx
+# Mostrar direção:
+graus
+```
+*** =solution
+```{r}
+# Aceleração da gravidade:
+g <- 9.8
+# Vel. inicial:
+vi <- 200
+# ângulo dado em graus:
+angulo <- 60
+# transformar graus em rad:
+teta <- (pi/180) * angulo
+# componente x da vi:
+vix <- vi * cos(teta)
+# componente y da vi:
+viy <- vi * sin(teta)
+# vx = vix
+vx <- vix
+# altura máxima
+hmax = (viy ^ 2)/(2 * g)
+# Tempo na hmax:
+thmax <- viy/g
+# tempo tot de trajeto:
+ttot = 2 * thmax
+# Componente vertical de v:
+vy <- viy - g * ttot
+#Atribuir vy/vx a uma variável
+tang <- vy/vx
+# Atribuir valor do arc tg
+angulo <- atan(tang)
+# Atribuir valor de angulo/(pi/180)
+graus <- angulo/(pi/180)
+# Mostrar vy:
+vy
+# Mostrar vx:
+vx
+# Mostrar direção:
+graus
+```
+*** =sct
+```{r}
+test_output_contains ("-60", incorrect_msg = "Escreva a expressão que atribua a uma variável (tang) a divisão entre as componentes vertical e horizontal da velocidade do projétil quando o mesmo alcança o tempo de trajeto.")
+success_msg ("Bom trabalho! Você aprendeu a determinar a direção do projétil quando o mesmo alcança o solo.")
+```
+--- type:NormalExercise lang:r xp:100 skills:1 key:cf63ed39fd
+## Explorando dados do tempo
+
+<p align="justify"> A equação do MRU que fornece o espaço inicial e final para um móvel num instante t, segundo o eixo horizontal (X), é dada por </p>
+
+$$\Delta X= X - x _{i} =v _{ix}.t \rightarrow X= x _{i} + v _{ix}.t$$
+
+<p align="justify">onde, $\Delta X$ representa a variação do espaço (no eixo X); $X$ corresponde ao espaço final; $x _{i}$ representa o espaço inicial (no caso, será na origem do gráfico e igual a zero); $v _{ix}$ é constante e corresponde à componente da velocidade no eixo X e o t representa o tempo dado.</p>
+
+<p align="justify"> Quando $x _{i}=0$, a equação acima torna-se</p> 
+
+$$X= v _{ix}.t.$$
+
+<p align="justify">Para plotarmos o gráfico precisaremos isolar o tempo t. Portanto, da primeira equação temos que</p> 
+
+$$t = \frac{X - x_{i}}{v _{ix}}.$$
+
+<p align="justify"> A equação do MRUV que fornece a altura inicial e final para um móvel num instante t, segundo o eixo vertical (Y), é dada por </p>
+
+$$\Delta Y= Y - y _{i} = v _{ix}.t - \displaystyle \frac{g.t^{2}}{2} \rightarrow$$
+$$Y =  y _{i} + v _{ix}.t - \displaystyle \frac{g.t^{2}}{2}\cdot$$
+
+<p align="justify">onde, $\Delta Y$ representa a variação da altura (no eixo Y); $Y$ corresponde à altura final; $y _{i}$ corresponde a altura inicial (no caso, será na origem do gráfico e igual a zero); $v _{iy}$ corresponde à componente da velocidade no eixo Y e o t corresponde ao tempo dado.</p> 
+
+<p align="justify"> Quando $y _{i}=0$, a equação acima torna-se</p> 
+
+$$Y= v _{ix}.t - \displaystyle \frac{g.t^{2}}{2}\cdot$$
+
+> Valores da componente vy
+
+```{r}
+# Aceleração da gravidade:
+g <- 9.8
+# Espaço inicial:
+xi <- 0
+# Espaço final:
+yi <- 0
+# Sequência de 0 até o Alcance indo de 2.209248 em 2.209248:
+X <- seq(from = 0, to = 220.9248, by = 2.209248)
+# Velocidade inicial:
+vi <- 50
+vi <- 50
+# ângulo em graus:
+angulo <- 30
+# Graus em radianos:
+teta <- (pi/180) * angulo
+# Componente vix:
+vix <- vi * cos(teta)
+# vx é igual a vix:
+vx <- vix
+# Componente viy:
+viy <- vi * sin(teta)
+# O tempo na eq. MRU:
+tempo <- (X - xi)/vix
+# Posição X
+X <- vix * tempo
+# Posição Y
+Y <- viy * tempo - (g * t ^ 2)/2 
+# Componente vertical de v:
+vy <- viy - g * tempo 
+# Velocidade resultante:
+vr <- sqrt(vx ^ 2 + vy ^ 2)
+# Mostrar o eixo X
+X
+# Mostrar o eixo Y
+Y
+# Mostrar vx
+vx
+43.30127
+# Mostrar vy
+vy
+```
+<p style="font-family = Arial; font-size: 12px; text-align:left">
+[1]  <font color="##FF0000">2.500000e+01</font> 2.450000e+01  2.400000e+01  2.350000e+01  2.300000e+01  2.250000e+01  2.200000e+01</p>
+<p style="font-family = Arial; font-size: 12px; text-align:left">
+[8]  2.150000e+01  2.100000e+01  2.050000e+01  2.000000e+01  1.950000e+01  1.900000e+01  1.850000e+01</p>
+<p style="font-family = Arial; font-size: 12px; text-align:left">
+[15] 1.800000e+01  1.750000e+01  1.700000e+01  1.650000e+01  1.600000e+01  1.550000e+01  1.500000e+01</p>
+<p style="font-family = Arial; font-size: 12px; text-align:left">
+[22] 1.450000e+01  1.400000e+01  1.350000e+01  1.300000e+01  1.250000e+01  1.200000e+01  1.150000e+01</p>
+<p style="font-family = Arial; font-size: 12px; text-align:left">
+[29] 1.100000e+01  1.050000e+01  1.000000e+01  9.500003e+00  9.000003e+00  8.500004e+00  8.000004e+00</p>
+<p style="font-family = Arial; font-size: 12px; text-align:left">
+[36] 7.500004e+00  7.000004e+00  6.500004e+00  6.000004e+00  5.500004e+00  5.000004e+00  4.500004e+00</p>
+<p style="font-family = Arial; font-size: 12px; text-align:left">
+[43] 4.000005e+00  3.500005e+00  3.000005e+00  2.500005e+00  2.000005e+00  1.500005e+00  1.000005e+00</p>
+<p style="font-family = Arial; font-size: 12px; text-align:left">
+[50] 5.000053e-01  <font color="##FF0000">5.420870e-06</font> -4.999945e-01 -9.999944e-01 -1.499994e+00 -1.999994e+00 -2.499994e+00</p>
+<p style="font-family = Arial; font-size: 12px; text-align:left">
+[57]-2.999994e+00 -3.499994e+00 -3.999994e+00 -4.499994e+00 -4.999993e+00 -5.499993e+00 -5.999993e+00</p>
+<p style="font-family = Arial; font-size: 12px; text-align:left">
+[64]-6.499993e+00 -6.999993e+00 -7.499993e+00 -7.999993e+00 -8.499993e+00 -8.999993e+00 -9.499993e+00</p>
+<p style="font-family = Arial; font-size: 12px; text-align:left">
+[71]-9.999992e+00 -1.049999e+01 -1.099999e+01 -1.149999e+01 -1.199999e+01 -1.249999e+01 -1.299999e+01</p>
+<p style="font-family = Arial; font-size: 12px; text-align:left">
+[78]-1.349999e+01 -1.399999e+01 -1.449999e+01 -1.499999e+01 -1.549999e+01 -1.599999e+01 -1.649999e+01</p>
+<p style="font-family = Arial; font-size: 12px; text-align:left">
+[85]-1.699999e+01 -1.749999e+01 -1.799999e+01 -1.849999e+01 -1.899999e+01 -1.949999e+01 -1.999999e+01</p>
+<p style="font-family = Arial; font-size: 12px; text-align:left">
+[92]-2.049999e+01 -2.099999e+01 -2.149999e+01 -2.199999e+01 -2.249999e+01 -2.299999e+01 -2.349999e+01</p>
+<p style="font-family = Arial; font-size: 12px; text-align:left">
+[99]-2.399999e+01 -2.449999e+01 <font color="##FF0000">-2.499999e+01</font></p>
+
+> Componentes da velocidade
+
+<p align="justify">A componente vx = vix é constante (43,30127 m/s). A velocidade da componente vy varia de uma maneira constante, pois faz parte de um MRUV. Vamos analisar os valores de vy.</p> 
+
+<p align="justify"> Nessa simulação, a velocidade da componente na vertical, vy, na partida equivale a</p> 
+$$2,500000e+01$$ 
+$$= 2,500000.10^{1}$$
+$$= 2,500000.10$$ 
+$$= 25,000000$$ 
+$$= 25m/s$$ 
+<p align="justify"> e na altura máxima sua velocidade tende a zero (0,00000542087m/s). Na chegada ao solo, equivale a -24,99999m/s. Praticamente, é o mesmo valor da velocidade de saída, porém, com sinal contrário.</p>
+
+> Comandos para explorar os valores de vy
+
+<p align="justify"> Muitas informações podem ser extraídas dos valores das componentes da velocidade. Veja algumas:</p>
+
+```{r}
+
+# Extrai de vy 3 valores
+# de partida e de 
+vy[c(1,2,3)]
+25.0 24.5 24.0
+# chegada - compará-las
+vy[c(101,100,99)]
+-24.99999 -24.49999 -23.99999
+
+# Extrai de vy os valores
+# de 48 a 52
+vy[c(48:52)]   
+1.500005e+00  1.000005e+00  5.000053e-01  
+5.420870e-06 -4.999945e-01
+
+# Maior valor vy:
+max(vy) 
+25
+# Menor valor vy:
+min(vy)
+-24.99999
+
+# Variação entre cada elemento
+# (constante)
+diff(vy)
+[1] -0.4999999 -0.4999999... 
+[10]-0.4999999 -0.4999999... 
+```
+> Valores da vr
+
+```{r}
+# Aceleração da gravidade:
+g <- 9.8
+# Espaço inicial:
+xi <- 0
+# Espaço final:
+yi <- 0
+# Sequência de 0 até o Alcance indo de 2.209248 em 2.209248:
+X <- seq(from = 0, to = 220.9248, by = 2.209248)
+# Velocidade inicial:
+vi <- 50
+vi <- 50
+# ângulo em graus:
+angulo <- 30
+# Graus em radianos:
+teta <- (pi/180) * angulo
+# Componente vix:
+vix <- vi * cos(teta)
+# vx é igual a vix:
+vx <- vix
+# Componente viy:
+viy <- vi * sin(teta)
+# O tempo na eq. MRU:
+tempo <- (X - xi)/vix
+# Posição X
+X <- vix * tempo
+# Posição Y
+Y <- viy * tempo - (g * t ^ 2)/2 
+# Componente vertical de v:
+vy <- viy - g * tempo 
+# Velocidade resultante:
+vr <- sqrt(vx ^ 2 + vy ^ 2)
+# Mostrar eixo X
+X
+# Mostrar eixo Y
+Y
+# Mostrar vx
+vx
+43.30127
+# Mostrar vy
+vy
+# Mostrar vr
+vr
+```
+<p style="font-family = Arial; font-size: 12px; text-align:left">
+[1]<font color="##FF0000"> 50.00000 </font>49.75188 49.50758 49.26713 49.03060 48.79805 48.56954 48.34511 48.12484 47.90877 47.69696</p>
+<p style="font-family = Arial; font-size: 12px; text-align:left">
+[12] 47.48947 47.28636 47.08768 46.89350 46.70385 46.51881 46.33843 46.16276 45.99185 45.82576 45.66454</p>
+<p style="font-family = Arial; font-size: 12px; text-align:left">
+[23] 45.50824 45.35692 45.21062 45.06939 44.93328 44.80234 44.67662 44.55615 44.44097 44.33114 44.22669</p>
+<p style="font-family = Arial; font-size: 12px; text-align:left">
+[34] 44.12766 44.03408 43.94599 43.86343 43.78641 43.71499 43.64917 43.58899 43.53447 43.48563 43.44249</p>
+<p style="font-family = Arial; font-size: 12px; text-align:left">
+[45] 43.40507 43.37338 43.34743 43.32724 43.31282 43.30416 <font color="##FF0000">43.30127</font> 43.30416 43.31282 43.32724 43.34743</p>
+<p style="font-family = Arial; font-size: 12px; text-align:left">
+[56] 43.37338 43.40507 43.44249 43.48563 43.53447 43.58899 43.64917 43.71499 43.78641 43.86342 43.94599</p>
+<p style="font-family = Arial; font-size: 12px; text-align:left">
+[67] 44.03408 44.12765 44.22669 44.33114 44.44097 44.55614 44.67661 44.80234 44.93328 45.06939 45.21062</p>
+<p style="font-family = Arial; font-size: 12px; text-align:left">
+[78] 45.35692 45.50824 45.66453 45.82575 45.99184 46.16275 46.33843 46.51881 46.70385 46.89349 47.08768</p>
+<p style="font-family = Arial; font-size: 12px; text-align:left">
+[89] 47.28636 47.48947 47.69696 47.90876 48.12483 48.34511 48.56953 48.79805 49.03060 49.26712 49.50757</p>
+<p style="font-family = Arial; font-size: 12px; text-align:left">
+[100]49.75188 <font color="##FF0000">49.99999</font></p>
+
+<p align="justify">Observe que o valor da velocidade resultante na saída e na chegada é o mesmo. A velocidade resultante na altura máxima é o mesmo valor da componente vix (43,30127 ), já que a vy é nula neste ponto. A velocidade resultante é sempre positiva. Muitas informações podem ser extraídas dos valores das componentes da velocidade. Veja algumas:</p>
+
+```{r}
+# Extrai da vr 3 valores
+# de partida 
+vr[c(1,2,3)]
+50.00000 49.75188 49.50758
+# E de chegada - compará-las
+vr[c(101,100,99)]
+49.99999 49.75188 49.50757
+ 
+# Extrai de vr os valores
+# de 48 a 52
+vr[c(48:51)]   
+43.32724 43.31282 43.30416 43.30127
+
+# Maior valor de vr:
+max(vr)
+50
+
+# Menor valor de vr
+# - na altura máxima:
+min(vr)
+43.30127
+
+# Variação entre cada elemento
 # (não constante)
 diff(vr)
 [1] -0.248115560 -0.244309157... 
