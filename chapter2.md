@@ -1911,6 +1911,8 @@ vr
 # Mostrar tempo
 tempo
 ```
+<p align="justify">Isso gerou os seguintes valores:</p>
+
 > Valores do tempo
 
 <p style="font-family = Arial; font-size: 12px; text-align:left">[1] <font color="##FF0000">0.0000000</font> 0.0510204 0.1020408 0.1530612 0.2040816 0.2551020 0.3061224 0.3571428 0.4081632 0.4591836<p>
