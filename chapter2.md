@@ -1863,7 +1863,7 @@ success_msg ("Bom trabalho! Você aprendeu a determinar a direção do projétil
 --- type:NormalExercise lang:r xp:100 skills:1 key:cf63ed39fd
 ## Explorando dados do tempo
 
-<p align="justify">Sabemos que um corpo está em movimento uniforme quando o mesmo percorre espaços iguais em intervalos de tempos iguais. O movimento do projétil no eixo X é constante, ou seja, a componente da velocidade inicial vix, que também é igual à componente da velocidade vx, é constante. Foi programado no R para que os espaços fossem divididos de 2,209248m em 2,209248m até atingir o alcance máximo de 220,9248m. Foram obtidos intervalos de tempos iguais, dividindo cada 2,209248m pelo valor da componente vix (43.30127m/s) que resultou em 0,0510204s. Vejamos o código:</p> 
+<p align="justify">Sabemos que um corpo está em movimento uniforme quando o mesmo percorre espaços iguais em intervalos de tempos iguais. O movimento do projétil no eixo X é constante, ou seja, a componente da velocidade inicial vix, que também é igual à componente da velocidade vx, é constante. Foi programado no R para que os espaços fossem divididos de 2,209248m em 2,209248m até atingir o alcance máximo de 220,9248m. Foram obtidos intervalos de tempos iguais, dividindo cada 2,209248m pelo valor da componente vix (43,30127m/s) que resultou em 0,0510204s. Vejamos o código:</p> 
 
 ```{r}
 # Aceleração da gravidade:
@@ -1938,6 +1938,7 @@ tempo
 # de partida
 tempo[c(1,2,3)]
 0.0000000 0.0510204 0.1020408
+
 # 3 valores de chegada
 tempo[c(99, 100, 101)]
 4.999999 5.051019 5.102040
