@@ -1489,7 +1489,7 @@ test_output_contains ("-60", incorrect_msg = "Escreva a expressão que atribua a
 success_msg ("Bom trabalho! Você aprendeu a determinar a direção do projétil quando o mesmo alcança o solo.")
 ```
 --- type:NormalExercise lang:r xp:100 skills:1 key:700f8dfafd
-## Explorando dados da componentes
+## Explorando dados das componentes
 
 <p align="justify"> A equação do MRU que fornece o espaço inicial e final para um móvel num instante t, segundo o eixo horizontal (X), é dada por </p>
 
@@ -1559,27 +1559,47 @@ vx
 43.30127
 # Mostrar vy
 vy
+```
+<p style="font-family = Arial; font-size: 12px; text-align:justify">
+[1]  2.500000e+01  2.450000e+01  2.400000e+01  2.350000e+01  2.300000e+01  2.250000e+01  2.200000e+01</p>
+<p style="font-family = Arial; font-size: 12px; text-align:justify">
+[8]  2.150000e+01  2.100000e+01  2.050000e+01  2.000000e+01  1.950000e+01  1.900000e+01  1.850000e+01</p>
+<p style="font-family = Arial; font-size: 12px; text-align:justify">
+[15] 1.800000e+01  1.750000e+01  1.700000e+01  1.650000e+01  1.600000e+01  1.550000e+01  1.500000e+01</p>
+<p style="font-family = Arial; font-size: 12px; text-align:justify">
+[22] 1.450000e+01  1.400000e+01  1.350000e+01  1.300000e+01  1.250000e+01  1.200000e+01  1.150000e+01</p>
+<p style="font-family = Arial; font-size: 12px; text-align:justify">
+[29] 1.100000e+01  1.050000e+01  1.000000e+01  9.500003e+00  9.000003e+00  8.500004e+00  8.000004e+00</p>
+<p style="font-family = Arial; font-size: 12px; text-align:justify">
+[36] 7.500004e+00  7.000004e+00  6.500004e+00  6.000004e+00  5.500004e+00  5.000004e+00  4.500004e+00</p>
+<p style="font-family = Arial; font-size: 12px; text-align:justify">
+[43] 4.000005e+00  3.500005e+00  3.000005e+00  2.500005e+00  2.000005e+00  1.500005e+00  1.000005e+00</p>
+<p style="font-family = Arial; font-size: 12px; text-align:justify">
+[50] 5.000053e-01  5.420870e-06 -4.999945e-01 -9.999944e-01 -1.499994e+00 -1.999994e+00 -2.499994e+00</p>
+<p style="font-family = Arial; font-size: 12px; text-align:justify">
+[57]-2.999994e+00 -3.499994e+00 -3.999994e+00 -4.499994e+00 -4.999993e+00 -5.499993e+00 -5.999993e+00</p>
+<p style="font-family = Arial; font-size: 12px; text-align:justify">
+[64]-6.499993e+00 -6.999993e+00 -7.499993e+00 -7.999993e+00 -8.499993e+00 -8.999993e+00 -9.499993e+00</p>
+<p style="font-family = Arial; font-size: 12px; text-align:justify">
+[71]-9.999992e+00 -1.049999e+01 -1.099999e+01 -1.149999e+01 -1.199999e+01 -1.249999e+01 -1.299999e+01</p>
+<p style="font-family = Arial; font-size: 12px; text-align:justify">
+[78]-1.349999e+01 -1.399999e+01 -1.449999e+01 -1.499999e+01 -1.549999e+01 -1.599999e+01 -1.649999e+01</p>
+<p style="font-family = Arial; font-size: 12px; text-align:justify">
+[85]-1.699999e+01 -1.749999e+01 -1.799999e+01 -1.849999e+01 -1.899999e+01 -1.949999e+01 -1.999999e+01</p>
+<p style="font-family = Arial; font-size: 12px; text-align:justify">
+[92]-2.049999e+01 -2.099999e+01 -2.149999e+01 -2.199999e+01 -2.249999e+01 -2.299999e+01 -2.349999e+01</p>
+<p style="font-family = Arial; font-size: 12px; text-align:justify">
+[99]-2.399999e+01 -2.449999e+01 -2.499999e+01</p>
 
-  [1]  2.500000e+01  2.450000e+01  2.400000e+01  2.350000e+01  2.300000e+01  2.250000e+01  2.200000e+01
-  [8]  2.150000e+01  2.100000e+01  2.050000e+01  2.000000e+01  1.950000e+01  1.900000e+01  1.850000e+01
- [15]  1.800000e+01  1.750000e+01  1.700000e+01  1.650000e+01  1.600000e+01  1.550000e+01  1.500000e+01
- [22]  1.450000e+01  1.400000e+01  1.350000e+01  1.300000e+01  1.250000e+01  1.200000e+01  1.150000e+01
- [29]  1.100000e+01  1.050000e+01  1.000000e+01  9.500003e+00  9.000003e+00  8.500004e+00  8.000004e+00
- [36]  7.500004e+00  7.000004e+00  6.500004e+00  6.000004e+00  5.500004e+00  5.000004e+00  4.500004e+00
- [43]  4.000005e+00  3.500005e+00  3.000005e+00  2.500005e+00  2.000005e+00  1.500005e+00  1.000005e+00
- [50]  5.000053e-01  5.420870e-06 -4.999945e-01 -9.999944e-01 -1.499994e+00 -1.999994e+00 -2.499994e+00
- [57] -2.999994e+00 -3.499994e+00 -3.999994e+00 -4.499994e+00 -4.999993e+00 -5.499993e+00 -5.999993e+00
- [64] -6.499993e+00 -6.999993e+00 -7.499993e+00 -7.999993e+00 -8.499993e+00 -8.999993e+00 -9.499993e+00
- [71] -9.999992e+00 -1.049999e+01 -1.099999e+01 -1.149999e+01 -1.199999e+01 -1.249999e+01 -1.299999e+01
- [78] -1.349999e+01 -1.399999e+01 -1.449999e+01 -1.499999e+01 -1.549999e+01 -1.599999e+01 -1.649999e+01
- [85] -1.699999e+01 -1.749999e+01 -1.799999e+01 -1.849999e+01 -1.899999e+01 -1.949999e+01 -1.999999e+01
- [92] -2.049999e+01 -2.099999e+01 -2.149999e+01 -2.199999e+01 -2.249999e+01 -2.299999e+01 -2.349999e+01
- [99] -2.399999e+01 -2.449999e+01 -2.499999e+01
-```{r}
+<p align="justify">A componente vx = vix é constante. A componente vy varia. Vamos analisar os valores de vy.</p> 
 
-<p align="justify">Nos dados acima, a componente vx = vix é constante. A componente vy varia. Vamos analisar os valores de vy.</p> 
-
-<p align="justify"> A velocidade da componente na vertical, vy, na partida equivale $2,500000e+01 = 2,500000.10^{1}= 2,500000.10 = 25,000000 = 25~m$ e na chegada ao solo equivale a -24,99999~m. É a mesma velocidade, porém, com sinal contrário.</p>
+<p align="justify"> A velocidade da componente na vertical, vy, na partida equivale a</p> 
+$$2,500000e+01$$ 
+$$= 2,500000.10^{1}$$
+$$= 2,500000.10$$ 
+$$= 25,000000$$ 
+$$= 25m$$ 
+<p align="justify"> e na chegada ao solo, equivale a -24,99999m. É a mesma velocidade, porém, com sinal contrário.</p>
 
 > Comandos para explorar os valores de vy
 
@@ -1659,23 +1679,31 @@ vx
 vy
 # Mostrar vr
 vr
-
-  [1] 50.00000 49.75188 49.50758 49.26713 49.03060 48.79805 48.56954 48.34511 48.12484 47.90877 47.69696
- [12] 47.48947 47.28636 47.08768 46.89350 46.70385 46.51881 46.33843 46.16276 45.99185 45.82576 45.66454
- [23] 45.50824 45.35692 45.21062 45.06939 44.93328 44.80234 44.67662 44.55615 44.44097 44.33114 44.22669
- [34] 44.12766 44.03408 43.94599 43.86343 43.78641 43.71499 43.64917 43.58899 43.53447 43.48563 43.44249
- [45] 43.40507 43.37338 43.34743 43.32724 43.31282 43.30416 43.30127 43.30416 43.31282 43.32724 43.34743
- [56] 43.37338 43.40507 43.44249 43.48563 43.53447 43.58899 43.64917 43.71499 43.78641 43.86342 43.94599
- [67] 44.03408 44.12765 44.22669 44.33114 44.44097 44.55614 44.67661 44.80234 44.93328 45.06939 45.21062
- [78] 45.35692 45.50824 45.66453 45.82575 45.99184 46.16275 46.33843 46.51881 46.70385 46.89349 47.08768
- [89] 47.28636 47.48947 47.69696 47.90876 48.12483 48.34511 48.56953 48.79805 49.03060 49.26712 49.50757
-[100] 49.75188 49.99999
-
 ```
+<p style="font-family = Arial; font-size: 12px; text-align:left">
+[1] 50.00000 49.75188 49.50758 49.26713 49.03060 48.79805 48.56954 48.34511 48.12484 47.90877 47.69696</p>
+<p style="font-family = Arial; font-size: 12px; text-align:left">
+[12] 47.48947 47.28636 47.08768 46.89350 46.70385 46.51881 46.33843 46.16276 45.99185 45.82576 45.66454</p>
+<p style="font-family = Arial; font-size: 12px; text-align:left">
+[23] 45.50824 45.35692 45.21062 45.06939 44.93328 44.80234 44.67662 44.55615 44.44097 44.33114 44.22669</p>
+<p style="font-family = Arial; font-size: 12px; text-align:left">
+[34] 44.12766 44.03408 43.94599 43.86343 43.78641 43.71499 43.64917 43.58899 43.53447 43.48563 43.44249</p>
+<p style="font-family = Arial; font-size: 12px; text-align:left">
+[45] 43.40507 43.37338 43.34743 43.32724 43.31282 43.30416 43.30127 43.30416 43.31282 43.32724 43.34743</p>
+<p style="font-family = Arial; font-size: 12px; text-align:left">
+[56] 43.37338 43.40507 43.44249 43.48563 43.53447 43.58899 43.64917 43.71499 43.78641 43.86342 43.94599</p>
+<p style="font-family = Arial; font-size: 12px; text-align:left">
+[67] 44.03408 44.12765 44.22669 44.33114 44.44097 44.55614 44.67661 44.80234 44.93328 45.06939 45.21062</p>
+<p style="font-family = Arial; font-size: 12px; text-align:left">
+[78] 45.35692 45.50824 45.66453 45.82575 45.99184 46.16275 46.33843 46.51881 46.70385 46.89349 47.08768</p>
+<p style="font-family = Arial; font-size: 12px; text-align:left">
+[89] 47.28636 47.48947 47.69696 47.90876 48.12483 48.34511 48.56953 48.79805 49.03060 49.26712 49.50757</p>
+<p style="font-family = Arial; font-size: 12px; text-align:left">
+[100]49.75188 49.99999</p>
 
 <p align="justify"> Muitas informações podem ser extraídas dos valores da velocidade resultante. Veja algumas:</p>
 
-<p align="justify">Observe que o valor da velocidade resultante na saída e na chegada é o mesmo. A velocidade resultante na altura máxima é o mesmo valor da componente vix (43,30127~m), já que a vy é nula neste ponto. A velocidade resultante é sempre positiva. Muitas informações podem ser extraídas dos valores das componentes da velocidade. Veja algumas:</p>
+<p align="justify">Observe que o valor da velocidade resultante na saída e na chegada é o mesmo. A velocidade resultante na altura máxima é o mesmo valor da componente vix (43,30127&nbsp;), já que a vy é nula neste ponto. A velocidade resultante é sempre positiva. Muitas informações podem ser extraídas dos valores das componentes da velocidade. Veja algumas:</p>
 
 ```{r}
 # Extrai da vr 3 valores
@@ -1686,7 +1714,6 @@ vr[c(1,2,3)]
 vr[c(101,100,99)]
 49.99999 49.75188 49.50757
  
-
 # Extrai de vr os valores
 # de 48 a 52
 vr[c(48:51)]   
@@ -1706,7 +1733,6 @@ min(vr)
 diff(vr)
 [1] -0.248115560 -0.244309157... 
 [9] -0.216070158 -0.211807357...
-
 ```
 
 > fAZER A PARTIR DAQUI - DEVER DE CASA - estude e execute os comandos abaixo no seu ambiente R:
