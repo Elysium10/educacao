@@ -1030,7 +1030,551 @@ cat("e) A posição em 5s é", X, "e", Y)
 ```
 > Compare sua resposta 
 
-<p style="background-color:#000000; font-weight: bold; font-size: 20px; text-align:justify"><font color="#ffffff">&nbsp;&nbsp;a) A hmax é 95.66327;<br>&nbsp;&nbsp;b) O thmax é 4.418497;<br>&nbsp;&nbsp;c) O alcance é 220.9248;<br>&nbsp;&nbsp;d) vy: -43.30127, vr: 50, direção: -60; <br>&nbsp;&nbsp;e) A posição em 5s é 125 e 94.00635.</font></p>
+<p style="background-color:#000000; font-weight: bold; font-size: 20px; text-align:justify"><font color="#ffffff">  a) A hmax é 95.66327;<br>  b) O thmax é 4.418497;<br>  c) O alcance é 220.9248;<br>  d) vy: -43.30127, vr: 50, direção: -60; <br>  e) A posição em 5s é 125 e 94.00635.</font></p>
+
+<p style="background-color:#33a0c2; font-weight: bold; font-size: 20px; text-align:center"><font color="#ffffff">EXERCÍCIO PROPOSTO</font></p>
+<p align="justify"> Um projétil é lançado a partir do solo, formando com o mesmo um ângulo de 60°, com uma velocidade inicial igual a 200 m/s. Determine as componentes vx, vy e a direção do projétil ao chegar no solo. Adote a aceleração da gravidade g = 9.8 m/s<sup>2</sup>.</p>
+*** =instructions
+<p align="justify"> - Calcule a direção do projétil no tempo de trajeto. Você irá atribuir vy/vx a uma variável.</p>
+<p align="justify"> - Leia todo o código do exercício e escreva a atribuição à variável.</p>
+*** =hint
+<p align="justify"> A direção ou ângulo formado em relação à horizontal, no momento em que o projétil chega ao chão, pode ser obtido pela seguinte expressão:</p> 
+$$\theta = arc~tg~\displaystyle \frac{v _{y}}{v _{x}}\cdot$$
+*** =pre_exercise_code
+```{r}
+# no pec
+```
+*** =sample_code
+```{r}
+# Aceleração da gravidade:
+g <- 9.8
+# Vel. inicial:
+vi <- 200
+# ângulo dado em graus:
+angulo <- 60
+# transformar graus em rad:
+teta <- (pi/180) * angulo
+# componente x da vi:
+vix <- vi * cos(teta)
+# componente y da vi:
+viy <- vi * sin(teta)
+# vx = vix
+vx <- vix
+# altura máxima
+hmax = (viy ^ 2)/(2 * g)
+# Tempo na hmax:
+thmax <- viy/g
+# tempo tot de trajeto:
+ttot = 2 * thmax
+# Componente vertical de v:
+vy <- viy - g * ttot
+#Atribuir vy/vx a uma variável
+tang <- 
+# Atribuir valor do arc tg
+angulo <- atan(tang)
+# Atribuir valor de angulo/(pi/180)
+graus <- angulo/(pi/180)
+# Mostrar vy:
+vy
+# Mostrar vx:
+vx
+# Mostrar direção:
+graus
+```
+*** =solution
+```{r}
+# Aceleração da gravidade:
+g <- 9.8
+# Vel. inicial:
+vi <- 200
+# ângulo dado em graus:
+angulo <- 60
+# transformar graus em rad:
+teta <- (pi/180) * angulo
+# componente x da vi:
+vix <- vi * cos(teta)
+# componente y da vi:
+viy <- vi * sin(teta)
+# vx = vix
+vx <- vix
+# altura máxima
+hmax = (viy ^ 2)/(2 * g)
+# Tempo na hmax:
+thmax <- viy/g
+# tempo tot de trajeto:
+ttot = 2 * thmax
+# Componente vertical de v:
+vy <- viy - g * ttot
+#Atribuir vy/vx a uma variável
+tang <- vy/vx
+# Atribuir valor do arc tg
+angulo <- atan(tang)
+# Atribuir valor de angulo/(pi/180)
+graus <- angulo/(pi/180)
+# Mostrar vy:
+vy
+# Mostrar vx:
+vx
+# Mostrar direção:
+graus
+```
+*** =sct
+```{r}
+test_output_contains ("-60", incorrect_msg = "Escreva a expressão que atribua a uma variável (tang) a divisão entre as componentes vertical e horizontal da velocidade do projétil quando o mesmo alcança o tempo de trajeto.")
+success_msg ("Bom trabalho! Você aprendeu a determinar a direção do projétil quando o mesmo alcança o solo.")
+```
+
+--- type:NormalExercise lang:r xp:100 skills:1 key:dee61a2620
+## Gráfico do Movimento oblíquo
+
+<p align="justify"> A equação do MRU que fornece o espaço inicial e final para um móvel num instante t, segundo o eixo horizontal (X), é dada por </p>
+
+$$\Delta X= X - x _{i} =v _{ix}.t \rightarrow X= x _{i} + v _{ix}.t$$
+
+<p align="justify">onde, $\Delta X$ representa a variação do espaço (no eixo X); $X$ corresponde ao espaço final; $x _{i}$ representa o espaço inicial (no caso, será na origem do gráfico e igual a zero); $v _{ix}$ é constante e corresponde à componente da velocidade no eixo X e o t representa o tempo dado.</p>
+
+<p align="justify"> Quando $x _{i}=0$, a equação acima torna-se</p> 
+
+$$X= v _{ix}.t.$$
+
+<p align="justify">Para plotarmos o gráfico precisaremos isolar o tempo t. Portanto, da primeira equação temos que</p> 
+
+$$t = \frac{X - x_{i}}{v _{ix}}.$$
+
+<p align="justify"> A equação do MRUV que fornece a altura inicial e final para um móvel num instante t, segundo o eixo vertical (Y), é dada por </p>
+
+$$\Delta Y= Y - y _{i} = v _{ix}.t - \displaystyle \frac{g.t^{2}}{2} \rightarrow$$
+$$Y =  y _{i} + v _{ix}.t - \displaystyle \frac{g.t^{2}}{2}\cdot$$
+
+<p align="justify">onde, $\Delta Y$ representa a variação da altura (no eixo Y); $Y$ corresponde à altura final; $y _{i}$ corresponde a altura inicial (no caso, será na origem do gráfico e igual a zero); $v _{iy}$ corresponde à componente da velocidade no eixo Y e o t corresponde ao tempo dado.</p> 
+
+<p align="justify"> Quando $y _{i}=0$, a equação acima torna-se</p> 
+
+$$Y= v _{ix}.t - \displaystyle \frac{g.t^{2}}{2}\cdot$$
+
+> Valores do eixo X (Distância horizontal)
+
+* <p align="justify">Um projétil é lançado a  partir do solo, formando com o mesmo um ângulo de 30°, com uma velocidade inicial igual a 50 m/s. Determine quais as alturas (coordenadas Y) do projétil a cada 2,209248 m de distância horizontal a partir de onde
+lançado (de 0 m) até o alcance (A = 220,9248 m). Considere $g = 9,8~m/s^{2}$.</p>
+
+
+
+```{r}
+# Aceleração da gravidade:
+g <- 9.8
+# Espaço inicial:
+xi <- 0
+# Espaço final:
+yi <- 0
+# Sequência de 0 até o Alcance indo de 2.209248 em 2.209248:
+X <- seq(from = 0, to = 220.9248, by = 2.209248)
+# Velocidade inicial:
+vi <- 50
+vi <- 50
+# ângulo em graus:
+angulo <- 30
+# Graus em radianos:
+teta <- (pi/180) * angulo
+# Componente vix:
+vix <- vi * cos(teta)
+# vx é igual a vix:
+vx <- vix
+# Componente viy:
+viy <- vi * sin(teta)
+# O tempo na eq. MRU:
+tempo <- (X - xi)/vix
+# Posição X
+X <- vix * tempo
+# Posição Y
+Y <- viy * tempo - (g * t ^ 2)/2 
+# Componente vertical de v:
+vy <- viy - g * tempo 
+# Velocidade resultante:
+vr <- sqrt(vx ^ 2 + vy ^ 2)
+#Mostrar o eixo X
+X
+
+ [1]    0.000000   2.209248   4.418496   6.627744   8.836992  11.046240  13.255488  15.464736  17.673984
+ [10]  19.883232  22.092480  24.301728  26.510976  28.720224  30.929472  33.138720  35.347968  37.557216
+ [19]  39.766464  41.975712  44.184960  46.394208  48.603456  50.812704  53.021952  55.231200  57.440448
+ [28]  59.649696  61.858944  64.068192  66.277440  68.486688  70.695936  72.905184  75.114432  77.323680
+ [37]  79.532928  81.742176  83.951424  86.160672  88.369920  90.579168  92.788416  94.997664  97.206912
+ [46]  99.416160 101.625408 103.834656 106.043904 108.253152 110.462400 112.671648 114.880896 117.090144
+ [55] 119.299392 121.508640 123.717888 125.927136 128.136384 130.345632 132.554880 134.764128 136.973376
+ [64] 139.182624 141.391872 143.601120 145.810368 148.019616 150.228864 152.438112 154.647360 156.856608
+ [73] 159.065856 161.275104 163.484352 165.693600 167.902848 170.112096 172.321344 174.530592 176.739840
+ [82] 178.949088 181.158336 183.367584 185.576832 187.786080 189.995328 192.204576 194.413824 196.623072
+ [91] 198.832320 201.041568 203.250816 205.460064 207.669312 209.878560 212.087808 214.297056 216.506304
+[100] 218.715552 220.924800
+```
+<p align="justify"> Observe que o projétil partiu de om (espaço inicial) até um alcance de 220,924800m (espaço final). Pedimos para o R executar na sequência de 2.209248m em 2.209248m até chegar no alcance.</p>
+
+> Comandos para explorar os valores de X
+
+<p align="justify"> Muitas informações podem ser extraídas dos valores do eixo horizontal. Veja algumas:</p>
+
+```{r}
+# Maior valor no X:
+max(X)
+220.9248
+
+# Menor valor no X:
+min(X) 
+0
+
+# Menor e maior valor:
+range(X) 
+0.0000 220.9248
+
+# Soma elementos de X:
+sum(X)
+11156.7
+
+# Variação cada elemento
+# (constante)
+diff(X)
+[1]  2.209248 2.209248... 
+[12] 2.209248 2.209248... 
+
+# Média: 
+ mean(X) 
+110.4624
+```{r}
+
+> Valores do eixo Y (Distância vertical)
+
+```{r}
+# Aceleração da gravidade:
+g <- 9.8
+# Espaço inicial:
+xi <- 0
+# Espaço final:
+yi <- 0
+# Sequência de 0 até o Alcance indo de 2.209248 em 2.209248:
+X <- seq(from = 0, to = 220.9248, by = 2.209248)
+# Velocidade inicial:
+vi <- 50
+vi <- 50
+# ângulo em graus:
+angulo <- 30
+# Graus em radianos:
+teta <- (pi/180) * angulo
+# Componente vix:
+vix <- vi * cos(teta)
+# vx é igual a vix:
+vx <- vix
+# Componente viy:
+viy <- vi * sin(teta)
+# O tempo na eq. MRU:
+tempo <- (X - xi)/vix
+# Posição X
+X <- vix * tempo
+# Posição Y
+Y <- viy * tempo - (g * t ^ 2)/2 
+# Componente vertical de v:
+vy <- viy - g * tempo 
+# Velocidade resultante:
+vr <- sqrt(vx ^ 2 + vy ^ 2)
+# Mostrar o eixo X
+X
+# Mostrar o eixo Y
+Y
+```
+[1]  0.000000e+00 1.262755e+00 2.499999e+00 3.711734e+00 4.897958e+00 6.058672e+00 7.193876e+00 8.303570e+00
+[9]  9.387753e+00 1.044643e+01 1.147959e+01 1.248724e+01 1.346939e+01 1.442602e+01 1.535714e+01 1.626275e+01
+[17] 1.714285e+01 1.799745e+01 1.882653e+01 1.963010e+01 2.040816e+01 2.116071e+01 2.188775e+01 2.258928e+01
+[25] 2.326530e+01 2.391581e+01 2.454081e+01 2.514030e+01 2.571428e+01 2.626275e+01 2.678571e+01 2.728316e+01
+[33] 2.775510e+01 2.820153e+01 2.862245e+01 2.901785e+01 2.938775e+01 2.973214e+01 3.005102e+01 3.034439e+01
+[41] 3.061224e+01 3.085459e+01 3.107143e+01 3.126275e+01 3.142857e+01 3.156888e+01 3.168367e+01 3.177296e+01
+[49] 3.183673e+01 3.187500e+01 3.188776e+01 3.187500e+01 3.183674e+01 3.177296e+01 3.168367e+01 3.156888e+01
+[57] 3.142857e+01 3.126276e+01 3.107143e+01 3.085459e+01 3.061225e+01 3.034439e+01 3.005102e+01 2.973215e+01
+[65] 2.938776e+01 2.901786e+01 2.862245e+01 2.820154e+01 2.775511e+01 2.728317e+01 2.678572e+01 2.626276e+01
+[73] 2.571429e+01 2.514032e+01 2.454083e+01 2.391583e+01 2.326532e+01 2.258930e+01 2.188777e+01 2.116073e+01
+[81] 2.040818e+01 1.963012e+01 1.882655e+01 1.799746e+01 1.714287e+01 1.626277e+01 1.535716e+01 1.442604e+01
+[89] 1.346941e+01 1.248726e+01 1.147961e+01 1.044645e+01 9.387776e+00 8.303594e+00 7.193900e+00 6.058697e+00
+[97] 4.897984e+00 3.711760e+00 2.500026e+00 1.262782e+00 2.765749e-05
+
+<p align="justify">Nos dados acima, a altura máxima corresponde a</p> 
+
+$$3,188776e+01 = 3,188776.10^{1}= 3,188776.10 = 31,88776m.$$
+
+<p align="justify"> Observe que o projétil partiu de om (altura inicial) até uma altura máxima (altura final) de 31.88776m.</p>
+
+> Comandos para explorar os valores de y
+
+<p align="justify"> Muitas informações podem ser extraídas dos valores do eixo vertical. Veja algumas:</p>
+
+```{r}
+# Extrai o valor nº 51 do eixo X
+# Metade do alcance 
+X[c(51)]
+110.4624
+
+# Extrai o valor nº 51 do eixo Y
+# Altura máxima
+Y[c(51)]
+31.88776
+
+# Extrai de X os valores
+# de nºs 49, 50, 51
+X[c(49, 50, 51)]
+106.0439 108.2532 110.4624
+
+# Extrai de Y os valores
+# de nºs 49, 50, 51
+Y[c(49, 50, 51)]
+31.83673 31.87500 31.88776
+
+# Extrai de X os valores
+# de 51 a 53
+X[c(51:53)]   
+110.4624 112.6716 114.8809
+
+# Extrai de Y os valores
+# de 51 a 53 - começo da descida
+Y[c(51:53)]
+31.88776 31.87500 31.83674
+
+# Maior valor no Y:
+max(Y) 
+31.88776
+
+# Menor valor no Y:
+min(Y) 
+0
+
+# Menor e maior valor:
+range(Y) 
+0.00000 31.88776
+
+# Soma elementos de Y:
+sum(Y)
+2125.638
+
+# Variação cada elemento
+## (Não constante)
+diff(Y)
+[1]  1.26275483  1.23724464...   
+[9]  1.05867329  1.03316309...  
+
+# Média: 
+mean(Y) 
+21.04592
+```{r}
+
+
+
+
+
+vx
+vy
+vr
+vix
+viy
+t
+plot (X, Y)
+```
+> <p align="justify">Comandos no R para determinar, além da posição do projétil, a componente horizontal de v, a componente vertical de v e a velocidade resultante - todos no tempo de altura máxima:</p>
+
+```{r}
+# Aceleração da gravidade:
+g <- 9.8
+# Instante na hmax:
+t <- 2.5510204081632653061224489795918
+# Componente vix:
+vix <- 43.30127
+# Componente viy:
+viy <- 25
+# Posição X
+X <- vix * t
+# Posição Y
+Y <- viy * t - (g * t ^ 2)/2 
+# vx é igual a vix:
+vx <- vix
+# Componente vy:
+vy <- viy - g * t 
+# Velocidade resultante:
+vr <- sqrt(vx ^ 2 + vy ^ 2)
+cat("A posição X na hmax é",  X, "e", Y)
+cat("As componentes de v:", vx, "e", vy)
+cat("A vr no tempo dado é", vr)
+
+A posição X na hmax é 110.4624 e 31.88776
+As componentes de v: 43.30127 e 0
+A vr no tempo dado é 43.30127
+```
+<p align="justify">Observe que o valor de X na altura máxima equivale a 110,4624 m, a metade do alcance (A = 220,9248m). Observe também que o valor de Y, para esse tempo exato, equivale à altura máxima (31.88776). Observe que a componente da velocidade na horizontal (vx = vix), em um dado tempo, não varia.</p>
+
+> <p align="justify">Comandos no R para determinar, além da posição do projétil, a componente horizontal de v, a componente vertical de v e a velocidade resultante - todos no tempo de 4s:</p>
+
+```{r}
+# Aceleração da gravidade:
+g <- 9.8
+# Instante dado:
+t <- 4
+# Componente vix:
+vix <- 43.30127
+# Componente viy:
+viy <- 25
+# Posição X
+X <- vix * t
+# Posição Y
+Y <- viy * t - (g * t ^ 2)/2 
+# Componente vx:
+vx <- vix
+# Componente vy:
+vy <- viy - g * t 
+# Velocidade resultante:
+vr <- sqrt(vx ^ 2 + vy ^ 2)
+cat("Posição do projétil:",  X, "e", Y)
+cat("Componentes de v:", vx, "e", vy)
+cat("vr no tempo dado é", vr)
+Posição do projétil: 173.2051 e 21.6
+Componentes de v: 43.30127 e -14.2
+vr no tempo dado é: 45.57017
+```
+<p align="justify">Observe que após o tempo de altura máxima (2,5510...), no caso 4s, o projétil já está caindo e, no eixo X, o projétil já passou da metade do alcance (110,4624), no caso, 173,2051m. Observe que na queda do projétil a componente vertical da velocidade está negativa e o vetor resultante é positivo.</p>
+
+> DEVER DE CASA - estude e execute os comandos abaixo no seu ambiente R:
+
+<p align="justify"> Aplique os comandos utilizados em R para resolver o seguinte problema: Um projétil é lançado a partir do solo, formando com o mesmo um ângulo de 45°, com uma velocidade inicial igual a 100 m/s. Sendo que o alcance máximo acontece quando o ângulo de lançamento é equivalente a 45°, prove que esse alcance máximo (A) é quatro vezes maior que a altura máxima (hmáx). Adote a aceleração da gravidade g = 9.8 m/s<sup>2</sup>. Compare sua resposta logo abaixo.</p>
+
+```{r}
+# Aceleração da gravidade:
+g <- 9.8
+# Velocidade inicial:
+vi <- 100
+# Ângulo em graus:
+angulo <- 45
+# Graus em radianos:
+teta <- (pi/180) * angulo
+# componente vix:
+vix <- vi * cos(teta)
+# componente viy:
+viy <- vi * sin(teta) 
+# Tempo na thmax:
+thmax <- viy/g
+# tempo total:
+ttot = 2 * thmax
+# altura máxima:
+hmax = (viy ^ 2)/(2 * g)
+# alcance
+A = vix * ttot
+cat("A altura máxima é", hmax)
+cat("O alcance é", A)
+cat(A, "é 4 vezes", hmax)
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p align="justify">No problema inicial os comandos no R podem ficar nesse formato:</p>
+
+```{r}
+# vx e vy já calculados:
+vx <-  43.30127
+vy <- -25
+# Atribuir o valor vy/vx:
+tang <- vy/vx
+# Atribuir o valor do arco tg
+angulo <- atan(tang)
+# Atribuir o valor angulo/(pi/180)
+graus <- angulo/(pi/180)
+# Mostrar variável graus
+graus
+
+ -30
+```
+<p align="justify">Portanto, o ângulo cuja tangente é igual a -0,57735031 equivale a -30°.</p>
+
+> Mais um exemplo
+
+* <p align="justify"> Um projétil é lançado a  partir do solo, formando com o mesmo um ângulo de 60°, com uma velocidade inicial igual a 50 m/s. Determine a direção do projétil ao atingir o solo. Considere $g = 9,8~m/s^{2}$, a $v _{x} = 25 m/s$ e a $v _{y} = -53~m/s$.</p>
+
+```{r}
+# vx e vy dados no problema:
+vx <-  25
+vy <- -53
+# Atribuir valor vy/vx:
+tang <- vy/vx
+# Atribuir valor do arco tg
+angulo <- atan(tang)
+# Atribuir valor de angulo/(pi/180)
+graus <- angulo/(pi/180)
+# Mostrar variável graus
+graus
+
+-64.74684 
+```
+<p align="justify"> Aproximadamente -65° é o ângulo formado, em relação à horizontal, no momento em que o projétil chega ao chão.</p>
+
+> DEVER DE CASA - estude e execute os comandos abaixo no seu ambiente R:
+
+<p align="justify"> Aplique os comandos utilizados em R para resolver o seguinte problema: Um projétil é lançado a partir do solo, formando com o mesmo um ângulo de 60°, com uma velocidade inicial igual a 50 m/s. Adote a aceleração da gravidade g = 9.8 m/s<sup>2</sup>. Determine: a) A altura máxima desenvolvida pelo projétil; b) O tempo gasto para chegar na altura máxima; c) O alcance desenvolvido pelo projétil; d) A velocidade da componente vertical, a velocidade resultante e a direção do projétil ao alcançar o solo; e) A posição do projétil no tempo de 5 segundos. Compare sua resposta logo abaixo.</p>
+
+```{r}
+# Aceleração da gravidade:
+g <- 9.8
+# Vel. inicial:
+vi <- 50
+# ângulo dado em graus:
+angulo <- 60
+# transformar graus em rad:
+teta <- (pi/180) * angulo
+# componente x da vi:
+vix <- vi * cos(teta)
+# componente y da vi:
+viy <- vi * sin(teta)
+# altura máxima
+hmax = (viy ^ 2)/(2 * g)
+# Tempo na hmax:
+thmax <- viy/g
+# tempo tot de trajeto:
+ttot = 2 * thmax
+# alcance:
+A = vix * ttot
+# Instante dado:
+t = 5
+# Posição X
+X <- vix * t
+# Posição Y
+Y <- viy * t - (g * t ^ 2)/2
+# vx é uniforme e igual a vix:
+vx <- vix
+# Componente vertical de v:
+vy <- viy - g * ttot 
+# Velocidade resultante:
+vr <- sqrt(vx ^ 2 + vy ^ 2)
+# Atribuir o valor vy/vx:
+tang <- vy/vx
+# Atribuir valor do arc tg
+angulo <- atan(tang)
+# Atribuir valor de angulo/(pi/180)
+graus <- angulo/(pi/180)
+cat("a) A hmax é", hmax)
+cat("b) O thmax é", thmax)
+cat("c) O alcance é", A)
+cat("d) vy:", vy, "vr:", vr, "direção:", graus)
+cat("e) A posição em 5s é", X, "e", Y)
+```
+> Compare sua resposta 
+
+<p style="background-color:#000000; font-weight: bold; font-size: 20px; text-align:justify"><font color="#ffffff">  a) A hmax é 95.66327;<br>  b) O thmax é 4.418497;<br>  c) O alcance é 220.9248;<br>  d) vy: -43.30127, vr: 50, direção: -60; <br>  e) A posição em 5s é 125 e 94.00635.</font></p>
 
 <p style="background-color:#33a0c2; font-weight: bold; font-size: 20px; text-align:center"><font color="#ffffff">EXERCÍCIO PROPOSTO</font></p>
 <p align="justify"> Um projétil é lançado a partir do solo, formando com o mesmo um ângulo de 60°, com uma velocidade inicial igual a 200 m/s. Determine as componentes vx, vy e a direção do projétil ao chegar no solo. Adote a aceleração da gravidade g = 9.8 m/s<sup>2</sup>.</p>
