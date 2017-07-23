@@ -1863,25 +1863,6 @@ success_msg ("Bom trabalho! Você aprendeu a determinar a direção do projétil
 --- type:NormalExercise lang:r xp:100 skills:1 key:cf63ed39fd
 ## Explorando dados do tempo
 
-<p align="justify"> A equação do MRU que fornece o espaço inicial e final para um móvel num instante t, segundo o eixo horizontal (X), é dada por </p>
-
-$$\Delta X= X - x _{i} =v _{ix}.t \rightarrow X= x _{i} + v _{ix}.t$$
-
-<p align="justify">onde, $\Delta X$ representa a variação do espaço (no eixo X); $X$ corresponde ao espaço final; $x _{i}$ representa o espaço inicial (no caso, será na origem do gráfico e igual a zero); $v _{ix}$ é constante e corresponde à componente da velocidade no eixo X e o t representa o tempo dado.</p>
-
-<p align="justify"> Quando $x _{i}=0$, a equação acima torna-se</p> 
-
-$$X= v _{ix}.t.$$
-
-<p align="justify">Para plotarmos o gráfico precisaremos isolar o tempo t. Portanto, da primeira equação temos que</p> 
-
-$$t = \frac{X - x_{i}}{v _{ix}}.$$
-
-<p align="justify"> A equação do MRUV que fornece a altura inicial e final para um móvel num instante t, segundo o eixo vertical (Y), é dada por </p>
-
-$$\Delta Y= Y - y _{i} = v _{ix}.t - \displaystyle \frac{g.t^{2}}{2} \rightarrow$$
-$$Y =  y _{i} + v _{ix}.t - \displaystyle \frac{g.t^{2}}{2}\cdot$$
-
 <p align="justify">onde, $\Delta Y$ representa a variação da altura (no eixo Y); $Y$ corresponde à altura final; $y _{i}$ corresponde a altura inicial (no caso, será na origem do gráfico e igual a zero); $v _{iy}$ corresponde à componente da velocidade no eixo Y e o t corresponde ao tempo dado.</p> 
 
 <p align="justify"> Quando $y _{i}=0$, a equação acima torna-se</p> 
@@ -1932,7 +1913,7 @@ vx
 # Mostrar vy
 vy
 # Mostrar vr
-vy
+vr
 # Mostrar tempo
 tempo
 ```
