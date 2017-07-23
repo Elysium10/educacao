@@ -1863,13 +1863,7 @@ success_msg ("Bom trabalho! Você aprendeu a determinar a direção do projétil
 --- type:NormalExercise lang:r xp:100 skills:1 key:cf63ed39fd
 ## Explorando dados do tempo
 
-<p align="justify">onde, $\Delta Y$ representa a variação da altura (no eixo Y); $Y$ corresponde à altura final; $y _{i}$ corresponde a altura inicial (no caso, será na origem do gráfico e igual a zero); $v _{iy}$ corresponde à componente da velocidade no eixo Y e o t corresponde ao tempo dado.</p> 
-
-<p align="justify"> Quando $y _{i}=0$, a equação acima torna-se</p> 
-
-$$Y= v _{ix}.t - \displaystyle \frac{g.t^{2}}{2}\cdot$$
-
-> Valores do tempo
+<p align="justify">Sabemos que um corpo está em movimento uniforme quando o mesmo percorre espaços iguais em intervalos de tempos iguais. O movimento do projétil no eixo X é constante, ou seja, a componente da velocidade inicial vix, que também é igual à componente da velocidade vx, é constante. Foi programado no R para que os espaços fossem divididos de 2,209248m em 2,209248m até atingir o alcance máximo de 220,9248m. Foram obtidos intervalos de tempos iguais, dividindo cada 2,209248m pelo valor da componente vix (43.30127m/s) que resultou em 0,0510204s. Vejamos o código:</p> 
 
 ```{r}
 # Aceleração da gravidade:
@@ -1917,6 +1911,7 @@ vr
 # Mostrar tempo
 tempo
 ```
+> Valores do tempo
 
 <p style="font-family = Arial; font-size: 12px; text-align:left">[1] <font color="##FF0000">0.0000000</font> 0.0510204 0.1020408 0.1530612 0.2040816 0.2551020 0.3061224 0.3571428 0.4081632 0.4591836<p>
 <p style="font-family = Arial; font-size: 12px; text-align:left">[11] 0.5102040 0.5612244 0.6122448 0.6632652 0.7142856 0.7653060 0.8163264 0.8673468 0.9183671 0.9693875<p>
@@ -1947,7 +1942,7 @@ tempo[c(99, 100, 101)]
 
 # Extrai de tempo os valores
 # de 50 a 52
- tempo[c(50,51,52)]
+tempo[c(50,51,52)]
 2.499999 2.551020 2.602040
 
 # Maior valor tempo:
