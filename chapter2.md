@@ -1888,7 +1888,7 @@ $$Y =  y _{i} + v _{ix}.t - \displaystyle \frac{g.t^{2}}{2}\cdot$$
 
 $$Y= v _{ix}.t - \displaystyle \frac{g.t^{2}}{2}\cdot$$
 
-> Valores da componente vy
+> Valores do tempo
 
 ```{r}
 # Aceleração da gravidade:
@@ -1931,180 +1931,58 @@ vx
 43.30127
 # Mostrar vy
 vy
+# Mostrar vr
+vy
+# Mostrar tempo
+tempo
 ```
-<p style="font-family = Arial; font-size: 12px; text-align:left">
-[1]  <font color="##FF0000">2.500000e+01</font> 2.450000e+01  2.400000e+01  2.350000e+01  2.300000e+01  2.250000e+01  2.200000e+01</p>
-<p style="font-family = Arial; font-size: 12px; text-align:left">
-[8]  2.150000e+01  2.100000e+01  2.050000e+01  2.000000e+01  1.950000e+01  1.900000e+01  1.850000e+01</p>
-<p style="font-family = Arial; font-size: 12px; text-align:left">
-[15] 1.800000e+01  1.750000e+01  1.700000e+01  1.650000e+01  1.600000e+01  1.550000e+01  1.500000e+01</p>
-<p style="font-family = Arial; font-size: 12px; text-align:left">
-[22] 1.450000e+01  1.400000e+01  1.350000e+01  1.300000e+01  1.250000e+01  1.200000e+01  1.150000e+01</p>
-<p style="font-family = Arial; font-size: 12px; text-align:left">
-[29] 1.100000e+01  1.050000e+01  1.000000e+01  9.500003e+00  9.000003e+00  8.500004e+00  8.000004e+00</p>
-<p style="font-family = Arial; font-size: 12px; text-align:left">
-[36] 7.500004e+00  7.000004e+00  6.500004e+00  6.000004e+00  5.500004e+00  5.000004e+00  4.500004e+00</p>
-<p style="font-family = Arial; font-size: 12px; text-align:left">
-[43] 4.000005e+00  3.500005e+00  3.000005e+00  2.500005e+00  2.000005e+00  1.500005e+00  1.000005e+00</p>
-<p style="font-family = Arial; font-size: 12px; text-align:left">
-[50] 5.000053e-01  <font color="##FF0000">5.420870e-06</font> -4.999945e-01 -9.999944e-01 -1.499994e+00 -1.999994e+00 -2.499994e+00</p>
-<p style="font-family = Arial; font-size: 12px; text-align:left">
-[57]-2.999994e+00 -3.499994e+00 -3.999994e+00 -4.499994e+00 -4.999993e+00 -5.499993e+00 -5.999993e+00</p>
-<p style="font-family = Arial; font-size: 12px; text-align:left">
-[64]-6.499993e+00 -6.999993e+00 -7.499993e+00 -7.999993e+00 -8.499993e+00 -8.999993e+00 -9.499993e+00</p>
-<p style="font-family = Arial; font-size: 12px; text-align:left">
-[71]-9.999992e+00 -1.049999e+01 -1.099999e+01 -1.149999e+01 -1.199999e+01 -1.249999e+01 -1.299999e+01</p>
-<p style="font-family = Arial; font-size: 12px; text-align:left">
-[78]-1.349999e+01 -1.399999e+01 -1.449999e+01 -1.499999e+01 -1.549999e+01 -1.599999e+01 -1.649999e+01</p>
-<p style="font-family = Arial; font-size: 12px; text-align:left">
-[85]-1.699999e+01 -1.749999e+01 -1.799999e+01 -1.849999e+01 -1.899999e+01 -1.949999e+01 -1.999999e+01</p>
-<p style="font-family = Arial; font-size: 12px; text-align:left">
-[92]-2.049999e+01 -2.099999e+01 -2.149999e+01 -2.199999e+01 -2.249999e+01 -2.299999e+01 -2.349999e+01</p>
-<p style="font-family = Arial; font-size: 12px; text-align:left">
-[99]-2.399999e+01 -2.449999e+01 <font color="##FF0000">-2.499999e+01</font></p>
 
-> Componentes da velocidade
+<p style="font-family = Arial; font-size: 12px; text-align:left">[1] <font color="##FF0000">0.0000000</font> 0.0510204 0.1020408 0.1530612 0.2040816 0.2551020 0.3061224 0.3571428 0.4081632 0.4591836<p>
+<p style="font-family = Arial; font-size: 12px; text-align:left">[11] 0.5102040 0.5612244 0.6122448 0.6632652 0.7142856 0.7653060 0.8163264 0.8673468 0.9183671 0.9693875<p>
+<p style="font-family = Arial; font-size: 12px; text-align:left">[21] 1.0204079 1.0714283 1.1224487 1.1734691 1.2244895 1.2755099 1.3265303 1.3775507 1.4285711 1.4795915<p>
+<p style="font-family = Arial; font-size: 12px; text-align:left">[31] 1.5306119 1.5816323 1.6326527 1.6836731 1.7346935 1.7857139 1.8367343 1.8877547 1.9387751 1.9897955<p>
+<p style="font-family = Arial; font-size: 12px; text-align:left">[41] 2.0408159 2.0918363 2.1428567 2.1938771 2.2448975 2.2959179 2.3469383 2.3979587 2.4489791 2.4999995<p>
+<p style="font-family = Arial; font-size: 12px; text-align:left">[51] <font color="##FF0000">2.5510199</font> 2.6020403 2.6530606 2.7040810 2.7551014 2.8061218 2.8571422 2.9081626 2.9591830 3.0102034<p>
+<p style="font-family = Arial; font-size: 12px; text-align:left">[61] 3.0612238 3.1122442 3.1632646 3.2142850 3.2653054 3.3163258 3.3673462 3.4183666 3.4693870 3.5204074<p>
+<p style="font-family = Arial; font-size: 12px; text-align:left">[71] 3.5714278 3.6224482 3.6734686 3.7244890 3.7755094 3.8265298 3.8775502 3.9285706 3.9795910 4.0306114<p>
+<p style="font-family = Arial; font-size: 12px; text-align:left">[81] 4.0816318 4.1326522 4.1836726 4.2346930 4.2857134 4.3367338 4.3877542 4.4387745 4.4897949 4.5408153<p>
+<p style="font-family = Arial; font-size: 12px; text-align:left">[91] 4.5918357 4.6428561 4.6938765 4.7448969 4.7959173 4.8469377 4.8979581 4.9489785 4.9999989 5.0510193<p>
+<p style="font-family = Arial; font-size: 12px; text-align:left">[101] <font color="##FF0000">5.1020397</font><p>
 
-<p align="justify">A componente vx = vix é constante (43,30127 m/s). A velocidade da componente vy varia de uma maneira constante, pois faz parte de um MRUV. Vamos analisar os valores de vy.</p> 
+<p align="justify"> Baseado nos dados de vy, vr e tempo, observe que na altura máxima atingida pelo projétil, o tempo chega a 2,5510199s e a componente da velocidade, vy, tende a zero (0,00000542087m/s). Na chegada do projétil ao solo, a componente da velocidade vy tende a -25m/s (-24,99999m/s) e a velocidade resultante tende a 50 m/s (49,99999), isso quando completa o tempo de trajeto de 5,1020397s.</p>
 
-<p align="justify"> Nessa simulação, a velocidade da componente na vertical, vy, na partida equivale a</p> 
-$$2,500000e+01$$ 
-$$= 2,500000.10^{1}$$
-$$= 2,500000.10$$ 
-$$= 25,000000$$ 
-$$= 25m/s$$ 
-<p align="justify"> e na altura máxima sua velocidade tende a zero (0,00000542087m/s). Na chegada ao solo, equivale a -24,99999m/s. Praticamente, é o mesmo valor da velocidade de saída, porém, com sinal contrário.</p>
+> Comandos para explorar os valores do tempo
 
-> Comandos para explorar os valores de vy
-
-<p align="justify"> Muitas informações podem ser extraídas dos valores das componentes da velocidade. Veja algumas:</p>
+<p align="justify"> Muitas informações podem ser extraídas dos valores do tempo. Veja algumas:</p>
 
 ```{r}
+# Extrai de tempo 3 valores
+# de partida
+tempo[c(1,2,3)]
+0.0000000 0.0510204 0.1020408
+# 3 valores de chegada
+tempo[c(99, 100, 101)]
+4.999999 5.051019 5.102040
 
-# Extrai de vy 3 valores
-# de partida e de 
-vy[c(1,2,3)]
-25.0 24.5 24.0
-# chegada - compará-las
-vy[c(101,100,99)]
--24.99999 -24.49999 -23.99999
+# Extrai de tempo os valores
+# de 50 a 52
+ tempo[c(50,51,52)]
+2.499999 2.551020 2.602040
 
-# Extrai de vy os valores
-# de 48 a 52
-vy[c(48:52)]   
-1.500005e+00  1.000005e+00  5.000053e-01  
-5.420870e-06 -4.999945e-01
-
-# Maior valor vy:
-max(vy) 
-25
-# Menor valor vy:
-min(vy)
--24.99999
+# Maior valor tempo:
+max(tempo) 
+5.1020425
 
 # Variação entre cada elemento
 # (constante)
-diff(vy)
-[1] -0.4999999 -0.4999999... 
-[10]-0.4999999 -0.4999999... 
-```
-> Valores da vr
-
-```{r}
-# Aceleração da gravidade:
-g <- 9.8
-# Espaço inicial:
-xi <- 0
-# Espaço final:
-yi <- 0
-# Sequência de 0 até o Alcance indo de 2.209248 em 2.209248:
-X <- seq(from = 0, to = 220.9248, by = 2.209248)
-# Velocidade inicial:
-vi <- 50
-vi <- 50
-# ângulo em graus:
-angulo <- 30
-# Graus em radianos:
-teta <- (pi/180) * angulo
-# Componente vix:
-vix <- vi * cos(teta)
-# vx é igual a vix:
-vx <- vix
-# Componente viy:
-viy <- vi * sin(teta)
-# O tempo na eq. MRU:
-tempo <- (X - xi)/vix
-# Posição X
-X <- vix * tempo
-# Posição Y
-Y <- viy * tempo - (g * t ^ 2)/2 
-# Componente vertical de v:
-vy <- viy - g * tempo 
-# Velocidade resultante:
-vr <- sqrt(vx ^ 2 + vy ^ 2)
-# Mostrar eixo X
-X
-# Mostrar eixo Y
-Y
-# Mostrar vx
-vx
-43.30127
-# Mostrar vy
-vy
-# Mostrar vr
-vr
-```
-<p style="font-family = Arial; font-size: 12px; text-align:left">
-[1]<font color="##FF0000"> 50.00000 </font>49.75188 49.50758 49.26713 49.03060 48.79805 48.56954 48.34511 48.12484 47.90877 47.69696</p>
-<p style="font-family = Arial; font-size: 12px; text-align:left">
-[12] 47.48947 47.28636 47.08768 46.89350 46.70385 46.51881 46.33843 46.16276 45.99185 45.82576 45.66454</p>
-<p style="font-family = Arial; font-size: 12px; text-align:left">
-[23] 45.50824 45.35692 45.21062 45.06939 44.93328 44.80234 44.67662 44.55615 44.44097 44.33114 44.22669</p>
-<p style="font-family = Arial; font-size: 12px; text-align:left">
-[34] 44.12766 44.03408 43.94599 43.86343 43.78641 43.71499 43.64917 43.58899 43.53447 43.48563 43.44249</p>
-<p style="font-family = Arial; font-size: 12px; text-align:left">
-[45] 43.40507 43.37338 43.34743 43.32724 43.31282 43.30416 <font color="##FF0000">43.30127</font> 43.30416 43.31282 43.32724 43.34743</p>
-<p style="font-family = Arial; font-size: 12px; text-align:left">
-[56] 43.37338 43.40507 43.44249 43.48563 43.53447 43.58899 43.64917 43.71499 43.78641 43.86342 43.94599</p>
-<p style="font-family = Arial; font-size: 12px; text-align:left">
-[67] 44.03408 44.12765 44.22669 44.33114 44.44097 44.55614 44.67661 44.80234 44.93328 45.06939 45.21062</p>
-<p style="font-family = Arial; font-size: 12px; text-align:left">
-[78] 45.35692 45.50824 45.66453 45.82575 45.99184 46.16275 46.33843 46.51881 46.70385 46.89349 47.08768</p>
-<p style="font-family = Arial; font-size: 12px; text-align:left">
-[89] 47.28636 47.48947 47.69696 47.90876 48.12483 48.34511 48.56953 48.79805 49.03060 49.26712 49.50757</p>
-<p style="font-family = Arial; font-size: 12px; text-align:left">
-[100]49.75188 <font color="##FF0000">49.99999</font></p>
-
-<p align="justify">Observe que o valor da velocidade resultante na saída e na chegada é o mesmo. A velocidade resultante na altura máxima é o mesmo valor da componente vix (43,30127 ), já que a vy é nula neste ponto. A velocidade resultante é sempre positiva. Muitas informações podem ser extraídas dos valores das componentes da velocidade. Veja algumas:</p>
-
-```{r}
-# Extrai da vr 3 valores
-# de partida 
-vr[c(1,2,3)]
-50.00000 49.75188 49.50758
-# E de chegada - compará-las
-vr[c(101,100,99)]
-49.99999 49.75188 49.50757
+diff(tempo)
+[1] 0.0510204 0.0510204... 
+[11] 0.0510204 0.0510204... 
  
-# Extrai de vr os valores
-# de 48 a 52
-vr[c(48:51)]   
-43.32724 43.31282 43.30416 43.30127
-
-# Maior valor de vr:
-max(vr)
-50
-
-# Menor valor de vr
-# - na altura máxima:
-min(vr)
-43.30127
-
-# Variação entre cada elemento
-# (não constante)
-diff(vr)
-[1] -0.248115560 -0.244309157... 
-[9] -0.216070158 -0.211807357...
+# Resumo estatístico tempo:
+summary(tempo)
+Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+0.000   1.276   2.551   2.551   3.827   5.102 
 ```
 
 > fAZER A PARTIR DAQUI - DEVER DE CASA - estude e execute os comandos abaixo no seu ambiente R:
