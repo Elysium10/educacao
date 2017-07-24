@@ -2093,6 +2093,10 @@ success_msg ("Bom trabalho! Você aprendeu a determinar a direção do projétil
 
 <p align="justify">Sabemos que um corpo está em movimento uniforme quando o mesmo percorre espaços iguais em intervalos de tempos iguais. O movimento do projétil no eixo X é constante, ou seja, a componente da velocidade inicial vix, que também é igual à componente da velocidade vx, é constante. Foi programado no R para que os espaços fossem divididos de 2,209248m em 2,209248m até atingir o alcance máximo de 220,9248m. Foram obtidos intervalos de tempos iguais, dividindo cada 2,209248m pelo valor da componente vix (43,30127m/s) que resultou em 0,0510204s. Vejamos o código:</p> 
 
+<p align="justify"> Para testar os códigos em R, acesse o link abaixo:</p>
+
+[R-Fiddle](http://www.r-fiddle.org/#/)
+
 ```{r}
 # Aceleração da gravidade:
 g <- 9.8
