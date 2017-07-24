@@ -1185,7 +1185,7 @@ tempo <- (X - xi)/vix
 # Posição X
 X <- vix * tempo
 # Posição Y
-Y <- viy * tempo - (g * t ^ 2)/2 
+Y <- viy * tempo - (g * tempo ^ 2)/2 
 # Componente vertical de v:
 vy <- viy - g * tempo 
 # Velocidade resultante:
@@ -1221,7 +1221,7 @@ max(X)
 min(X) 
 0
 
-# Menor e maior valor:
+# Menor e maior valor X:
 range(X) 
 0.0000 220.9248
 
@@ -1546,7 +1546,7 @@ tempo <- (X - xi)/vix
 # Posição X
 X <- vix * tempo
 # Posição Y
-Y <- viy * tempo - (g * t ^ 2)/2 
+Y <- viy * tempo - (g * tempo ^ 2)/2 
 # Componente vertical de v:
 vy <- viy - g * tempo 
 # Velocidade resultante:
@@ -1892,7 +1892,7 @@ tempo <- (X - xi)/vix
 # Posição X
 X <- vix * tempo
 # Posição Y
-Y <- viy * tempo - (g * t ^ 2)/2 
+Y <- viy * tempo - (g * tempo ^ 2)/2 
 # Componente vertical de v:
 vy <- viy - g * tempo 
 # Velocidade resultante:
