@@ -2097,6 +2097,26 @@ success_msg ("Bom trabalho! Você aprendeu a determinar a direção do projétil
 
 [R-Fiddle](http://www.r-fiddle.org/#/)
 
+[Frações](https://drive.google.com/file/d/0B-ZeEtVJqx2TM1o3T2xYQ3JNTWc/view?usp=sharing)
+
+<br>
+testando:
+<p style="text-align: center;">Baixar livro Gestão Ambiental Empresarial:</p>
+<center><a href="https://dl.dropboxusercontent.com/s/79ww3eim9athxff/Gest%C3%A3o%20Ambiental%20Empresarial.pdf?dl=1&token_hash=AAFSsX1NYtn3F5kvLqsBwS891LWg57puathNXTROozc7jg" target="_blank"><img alt="Download do livro Gestão Ambiental" src="https://lh3.googleusercontent.com/-yhYUyL3mk3c/Uw_hdwRoYtI/AAAAAAAAA9M/tpH1DFoZVhc/s144/download%2520verde.jpg" 
+title="Download do livro Gestão Ambiental" /></a><center>
+<br>
+
+<p style="text-align:justify;">Saiba que sua participação é muito importante no processo de ensino-aprendizagem. Portanto, vamos presenteá-lo com um brinde – um livro com vários exercícios resolvidos de Matemática Básica. faça o Download:</p>
+<p><a href="https://goo.gl/Lkg3C1" target="_blank" rel="nofollow"><img class="aligncenter" title="Download do Livro de Matemática Básica" src="https://lh3.googleusercontent.com/-yhYUyL3mk3c/Uw_hdwRoYtI/AAAAAAAAA9M/zAIvm-gwZZAnVLu-4tdowVu1DcmT13NfQCEwYBhgL/w140-h28-p/download%2Bverde.jpg" alt="Download do Livro de Matemática Básica" scale="0" width="129" height="23"></a></p>
+
+
+<p style="text-align:justify;">Saiba que sua participação é muito importante no processo de ensino-aprendizagem. Portanto, vamos presenteá-lo com um brinde – um livro com vários exercícios resolvidos de Matemática Básica. faça o Download:</p>
+<p><a href="https://goo.gl/Lkg3C1" target="_blank" rel="nofollow"><img class="aligncenter" title="Download do Livro de Matemática Básica" src="https://lh3.googleusercontent.com/-wEQA8cMk4oQ/Vq1mxWAOmII/AAAAAAAAB1s/7MHGLslu8Uo/s800-Ic42/BotDownload.png" alt="Download do Livro de Matemática Básica"></a></p>
+
+
+
+
+
 ```{r}
 # Aceleração da gravidade:
 g <- 9.8
@@ -2189,6 +2209,10 @@ summary(tempo)
 Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
 0.000   1.276   2.551   2.551   3.827   5.102 
 ```
+
+
+
+
 
 > fAZER A PARTIR DAQUI - DEVER DE CASA - estude e execute os comandos abaixo no seu ambiente R:
 
