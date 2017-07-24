@@ -2088,8 +2088,6 @@ graus
 test_output_contains ("-60", incorrect_msg = "Escreva a expressão que atribua a uma variável (tang) a divisão entre as componentes vertical e horizontal da velocidade do projétil quando o mesmo alcança o tempo de trajeto.")
 success_msg ("Bom trabalho! Você aprendeu a determinar a direção do projétil quando o mesmo alcança o solo.")
 ```
-
-
 --- type:NormalExercise lang:r xp:100 skills:1 key:b9d71cd47e
 ## Gráfico do lançamento oblíquo
 
@@ -2127,35 +2125,33 @@ Y <- viy * tempo - (g * tempo ^ 2)/2
 vy <- viy - g * tempo 
 # Velocidade resultante:
 vr <- sqrt(vx ^ 2 + vy ^ 2)
-#Mostrar o eixo X
+# Mostrar o eixo X
 X
+# Mostrar o eixo Y
 Y
+# Mostrar vx
+vx
+43.30127
+# Mostrar vy
 vy
+# Mostrar vr
 vr
+# Mostrar tempo
 tempo
+# Traçar gráfico
 plot(X, Y, main="Lançamento oblíquo", xlim = c(0, 220.924800), ylim = c(0, 31.88776), col="blue" , type="l", xlab = "Alcance (m)", ylab = "Altura (m)")
 abline(h = 31.88776, col="red")
 abline(v = 110.4624002, col="red")
 ```
 <p align="justify">Isso gerou os seguintes valores:</p>
 
-> Valores do tempo
+> Valores 
 
-<p style="font-family = Arial; font-size: 12px; text-align:left">[1] <font color="##FF0000">0.0000000</font> 0.0510204 0.1020408 0.1530612 0.2040816 0.2551020 0.3061224 0.3571428 0.4081632 0.4591836<p>
-<p style="font-family = Arial; font-size: 12px; text-align:left">[11] 0.5102040 0.5612244 0.6122448 0.6632652 0.7142856 0.7653060 0.8163264 0.8673468 0.9183671 0.9693875<p>
-<p style="font-family = Arial; font-size: 12px; text-align:left">[21] 1.0204079 1.0714283 1.1224487 1.1734691 1.2244895 1.2755099 1.3265303 1.3775507 1.4285711 1.4795915<p>
-<p style="font-family = Arial; font-size: 12px; text-align:left">[31] 1.5306119 1.5816323 1.6326527 1.6836731 1.7346935 1.7857139 1.8367343 1.8877547 1.9387751 1.9897955<p>
-<p style="font-family = Arial; font-size: 12px; text-align:left">[41] 2.0408159 2.0918363 2.1428567 2.1938771 2.2448975 2.2959179 2.3469383 2.3979587 2.4489791 2.4999995<p>
-<p style="font-family = Arial; font-size: 12px; text-align:left">[51] <font color="##FF0000">2.5510199</font> 2.6020403 2.6530606 2.7040810 2.7551014 2.8061218 2.8571422 2.9081626 2.9591830 3.0102034<p>
-<p style="font-family = Arial; font-size: 12px; text-align:left">[61] 3.0612238 3.1122442 3.1632646 3.2142850 3.2653054 3.3163258 3.3673462 3.4183666 3.4693870 3.5204074<p>
-<p style="font-family = Arial; font-size: 12px; text-align:left">[71] 3.5714278 3.6224482 3.6734686 3.7244890 3.7755094 3.8265298 3.8775502 3.9285706 3.9795910 4.0306114<p>
-<p style="font-family = Arial; font-size: 12px; text-align:left">[81] 4.0816318 4.1326522 4.1836726 4.2346930 4.2857134 4.3367338 4.3877542 4.4387745 4.4897949 4.5408153<p>
-<p style="font-family = Arial; font-size: 12px; text-align:left">[91] 4.5918357 4.6428561 4.6938765 4.7448969 4.7959173 4.8469377 4.8979581 4.9489785 4.9999989 5.0510193<p>
 <p style="font-family = Arial; font-size: 12px; text-align:left">[101] <font color="##FF0000">5.1020397</font><p>
 
 <p align="justify"> Baseado nos dados de vy, vr e tempo, observe que na altura máxima atingida pelo projétil, o tempo chega a 2,5510199s e a componente da velocidade, vy, tende a zero (0,00000542087m/s). Na chegada do projétil ao solo, a componente da velocidade vy tende a -25m/s (-24,99999m/s) e a velocidade resultante tende a 50 m/s (49,99999), isso quando completa o tempo de trajeto de 5,1020397s.</p>
 
-> Comandos para explorar os valores do tempo
+> Comandos para explorar os valores 
 
 <p align="justify"> Muitas informações podem ser extraídas dos valores do tempo. Veja algumas:</p>
 
