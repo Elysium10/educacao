@@ -2091,30 +2091,11 @@ success_msg ("Bom trabalho! Você aprendeu a determinar a direção do projétil
 --- type:NormalExercise lang:r xp:100 skills:1 key:b9d71cd47e
 ## Gráfico do lançamento oblíquo
 
-<p align="justify">Sabemos que um corpo está em movimento uniforme quando o mesmo percorre espaços iguais em intervalos de tempos iguais. O movimento do projétil no eixo X é constante, ou seja, a componente da velocidade inicial vix, que também é igual à componente da velocidade vx, é constante. Foi programado no R para que os espaços fossem divididos de 2,209248m em 2,209248m até atingir o alcance máximo de 220,9248m. Foram obtidos intervalos de tempos iguais, dividindo cada 2,209248m pelo valor da componente vix (43,30127m/s) que resultou em 0,0510204s. Vejamos o código:</p> 
+<p align="justify">eSCREVER SOBRE O GRÁFICO -- Sabemos que um corpo está em movimento uniforme quando o mesmo percorre espaços iguais em intervalos de tempos iguais. O movimento do projétil no eixo X é constante, ou seja, a componente da velocidade inicial vix, que também é igual à componente da velocidade vx, é constante. Foi programado no R para que os espaços fossem divididos de 2,209248m em 2,209248m até atingir o alcance máximo de 220,9248m. Foram obtidos intervalos de tempos iguais, dividindo cada 2,209248m pelo valor da componente vix (43,30127m/s) que resultou em 0,0510204s. Vejamos o código:</p> 
 
 <p align="justify"> Para testar os códigos em R, acesse o link abaixo:</p>
 
 [R-Fiddle](http://www.r-fiddle.org/#/)
-
-[Frações](https://drive.google.com/file/d/0B-ZeEtVJqx2TM1o3T2xYQ3JNTWc/view?usp=sharing)
-
-<br>
-testando:
-<p style="text-align: center;">Baixar livro Gestão Ambiental Empresarial:</p>
-<center><a href="https://dl.dropboxusercontent.com/s/79ww3eim9athxff/Gest%C3%A3o%20Ambiental%20Empresarial.pdf?dl=1&token_hash=AAFSsX1NYtn3F5kvLqsBwS891LWg57puathNXTROozc7jg" target="_blank"><img alt="Download do livro Gestão Ambiental" src="https://lh3.googleusercontent.com/-yhYUyL3mk3c/Uw_hdwRoYtI/AAAAAAAAA9M/tpH1DFoZVhc/s144/download%2520verde.jpg" 
-title="Download do livro Gestão Ambiental" /></a><center>
-<br>
-
-<p style="text-align:justify;">Saiba que sua participação é muito importante no processo de ensino-aprendizagem. Portanto, vamos presenteá-lo com um brinde – um livro com vários exercícios resolvidos de Matemática Básica. faça o Download:</p>
-<p><a href="https://goo.gl/Lkg3C1" target="_blank" rel="nofollow"><img class="aligncenter" title="Download do Livro de Matemática Básica" src="https://lh3.googleusercontent.com/-yhYUyL3mk3c/Uw_hdwRoYtI/AAAAAAAAA9M/zAIvm-gwZZAnVLu-4tdowVu1DcmT13NfQCEwYBhgL/w140-h28-p/download%2Bverde.jpg" alt="Download do Livro de Matemática Básica" scale="0" width="129" height="23"></a></p>
-
-
-<p style="text-align:justify;">Saiba que sua participação é muito importante no processo de ensino-aprendizagem. Portanto, vamos presenteá-lo com um brinde – um livro com vários exercícios resolvidos de Matemática Básica. faça o Download:</p>
-<p><a href="https://goo.gl/Lkg3C1" target="_blank" rel="nofollow"><img class="aligncenter" title="Download do Livro de Matemática Básica" src="https://lh3.googleusercontent.com/-wEQA8cMk4oQ/Vq1mxWAOmII/AAAAAAAAB1s/7MHGLslu8Uo/s800-Ic42/BotDownload.png" alt="Download do Livro de Matemática Básica"></a></p>
-
-
-
 
 
 ```{r}
@@ -2167,11 +2148,11 @@ plot(X, Y, main="Lançamento oblíquo", xlim = c(0, 220.924800), ylim = c(0, 31.
 abline(h = 31.88776, col="red")
 abline(v = 110.4624002, col="red")
 ```
+CONTINUAR
+
 <p align="justify">Isso gerou os seguintes valores:</p>
 
-> Valores 
 
-<p style="font-family = Arial; font-size: 12px; text-align:left">[101] <font color="##FF0000">5.1020397</font><p>
 
 <p align="justify"> Baseado nos dados de vy, vr e tempo, observe que na altura máxima atingida pelo projétil, o tempo chega a 2,5510199s e a componente da velocidade, vy, tende a zero (0,00000542087m/s). Na chegada do projétil ao solo, a componente da velocidade vy tende a -25m/s (-24,99999m/s) e a velocidade resultante tende a 50 m/s (49,99999), isso quando completa o tempo de trajeto de 5,1020397s.</p>
 
@@ -2209,9 +2190,6 @@ summary(tempo)
 Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
 0.000   1.276   2.551   2.551   3.827   5.102 
 ```
-
-
-
 
 
 > fAZER A PARTIR DAQUI - DEVER DE CASA - estude e execute os comandos abaixo no seu ambiente R:
