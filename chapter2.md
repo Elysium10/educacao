@@ -889,15 +889,16 @@ success_msg ("Bom trabalho! Você aprendeu a determinar o valor da posição (X,
 --- type:NormalExercise lang:r xp:100 skills:1 key:289ca73696
 ## Direção do projétil
 
-<p align="justify"> A direção do projeto em um dado instante t é determinada pelo cálculo da tangente entre a componente da velocidade na vertical e a componente da velocidade na horizontal. A expressão que calcula a tangente de um ângulo é dada por:</p>
+O ângulo de lnçamento do projétil foi chamado de $$\theta$$. Chamaremos de \alpha de direção do projétil ou a direção da velocidade \theta
+<p align="justify"> A direção do projeto, em um dado instante t, é determinada pelo cálculo da tangente entre a componente da velocidade na vertical e a componente da velocidade na horizontal. A expressão que calcula a tangente de um ângulo é dada por:</p>
 
-$$tg~ \theta = \displaystyle \frac{v _{y}}{v _{x}}$$
+$$tg~ \alpha  = \displaystyle \frac{v _{y}}{v _{x}}$$
 
-<p align="justify"> onde, $\theta$ corresponde ao ângulo formado entre a componente horizontal e a direção da velocidade resultante num dado instante, $v _{y}$ corresponde à componente da velocidade segundo a vertical e $v _{x}$ corresponde à componente da velocidade segundo a horizontal.</p>
+<p align="justify"> onde, $\alpha$ corresponde ao ângulo formado entre a componente horizontal e a direção da velocidade resultante num dado instante, $v _{y}$ corresponde à componente da velocidade segundo a vertical e $v _{x}$ corresponde à componente da velocidade segundo a horizontal.</p>
 
-<p align="justify">Da expressão acima podemos encontar o valor do ângulo $\theta$:</p> 
+<p align="justify">Da expressão acima podemos encontar o valor do ângulo $\alpha$:</p> 
 
-$$\theta = arc~tg~\displaystyle \frac{v _{y}}{v _{x}}\cdot$$
+$$\alpha = arc~tg~\displaystyle \frac{v _{y}}{v _{x}}\cdot$$
 
 > Motivação 1
 
@@ -905,7 +906,7 @@ $$\theta = arc~tg~\displaystyle \frac{v _{y}}{v _{x}}\cdot$$
 
 > Determinando a tangente do ângulo
 
-$$tg~ \theta = \displaystyle \frac{v _{y}}{v _{x}}= \frac{-25}{43,30127}\cong-0,57735.$$
+$$tg~ \alpha  = \displaystyle \frac{v _{y}}{v _{x}}= \frac{-25}{43,30127}\cong-0,57735.$$
 
 <p align="justify">Link para auxílio no cálculo da tangente (use números com vírgula):</p>
 
@@ -913,7 +914,7 @@ $$tg~ \theta = \displaystyle \frac{v _{y}}{v _{x}}= \frac{-25}{43,30127}\cong-0,
 
 > Determinando o ângulo
 
-$$\theta = arc~tg~(-0,5773503) = -30°.$$
+$$ \alpha  = arc~tg~(-0,5773503) = -30°.$$
 
 > <p align="justify">-30° é o ângulo formado, em relação à horizontal, no momento em que o projétil chega ao chão.</p>
 
@@ -939,6 +940,8 @@ y
 
 45
 ```
+<p align="justify">45° é o ângulo procurado.</p>
+
 <p align="justify">No problema inicial os comandos no R podem ficar nesse formato:</p>
 
 ```{r}
