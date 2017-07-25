@@ -889,8 +889,7 @@ success_msg ("Bom trabalho! Você aprendeu a determinar o valor da posição (X,
 --- type:NormalExercise lang:r xp:100 skills:1 key:289ca73696
 ## Direção do projétil
 
-O ângulo de lnçamento do projétil foi chamado de $$\theta$$. Chamaremos de \alpha de direção do projétil ou a direção da velocidade \theta
-<p align="justify"> A direção do projeto, em um dado instante t, é determinada pelo cálculo da tangente entre a componente da velocidade na vertical e a componente da velocidade na horizontal. A expressão que calcula a tangente de um ângulo é dada por:</p>
+<p align="justify"> O ângulo de lançamento do projétil foi chamado de $\theta$. Chamaremos de $\alpha$ a direção do projétil em um dado instante t que será determinada pelo cálculo da tangente entre a componente da velocidade na vertical e a componente da velocidade na horizontal. A expressão que calcula a tangente de um ângulo é dada por:</p>
 
 $$tg~ \alpha  = \displaystyle \frac{v _{y}}{v _{x}}$$
 
@@ -1126,7 +1125,6 @@ graus
 test_output_contains ("-60", incorrect_msg = "Escreva a expressão que atribua a uma variável (tang) a divisão entre as componentes vertical e horizontal da velocidade do projétil quando o mesmo alcança o tempo de trajeto.")
 success_msg ("Bom trabalho! Você aprendeu a determinar a direção do projétil quando o mesmo alcança o solo.")
 ```
-
 --- type:NormalExercise lang:r xp:100 skills:1 key:dee61a2620
 ## Explorando dados dos Eixos
 
@@ -1157,8 +1155,7 @@ $$Y= v _{ix}.t - \displaystyle \frac{g.t^{2}}{2}\cdot$$
 
 > Valores do eixo X (Distância horizontal)
 
-* <p align="justify">Um projétil é lançado a  partir do solo, formando com o mesmo um ângulo de 30°, com uma velocidade inicial igual a 50 m/s. Determine quais as alturas (coordenadas Y) do projétil a cada 2,209248 m de distância horizontal a partir de onde
-lançado (de 0 m) até o alcance (A = 220,9248 m). Considere $g = 9,8~m/s^{2}$.</p>
+* <p align="justify">Um projétil é lançado a  partir do solo, formando com o mesmo um ângulo de 30°, com uma velocidade inicial igual a 50 m/s. Determine e analise os valores das distâncias (coordenadas X) e as alturas (coordenadas Y) do projétil a cada 2,209248 m de distância horizontal a partir de onde onde foi lançado (de 0 m) até o alcance (A = 220,9248 m). Considere $g = 9,8~m/s^{2}$.</p>
 
 ```{r}
 
@@ -1216,6 +1213,21 @@ X
 <p align="justify"> Muitas informações podem ser extraídas dos valores do eixo horizontal. Veja algumas:</p>
 
 ```{r}
+# Extrai o valor nº 51 do eixo X
+# Metade do alcance 
+X[c(51)]
+110.4624
+
+# Extrai de X os valores
+# de nºs 49, 50, 51
+X[c(49, 50, 51)]
+106.0439 108.2532 110.4624
+
+# Extrai de X os valores
+# de 51 a 53
+X[c(51:53)]   
+110.4624 112.6716 114.8809
+
 # Maior valor no X:
 max(X)
 220.9248
@@ -1271,7 +1283,7 @@ tempo <- (X - xi)/vix
 # Posição X
 X <- vix * tempo
 # Posição Y
-Y <- viy * tempo - (g * t ^ 2)/2 
+Y <- viy * tempo - (g * tempo ^ 2)/2 
 # Componente vertical de v:
 vy <- viy - g * tempo 
 # Velocidade resultante:
@@ -1302,42 +1314,42 @@ $$= 3,188776.10^{1}m$$
 $$= 3,188776.10m$$ 
 $$= 31,88776m.$$
 
-<p align="justify"> Observe que o projétil partiu de zero metro (altura inicial) até uma altura máxima de 31.88776m (altura final) e depois retorna para a origem, que na simulação tende a zero (0,00002765749m).</p>
+<p align="justify"> Observe que o projétil partiu de zero metro (altura inicial) até uma altura máxima de 31.88776m (altura final) e depois retorna para a origem, que na simulação tende a zero (2,765749e-05m = 0,00002765749m).</p>
 
-> Comandos para explorar os valores de y
+> Comandos para explorar os valores de Y
 
 <p align="justify"> Muitas informações podem ser extraídas dos valores do eixo vertical, inclusive as posições (X, Y). Veja algumas:</p>
 
 ```{r}
-# Extrai o valor nº 51 do eixo X
-# Metade do alcance 
-X[c(51)]
+# Extrai as posições X,Y
+> X[c(51)]; Y[c(51)]
 110.4624
+ 31.88776
 
 # Extrai o valor nº 51 do eixo Y
 # Altura máxima
 Y[c(51)]
 31.88776
 
-# Extrai de X os valores
-# de nºs 49, 50, 51
-X[c(49, 50, 51)]
-106.0439 108.2532 110.4624
-
 # Extrai de Y os valores
 # de nºs 49, 50, 51
 Y[c(49, 50, 51)]
 31.83673 31.87500 31.88776
 
-# Extrai de X os valores
-# de 51 a 53
-X[c(51:53)]   
-110.4624 112.6716 114.8809
-
 # Extrai de Y os valores
 # de 51 a 53 - começo da descida
 Y[c(51:53)]
 31.88776 31.87500 31.83674
+
+# Conjunto de posições X,Y
+X[c(49, 50, 51, 52)]; Y[c(49, 50, 51, 52)]
+106.0439 108.2532 110.4624 112.6716
+ 31.83673 31.87500 31.88776 31.87500
+ 
+# Posições X,Y de chegada
+X[c(99, 100, 101)]; Y[c(99, 100, 101)]
+216.5063 218.7156 220.9248
+2.500026e+00 1.262782e+00 2.765749e-05
 
 # Maior valor no Y:
 max(Y) 
@@ -1364,42 +1376,71 @@ diff(Y)
 # Média: 
 mean(Y) 
 21.04592
-```{r}
 
+```{r}
 <p align="justify">Observe que o valor de X na altura máxima equivale a 110,4624 m, a metade do alcance (A = 220,9248m). Observe também que o valor de Y corresponde à altura máxima (31.88776).</p>
 
-> fAZER A PARTIR DAQUI - DEVER DE CASA - estude e execute os comandos abaixo no seu ambiente R:
+> DEVER DE CASA - estude e execute os comandos abaixo no seu ambiente R:
 
-<p align="justify"> Aplique os comandos utilizados em R para resolver o seguinte problema: Um projétil é lançado a partir do solo, formando com o mesmo um ângulo de 45°, com uma velocidade inicial igual a 100 m/s. Sendo que o alcance máximo acontece quando o ângulo de lançamento é equivalente a 45°, prove que esse alcance máximo (A) é quatro vezes maior que a altura máxima (hmáx). Adote a aceleração da gravidade g = 9.8 m/s<sup>2</sup>. Compare sua resposta logo abaixo.</p>
+<p align="justify"> Aplique os comandos utilizados em R para resolver o seguinte problema: Um projétil com uma velocidade inicial igual a 100 m/s é lançado a partir do solo, formando com o mesmo um ângulo de 45°. Particione o alcance máximo (1020,408m), numa sequência de 1,020408m em 1,020408m, escrevendo um comando que indique a posição do projétil na altura máxima (correspondende à metade do alcance máximo). Adote a aceleração da gravidade g = 9.8 m/s<sup>2</sup>. Compare sua resposta logo abaixo.</p>
+
+
+
+Sendo que o alcance máximo é igual a 
+<p style="background-color:#000000; font-weight: bold; font-size: 20px; text-align:justify"><font color="#ffffff">  A altura máxima é 255.102; <br>  O alcance é 1020.408; <br>  1020.408 é 4 vezes 255.102.</font></p>
+
+1020.408
 
 ```{r}
-# Aceleração da gravidade:
+# Aceleração da O alcance é gravidade:
 g <- 9.8
+# Espaço inicial:
+xi <- 0
+# Espaço final:
+yi <- 0
+# Sequência de 0 até o Alcance indo de 2.209248 em 2.209248:
+X <- seq(from = 0, to = 1020.408, by = 1.020408)
 # Velocidade inicial:
 vi <- 100
-# Ângulo em graus:
+# ângulo em graus:
 angulo <- 45
 # Graus em radianos:
 teta <- (pi/180) * angulo
-# componente vix:
+# Componente vix:
 vix <- vi * cos(teta)
-# componente viy:
-viy <- vi * sin(teta) 
-# Tempo na thmax:
-thmax <- viy/g
-# tempo total:
-ttot = 2 * thmax
-# altura máxima:
-hmax = (viy ^ 2)/(2 * g)
-# alcance
-A = vix * ttot
-cat("A altura máxima é", hmax)
-cat("O alcance é", A)
-cat(A, "é 4 vezes", hmax)
+# vx é igual a vix:
+vx <- vix
+# Componente viy:
+viy <- vi * sin(teta)
+# O tempo na eq. MRU:
+tempo <- (X - xi)/vix
+# Posição X
+X <- vix * tempo
+# Posição Y
+Y <- viy * tempo - (g * tempo ^ 2)/2 
+# Componente vertical de v:
+vy <- viy - g * tempo 
+# Velocidade resultante:
+vr <- sqrt(vx ^ 2 + vy ^ 2)
+# Mostrar o eixo X
+X
+# Mostrar o eixo Y
+Y
+# Maximo no Y
+max(Y)
+255.102
+# Maximo no X
+1020.408
+# Posições X,Y na hmax
+X[c(501)]; Y[c(501)]
+510.204
+255.102
 ```
 > Compare sua resposta 
 
-<p style="background-color:#000000; font-weight: bold; font-size: 20px; text-align:justify"><font color="#ffffff">  a) A hmax é 95.66327;<br>  b) O thmax é 4.418497;<br>  c) O alcance é 220.9248;<br>  d) vy: -43.30127, vr: 50, direção: -60; <br>  e) A posição em 5s é 125 e 94.00635.</font></p>
+
+<p style="background-color:#000000; font-weight: bold; font-size: 20px; text-align:justify"><font color="#ffffff">[1] 510.204
+[1] 255.102</font></p>
 
 <p style="background-color:#33a0c2; font-weight: bold; font-size: 20px; text-align:center"><font color="#ffffff">EXERCÍCIO PROPOSTO</font></p>
 <p align="justify"> Um projétil é lançado a partir do solo, formando com o mesmo um ângulo de 60°, com uma velocidade inicial igual a 200 m/s. Determine as componentes vx, vy e a direção do projétil ao chegar no solo. Adote a aceleração da gravidade g = 9.8 m/s<sup>2</sup>.</p>
