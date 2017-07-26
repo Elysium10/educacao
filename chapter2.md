@@ -1429,7 +1429,7 @@ X[c(501)]; Y[c(501)]
 ```
 > Compare sua resposta 
 
-<p style="background-color:#000000; font-weight: bold; font-size: 20px; text-align:justify"><font color="#ffffff">&nbsp;510,204m e 255,102m.</font></p>
+<p style="background-color:#000000; font-weight: bold; font-size: 20px; text-align:justify"><font color="#ffffff"> 510,204m e 255,102m.</font></p>
 <p style="background-color:#33a0c2; font-weight: bold; font-size: 20px; text-align:center"><font color="#ffffff">EXERCÍCIO PROPOSTO</font></p>
 <p align="justify"> Um projétil é lançado a partir do solo, formando com o mesmo um ângulo de 60°, com uma velocidade inicial igual a 200 m/s. Particione o alcance máximo (3534,798m), numa sequência de 3,534798m em 3,534798m, escrevendo um comando que indique a posição do projétil na altura máxima (correspondende à metade do alcance máximo). Adote a aceleração da gravidade g = 9.8 m/s<sup>2</sup>.</p>
 *** =instructions
@@ -2189,7 +2189,8 @@ abline(v = 110.4624002, col="red")
 ```
 CONTINUAR
 
-<p align="justify">Isso gerou os seguintes valores:</p>
+
+
 
 
 
