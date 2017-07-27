@@ -323,12 +323,9 @@ $$-v _{iy}=-gt _{hmáx} \rightarrow$$
 $$v _{iy}=gt _{hmáx} \rightarrow$$
 $$t _{hmáx}= \displaystyle \frac{v _{iy}}{g}\cdot$$
 
-<p align="justify">Visualize, na figura abaixo, a representação de $hmáx$, $v _{y} = 0$, $v _{y}$, $g$, o alcance do projétil e todos os componentes do movimento oblíquo:</p>
-![Componentes do movimento oblíquo inicial](http://s3.amazonaws.com/assets.datacamp.com/production/course_4551/datasets/Lancobliquo2.png "Componentes do movimento oblíquo")
-
 > Motivação
 
-* <p align="justify">Um projétil é lançado a  partir do solo, formando com o mesmo um ângulo de 30°, com uma velocidade inicial igual a 50 m/s. Determine a altura máxima e o tempo necessário para atingir esta altura. Adote a aceleração da gravidade g = 9.8 m/s<sup>2</sup>. Neste problema, não usaremos nem a velocidade inicial ($v _{i}$) e nem a componente da velocidade inicial ($v _{ix}$)</p> 
+* <p align="justify">Um projétil é lançado a  partir do solo, formando com o mesmo um ângulo de 30°, com uma velocidade inicial igual a 50 m/s. Determine o tempo necessário para atingir esta altura. Adote a aceleração da gravidade g = 9.8 m/s<sup>2</sup>.</p> 
 
 > <p align="justify"> O tempo para atingir a altura máxima:</p>
 
@@ -344,19 +341,60 @@ $$t _{hmáx}= \displaystyle \frac{v _{iy}}{g}=\displaystyle\frac{25}{9,8}\cong 2
 # Aceleração da gravidade:
 g <- 9.8
 # Componente viy:
-viy = 25
-# Altura máxima:
-hmax = (viy ^ 2)/(2 * g)
+viy <- 25
 # Tempo da hmax
-thmax = viy/g
+thmax <- viy/g
 # Mostrar a hmax e o thmax:
-cat("A altura máxima é", hmax)
 cat("O tempo até a hmax é", thmax)
 
-A altura máxima é 31.88776
 O tempo até a hmax é 2.5510204081632653061224489795918
 ```
-> DEVER DE CASA - estude e execute os comandos abaixo no seu ambiente R:
+<p style="background-color:#33a0c2; font-weight: bold; font-size: 20px; text-align:center"><font color="#ffffff">EXERCÍCIO PROPOSTO</font></p>
+<p align="justify"> Um projétil é lançado a partir do solo, formando com o mesmo um ângulo de 60°, com uma velocidade inicial igual a 200 m/s. Determine o tempo necessário para atingir a altura máxima. Adote a aceleração da gravidade g = 9.8 m/s<sup>2</sup>.</p>
+
+*** =instructions
+<p align="justify"> Determinaremos o tempo necessário para atingir a altura máxima.</p> 
+<p align="justify"> Adote a aceleração da gravidade g = 9.8 m/s<sup>2</sup>e a componente vertical da velocidade inicial, calculado anteriormente, equivale a 173.2051..</p>
+*** =hint
+<p align="justify"> O tempo necessário para que o projétil alcance a altura máxima é dado pela seguinte expressão:</p> 
+$$$$t _{hmáx}= \displaystyle \frac{v _{iy}}{g}\cdot$$$$
+*** =pre_exercise_code
+```{r}
+# no pec
+```
+*** =sample_code
+```{r}
+# Aceleração da gravidade:
+g <- 9.8
+# Componente viy:
+viy <- 173.2051
+# Altura máxima:
+hmax <- (viy ^ 2)/(2 * g)
+# Escreva tempo na hmax:
+thmax <-  
+# Mostrar thmax:
+thmax
+```
+*** =solution
+```{r}
+# Aceleração da gravidade:
+g <- 9.8
+# Componente viy:
+viy <- 173.2051
+# Altura máxima:
+hmax <- (viy ^ 2)/(2 * g)
+# Escreva tempo na hmax:
+thmax <- viy/g
+# Mostrar thmax:
+thmax
+```
+*** =sct
+```{r}
+test_output_contains("17.67399", incorrect_msg = "Escreva a expressão que determina o valor do tempo necessário para que o projétil alcance a altura máxima.")
+success_msg("Bom trabalho! Você adquiriu noções sobre como calcular o tempo gasto para o projétil alcançar a altura máxima.")
+```
+--- type:NormalExercise lang:r xp:100 skills:1 key:e1a3b0c037
+## Tempo de subida para o ângulo de 45 graus
 
 <p align="justify"> Um projétil é lançado a partir do solo, formando com o mesmo um ângulo de 45°, com uma velocidade inicial igual a 100 m/s. Determine a altura máxima e o tempo necessário para atingir esta altura. Adote a aceleração da gravidade g = 9.8 m/s<sup>2</sup>. A componente y da vel. inicial é igual a: 70.71068 - calculada em tópico anterior. Compare sua resposta logo abaixo. </p>
 
@@ -376,9 +414,6 @@ cat("O tempo até a hmax é", thmax)
 > Compare sua resposta
 
 <p style="background-color:#000000; font-weight: bold; font-size: 20px; text-align:justify"><font color="#ffffff">  A altura máxima é 255.1021; <br>  O tempo até a hmax é 7.215376.</font></p>
-
-<p style="background-color:#33a0c2; font-weight: bold; font-size: 20px; text-align:center"><font color="#ffffff">EXERCÍCIO PROPOSTO</font></p>
-<p align="justify"> Um projétil é lançado a partir do solo, formando com o mesmo um ângulo de 60°, com uma velocidade inicial igual a 200 m/s. Determine a altura máxima e o tempo necessário para atingir esta altura. Adote a aceleração da gravidade g = 9.8 m/s<sup>2</sup>.</p>
 
 *** =instructions
 <p align="justify"> Use o código estudado neste tópico para calcular altura máxima e o tempo necessário para atingir esta altura.</p> 
