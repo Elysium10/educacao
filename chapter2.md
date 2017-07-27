@@ -115,7 +115,7 @@ viy
 *** =sct
 ```{r}
 test_output_contains("173.20511", incorrect_msg = "Digite corretamente o valor da variável angulo. O valor da variável teta equivale a $$(pi/180)*angulo.$$.")
-success_msg("Bom trabalho! Você adquiriu noções sobre as componentes da velocidade inicial do lançamento oblíquo.")
+success_msg("Bom trabalho! Você adquiriu noções sobre as componentes da velocidade inicial do lançamento oblíquo. ![Elysium](http://s3.amazonaws.com/assets.datacamp.com/production/course_4551/datasets/Elysium.png "Elysium") ")
 ```
 --- type:NormalExercise lang:r xp:100 skills:1 key:0a2b6cd71d
 ## Atividade - Componentes da velocidade inicial
@@ -127,7 +127,7 @@ success_msg("Bom trabalho! Você adquiriu noções sobre as componentes da veloc
 <p align="justify"> Um projétil é lançado a partir do solo com uma velocidade inicial igual a 100 m/s, formando com o mesmo um ângulo de 45°. Determine as componentes da velocidade inicial.</p>
 
 *** =instructions
-<p align="justify"> - Calcularemos as componentes da velocidade inicial&nbsp;(vi) pra  45°.</p> 
+<p align="justify"> - Calcularemos as componentes da velocidade inicial (vi) pra  45°.</p> 
 <p align="justify"> - Você irá completar as expressões que calculam as componentes vix e viy.</p>
 <p align="justify"> - Obs.: clicando no R Console e depois utilizando as teclas Control + L, você pode limpar os dados do console.</p>
 *** =hint
