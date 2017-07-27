@@ -222,6 +222,53 @@ cat("A altura máxima é", hmax)
 
 A altura máxima é 31.88776
 ```
+<p style="background-color:#33a0c2; font-weight: bold; font-size: 20px; text-align:center"><font color="#ffffff">EXERCÍCIO PROPOSTO</font></p>
+<p align="justify"> Um projétil é lançado a partir do solo, formando com o mesmo um ângulo de 60°, com uma velocidade inicial igual a 200 m/s. Determine a altura máxima atingida pelo projétil. Adote a aceleração da gravidade g = 9.8 m/s<sup>2</sup>.</p>
+
+*** =instructions
+<p align="justify"> - Use o código estudado neste tópico para calcular altura máxima.</p> 
+<p align="justify"> - Adote a aceleração da gravidade g = 9.8 m/s<sup>2</sup>e a componente vertical da velocidade inicial, determinado em tópico anterior, equivale a 173,2051.</p>
+<p align="justify"> - Escreva a expressão para determinar a altura máxima.</p>
+*** =hint
+<p align="justify"> A altura máxima no movimento oblíquo é dada pela seguinte expressão:</p> 
+$$h _{máx}= \displaystyle \frac{v _{iy}^{2}}{2g}\cdot$$
+*** =pre_exercise_code
+```{r}
+# no pec
+```
+*** =sample_code
+```{r}
+# Aceleração da gravidade:
+g <- 9.8
+# Componente viy:
+viy <- 173.2051
+# Escreva altura máxima:
+hmax <- 
+# Tempo da hmax:
+thmax <- viy/g
+# Mostrar hmax:
+hmax
+```
+*** =solution
+```{r}
+# Aceleração da gravidade:
+g <- 9.8
+# Componente viy:
+viy <- 173.2051
+# Escreva altura máxima:
+hmax <- (viy ^ 2)/(2 * g)
+# Tempo da hmax:
+thmax <- viy/g
+# Mostrar hmax:
+hmax
+```
+*** =sct
+```{r}
+test_output_contains("1530.613", incorrect_msg = "Digite corretamente a expressão para determinar a altura máxima alcançada pelo projétil.")
+success_msg("Bom trabalho! Você adquiriu noções sobre como calcular a altura máxima alcançada pelo projétil.")
+```
+--- type:NormalExercise lang:r xp:100 skills:1 key:218ca06138
+## Altura máxima para o ângulo de 45 graus
 > DEVER DE CASA - estude e execute os comandos abaixo no seu ambiente R:
 
 <p align="justify"> Um projétil é lançado a partir do solo, formando com o mesmo um ângulo de 45°, com uma velocidade inicial igual a 100 m/s. Determine a altura máxima alcançada pelo projétil. Adote a aceleração da gravidade g = 9.8 m/s<sup>2</sup>. A componente y da vel. inicial é igual a: 70.71068 - calculada em tópico anterior. </p>
@@ -316,7 +363,7 @@ $$t _{hmáx}= \displaystyle \frac{v _{iy}}{g}=\displaystyle\frac{25}{9,8}\cong 2
 
 [Lançamento de projéteis.](https://phet.colorado.edu/sims/projectile-motion/projectile-motion_pt_BR.html)
 
-> <p align="justify">Comandos no R para calcular a altura máxima e o tempo para alcançá-la:</p>
+> <p align="justify">Comandos no R para calcular a altura máxima:</p>
 
 ```{r}
 # Aceleração da gravidade:
