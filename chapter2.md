@@ -214,9 +214,9 @@ $$h _{máx}= \displaystyle \frac{v _{iy}^{2}}{2g}= \displaystyle \frac{25^{2}}{2
 # Aceleração da gravidade:
 g <- 9.8
 # Componente viy:
-viy = 25
+viy <- 25
 # Altura máxima:
-hmax = (viy ^ 2)/(2 * g)
+hmax <- (viy ^ 2)/(2 * g)
 # Mostrar a hmax:
 cat("A altura máxima é", hmax)
 
@@ -268,34 +268,15 @@ test_output_contains("1530.613", incorrect_msg = "Digite corretamente a express�
 success_msg("Bom trabalho! Você adquiriu noções sobre como calcular a altura máxima alcançada pelo projétil.")
 ```
 --- type:NormalExercise lang:r xp:100 skills:1 key:218ca06138
-## Altura máxima para o ângulo de 45 graus
-> DEVER DE CASA - estude e execute os comandos abaixo no seu ambiente R:
+## Altura máxima para um ângulo de 45°
 
-<p align="justify"> Um projétil é lançado a partir do solo, formando com o mesmo um ângulo de 45°, com uma velocidade inicial igual a 100 m/s. Determine a altura máxima alcançada pelo projétil. Adote a aceleração da gravidade g = 9.8 m/s<sup>2</sup>. A componente y da vel. inicial é igual a: 70.71068 - calculada em tópico anterior. </p>
-
-```{r}
-# Aceleração da gravidade:
-g <- 9.8
-# Componente viy:
-viy =  70.71068
-# Altura máxima:
-hmax = (viy ^ 2)/(2 * g)
-# Tempo até a hmax:
-thmax = viy/g
-# Mostrar hmax e thmax:
-cat("A altura máxima é", hmax)
-cat("O tempo até a hmax é", thmax)
-```
-> Compare sua resposta
-
-<p style="background-color:#000000; font-weight: bold; font-size: 20px; text-align:justify"><font color="#ffffff">  A altura máxima é 255.1021; <br>  O tempo até a hmax é 7.215376.</font></p>
-
-<p style="background-color:#33a0c2; font-weight: bold; font-size: 20px; text-align:center"><font color="#ffffff">EXERCÍCIO PROPOSTO</font></p>
-<p align="justify"> Um projétil é lançado a partir do solo, formando com o mesmo um ângulo de 60°, com uma velocidade inicial igual a 200 m/s. Determine a altura máxima e o tempo necessário para atingir esta altura. Adote a aceleração da gravidade g = 9.8 m/s<sup>2</sup>.</p>
+<p style="background-color:#33a0c2; font-weight: bold; font-size: 20px; text-align:center"><font color="#ffffff">MAIS EXERCÍCIO PROPOSTO SOBRE ALTURA MÁXIMA</font></p>
+<p align="justify"> Um projétil é lançado a partir do solo com uma velocidade inicial igual a 200m/s, formando com o mesmo um ângulo de 45°. Determine a altura máxima alcançada pelo projétil. Adote a aceleração da gravidade g = 9.8 m/s<sup>2</sup>.</p>
 
 *** =instructions
-<p align="justify"> Use o código estudado neste tópico para calcular altura máxima e o tempo necessário para atingir esta altura.</p> 
-<p align="justify"> Adote a aceleração da gravidade g = 9.8 m/s<sup>2</sup>e a componente vertical da velocidade inicial equivalente a 173.2051, calculado no tópico anterior.</p>
+<p align="justify"> Use o código estudado neste tópico para calcular altura máxima.</p> 
+<p align="justify"> Escreva o valor da aceleração da gravidade adotada neste estudo e a expressão para a altura máxima.
+<p align="justify"> A componente vertical da velocidade inicial é equivalente a 173.2051, calculado no tópico anterior.</p>
 *** =hint
 <p align="justify"> A altura máxima no movimento oblíquo é dada pela seguinte expressão:</p> 
 $$h _{máx}= \displaystyle \frac{v _{iy}^{2}}{2g}\cdot$$
@@ -305,36 +286,30 @@ $$h _{máx}= \displaystyle \frac{v _{iy}^{2}}{2g}\cdot$$
 ```
 *** =sample_code
 ```{r}
-# Aceleração da gravidade:
-g <- 
+# Escreva acel. gravidade:
+g <- 9.8
 # Componente viy:
-viy =  173.2051
-# Altura máxima:
-hmax = (viy ^ 2)/(2 * g)
-# Tempo da hmax:
-thmax = 
-# Mostrar hmax e thmax:
+viy <- 70.71068
+# Escreva altura máxima:
+hmax <- 
+# Mostrar hmax
 hmax
-thmax
 ```
 *** =solution
 ```{r}
-# Aceleração da gravidade:
+# Escreva acel. gravidade:
 g <- 9.8
 # Componente viy:
-viy =  173.2051
+viy <- 70.71068
 # Altura máxima:
-hmax = (viy ^ 2)/(2 * g)
-# Tempo da hmax:
-thmax = viy/g
-# Mostrar hmax e thmax:
+hmax <- (viy ^ 2)/(2 * g)
+# Mostrar hmax
 hmax
-thmax
 ```
 *** =sct
 ```{r}
-test_output_contains("17.67399", incorrect_msg = "Digite corretamente o valor da aceleração da gravidade e a expressão para a altura máxima alcançada pelo projétil.")
-success_msg("Bom trabalho! Você adquiriu noções sobre como calcular a altura máxima alcançada pelo projétil e o tempo gasto para atingí-la.")
+test_output_contains("255.1021", incorrect_msg = "Digite corretamente o valor da aceleração da gravidade e a expressão para a altura máxima alcançada pelo projétil.")
+success_msg("Bom trabalho! Você adquiriu mais noções sobre como calcular a altura máxima alcançada pelo projétil e o tempo gasto para atingí-la.")
 ```
 --- type:NormalExercise lang:r xp:100 skills:1 key:7c6dfaabfd
 ## Tempo de subida
