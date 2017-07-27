@@ -86,7 +86,7 @@ $$(pi/180)*angulo.$$
 vi <- 200
 # Escreva o ângulo dado em graus:
 angulo <- 
-# Graus em radianos:
+# Escreva graus em radianos:
 teta <-
 # Componentes da vi:
 vix <- vi * cos(teta)  
@@ -102,7 +102,7 @@ viy
 vi <- 200
 # Escreva o ângulo dado em graus:
 angulo <- 60
-# Graus em radianos:
+# Escreva graus em radianos:
 teta <- (pi/180) * angulo
 # Componentes da vi:
 vix <- vi * cos(teta)  
@@ -115,7 +115,7 @@ viy
 *** =sct
 ```{r}
 test_output_contains("173.20511", incorrect_msg = "Digite corretamente o valor da variável angulo. O valor da variável teta equivale a $$(pi/180)*angulo.$$.")
-success_msg("Bom trabalho! Você adquiriu noções sobre as componentes da velocidade inicial do lançamento oblíquo. ![Elysium](http://s3.amazonaws.com/assets.datacamp.com/production/course_4551/datasets/Elysium.png "Elysium") ")
+success_msg("Bom trabalho! Você adquiriu noções sobre as componentes da velocidade inicial do lançamento oblíquo.")
 ```
 --- type:NormalExercise lang:r xp:100 skills:1 key:0a2b6cd71d
 ## Atividade - Componentes da velocidade inicial
@@ -268,7 +268,7 @@ test_output_contains("1530.613", incorrect_msg = "Digite corretamente a express�
 success_msg("Bom trabalho! Você adquiriu noções sobre como calcular a altura máxima alcançada pelo projétil.")
 ```
 --- type:NormalExercise lang:r xp:100 skills:1 key:218ca06138
-## Atividade - altura máxima
+## Atividade - Altura máxima
 
 <p style="background-color:#33a0c2; font-weight: bold; font-size: 20px; text-align:center"><font color="#ffffff">EXERCÍCIO PROPOSTO</font></p>
 <p align="justify"> Um projétil é lançado a partir do solo com uma velocidade inicial igual a 200m/s, formando com o mesmo um ângulo de 45°. Determine a altura máxima alcançada pelo projétil. Adote a aceleração da gravidade g = 9.8 m/s<sup>2</sup>.</p>
@@ -439,49 +439,46 @@ success_msg("Bom trabalho! Você adquiriu noções sobre como calcular a altura 
 ```
 --- type:NormalExercise lang:r xp:100 skills:1 key:12980fa718
 ## Tempo de trajeto
-> Tempo de subida mais o tempo de descida
 
-<p align="justify">Neste estudo estamos desprezando a resistência do ar, por isso o tempo que o projétil leva para atingir a altura máxima é o mesmo tempo gasto para voltar da altura máxima até o solo. Portanto,  o tempo total gasto em todo o trajeto pode ser  dado pela seguinte expressão:</p>
+<p align="justify">Neste estudo estamos desprezando a resistência do ar, por isso o tempo que o projétil leva para atingir a altura máxima (tempo de subida) é o mesmo tempo gasto para voltar da altura máxima até o solo (tempo de descida). Portanto, o tempo total gasto em todo o trajeto pode ser  dado pela seguinte expressão:</p>
 $$t _{tot} = 2t _{hmáx}$$
 <p align="justify">onde, $t _{tot}$ corresponde ao tempo total ou tempo de trajeto e $t _{hmáx}$ ao tempo necessário para o projétil alcançar a altura máxima.</p>
-> Alcance
 
-<p align="justify"> Sabemos que o movimento do projétil, na direção horizontal, é do tipo Movimento Retilíneo Uniforme (MRU). Para determinar o alcance, ou seja, a distância percorrida pelo projétil da posição de lançamento até tocar no solo, adaptaremos a equação do espaço do MRU ($X= v _{ix}.t$) para</p>
-$$A=v _{ix}.t _{tot}$$
-<p align="justify">onde $A$ corresponde ao alcance, $v _{ix}$ à componente da velocidade inicial na direção x, e $t _{tot}$ ao tempo total ou tempo de trajeto.</p> 
 > Motivação
 
-* <p align="justify">Continuação do resolução do exercício: um projétil é lançado a  partir do solo, formando com o mesmo um ângulo de 30°, com uma velocidade inicial igual a 50 m/s. Determine a o tempo total gasto e o alcance do projétil. Dados: $9,8~m/s^{2}$. O $t _{hmáx}=2,55~s$ e a $v _{ix}=43,30127~m/s$ já foram determinados em tópicos anteriores.</p>
+* <p align="justify"> Um projétil é lançado obliquamente, a partir do solo, com uma velocidade inicial igual a 50m/s e um ângulo de lançamento igual a 30°. Determine o tempo gasto pelo projétil até sua chegada no solo. Dados: $9,8~m/s^{2}$. O $t _{hmáx}=2,55~s$ e a $v _{ix}=43,30127~m/s$ já foram determinados anteriormente.</p>
 
 <p align="justify">O tempo de trajeto pode ser determinado por:</p> 
 
 $$t _{tot} = 2t _{hmáx} = 2.2,55 = 5,1~s.$$
 
-<p align="justify">O alcance do projétil pode ser determinado por:</p>
-
-$$A=v _{ix}.t _{tot} =  43,30127.5,1 = 220,83 m/s.$$
-
-> <p align="justify">Comandos no R para calcular o tempo de trajeto e o alcance:</p>
+> <p align="justify">Comandos no R para calcular o tempo de trajeto:</p>
 
 ```{r}
-# Componente vix:
-vix = 43.30127
-# Tempo da hmax:
-thmax = 2.5510204081632653061224489795918
+# Dado a componente vix:
+vix <- 43.30127
+# Dado o tempo da hmax:
+thmax <- 2.5510204081632653061224489795918
 # Tempo total:
-ttot = 2 * thmax
-# Alcance:
-A = vix * ttot
+ttot <- 2 * thmax
 cat("O tempo de trajeto é", ttot)
-cat("O alcance é ", A)
 
 O tempo de trajeto é 5.102041
-O alcance é 220.9248
 ```
-> DEVER DE CASA - estude e execute os comandos abaixo no seu ambiente R:
+<p style="background-color:#33a0c2; font-weight: bold; font-size: 20px; text-align:center"><font color="#ffffff">EXERCÍCIO PROPOSTO</font></p>
+<p align="justify"> Um projétil é lançado obliquamente, a partir do solo, com uma velocidade inicial igual a 100m/s e um ângulo de lançamento igual a 45°. Calcule todos os elementos do lançamento oblíquo, visto até agora. Adote a aceleração da gravidade g = 9.8 m/s<sup>2</sup>.</p>
 
-<p align="justify"> Um projétil é lançado a partir do solo, formando com o mesmo um ângulo de 45°, com uma velocidade inicial igual a 100 m/s. Calcule todos os elementos do lançamento oblíquo, visto até agora. Adote a aceleração da gravidade g = 9.8 m/s<sup>2</sup>. (Compare sua resposta logo abaixo</p>
-
+*** =instructions
+<p align="justify"> - Determine no R as componentes da velocidade inicial vix e viy, a altura máxima, o tempo de subida, o tempo de descida e o tempo de trajeto do projétil.</p> 
+<p align="justify"> - Escreva a expressão do tempo de trajeto.</p>
+*** =hint
+<p align="justify"> O tempo total gasto em todo o trajeto pode ser  dado pela seguinte expressão:</p>
+$$t _{tot} = 2t _{hmáx}$$
+*** =pre_exercise_code
+```{r}
+# no pec
+```
+*** =sample_code
 ```{r}
 # Aceleração da gravidade:
 g <- 9.8
@@ -498,31 +495,71 @@ viy <- vi * sin(teta)
 cat("A componente vix é", vix)
 cat("A componente viy é", viy)
 # Altura máxima:
-hmax = (viy ^ 2)/(2 * g)
-# Tempo da hmax
-thmax = viy/g
+hmax <- (viy ^ 2)/(2 * g)
+# Tempo da hmax:
+thmax <- viy/g
 # Mostrar hmax e thmax:
 cat("A altura máxima é", hmax)
 cat("O thmax é", thmax)
-# tempo total ou de trajeto:
-ttot = 2 * thmax
-# alcance:
-A = vix * ttot
-cat("O tempo total é", ttot)
-cat("O alcance é", A)
+# Tempo descida = tempo de subida:
+td <- thmax
+cat("O tempo de descida é", td)
+# Escreva tempo de trajeto:
+ttot <- 
+# Mostrar tempo total:
+ttot
 ```
-> Compare sua resposta
+*** =solution
+```{r}
+# Aceleração da gravidade:
+g <- 9.8
+# Velocidad inicial:
+vi <- 100
+# Ângulo em graus:
+angulo <- 45
+# Graus em radianos:
+teta <- (pi/180) * angulo
+# Componentes da vi:
+vix <- vi * cos(teta)  
+viy <- vi * sin(teta)  
+# Mostrar componentes da vi:
+cat("A componente vix é", vix)
+cat("A componente viy é", viy)
+# Altura máxima:
+hmax <- (viy ^ 2)/(2 * g)
+# Tempo da hmax:
+thmax <- viy/g
+# Mostrar hmax e thmax:
+cat("A altura máxima é", hmax)
+cat("O thmax é", thmax)
+# Tempo descida = tempo de subida:
+td <- thmax
+cat("O tempo de descida é", td)
+# Escreva tempo de trajeto:
+ttot <- 2 * thmax
+# Mostrar tempo total:
+ttot
+```
+*** =sct
+```{r}
+test_output_contains("14.43075", incorrect_msg = "Veja nas dicas qual é a expressão que determina o tempo gasto em toda a trajetória.")
+success_msg("Bom trabalho! Você adquiriu noções sobre como calcular o tempo de trajeto no movimento oblíquo.")
+```
+--- type:NormalExercise lang:r xp:100 skills:1 key:b95850435c
+## Atividade - Tempo de trajeto
 
-<p style="background-color:#000000; font-weight: bold; font-size: 20px; text-align:justify"><font color="#ffffff">   A componente vix é 70.71068; <br>  A componente viy é 70.71068; <br>  A altura máxima é 255.102; <br>  O thmax é 7.215375; <br>  O tempo total é 14.43075; <br>  O alcance é 1020.408.</font></p>
+<p align="justify">Já sabemos que o tempo de trajeto equivale a duas vezes o tempo que o projétil gasta para atingir a altura máxima.</p>
 
 <p style="background-color:#33a0c2; font-weight: bold; font-size: 20px; text-align:center"><font color="#ffffff">EXERCÍCIO PROPOSTO</font></p>
+
 <p align="justify"> Um projétil é lançado a partir do solo, formando com o mesmo um ângulo de 60°, com uma velocidade inicial igual a 200 m/s. Determine todos os elementos do lançamento oblíquo visto até agora. Adote a aceleração da gravidade g = 9.8 m/s<sup>2</sup>.</p>
 *** =instructions
-<p align="justify"> Use os códigos estudados neste tópico para calcular todos os elementos do lançamento oblíquo visto até agora.</p> 
-<p align="justify"> Adotaremos sempre a aceleração da gravidade como g = 9.8 m/s<sup>2</sup>.</p>
+<p align="justify"> - Use os códigos estudados no tópico sobre o tempo de trajeto para calcular todos os elementos do lançamento oblíquo visto até agora.</p> 
+<p align="justify"> - Escreva a expressão para a componente vix e para o tempo de trajeto.</p>
+
 *** =hint
-<p align="justify"> A componente da velocidade inicial na direção horizontal e o tempo de trajeto são dados, respectivamente, por
-$$v _{ix} = v _{i}.cos(\theta)$$
+<p align="justify"> O valor da componente da velocidade inicial na direção vertical e do tempo de trajeto são dados, respectivamente, por
+$$v _{iy} = v _{i}.sin(\theta)$$
 e
 $$t _{tot} = 2t _{hmáx}.$$
 *** =pre_exercise_code
@@ -539,8 +576,208 @@ vi <- 200
 angulo <- 60
 # Graus em radianos:
 teta <- (pi/180) * angulo
+# Componente vix:
+vix <- vi * cos(teta)
+# Escreva a componente viy:
+viy <-   
+# Mostrar compon. vix:
+vix
+# Mostrar compon. viy:
+viy
+# Altura máxima:
+hmax <- (viy ^ 2)/(2 * g)
+# Tempo da hmax:
+thmax <- viy/g
+# Mostrar hmax:
+hmax
+# Mostrar thmax:
+thmax
+# Escreva o tempo total:
+ttot <- 
+# Mostrar ttot:
+ttot
+```
+*** =solution
+```{r}
+# Aceleração da gravidade:
+g <- 9.8
+# Velocidad inicial:
+vi <- 200
+# Ângulo em graus:
+angulo <- 60
+# Graus em radianos:
+teta <- (pi/180) * angulo
+# Componente vix:
+vix <- vi * cos(teta)
+# Escreva a componente viy:
+viy <- vi * sin(teta)  
+# Mostrar compon. vix:
+vix
+# Mostrar compon. viy:
+viy
+# Altura máxima:
+hmax <- (viy ^ 2)/(2 * g)
+# Tempo da hmax:
+thmax <- viy/g
+# Mostrar hmax:
+hmax
+# Mostrar thmax:
+thmax
+# Escreva o tempo total:
+ttot <- 2 * thmax
+# Mostrar ttot:
+ttot
+```
+*** =sct
+```{r}
+test_output_contains("35.34798", incorrect_msg = "Veja nas dicas as expressões que determinam o valor da componente da velocidade inicial e o valor do tempo gasto em toda trajetória.")
+success_msg("Bom trabalho! Você adquiriu mais noções sobre a o tempo de trajeto de um projétil no movimento oblíquo.")
+```
+--- type:NormalExercise lang:r xp:100 skills:1 key:0da2105cd7
+## Alcance
+
+<p align="justify"> Sabemos que o movimento do projétil, na direção horizontal, é do tipo Movimento Retilíneo Uniforme (MRU). Para determinar o alcance, ou seja, a distância percorrida pelo projétil da posição de lançamento até tocar no solo, adaptaremos a equação do espaço do MRU ($X= v _{ix}.t$) para</p>
+$$A=v _{ix}.t _{tot}$$
+<p align="justify">onde $A$ corresponde ao alcance, $v _{ix}$ à componente da velocidade inicial na direção X, e $t _{tot}$ ao tempo total ou tempo de trajeto.</p>
+
+> Motivação
+
+* <p align="justify"> Um projétil é lançado a  partir do solo, formando com o mesmo um ângulo de 30°, com uma velocidade inicial igual a 50 m/s. Determine a o tempo total gasto e o alcance do projétil. Dados: $9,8~m/s^{2}$. O $t _{hmáx}=2,55~s$ e a $v _{ix}=43,30127~m/s$ já foram determinados anteriormente.</p>
+
+<p align="justify">Já sabemos que o tempo de trajeto pode ser determinado por:</p> 
+
+$$t _{tot} = 2t _{hmáx} = 2.2,55 = 5,1~s.$$
+
+<p align="justify">O alcance do projétil pode ser determinado por:</p>
+
+$$A=v _{ix}.t _{tot} =  43,30127.5,1 = 220,83 m/s.$$
+
+> <p align="justify">Comandos no R para calcular o tempo de trajeto e o alcance:</p>
+
+```{r}
+# Componente vix:
+vix <- 43.30127
+# Tempo da hmax:
+thmax <- 2.5510204081632653061224489795918
+# Tempo total:
+ttot <- 2 * thmax
+# Alcance:
+A = vix * ttot
+cat("O tempo de trajeto é", ttot)
+cat("O alcance é ", A)
+
+O tempo de trajeto é 5.102041
+O alcance é 220.9248
+```
+<p style="background-color:#33a0c2; font-weight: bold; font-size: 20px; text-align:center"><font color="#ffffff">EXERCÍCIO PROPOSTO</font></p>
+<p align="justify"> Um projétil é lançado a partir do solo, formando com o mesmo um ângulo de 45°, com uma velocidade inicial igual a 100 m/s. Calcular os elementos do lançamento oblíquo. Adote a aceleração da gravidade g = 9.8 m/s<sup>2</sup>.</p>
+*** =instructions
+<p align="justify"> - Determinar os elementos do lançamento oblíquo visto até agora.</p> 
+<p align="justify"> - Escreva a expressão que determina o alcance máximo do projétil.</p>
+*** =hint
+<p align="justify"> - A expressão que determina o alcance máximo do projétil é dada por </p> 
+$$A=v _{ix}.t _{tot}$$
+*** =pre_exercise_code
+```{r}
+# no pec
+```
+*** =sample_code
+```{r}
+# Aceleração da gravidade:
+g <- 9.8
+# Velocidad inicial:
+vi <- 100
+# Ângulo em graus:
+angulo <- 45
+# Graus em radianos:
+teta <- (pi/180) * angulo
+# Componentes da vi:
+vix <- vi * cos(teta)  
+viy <- vi * sin(teta)  
+# Mostrar componentes da vi:
+cat("A componente vix é", vix)
+cat("A componente viy é", viy)
+# Altura máxima:
+hmax <- (viy ^ 2)/(2 * g)
+# Tempo da hmax
+thmax <- viy/g
+# Mostrar hmax e thmax:
+cat("A altura máxima é", hmax)
+cat("O thmax é", thmax)
+# Tempo total ou de trajeto:
+ttot <- 2 * thmax
+# Mostrar tempo trajeto:
+cat("O tempo total é", ttot)
+# Escrever alcance máximo:
+A <- 
+# Mostrar o Alcance máximo
+A
+```
+*** =solution
+```{r}
+# Aceleração da gravidade:
+g <- 9.8
+# Velocidad inicial:
+vi <- 100
+# Ângulo em graus:
+angulo <- 45
+# Graus em radianos:
+teta <- (pi/180) * angulo
+# Componentes da vi:
+vix <- vi * cos(teta)  
+viy <- vi * sin(teta)  
+# Mostrar componentes da vi:
+cat("A componente vix é", vix)
+cat("A componente viy é", viy)
+# Altura máxima:
+hmax <- (viy ^ 2)/(2 * g)
+# Tempo da hmax
+thmax <- viy/g
+# Mostrar hmax e thmax:
+cat("A altura máxima é", hmax)
+cat("O thmax é", thmax)
+# Tempo total ou de trajeto:
+ttot <- 2 * thmax
+# Mostrar tempo trajeto:
+cat("O tempo total é", ttot)
+# Escrever alcance máximo:
+A <- vix * ttot
+# Mostrar o Alcance máximo
+A
+```
+*** =sct
+```{r}
+test_output_contains("1020.408", incorrect_msg = "Veja nas dicas a expressão que determina o valor do alcance máximo do projétil.")
+success_msg("Bom trabalho! Você adquiriu noções sobre como calcular o alcance máximo de um projétil.")
+```
+--- type:NormalExercise lang:r xp:100 skills:1 key:c0c16b98ca
+## Atividade - Alcance
+
+<p style="background-color:#33a0c2; font-weight: bold; font-size: 20px; text-align:center"><font color="#ffffff">EXERCÍCIO PROPOSTO</font></p>
+<p align="justify"> Um projétil é lançado a partir do solo com uma velocidade inicial igual a 200 m/s e formando um ângulo de lançamento igual a 60°. Determine os elementos do lançamento oblíquo. Adote a aceleração da gravidade g = 9.8 m/s<sup>2</sup>.</p>
+*** =instructions
+<p align="justify"> - Determinar os elementos do lançamento oblíquo.</p> 
+<p align="justify"> - Escreva a expressão que determina o alcance máximo e o tempo de trajeto do projétil.</p>
+*** =hint
+<p align="justify"> - As expressões que determinam o tempo de trajeto e o alcance máximo do projétil é dada, respectivamente, por </p> $$t _{tot} = 2t _{hmáx}$$
+e
+$$A=v _{ix}.t _{tot}$$
+*** =pre_exercise_code
+```{r}
+# no pec
+```
+*** =sample_code
+```{r}
+# Aceleração da gravidade:
+g <- 9.8
+# Velocidad inicial:
+vi <- 200
+# Ângulo em graus:
+angulo <- 60
+# Graus em radianos:
+teta <- (pi/180) * angulo
 # Escreva a componente vix:
-vix <-   
+vix <- vi * cos(teta)  
 viy <- vi * sin(teta)  
 # Mostrar compon.da vi:
 vix
@@ -554,8 +791,8 @@ hmax
 thmax
 # Escreva o tempo total:
 ttot <- 
-# Alcance
-A <- vix * ttot
+# Escreva o alcance
+A <- 
 # Mostrar ttot e A:
 ttot
 A
@@ -585,7 +822,7 @@ hmax
 thmax
 # Escreva o tempo total:
 ttot <- 2 * thmax
-# Alcance
+# Escreva o alcance
 A <- vix * ttot
 # Mostrar ttot e A:
 ttot
@@ -593,8 +830,8 @@ A
 ```
 *** =sct
 ```{r}
-test_output_contains("3534.798", incorrect_msg = "Veja nas dicas o valor da componente da velocidade inicial e do tempo gasto em toda trajetória.")
-success_msg("Bom trabalho! Você adquiriu noções sobre a o tempo de trajeto e o alcance de um projétil no movimento oblíquo.")
+test_output_contains("3534.798", incorrect_msg = "Veja nas dicas as expressões que dão o valor do tempo de trajeto e o alcance máximo de um projétil no movimento oblíquo.")
+success_msg("Bom trabalho! Você adquiriu mais noções sobre como calcular o tempo de trajeto e o alcance máximo de um projétil no movimento oblíquo.")
 ```
 --- type:NormalExercise lang:r xp:100 skills:1 key:314c81a391
 ## Componentes da velocidade
@@ -743,10 +980,10 @@ cat("A vr na hmax é", vr)
 <p style="background-color:#33a0c2; font-weight: bold; font-size: 20px; text-align:center"><font color="#ffffff">EXERCÍCIO PROPOSTO</font></p>
 <p align="justify"> Um projétil é lançado a partir do solo, formando com o mesmo um ângulo de 60°, com uma velocidade inicial igual a 200 m/s. Determine a componente vertical da velocidade (vy) e a velocidade resultante (vr) do projétil no instante em que o mesmo alcança a altura máxima. Adote a aceleração da gravidade g = 9.8 m/s<sup>2</sup>.</p>
 *** =instructions
-<p align="justify"> Use os comandos estudados neste tópico para calcular a componente vertical da velocidade e a velocidade resultante do projétil no tempo da altura máxima.</p> 
-<p align="justify"> Adotaremos sempre a aceleração da gravidade como g = 9.8 m/s<sup>2</sup>.</p>
+<p align="justify"> - Use os comandos estudados neste tópico para calcular a componente vertical da velocidade e a velocidade resultante do projétil no tempo da altura máxima.</p>
+<p align="justify"> - Escreva a expressão para a velocidade resultante do projétil.</p>
 *** =hint
-<p align="justify"> O valor da velocidade resultante no movimento oblíquo é dado pela seguinte expressão:</p>
+<p align="justify"> - O valor da velocidade resultante no movimento oblíquo é dado pela seguinte expressão:</p>
 $$v _{r}= \sqrt{v _{x}^{2}+ v _{y}^{2}}.$$
 *** =pre_exercise_code
 ```{r}
@@ -773,7 +1010,7 @@ hmax <- (viy ^ 2)/(2 * g)
 thmax <- viy/g
 # Componente vy:
 vy <- viy - g * thmax
-# escreva a veloc. resultante:
+# Escreva a veloc. resultante:
 vr <- 
 # Mostrar vy:
 vy
@@ -801,7 +1038,7 @@ hmax <- (viy ^ 2)/(2 * g)
 thmax <- viy/g
 # Componente vy:
 vy <- viy - g * thmax
-# escreva a veloc. resultante:
+# Escreva a veloc. resultante:
 vr <- sqrt(vx ^ 2 + vy ^ 2)
 # Mostrar vy:
 vy
