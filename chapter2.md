@@ -122,7 +122,7 @@ success_msg("Bom trabalho! Você adquiriu noções sobre as componentes da veloc
 
 <p align="justify">Num lançamento oblíquo, quando o ângulo de elevação equivale a 45°, o alcance do projétil é máximo e as componentes da velocidade inicial possuem valores iguais. No decorrer do curso observaremos também que, quando o ângulo  equivale a 45°, o valor do alcance máximo é quatro vezes o valor da altura máxima alcançada pelo projétil.</p> 
 
-<p style="background-color:#33a0c2; font-weight: bold; font-size: 20px; text-align:center"><font color="#ffffff">EXERCÍCIO PROPOSTO</font></p>
+<p style="background-color:#33a0c2; font-weight: bold; font-size: 20px; text-align:center"><font color="#ffffff">MAIS EXERCÍCIO PROPOSTO SOBRE COMPONENTES DA VELOCIDADE INICIAL</font></p>
 
 <p align="justify"> Um projétil é lançado a partir do solo com uma velocidade inicial igual a 100 m/s, formando com o mesmo um ângulo de 45°. Determine as componentes da velocidade inicial.</p>
 
@@ -301,7 +301,7 @@ hmax
 g <- 9.8
 # Componente viy:
 viy <- 70.71068
-# Altura máxima:
+# Escreva altura máxima:
 hmax <- (viy ^ 2)/(2 * g)
 # Mostrar hmax
 hmax
