@@ -226,9 +226,54 @@ success_msg ("Bom trabalho! Você aprendeu a determinar o valor da posição (X,
 ```
 --- type:NormalExercise lang:r xp:100 skills:1 key:da26d811b1
 ## Atividade - Posição do projétil
-<p align="justify"> A equação que fornece a posição do projétil no instante t, segundo o eixo horizontal (X), é dada por </p>
 
-$$X= v _{ix}.t$$
+<style type="text/css">p { color: #009ACD; font-family: "Calibri", Palatino, serif }
+
+h1 {
+    color: #FFFFFF; text-align: center; background-color:#34A2C4;
+}
+h2 {
+    color: #FFFFFF; text-align: center; background-color:#34A2C4;
+}
+h3 {
+    color: #FFFFFF; text-align: center; background-color:#34A2C4;
+}
+h4 {
+    color: #FFFFFF; text-align: center; background-color:#34A2C4;
+}
+</style>
+
+ 
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"> <script>
+
+<pre><code>
+Aceleração da gravidade:
+g <- 9.8
+# Instante dado:
+t <- 2
+# vix - já calculado:
+vix <-  43.30127
+# viy - já calculado:
+viy <- 25
+# Posição X
+X <- vix * t
+# Posição Y
+Y <- viy * t - (g * t ^ 2)/2 
+# vx é uniforme e igual a vix:
+vx <- vix
+# Componente vy:
+vy <- viy - g * t 
+# Velocidade resultante:
+vr <- sqrt(vx ^ 2 + vy ^ 2)
+cat("A posição do projétil é",  X, "e", Y)
+cat("As componentes de v:", vx, "e", vy)
+cat("A velocidade resultante é", vr)
+A posição do projétil é 86.60254 e 30.4
+As componentes de v: 43.30127 e 5.4
+A velocidade resultante é 43.63668
+</code></pre>
+
+<p align="justify"> A equação que fornece a posição do projétil no instante t, segundo o eixo horizontal (X), é dada por </p>
 
 <p align="justify"> e a equação que fornece a posição do projétil no instante t, segundo o eixo vertical (Y), é dada por </p>
  
@@ -236,7 +281,7 @@ $$Y = v _{ix}.t- \displaystyle \frac{g.t^{2}}{2}\cdot$$
 
 <p align="justify">Para determinar uma posição qualquer do projétil, basta obter os valores de X e Y.</p> 
 
-> Motivação
+#### Motivação
 
 * <p align="justify">Um projétil é lançado a  partir do solo, formando com o mesmo um ângulo de 30°, com uma velocidade inicial igual a 50 m/s. Determine a posição do projétil em 2 segundos e em 4 segundos. Considere $g = 9,8~m/s^{2}$, a $v _{ix} = 43.30~m/s$ e a $v _{iy} = 25~m/s$ foram determinados em tópicos anteriores.</p>
 
