@@ -225,6 +225,62 @@ A altura máxima é 31.88776
 <p style="background-color:#33a0c2; font-weight: bold; font-size: 20px; text-align:center"><font color="#ffffff">EXERCÍCIO PROPOSTO</font></p>
 <p align="justify"> Um projétil é lançado a partir do solo, formando com o mesmo um ângulo de 60°, com uma velocidade inicial igual a 200 m/s. Determine a altura máxima atingida pelo projétil. Adote a aceleração da gravidade g = 9.8 m/s<sup>2</sup>.</p>
 
+<style type="text/css">
+.letras{
+width:580px;line-height:1.5;position:relative; text-align:justify;font-family:Calibri;font-size:20px;line-height:1.5em;border:#7FFF00 2px none;
+padding:5px;border-radius:5px;-moz-border-radius:5px; -webkit-border-radius:5px;background:#DDD url(https://lh6.googleusercontent.com/-0X8KQIRPiuY/UxY5KmzdpsI/AAAAAAAABAo/RqqhQIR7Gf4/s800/pattern.png) repeat; text-shadow:1px 1px #fff;
+box-shadow:0 0 0 6px #33a0c2;
+}
+</style>
+<body>
+<div class="letras">
+
+<p align="justify">O valor da altura máxima, no movimento oblíquo, é obtido adaptando-se a a equação de Torricelli para</p>
+
+$$v _{y}^{2}= v _{iy}^{2}-2gh _{máx}$$
+
+<p align="justify">onde, $v _{y}$ é a componente vertical da velocidade no instante t, $v _{iy}$ é a componente da velocidade inicial na direção (vertical) y, $g$ é a aceleração da gravidade a qual vamos considerar como 9.8m/s<sup>2</sup> e $h _{máx}$ é a altura máxima alcançada pelo projétil.</p>
+
+<p align="justify">Sabemos que à medida que o projétil vai atingindo a altura máxima, sua velocidade vai dimunuindo. Quando chega exatamente no ponto da altura máxima, o projétil tem sua velocidade equivalente a zero. Portanto, a velocidade do corpo na direção vertical torna-se nula ($v _{y}$ = 0), ou seja,</p>
+$$0= v _{iy}^{2}-2gh _{máx}.$$
+<p align="justify">Daí, podemos obter a expresão para a altura máxima alcançada pelo projétil:</p>
+$$-v _{iy}^{2}= -2gh _{máx}\rightarrow$$ 
+$$v _{iy}^{2}= 2gh _{máx}\rightarrow$$ 
+$$h _{máx}= \displaystyle \frac{v _{iy}^{2}}{2g}\cdot$$
+
+> Motivação
+
+* <p align="justify">Um projétil é lançado a  partir do solo, formando com o mesmo um ângulo de 30°, com uma velocidade inicial igual a 50 m/s. Determine a altura máxima alcançado pelo projétil. Adote a aceleração da gravidade g = 9.8 m/s<sup>2</sup>.</p> 
+
+<p align="justify">No tópico anterior foi determinado a componente da velocidade inicial, $v _{iy}$.</p>
+
+Dado:
+
+$$v _{iy} = 25~m/s.$$
+
+> <p align="justify"> A altura máxima:</p>
+
+$$h _{máx}= \displaystyle \frac{v _{iy}^{2}}{2g}= \displaystyle \frac{25^{2}}{2.9,8}= \displaystyle \frac{625}{19,6}\cong 31,88~m.$$
+
+> <p align="justify">Comandos no R para calcular a altura máxima:</p>
+
+```{r}
+# Aceleração da gravidade:
+g <- 9.8
+# Componente viy:
+viy <- 25
+# Altura máxima:
+hmax <- (viy ^ 2)/(2 * g)
+# Mostrar a hmax:
+cat("A altura máxima é", hmax)
+
+A altura máxima é 31.88776
+```
+<p style="background-color:#33a0c2; font-weight: bold; font-size: 20px; text-align:center"><font color="#ffffff">EXERCÍCIO PROPOSTO</font></p>
+<p align="justify"> Um projétil é lançado a partir do solo, formando com o mesmo um ângulo de 60°, com uma velocidade inicial igual a 200 m/s. Determine a altura máxima atingida pelo projétil. Adote a aceleração da gravidade g = 9.8 m/s<sup>2</sup>.</p>
+</div>
+</body>
+
 *** =instructions
 <p align="justify"> - Use o código estudado neste tópico para calcular altura máxima.</p> 
 <p align="justify"> - Adote a aceleração da gravidade g = 9.8 m/s<sup>2</sup>e a componente vertical da velocidade inicial, determinado em tópico anterior, equivale a 173,2051.</p>

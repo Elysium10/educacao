@@ -232,6 +232,39 @@ h4 {
     color: #FFFFFF; text-align: center; background-color:#34A2C4;
 }
 </style>
+<style type="text/css">
+<!--
+.letras {
+width:580px;line-height:1.5;position:relative; text-align:justify;font-family:Calibri;font-size:16px;line-height:1.5em;border:#7FFF00 2px none;
+padding:5px;border-radius:5px;-moz-border-radius:5px; -webkit-border-radius:5px;background:#eee;text-shadow:1px 1px #fff;
+box-shadow:0 0 0 6px #999;
+}
+-->
+</style>
+<div class="letras">
+<!-- <h1>LIVROS DE FÍSICA PARA NÍVEL MÉDIO</h1> -->
+<div class="border2" style="clear: both; text-align: left;">
+<a href="https://lh6.googleusercontent.com/-mJAlchuFzy0/UwkkFuwCKbI/AAAAAAAAA5I/I3z6fHEimMQ/s144/Livrofisicamedio.jpg" 
+imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0"  
+src="https://lh6.googleusercontent.com/-mJAlchuFzy0/UwkkFuwCKbI/AAAAAAAAA5I/I3z6fHEimMQ/s288/Livrofisicamedio.jpg"/></a></div>
+<span style="font-weight: bold; color: #006600;">INFORMAÇÕES DO LIVRO</span><br />
+<span style="font-weight: bold;">Idioma</span>: Português.<br>
+<span style="font-weight: bold;">Legenda</span>: Indisponível.<br>
+<span style="font-weight: bold;">Tamanho</span>: 91,11 MB.<br>
+<span style="font-weight: bold;">Formato</span>: RAR / PDF.<br>
+<span style="font-weight: bold;">Nº de mídias</span>: 1 CD.<br>
+<span style="font-weight: bold;">Nome do Álbum</span>: Tópicos de Física Completa.<br>
+<span style="font-weight: bold;">Artista</span>: Tópicos de Física Completa.<br>
+<span style="font-weight: bold;">Ano de Lançamento</span>: 2012.<br>
+<span style="font-weight: bold;">Gênero</span>: Revistas / E-Books.<br>
+<span style="font-weight: bold;">Duração</span>: - .<br>
+<p style="text-align: justify;">Descrição: A Coleção Tópicos de Física foi elaborada com grande rigor conceitual e apresenta a matéria de forma clara e com pormenores 
+que enriquecem a compreensão do aluno. As leituras, os exercícios e os experimentos foram elaborados com base em aplicações e vivências em sala de aula. 
+Grande quantidade de exercício e atividades, divididos em três níveis de dificuldade. Seção de experiências e textos para leitura ao final de cada tópico.</p>
+<p style="text-align: center;">Baixar Resoluções de Exercícios – Livros Tópicos de Física – Completa</p>
+<p style="text-align: center;"><strong>Servidores Para Downloads</strong></p>
+<p style="text-align: center;"><strong>Clique no link abaixo para fazer o download:</strong></p>
+<p style="text-align: center;"><strong><a href="http://www.seusite.com.br" target="_blank" rel="nofollow">TÓPICOS DE FÍSICA</a>  </strong></p>
 
 <p align="justify"> A equação que fornece a posição do projétil no instante t, segundo o eixo horizontal (X), é dada por </p>
 
@@ -604,6 +637,12 @@ cat("e) A posição em 5s é", X, "e", Y)
 
 <p style="background-color:#33a0c2; font-weight: bold; font-size: 20px; text-align:center"><font color="#ffffff">EXERCÍCIO PROPOSTO</font></p>
 <p align="justify"> Um projétil é lançado a partir do solo, formando com o mesmo um ângulo de 60°, com uma velocidade inicial igual a 200 m/s. Determine as componentes vx, vy e a direção do projétil ao chegar no solo. Adote a aceleração da gravidade g = 9.8 m/s<sup>2</sup>.</p>
+</div>
+</body>
+
+
+
+
 *** =instructions
 <p align="justify"> - Calcule a direção do projétil no tempo de trajeto. Você irá atribuir vy/vx a uma variável.</p>
 <p align="justify"> - Leia todo o código do exercício e escreva a atribuição à variável.</p>
