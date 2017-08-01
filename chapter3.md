@@ -940,11 +940,12 @@ mean(Y)
 <p align="justify"> - Gere os dados dos eixos X e Y e observe o valor da altura máxima no eixo Y.</p>
 <p align="justify"> - Escreva um comando que mostre o valor no eixo Y da altura máxima.</p>
 *** =hint
-<p align="justify"> - Veja quem é o elemento nos valores do eixo Y de número 501.</p> 
+<p align="justify"> - Veja quem é o elemento nos valores do eixo Y de número 51.</p> 
 *** =pre_exercise_code
 ```{r}
 # no pec
 ```
+
 *** =sample_code
 ```{r}
 # Acel. gravidade:
@@ -991,9 +992,9 @@ max(Y)
 min(X)
 # Maximo no X
 max(X)
-# Escreva X na hmax
-X[c(51)] 
 # Escreva Y na hmax
+Y[c(51)]
+# Escreva X na hmax
 
 ```
 *** =solution
@@ -1042,16 +1043,17 @@ max(Y)
 min(X)
 # Maximo no X
 max(X)
-# Escreva X na hmax
-X[c(51)] 
 # Escreva Y na hmax
 Y[c(51)]
-```{r}
+# Escreva X na hmax
+X[c(51)] 
+```
 *** =sct
 ```{r}
-test_output_contains ("255.102", incorrect_msg = "Escreva a expressão que mostre o valor da altura máxima atingida pelo projétil.")
+test_output_contains ("110.4624", incorrect_msg = "Escreva a expressão que mostre o valor da altura máxima atingida pelo projétil.")
 success_msg ("Bom trabalho! Você aprendeu a analisar os valores dos eixos correspondentes à Altura e ao Alcance máximo de um projétil no movimento oblíquo.")
 ```
+
 --- type:NormalExercise lang:r xp:100 skills:1 key:3f42c2369a
 ## Atividade - Explorando dados dos eixos X e Y
 
