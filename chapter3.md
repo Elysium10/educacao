@@ -691,7 +691,7 @@ max(X)
 X[c(51)] 
 # Escreva Y na hmax
 Y[c(51)]
-```{r}
+```
 
 <p style="font-family = Arial; font-size: 12px; text-align:left">[1] <font color="##FF0000">0.000000</font>   2.209248   4.418496   6.627744   8.836992  11.046240  13.255488  15.464736  17.673984</p>
 <p style="font-family = Arial; font-size: 12px; text-align:left">[10]  19.883232  22.092480  24.301728  26.510976  28.720224  30.929472  33.138720  35.347968  37.557216</p>
@@ -844,7 +844,7 @@ max(X)
 X[c(51)] 
 # Escreva Y na hmax
 Y[c(51)]
-```{r}
+```
 
 <p style="font-family = Arial; font-size: 12px; text-align:left">[1]  <font color="##FF0000">0.000000e+00</font> 1.262755e+00 2.499999e+00 3.711734e+00 4.897958e+00 6.058672e+00 7.193876e+00 8.303570e+00</p>
 <p style="font-family = Arial; font-size: 12px; text-align:left">[9]  9.387753e+00 1.044643e+01 1.147959e+01 1.248724e+01 1.346939e+01 1.442602e+01 1.535714e+01 1.626275e+01</p>
