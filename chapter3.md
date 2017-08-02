@@ -605,44 +605,9 @@ $$Y= v _{ix}.t - \displaystyle \frac{g.t^{2}}{2}\cdot$$
 
 * <p align="justify">Um projétil é lançado a  partir do solo com uma velocidade inicial de 50m/s formando com o mesmo um ângulo de 30°. Determine e analise os valores das distâncias (coordenadas X) e as alturas (coordenadas Y) do projétil a cada 2,209248 m de distância horizontal a partir de onde onde foi lançado (de 0 m) até o alcance (A = 220,9248 m). Considere $g = 9,8~m/s^{2}$.</p>
 
-```{r}
-# Acel. gravidade:
-g <- 9.8
-# Espaço inicial:
-xi <- 0
-# Espaço final:
-yi <- 0
-# Sequência 0 até Alcance variando de 2.209248:
-X <- seq(from = 0, to = 220.9248, by = 2.209248)
-# Velocidade inicial:
-vi <- 50
-vi <- 50
-# ângulo em graus:
-angulo <- 30
-# Graus em radianos:
-teta <- (pi/180) * angulo
-# Componente vix:
-vix <- vi * cos(teta)
-# vx é igual a vix:
-vx <- vix
-# Componente viy:
-viy <- vi * sin(teta)
-# O tempo na eq. MRU:
-tempo <- (X - xi)/vix
-# Posição X
-X <- vix * tempo
-# Posição Y
-Y <- viy * tempo - (g * tempo ^ 2)/2 
-# Componente vertical de v:
-vy <- viy - g * tempo 
-# Velocidade resultante:
-vr <- sqrt(vx ^ 2 + vy ^ 2)
-#Mostrar o eixo X
-X
-```
+> Código em R
 
 ```{r}
-# correto
 # Acel. gravidade:
 g <- 9.8
 # Velocidade inicial:
@@ -677,21 +642,8 @@ vy <- viy - g * tempo
 vr <- sqrt(vx ^ 2 + vy ^ 2)
 #Mostrar valores eixo X
 X
-#Mostrar valores eixo y
-Y
-# Mínimo no Y
-min(Y)
-# Maximo no Y
-max(Y)
-# Mínimo no X
-min(X)
-# Maximo no X
-max(X)
-# Escreva X na hmax
-X[c(51)] 
-# Escreva Y na hmax
-Y[c(51)]
 ```
+> Retorno do código
 
 <p style="font-family = Arial; font-size: 12px; text-align:left">[1] <font color="##FF0000">0.000000</font>   2.209248   4.418496   6.627744   8.836992  11.046240  13.255488  15.464736  17.673984</p>
 <p style="font-family = Arial; font-size: 12px; text-align:left">[10]  19.883232  22.092480  24.301728  26.510976  28.720224  30.929472  33.138720  35.347968  37.557216</p>
@@ -708,7 +660,7 @@ Y[c(51)]
 
 <p align="justify"> Observe que o projétil partiu de zero metro (espaço inicial) até um alcance máximo de 220,924800m (espaço final). Programamos para o R executar na sequência de 2,209248m em 2,209248m até chegar no alcance máximo.</p>
 
-> Comandos para explorar os valores de X
+> Alguns comandos para explorar os valores de X
 
 <p align="justify"> Muitas informações podem ser extraídas dos valores do eixo horizontal. Veja algumas:</p>
 
@@ -757,45 +709,6 @@ diff(X)
 > Valores do eixo Y (Distância vertical)
 
 ```{r}
-# Acel.gravidade:
-g <- 9.8
-# Espaço inicial:
-xi <- 0
-# Espaço final:
-yi <- 0
-# # Sequência 0 até Alcance variando de 2.209248:
-X <- seq(from = 0, to = 220.9248, by = 2.209248)
-# Velocidade inicial:
-vi <- 50
-vi <- 50
-# Ângulo em graus:
-angulo <- 30
-# Graus em radianos:
-teta <- (pi/180) * angulo
-# Componente vix:
-vix <- vi * cos(teta)
-# vx é igual a vix:
-vx <- vix
-# Componente viy:
-viy <- vi * sin(teta)
-# O tempo na eq. MRU:
-tempo <- (X - xi)/vix
-# Posição X
-X <- vix * tempo
-# Posição Y
-Y <- viy * tempo - (g * tempo ^ 2)/2 
-# Componente vertical de v:
-vy <- viy - g * tempo 
-# Velocidade resultante:
-vr <- sqrt(vx ^ 2 + vy ^ 2)
-# Mostrar o eixo X
-X
-# Mostrar o eixo Y
-Y
-```
-
-```{r}
-# Correto
 # Acel. gravidade:
 g <- 9.8
 # Velocidade inicial:
@@ -830,21 +743,10 @@ vy <- viy - g * tempo
 vr <- sqrt(vx ^ 2 + vy ^ 2)
 #Mostrar valores eixo X
 X
-#Mostrar valores eixo y
+#Mostrar valores eixo Y
 Y
-# Mínimo no Y
-min(Y)
-# Maximo no Y
-max(Y)
-# Mínimo no X
-min(X)
-# Maximo no X
-max(X)
-# Escreva X na hmax
-X[c(51)] 
-# Escreva Y na hmax
-Y[c(51)]
 ```
+> Retorno do código
 
 <p style="font-family = Arial; font-size: 12px; text-align:left">[1]  <font color="##FF0000">0.000000e+00</font> 1.262755e+00 2.499999e+00 3.711734e+00 4.897958e+00 6.058672e+00 7.193876e+00 8.303570e+00</p>
 <p style="font-family = Arial; font-size: 12px; text-align:left">[9]  9.387753e+00 1.044643e+01 1.147959e+01 1.248724e+01 1.346939e+01 1.442602e+01 1.535714e+01 1.626275e+01</p>
@@ -869,7 +771,7 @@ $$= 31,88776m.$$
 
 <p align="justify"> Observe que o projétil partiu de zero metro (altura inicial) até uma altura máxima de 31.88776m (altura final) e depois retorna para a origem, que na simulação tende a zero (2,765749e-05m = 0,00002765749m).</p>
 
-> Comandos para explorar os valores de Y
+> Alguns comandos para explorar os valores de Y
 
 <p align="justify"> Muitas informações podem ser extraídas dos valores do eixo vertical, inclusive as posições (X, Y). Veja algumas:</p>
 
@@ -930,17 +832,17 @@ diff(Y)
 mean(Y) 
 21.04592
 ```
-<p align="justify">Observe que o valor de X correspondente na altura máxima equivale a 110,4624 m, a metade do alcance (A = 220,9248m). Observe também o valor de Y que corresponde à altura máxima (31.88776).</p>
+<p align="justify">Observe que o valor de X correspondente na altura máxima equivale a 110,4624 m, a metade do alcance (A = 220,9248m). Observe também o valor de Y que corresponde à altura máxima (31,88776m).</p>
 
 <p style="background-color:#33a0c2; font-weight: bold; font-size: 20px; text-align:center"><font color="#ffffff">EXERCÍCIO PROPOSTO</font></p>
 
-<p align="justify"> Aplique os comandos utilizados em R para resolver o seguinte problema: Um projétil com uma velocidade inicial igual a 100 m/s é lançado a partir do solo, formando com o mesmo um ângulo de 45°. Particione o alcance máximo (1020,408m), numa sequência de 1,020408m em 1,020408m, escrevendo um comando que indique a posição do projétil na altura máxima (correspondende à metade do alcance máximo). Adote a aceleração da gravidade g = 9.8 m/s<sup>2</sup>. Compare sua resposta logo abaixo.</p>
+<p align="justify"> Aplique os comandos utilizados em R para resolver o seguinte problema: Um projétil com uma velocidade inicial igual a 100 m/s é lançado a partir do solo, formando com o mesmo um ângulo de 45°. Particione o alcance máximo (1020,408m), numa sequência de 1,020408m em 1,020408m, escrevendo um comando que indique a posição do projétil na altura máxima (correspondende à metade do alcance máximo). Adote a aceleração da gravidade g = 9.8 m/s<sup>2</sup>.</p>
 
 *** =instructions
-<p align="justify"> - Gere os dados dos eixos X e Y e observe o valor da altura máxima no eixo Y.</p>
-<p align="justify"> - Escreva um comando que mostre o valor no eixo Y da altura máxima.</p>
+<p align="justify"> - Depois de gerar os dados dos eixos X e Y, observe o valor da altura máxima no eixo Y.</p>
+<p align="justify"> - Escreva um comando que mostre o valor, no eixo X, que corresponda à altura máxima atingida pelo projétil.</p>
 *** =hint
-<p align="justify"> - Veja quem é o elemento nos valores do eixo Y de número 51.</p> 
+<p align="justify"> - Veja quem é o elemento nos valores do eixo X de número 51.</p> 
 *** =pre_exercise_code
 ```{r}
 # no pec
@@ -1053,31 +955,25 @@ X[c(51)]
 test_output_contains ("110.4624", incorrect_msg = "Escreva a expressão que mostre o valor da altura máxima atingida pelo projétil.")
 success_msg ("Bom trabalho! Você aprendeu a analisar os valores dos eixos correspondentes à Altura e ao Alcance máximo de um projétil no movimento oblíquo.")
 ```
-
 --- type:NormalExercise lang:r xp:100 skills:1 key:3f42c2369a
 ## Atividade - Explorando dados dos eixos X e Y
 
-color="#ffffff">EXERCÍCIO PROPOSTO</font></p>
+<p style="background-color:#33a0c2; font-weight: bold; font-size: 20px; text-align:center"><font color="#ffffff">EXERCÍCIO PROPOSTO</font></p>
+
 <p align="justify"> Um projétil é lançado a partir do solo, formando com o mesmo um ângulo de 60°, com uma velocidade inicial igual a 200 m/s. Particione o alcance máximo (3534,798m), numa sequência de 3,534798m em 3,534798m, escrevendo um comando que indique a posição do projétil na altura máxima (correspondende à metade do alcance máximo). Adote a aceleração da gravidade g = 9.8 m/s<sup>2</sup>.</p>
 *** =instructions
-<p align="justify"> - Gere os dados dos eixos X e Y e observe a altura máxima no eixo Y.</p>
-<p align="justify"> - Escreva um comando que mostre o valor de Y na altura máxima.</p>
+<p align="justify"> - Gere os dados dos eixos X e Y, observe a altura máxima no eixo Y que corresponde à metade do alcance máximo no eixo X.</p>
+<p align="justify"> - Escreva um comando que mostre o valor de X que correspondente à altura máxima no eixo Y.</p>
 *** =hint
-<p align="justify"> - Veja quem é o elemento nos valores do eixo Y de número 501.</p> 
+<p align="justify"> - Veja quem é o elemento nos valores do eixo X de número 501.</p> 
 *** =pre_exercise_code
 ```{r}
 # no pec
 ```
 *** =sample_code
 ```{r}
-# Aceleração da O alcance é gravidade:
+# Acel. gravidade:
 g <- 9.8
-# Espaço inicial:
-xi <- 0
-# Espaço final:
-yi <- 0
-# Sequência de 0 até o Alcance indo de 2.209248 em 2.209248:
-X <- seq(from = 0, to = 3534.798, by = 3.534798)
 # Velocidade inicial:
 vi <- 200
 # ângulo em graus:
@@ -1090,35 +986,45 @@ vix <- vi * cos(teta)
 vx <- vix
 # Componente viy:
 viy <- vi * sin(teta)
+# Tempo da hmax
+thmax <- viy/g
+# Tempo trajeto
+ttotal <- 2 * thmax
+# Alcance
+A <- vx * ttotal
+# Espaço inicial:
+xi <- 0
+# Sequência 0 até Alcance variando de 3.534798:
+X <- seq(from = 0, to = 3534.798, by = 3.534798)
 # O tempo na eq. MRU:
-tempo <- (X - xi)/vix
-# Posição X
-X <- vix * tempo
+tempo <- (X - xi)/vx
 # Posição Y
 Y <- viy * tempo - (g * tempo ^ 2)/2 
 # Componente vertical de v:
 vy <- viy - g * tempo 
 # Velocidade resultante:
 vr <- sqrt(vx ^ 2 + vy ^ 2)
-# Mostrar eixo X
+#Mostrar valores eixo X
 X
-# Mostrar eixo Y
+#Mostrar valores eixo y
 Y
-# Escreva X na hmax
-X[c(501)] 
+# Mínimo no Y
+min(Y)
+# Maximo no Y
+max(Y)
+# Mínimo no X
+min(X)
+# Maximo no X
+max(X)
 # Escreva Y na hmax
+Y[c(501)]
+# Escreva X na hmax
 
 ```
 *** =solution
 ```{r}
-# Aceleração da O alcance é gravidade:
+# Acel. gravidade:
 g <- 9.8
-# Espaço inicial:
-xi <- 0
-# Espaço final:
-yi <- 0
-# Sequência de 0 até o Alcance indo de 2.209248 em 2.209248:
-X <- seq(from = 0, to = 3534.798, by = 3.534798)
 # Velocidade inicial:
 vi <- 200
 # ângulo em graus:
@@ -1131,29 +1037,45 @@ vix <- vi * cos(teta)
 vx <- vix
 # Componente viy:
 viy <- vi * sin(teta)
+# Tempo da hmax
+thmax <- viy/g
+# Tempo trajeto
+ttotal <- 2 * thmax
+# Alcance
+A <- vx * ttotal
+# Espaço inicial:
+xi <- 0
+# Sequência 0 até Alcance variando de 3.534798:
+X <- seq(from = 0, to = 3534.798, by = 3.534798)
 # O tempo na eq. MRU:
-tempo <- (X - xi)/vix
-# Posição X
-X <- vix * tempo
+tempo <- (X - xi)/vx
 # Posição Y
 Y <- viy * tempo - (g * tempo ^ 2)/2 
 # Componente vertical de v:
 vy <- viy - g * tempo 
 # Velocidade resultante:
 vr <- sqrt(vx ^ 2 + vy ^ 2)
-# Mostrar eixo X
+#Mostrar valores eixo X
 X
-# Mostrar eixo Y
+#Mostrar valores eixo y
 Y
-# Escreva X na hmax
-X[c(501)] 
+# Mínimo no Y
+min(Y)
+# Maximo no Y
+max(Y)
+# Mínimo no X
+min(X)
+# Maximo no X
+max(X)
 # Escreva Y na hmax
 Y[c(501)]
+# Escreva X na hmax
+X[c(501)] 
 ```
 *** =sct
 ```{r}
-test_output_contains ("1530.612", incorrect_msg = "Escreva a expressão que mostre o valor da altura máxima atingida pelo projétil.")
-success_msg ("Bom trabalho! Você aprendeu a analisar os valores dos eixos da Altura e Alcance máximo do movimento oblíquo.")
+test_output_contains ("1767.399", incorrect_msg = "Escreva a expressão que mostre o valor no eixo X que corresponde à altura máxima atingida pelo projétil.")
+success_msg ("Bom trabalho! Você aprendeu mais sobre como analisar os valores dos eixos da Altura e Alcance máximo do movimento oblíquo.")
 ```
 --- type:NormalExercise lang:r xp:100 skills:1 key:700f8dfafd
 ## Explorando dados das componentes
