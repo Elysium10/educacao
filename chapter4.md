@@ -229,6 +229,6 @@ graus
 ```
 *** =sct
 ```{r}
-test_output_contains ("-60", incorrect_msg = "Escreva a expressão que atribua a uma variável (tang) a divisão entre as componentes vertical e horizontal da velocidade do projétil quando o mesmo alcança o tempo de trajeto.")
-success_msg ("Bom trabalho! Você aprendeu a determinar a direção do projétil quando o mesmo alcança o solo.")
+test_output_contains("-60", incorrect_msg = "Escreva a expressão que atribua a uma variável (tang) a divisão entre as componentes vertical e horizontal da velocidade do projétil quando o mesmo alcança o tempo de trajeto.")
+success_msg("Bom trabalho! Você aprendeu a determinar a direção do projétil quando o mesmo alcança o solo.")
 ```

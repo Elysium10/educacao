@@ -169,8 +169,8 @@ X
 ```
 *** =sct
 ```{r}
-test_output_contains ("173.2051", incorrect_msg = "Escreva a expressão que calcula o valor da posição de um projétil no eixo X. Veja nas dicas essa expressão.")
-success_msg ("Bom trabalho! Você aprendeu a determinar o valor da posição X e Y de um projétil em um determinado tempo.")
+test_output_contains("173.2051", incorrect_msg = "Escreva a expressão que calcula o valor da posição de um projétil no eixo X. Veja nas dicas essa expressão.")
+success_msg("Bom trabalho! Você aprendeu a determinar o valor da posição X e Y de um projétil em um determinado tempo.")
 ```
 --- type:NormalExercise lang:r xp:100 skills:1 key:da26d811b1
 ## Atividade - Posição do projétil
@@ -275,8 +275,8 @@ X
 ```
 *** =sct
 ```{r}
-test_output_contains ("200", incorrect_msg = "Escreva a expressão que calcula o valor da posição de um projétil no eixo X.")
-success_msg ("Bom trabalho! Você aprendeu mais sobre como determinar o valor da posição X e Y de um projétil em um determinado tempo.")
+test_output_contains("200", incorrect_msg = "Escreva a expressão que calcula o valor da posição de um projétil no eixo X.")
+success_msg("Bom trabalho! Você aprendeu mais sobre como determinar o valor da posição X e Y de um projétil em um determinado tempo.")
 ```
 --- type:NormalExercise lang:r xp:100 skills:1 key:289ca73696
 ## Direção do projétil
@@ -399,8 +399,8 @@ graus
 ```
 *** =sct
 ```{r}
-test_output_contains ("-64.74684", incorrect_msg = "Escreva a expressão que atribua a uma variável a divisão entre as componentes vy e vx da velocidade do projétil quando o mesmo alcança o tempo de trajeto.")
-success_msg ("Bom trabalho! Você aprendeu a determinar a direção de um projétil quando o mesmo alcança o solo.")
+test_output_contains("-64.74684", incorrect_msg = "Escreva a expressão que atribua a uma variável a divisão entre as componentes vy e vx da velocidade do projétil quando o mesmo alcança o tempo de trajeto.")
+success_msg("Bom trabalho! Você aprendeu a determinar a direção de um projétil quando o mesmo alcança o solo.")
 ```
 --- type:NormalExercise lang:r xp:100 skills:1 key:06f6447360
 ## Atividade - Direção do projétil
@@ -544,8 +544,8 @@ graus
 ```
 *** =sct
 ```{r}
-test_output_contains ("-60", incorrect_msg = "Escreva a expressão que atribua a uma variável a divisão entre as componentes vy e vx quando o mesmo alcança o tempo de trajeto.")
-success_msg ("Bom trabalho! Você aprendeu mais sobre como determinar a direção do projétil quando o mesmo alcança o solo.")
+test_output_contains("-60", incorrect_msg = "Escreva a expressão que atribua a uma variável a divisão entre as componentes vy e vx quando o mesmo alcança o tempo de trajeto.")
+success_msg("Bom trabalho! Você aprendeu mais sobre como determinar a direção do projétil quando o mesmo alcança o solo.")
 ```
 --- type:NormalExercise lang:r xp:100 skills:1 key:dee61a2620
 ## Explorando dados dos eixos X e Y
@@ -926,8 +926,8 @@ X[c(51)]
 ```
 *** =sct
 ```{r}
-test_output_contains ("110.4624", incorrect_msg = "Escreva a expressão que extraia o valor de X correspondente à altura máxima atingida pelo projétil.")
-success_msg ("Bom trabalho! Você aprendeu a analisar os valores dos eixos correspondentes à Altura e ao Alcance máximo de um projétil no movimento oblíquo.")
+test_output_contains("110.4624", incorrect_msg = "Escreva a expressão que extraia o valor de X correspondente à altura máxima atingida pelo projétil.")
+success_msg("Bom trabalho! Você aprendeu a analisar os valores dos eixos correspondentes à Altura e ao Alcance máximo de um projétil no movimento oblíquo.")
 ```
 --- type:NormalExercise lang:r xp:100 skills:1 key:3f42c2369a
 ## Atividade - Explorando dados dos eixos X e Y
@@ -1048,8 +1048,8 @@ X[c(501)]
 ```
 *** =sct
 ```{r}
-test_output_contains ("1767.399", incorrect_msg = "Escreva a expressão que mostre o valor no eixo X que corresponde à altura máxima atingida pelo projétil.")
-success_msg ("Bom trabalho! Você aprendeu mais sobre como analisar os valores dos eixos da Altura e Alcance máximo do movimento oblíquo.")
+test_output_contains("1767.399", incorrect_msg = "Escreva a expressão que mostre o valor no eixo X que corresponde à altura máxima atingida pelo projétil.")
+success_msg("Bom trabalho! Você aprendeu mais sobre como analisar os valores dos eixos da Altura e Alcance máximo do movimento oblíquo.")
 ```
 --- type:NormalExercise lang:r xp:100 skills:1 key:700f8dfafd
 ## Explorando dados das componentes
@@ -1376,8 +1376,8 @@ hmax
 ```
 *** =sct
 ```{r}
-test_output_contains ("255.102", incorrect_msg = "Ou a expressão para altura máxima ou para o alcance máximo não estão corretas.")
-success_msg ("Bom trabalho! Você mostrou que no lançamento oblíquo, quando ângulo de tiro equivale a 45°, o alcance máximo é quatro vezes maior que a altura máxima.")
+test_output_contains("255.102", incorrect_msg = "Ou a expressão para altura máxima ou para o alcance máximo não estão corretas.")
+success_msg("Bom trabalho! Você mostrou que no lançamento oblíquo, quando ângulo de tiro equivale a 45°, o alcance máximo é quatro vezes maior que a altura máxima.")
 ```
 --- type:NormalExercise lang:r xp:100 skills:1 key:ff0e8c1b61
 ## Atividade - Explorando dados das componentes
@@ -1471,8 +1471,8 @@ graus
 ```
 *** =sct
 ```{r}
-test_output_contains ("-60", incorrect_msg = "Escreva a expressão que atribua a uma variável (tang) a divisão entre as componentes vertical e horizontal da velocidade do projétil quando o mesmo alcança o tempo de trajeto.")
-success_msg ("Bom trabalho! Você aprendeu a determinar a direção do projétil quando o mesmo alcança o solo.")
+test_output_contains("-60", incorrect_msg = "Escreva a expressão que atribua a uma variável (tang) a divisão entre as componentes vertical e horizontal da velocidade do projétil quando o mesmo alcança o tempo de trajeto.")
+success_msg("Bom trabalho! Você aprendeu a determinar a direção do projétil quando o mesmo alcança o solo.")
 ```
 --- type:NormalExercise lang:r xp:100 skills:1 key:cf63ed39fd
 ## Explorando dados do tempo
@@ -1711,8 +1711,8 @@ max(tempo)
 ```
 *** =sct
 ```{r}
-test_output_contains ("14.43075", incorrect_msg = "Escreva a expressão que mostre o valor do maior tempo.")
-success_msg ("Bom trabalho! Você aprendeu a analisar os valores dos tempos para o movimento oblíquo.")
+test_output_contains("14.43075", incorrect_msg = "Escreva a expressão que mostre o valor do maior tempo.")
+success_msg("Bom trabalho! Você aprendeu a analisar os valores dos tempos para o movimento oblíquo.")
 ```
 --- type:NormalExercise lang:r xp:100 skills:1 key:be60740def
 ## Atividade - Explorando dados do tempo
@@ -1805,6 +1805,6 @@ graus
 ```
 *** =sct
 ```{r}
-test_output_contains ("-60", incorrect_msg = "Escreva a expressão que atribua a uma variável (tang) a divisão entre as componentes vertical e horizontal da velocidade do projétil quando o mesmo alcança o tempo de trajeto.")
-success_msg ("Bom trabalho! Você aprendeu a determinar a direção do projétil quando o mesmo alcança o solo.")
+test_output_contains("-60", incorrect_msg = "Escreva a expressão que atribua a uma variável (tang) a divisão entre as componentes vertical e horizontal da velocidade do projétil quando o mesmo alcança o tempo de trajeto.")
+success_msg("Bom trabalho! Você aprendeu a determinar a direção do projétil quando o mesmo alcança o solo.")
 ```
