@@ -1503,7 +1503,247 @@ success_msg ("Bom trabalho! Você aprendeu a determinar a direção do projétil
 --- type:NormalExercise lang:r xp:100 skills:1 key:cf63ed39fd
 ## Explorando dados do tempo
 
-<p align="justify">Sabemos que um corpo está em movimento uniforme quando o mesmo percorre espaços iguais em intervalos de tempos iguais. O movimento do projétil no eixo X é constante, ou seja, a componente da velocidade inicial vix, que também é igual à componente da velocidade vx, é constante. Foi programado no R para que os espaços fossem divididos de 2,209248m em 2,209248m até atingir o alcance máximo de 220,9248m. Foram obtidos intervalos de tempos iguais, dividindo cada 2,209248m pelo valor da componente vix (43,30127m/s) que resultou em 0,0510204s. Vejamos o código:</p> 
+<style type="text/css">
+.letras{
+width:300px;line-height:1.5;position:relative; text-align:center;font-family:Calibri;font-size:16px;line-height:1.5em;border:#7FFF00 2px none;
+padding:5px;border-radius:5px;-moz-border-radius:5px; -webkit-border-radius:5px;background:#DDD text-shadow:1px 1px #fff;
+box-shadow:0 0 0 6px #33a0c2;
+}
+</style>
+
+> <p align="justify"> Voltando ao problema já estudado anteriormente: um projétil é lançado a  partir do solo com uma velocidade inicial de 50m/s formando um ângulo de lançamento igual a 30°. Determine e analise os valores do tempo a cada 2,209248m de distância horizontal a partir de onde foi lançado (de zero metro) até o alcance (A=220,9248m). Considere $g = 9,8~m/s^{2}$.</p>
+
+<center><div class="letras"> Sabemos que um corpo está em movimento uniforme quando percorre espaços iguais em intervalos de tempos iguais. O movimento do projétil no eixo X é constante, ou seja, a componente da velocidade inicial vix, que também é igual à componente da velocidade vx, é constante. Nesse exemplo, foi programado no R para que os espaços fossem divididos de 2,209248m em 2,209248m até atingir o alcance máximo de 220,9248m. Foram obtidos intervalos de tempos iguais, dividindo cada 2,209248m pelo valor da componente vix (43,30127m/s) que resultou em 0,0510204s. Vejamos o código:</div></center>
+<br>
+
+```{r}
+# Acel. gravidade:
+g <- 9.8
+# Velocidade inicial:
+vi <- 50
+# ângulo em graus:
+Ângulo <- 30
+# Graus em radianos:
+teta <- (pi/180) * angulo
+# Componente vix:
+vix <- vi * cos(teta)
+# vx é igual a vix:
+vx <- vix
+# Componente viy:
+viy <- vi * sin(teta)
+# Tempo da hmax
+thmax <- viy/g
+# Tempo trajeto
+ttotal <- 2 * thmax
+# Alcance
+A <- vx * ttotal
+# Espaço inicial:
+xi <- 0
+# Sequência 0 até Alcance variando de 2.209248:
+X <- seq(from = 0, to = 220.9248, by = 2.209248)
+# O tempo na eq. MRU:
+tempo <- (X - xi)/vx
+# Posição Y
+Y <- viy * tempo - (g * tempo ^ 2)/2 
+# Componente vertical de v:
+vy <- viy - g * tempo 
+# Velocidade resultante:
+vr <- sqrt(vx ^ 2 + vy ^ 2)
+#Mostrar valores eixo X
+X
+#Mostrar valores eixo Y
+Y
+# Mostrar vx
+vx
+# Mostrar vy
+vy
+# Mostrar vr
+vr
+# Mostrar valores tempo
+tempo
+```
+> Retorno do código para valores do tempo
+
+<p style="font-family = Arial; font-size: 12px; text-align:left">[1] <font color="##FF0000">0.0000000</font> 0.0510204 0.1020408 0.1530612 0.2040816 0.2551020 0.3061224 0.3571428 0.4081632 0.4591836<p>
+<p style="font-family = Arial; font-size: 12px; text-align:left">[11] 0.5102040 0.5612244 0.6122448 0.6632652 0.7142856 0.7653060 0.8163264 0.8673468 0.9183671 0.9693875<p>
+<p style="font-family = Arial; font-size: 12px; text-align:left">[21] 1.0204079 1.0714283 1.1224487 1.1734691 1.2244895 1.2755099 1.3265303 1.3775507 1.4285711 1.4795915<p>
+<p style="font-family = Arial; font-size: 12px; text-align:left">[31] 1.5306119 1.5816323 1.6326527 1.6836731 1.7346935 1.7857139 1.8367343 1.8877547 1.9387751 1.9897955<p>
+<p style="font-family = Arial; font-size: 12px; text-align:left">[41] 2.0408159 2.0918363 2.1428567 2.1938771 2.2448975 2.2959179 2.3469383 2.3979587 2.4489791 2.4999995<p>
+<p style="font-family = Arial; font-size: 12px; text-align:left">[51] <font color="##FF0000">2.5510199</font> 2.6020403 2.6530606 2.7040810 2.7551014 2.8061218 2.8571422 2.9081626 2.9591830 3.0102034<p>
+<p style="font-family = Arial; font-size: 12px; text-align:left">[61] 3.0612238 3.1122442 3.1632646 3.2142850 3.2653054 3.3163258 3.3673462 3.4183666 3.4693870 3.5204074<p>
+<p style="font-family = Arial; font-size: 12px; text-align:left">[71] 3.5714278 3.6224482 3.6734686 3.7244890 3.7755094 3.8265298 3.8775502 3.9285706 3.9795910 4.0306114<p>
+<p style="font-family = Arial; font-size: 12px; text-align:left">[81] 4.0816318 4.1326522 4.1836726 4.2346930 4.2857134 4.3367338 4.3877542 4.4387745 4.4897949 4.5408153<p>
+<p style="font-family = Arial; font-size: 12px; text-align:left">[91] 4.5918357 4.6428561 4.6938765 4.7448969 4.7959173 4.8469377 4.8979581 4.9489785 4.9999989 5.0510193<p>
+<p style="font-family = Arial; font-size: 12px; text-align:left">[101] <font color="##FF0000">5.1020397</font><p>
+
+<center><div class="letras">Baseado nos dados dos valores de vy, vr e tempo, observe que na altura máxima atingida pelo projétil, o tempo chega a 2,5510199s e a componente da velocidade, vy, se aproxima de zero (0,00000542087m/s). Na chegada do projétil ao solo, a componente da velocidade vy se aproxima de -25m/s (-24,99999m/s) e a velocidade resultante se aproxima de 50 m/s (49,99999m/s), isso quando completa o tempo de trajeto de 5,1020397s.</div></center>
+<br>
+<p align="justify"> Muitas informações podem ser extraídas dos valores do tempo. Veja algumas:</p>
+
+```{r}
+# Extrai de tempo 3 valores
+# de partida
+tempo[c(1,2,3)]
+0.0000000 0.0510204 0.1020408
+
+# Extrai 3 valores de chegada
+tempo[c(99, 100, 101)]
+4.999999 5.051019 5.102040
+
+# Extrai de tempo os valores
+# de 50 a 52
+tempo[c(50,51,52)]
+2.499999 2.551020 2.602040
+
+# Maior valor tempo:
+max(tempo) 
+5.1020425
+
+# Variação entre cada elemento
+# (constante)
+diff(tempo)
+[1] 0.0510204 0.0510204... 
+[11] 0.0510204 0.0510204... 
+ 
+# Resumo estatístico tempo:
+summary(tempo)
+Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+0.000   1.276   2.551   2.551   3.827   5.102 
+```
+
+<p style="background-color:#33a0c2; font-weight: bold; font-size: 20px; text-align:center"><font color="#ffffff">EXERCÍCIO PROPOSTO</font></p>
+
+<p align="justify"> Aplique os comandos utilizados em R para resolver o seguinte problema: Um projétil é lançado a partir do solo, formando com o mesmo um ângulo de 45°, com uma velocidade inicial igual a 100 m/s. Determine os valores do tempo a cada 1,020408m de distância horizontal a partir de onde foi lançado (de zero metro) até o alcance (A=1020,408m). Adote a aceleração da gravidade g = 9.8 m/s<sup>2</sup>.</p>
+
+*** =instructions
+<p align="justify"> - Gere os valores dos tempos até o alcance máximo do projétil e obtenha o maior valor de tempo.</p>
+
+*** =hint
+<p align="justify"> O maior valor de tempo pode ser dado pelo comando max(tempo).</p> 
+
+*** =pre_exercise_code
+```{r}
+# no pec
+```
+*** =sample_code
+```{r}
+# Acel. gravidade:
+g <- 9.8
+# Velocidade inicial:
+vi <- 100
+# ângulo em graus:
+angulo <- 45
+# Graus em radianos:
+teta <- (pi/180) * angulo
+# Componente vix:
+vix <- vi * cos(teta)
+# vx é igual a vix:
+vx <- vix
+# Componente viy:
+viy <- vi * sin(teta)
+# Tempo da hmax
+thmax <- viy/g
+# Mostrar thmax
+thmax
+# Tempo trajeto
+ttotal <- 2 * thmax
+# Mostrar tempo trajeto
+ttotal
+# Alcance
+A <- vx * ttotal
+# Mostrar alcance
+A
+# Espaço inicial:
+xi <- 0
+# Sequência 0 até Alcance variando de 2.209248:
+X <- seq(from = 0, to = 1020.408, by = 1.020408)
+# O tempo na eq. MRU:
+tempo <- (X - xi)/vx
+# Posição Y
+Y <- viy * tempo - (g * tempo ^ 2)/2 
+# Componente vertical de v:
+vy <- viy - g * tempo 
+# Velocidade resultante:
+vr <- sqrt(vx ^ 2 + vy ^ 2)
+#Mostrar valores eixo X
+X
+#Mostrar valores eixo Y
+Y
+# Mostrar vx
+vx
+# Mostrar vy
+vy
+# Mostrar valores tempo
+tempo
+# Mostrar vr
+vr
+# Escreva maior valor tempo:
+max
+```
+*** =solution
+```{r}
+# Acel. gravidade:
+g <- 9.8
+# Velocidade inicial:
+vi <- 100
+# ângulo em graus:
+angulo <- 45
+# Graus em radianos:
+teta <- (pi/180) * angulo
+# Componente vix:
+vix <- vi * cos(teta)
+# vx é igual a vix:
+vx <- vix
+# Componente viy:
+viy <- vi * sin(teta)
+# Tempo da hmax
+thmax <- viy/g
+# Mostrar thmax
+thmax
+# Tempo trajeto
+ttotal <- 2 * thmax
+# Mostrar tempo trajeto
+ttotal
+# Alcance
+A <- vx * ttotal
+# Mostrar alcance
+A
+# Espaço inicial:
+xi <- 0
+# Sequência 0 até Alcance variando de 2.209248:
+X <- seq(from = 0, to = 1020.408, by = 1.020408)
+# O tempo na eq. MRU:
+tempo <- (X - xi)/vx
+# Posição Y
+Y <- viy * tempo - (g * tempo ^ 2)/2 
+# Componente vertical de v:
+vy <- viy - g * tempo 
+# Velocidade resultante:
+vr <- sqrt(vx ^ 2 + vy ^ 2)
+#Mostrar valores eixo X
+X
+#Mostrar valores eixo Y
+Y
+# Mostrar vx
+vx
+# Mostrar vy
+vy
+# Mostrar valores tempo
+tempo
+# Mostrar vr
+vr
+# Escreva maior valor tempo:
+max(tempo) 
+```
+*** =sct
+```{r}
+test_output_contains ("14.43075", incorrect_msg = "Escreva a expressão que mostre o valor do maior tempo.")
+success_msg ("Bom trabalho! Você aprendeu a analisar os valores dos tempos para o movimento oblíquo.")
+```
+--- type:NormalExercise lang:r xp:100 skills:1 key:be60740def
+## Atividade - Explorando dados do tempo
+
+<p align="justify">Sabemos que um corpo está em movimento uniforme quando percorre espaços iguais em intervalos de tempos iguais. O movimento do projétil no eixo X é constante, ou seja, a componente da velocidade inicial vix, que também é igual à componente da velocidade vx, é constante. Foi programado no R para que os espaços fossem divididos de 2,209248m em 2,209248m até atingir o alcance máximo de 220,9248m. Foram obtidos intervalos de tempos iguais, dividindo cada 2,209248m pelo valor da componente vix (43,30127m/s) que resultou em 0,0510204s. Vejamos o código:</p> 
 
 ```{r}
 # Aceleração da gravidade:
