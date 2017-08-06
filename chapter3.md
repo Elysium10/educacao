@@ -1621,15 +1621,13 @@ thmax <- viy/g
 thmax
 # Tempo trajeto
 ttotal <- 2 * thmax
-# Mostrar tempo trajeto
-ttotal
 # Alcance
 A <- vx * ttotal
 # Mostrar alcance
 A
 # Espaço inicial:
 xi <- 0
-# Sequência 0 até Alcance variando de 2.209248:
+# Sequência 0 até Alcance variando de 1.020408:
 X <- seq(from = 0, to = 1020.408, by = 1.020408)
 # O tempo na eq. MRU:
 tempo <- (X - xi)/vx
@@ -1647,10 +1645,10 @@ Y
 vx
 # Mostrar vy
 vy
-# Mostrar valores tempo
-tempo
 # Mostrar vr
 vr
+# Mostrar valores tempo
+tempo
 # Escreva maior valor tempo:
 
 ```
@@ -1676,15 +1674,13 @@ thmax <- viy/g
 thmax
 # Tempo trajeto
 ttotal <- 2 * thmax
-# Mostrar tempo trajeto
-ttotal
 # Alcance
 A <- vx * ttotal
 # Mostrar alcance
 A
 # Espaço inicial:
 xi <- 0
-# Sequência 0 até Alcance variando de 2.209248:
+# Sequência 0 até Alcance variando de 1.020408:
 X <- seq(from = 0, to = 1020.408, by = 1.020408)
 # O tempo na eq. MRU:
 tempo <- (X - xi)/vx
@@ -1702,109 +1698,141 @@ Y
 vx
 # Mostrar vy
 vy
-# Mostrar valores tempo
-tempo
 # Mostrar vr
 vr
+# Mostrar valores tempo
+tempo
 # Escreva maior valor tempo:
 max(tempo) 
 ```
 *** =sct
 ```{r}
-test_output_contains("14.43075", incorrect_msg = "Escreva a expressão que mostre o valor do maior tempo.")
+test_output_contains("14.43074833", incorrect_msg = "Escreva a expressão que mostre o valor do maior tempo.")
 success_msg("Bom trabalho! Você aprendeu a analisar os valores dos tempos para o movimento oblíquo.")
 ```
 --- type:NormalExercise lang:r xp:100 skills:1 key:be60740def
 ## Atividade - Explorando dados do tempo
 
 <p style="background-color:#33a0c2; font-weight: bold; font-size: 20px; text-align:center"><font color="#ffffff">EXERCÍCIO PROPOSTO</font></p>
-<p align="justify"> Um projétil é lançado a partir do solo, formando com o mesmo um ângulo de 60°, com uma velocidade inicial igual a 200 m/s. Determine as componentes vx, vy e a direção do projétil ao chegar no solo. Adote a aceleração da gravidade g = 9.8 m/s<sup>2</sup>.</p>
+<p align="justify"> Um projétil é lançado a partir do solo, formando com o mesmo um ângulo de 60°, com uma velocidade inicial igual a 200 m/s. Determine e analise os valores do tempo a cada 3,534798m de distância horizontal a partir de onde foi lançado (de zero metro) até o alcance (A=3534.798m). Adote a aceleração da gravidade g = 9.8 m/s<sup>2</sup>.</p>
 *** =instructions
-<p align="justify"> - Calcule a direção do projétil no tempo de trajeto. Você irá atribuir vy/vx a uma variável.</p>
-<p align="justify"> - Leia todo o código do exercício e escreva a atribuição à variável.</p>
+<p align="justify"> - Escreva a expressão que extrai o tempo gasto para que o projétil atinja a altura máxima.</p>
+
 *** =hint
-<p align="justify"> A direção ou ângulo formado em relação à horizontal, no momento em que o projétil chega ao chão, pode ser obtido pela seguinte expressão:</p> 
-$$\theta = arc~tg~\displaystyle \frac{v _{y}}{v _{x}}\cdot$$
+<p align="justify"> - Veja nos valores do tempo, o número da posição referente ao tempo gasto pelo projétil para atingir a altura máxima. Por exemplo: o tempo total de trajeto pode ser determinado pelo comando "tempo[c(1001)]".</p> 
+
 *** =pre_exercise_code
 ```{r}
 # no pec
 ```
 *** =sample_code
 ```{r}
-# Aceleração da gravidade:
+# Acel. gravidade:
 g <- 9.8
-# Vel. inicial:
+# Velocidade inicial:
 vi <- 200
-# ângulo dado em graus:
+# ângulo em graus:
 angulo <- 60
-# transformar graus em rad:
+# Graus em radianos:
 teta <- (pi/180) * angulo
-# componente x da vi:
+# Componente vix:
 vix <- vi * cos(teta)
-# componente y da vi:
-viy <- vi * sin(teta)
-# vx = vix
+# vx é igual a vix:
 vx <- vix
-# altura máxima
-hmax = (viy ^ 2)/(2 * g)
-# Tempo na hmax:
+# Componente viy:
+viy <- vi * sin(teta)
+# Tempo da hmax
 thmax <- viy/g
-# tempo tot de trajeto:
-ttot = 2 * thmax
+# Tempo trajeto
+ttotal <- 2 * thmax
+# Alcance
+A <- vx * ttotal
+# Mostrar alcance
+A
+# Espaço inicial:
+xi <- 0
+# Sequência 0 até Alcance variando de 3.534798:
+X <- seq(from = 0, to = 3534.798, by = 3.534798)
+# O tempo na eq. MRU:
+tempo <- (X - xi)/vx
+# Posição Y
+Y <- viy * tempo - (g * tempo ^ 2)/2 
 # Componente vertical de v:
-vy <- viy - g * ttot
-#Atribuir vy/vx a uma variável
-tang <- 
-# Atribuir valor do arc tg
-angulo <- atan(tang)
-# Atribuir valor de angulo/(pi/180)
-graus <- angulo/(pi/180)
-# Mostrar vy:
-vy
-# Mostrar vx:
+vy <- viy - g * tempo 
+# Velocidade resultante:
+vr <- sqrt(vx ^ 2 + vy ^ 2)
+#Mostrar valores eixo X
+X
+#Mostrar valores eixo Y
+Y
+# Mostrar vx
 vx
-# Mostrar direção:
-graus
+# Mostrar vy
+vy
+# Mostrar vr
+vr
+# Mostrar valores tempo
+tempo
+# Extraia o maior valor tempo:
+tempo[c(1001)]
+# Escreva expressão extrair tempo hmax:
+
 ```
 *** =solution
 ```{r}
-# Aceleração da gravidade:
+# Acel. gravidade:
 g <- 9.8
-# Vel. inicial:
+# Velocidade inicial:
 vi <- 200
-# ângulo dado em graus:
+# ângulo em graus:
 angulo <- 60
-# transformar graus em rad:
+# Graus em radianos:
 teta <- (pi/180) * angulo
-# componente x da vi:
+# Componente vix:
 vix <- vi * cos(teta)
-# componente y da vi:
-viy <- vi * sin(teta)
-# vx = vix
+# vx é igual a vix:
 vx <- vix
-# altura máxima
-hmax = (viy ^ 2)/(2 * g)
-# Tempo na hmax:
+# Componente viy:
+viy <- vi * sin(teta)
+# Tempo da hmax
 thmax <- viy/g
-# tempo tot de trajeto:
-ttot = 2 * thmax
+# Tempo trajeto
+ttotal <- 2 * thmax
+# Alcance
+A <- vx * ttotal
+# Mostrar alcance
+A
+# Espaço inicial:
+xi <- 0
+# Sequência 0 até Alcance variando de 3.534798:
+X <- seq(from = 0, to = 3534.798, by = 3.534798)
+# O tempo na eq. MRU:
+tempo <- (X - xi)/vx
+# Posição Y
+Y <- viy * tempo - (g * tempo ^ 2)/2 
 # Componente vertical de v:
-vy <- viy - g * ttot
-#Atribuir vy/vx a uma variável
-tang <- vy/vx
-# Atribuir valor do arc tg
-angulo <- atan(tang)
-# Atribuir valor de angulo/(pi/180)
-graus <- angulo/(pi/180)
-# Mostrar vy:
-vy
-# Mostrar vx:
+vy <- viy - g * tempo 
+# Velocidade resultante:
+vr <- sqrt(vx ^ 2 + vy ^ 2)
+#Mostrar valores eixo X
+X
+#Mostrar valores eixo Y
+Y
+# Mostrar vx
 vx
-# Mostrar direção:
-graus
+# Mostrar vy
+vy
+# Mostrar vr
+vr
+# Mostrar valores tempo
+tempo
+# Extraia o maior valor tempo:
+tempo[c(1001)]
+# Escreva expressão extrair tempo hmax:
+tempo[c(501)]
 ```
 *** =sct
 ```{r}
-test_output_contains("-60", incorrect_msg = "Escreva a expressão que atribua a uma variável (tang) a divisão entre as componentes vertical e horizontal da velocidade do projétil quando o mesmo alcança o tempo de trajeto.")
-success_msg("Bom trabalho! Você aprendeu a determinar a direção do projétil quando o mesmo alcança o solo.")
+test_output_contains("17.67399", incorrect_msg = "Escreva corretamente a expressão que extrai o tempo gasto para que o projétil atinja a altura máxima.")
+success_msg("Bom trabalho! Você aprendeu mais sobre como analisar os valores dos tempos para o movimento oblíquo.")
 ```
