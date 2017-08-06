@@ -182,18 +182,6 @@ success_msg ("Bom trabalho! Você aprendeu a determinar o valor da posição (X,
 --- type:NormalExercise lang:r xp:100 skills:1 key:da26d811b1
 ## Atividade - Posição do projétil
 
-<style type="text/css">
-.letras{
-width:300px;line-height:1.5;position:relative; text-align:justify;font-family:Calibri;font-size:16px;line-height:1.5em;border:#7FFF00 2px none;
-padding:5px;border-radius:5px;-moz-border-radius:5px; -webkit-border-radius:5px;background:#DDD text-shadow:1px 1px #fff;
-box-shadow:0 0 0 6px #33a0c2;
-}
-</style>
-<style type="text/css">
-.exerc{
-background-color:#33a0c2; font-weight: bold; font-size:20px; color:#ffffff; text-align:center;
-}
-</style>
 > <p align="justify"> Quando o alcance é quatro vezes maior que a altura máxima</p>
 
  * <p align="justify"> Um projétil é lançado a partir do solo com uma velocidade inicial igual a 100 m/s, formando um ângulo de tiro de 45°. Quando o ângulo de lançamento é equivalente a 45° o alcance (A) é máximo. Mostre no R que o valor desse alcance é quatro vezes maior que o valor da altura máxima (hmáx). Adote a aceleração da gravidade g = 9.8 m/s<sup>2</sup>. Compare sua resposta logo abaixo.</p>
@@ -226,6 +214,18 @@ cat(A, "é 4 vezes", hmax)
 > Compare sua resposta:
 
 <p style="background-color:#000000; font-weight: bold; font-size: 20px; text-align:justify"><font color="#ffffff">  A altura máxima é 255.102; <br>  O alcance é 1020.408; <br>  1020.408 é 4 vezes 255.102.</font></p>
+<style type="text/css">
+.letras{
+width:300px;line-height:1.5;position:relative; text-align:justify;font-family:Calibri;font-size:16px;line-height:1.5em;border:#7FFF00 2px none;
+padding:5px;border-radius:5px;-moz-border-radius:5px; -webkit-border-radius:5px;background:#DDD text-shadow:1px 1px #fff;
+box-shadow:0 0 0 6px #33a0c2;
+}
+</style>
+<style type="text/css">
+.exerc{
+background-color:#33a0c2; font-weight: bold; font-size:20px; color:#ffffff; text-align:center;
+}
+</style>
 <center><div class="exerc">EXERCÍCIO PROPOSTO</div></center>
 <p align="justify"> Um projétil é lançado a partir do solo, formando com o mesmo um ângulo de 60°, com uma velocidade inicial igual a 200 m/s. Determine a posição do projeto no tempo de 2 segundos. Adote a aceleração da gravidade g = 9.8 m/s<sup>2</sup>.</p>
 *** =instructions
@@ -1678,7 +1678,7 @@ tempo
 # Mostrar vr
 vr
 # Escreva maior valor tempo:
-max
+
 ```
 *** =solution
 ```{r}
