@@ -1103,6 +1103,6 @@ vr
 ```
 *** =sct
 ```{r}
-test_output_contains ("100", incorrect_msg = "Escreva corretamente a expressão que calcula a velocidade resultante. Veja nas dicas a expressão que usamos para determinar a velocidade resultante.")
-success_msg ("Bom trabalho! Você aprendeu a determinar o valor de vy e o valor da velocidade resultante do projétil quando o mesmo alcança a altura máxima.")
-``
+test_output_contains("100", incorrect_msg = "Escreva corretamente a expressão que calcula a velocidade resultante. Veja nas dicas a expressão que usamos para determinar a velocidade resultante.")
+success_msg("Bom trabalho! Você aprendeu a determinar o valor de vy e o valor da velocidade resultante do projétil quando o mesmo alcança a altura máxima.")
+```
